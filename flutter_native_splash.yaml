@@ -4,6 +4,3 @@ flutter_native_splash:
   android_12:
     #image: assets/android12splash.png
     #color: "#42a5f5"
-
-
-  web: false
