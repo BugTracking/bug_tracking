@@ -1,17 +1,7 @@
 # bug_tracking
 
-A new Flutter project.
+Welcome to the Bug Tracking Flutter App, a robust and user-friendly application designed for effective tracking and management of software bugs. This app offers an intuitive interface built with Flutter, making it highly adaptable for both Android and iOS platforms. Aimed at developers, project managers, and teams, our app streamlines the bug tracking process, enhancing productivity and software quality.
 
-## Getting Started
+## System Design
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# bug_tracking
+![302293078-a304b07d-d62d-42d3-a6e6-9e7f7dba2dd6](https://github.com/BugTracking/bug_tracking/assets/57016916/e764c3fa-747c-4bac-827b-b02d4037bc3b)
