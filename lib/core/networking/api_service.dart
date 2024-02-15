@@ -1,0 +1,12 @@
+import 'package:bug_tracking/core/networking/api_constance.dart';
+import 'package:dio/dio.dart';
+import 'package:retrofit/retrofit.dart';
+part 'api_service.g.dart';
+
+@RestApi(baseUrl: ApiConstance.baseUrl)
+abstract class ApiService {
+  factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
+
+  @POST(ApiConstance.login)
+  Future<Map<String, String>> login(@Body() Map<String, String> body);
+}
