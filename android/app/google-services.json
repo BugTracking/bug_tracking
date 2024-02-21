@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1081198957448",
+    "project_id": "bug-tracking-36f35",
+    "storage_bucket": "bug-tracking-36f35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081198957448:android:98033a89467e891075603d",
+        "android_client_info": {
+          "package_name": "com.example.bug_tracking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs3PbNWNRNGUxMGTZY5ZhaVUWtyYuwdd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
