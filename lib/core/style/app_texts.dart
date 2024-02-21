@@ -19,13 +19,19 @@ class AppTexts {
         color: Colors.white,
       );
 
+  static TextStyle get text16WhiteLatoBold => GoogleFonts.lato(
+        fontSize: 16.sp,
+        fontWeight: AppFontWeight.bold,
+        color: Colors.white,
+      );
+
   static TextStyle get text12BlueLatoBold => GoogleFonts.lato(
         fontSize: 12.sp,
         fontWeight: AppFontWeight.bold,
         color: AppColor.bluish,
       );
-  static TextStyle get text16GreyLatoBold => GoogleFonts.lato(
-        fontSize: 16.sp,
+  static TextStyle get text16GreyLatoRegular => GoogleFonts.lato(
+        fontSize: 14.sp,
         fontWeight: AppFontWeight.regular,
         color: AppColor.greyish,
       );
