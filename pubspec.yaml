@@ -47,6 +47,7 @@ dependencies:
   get_it: ^7.6.7
   flutter_native_splash: ^2.3.11
   flutter_screenutil: ^5.9.0
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/router/app_router.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/style/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,6 +18,7 @@ class BugTrackingApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.onBoarding,
         onGenerateRoute: appRouter.onGeneratedRoute,
+        theme: AppTheme.lightTheme,
       ),
     );
   }
