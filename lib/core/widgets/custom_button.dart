@@ -1,24 +1,43 @@
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
-  const CustomButton({super.key, required this.onPressed, required this.text});
+  final Color? color;
+  final Color? textColor;
+  const CustomButton({
+    super.key,
+    required this.onPressed,
+    required this.text,
+    this.color = AppColor.bluish,
+    this.textColor = Colors.white,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: double.infinity,
-      child: CupertinoButton(
-        onPressed: onPressed,
-        color: AppColor.bluish,
+      height: 45.0.h,
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.0),
-        padding: const EdgeInsets.all(18.0),
+        border: Border.all(
+          color: AppColor.bluish,
+        ),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: MaterialButton(
+        onPressed: onPressed,
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+        color: color,
         child: Text(
           text,
-          style: AppTexts.text16WhiteLatoBold,
+          style: textColor == Colors.white
+              ? AppTexts.text16WhiteLatoBold
+              : AppTexts.text16BlueLatoBold,
         ),
       ),
     );
