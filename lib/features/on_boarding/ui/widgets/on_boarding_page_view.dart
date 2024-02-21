@@ -21,6 +21,7 @@ class OnBoardingPageView extends StatelessWidget {
           itemCount: cubit.onBoardingList.length,
           itemBuilder: (context, index, realIndex) {
             return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OnBoardingImage(
                   image: cubit.onBoardingList[index].image,
@@ -34,13 +35,14 @@ class OnBoardingPageView extends StatelessWidget {
             );
           },
           options: CarouselOptions(
-            height: 450,
-            initialPage: 0,
-            viewportFraction: 1.0,
+            height: double.infinity,
+            viewportFraction: 1,
             enableInfiniteScroll: false,
+            enlargeCenterPage: true,
             onPageChanged: (index, reason) {
               cubit.emitChangePageState(index);
             },
+            scrollPhysics: const BouncingScrollPhysics(),
           ),
         );
       },

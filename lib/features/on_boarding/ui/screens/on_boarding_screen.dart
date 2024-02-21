@@ -1,4 +1,3 @@
-import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/features/on_boarding/ui/widgets/on_boarding_button.dart';
 import 'package:bug_tracking/features/on_boarding/ui/widgets/on_boarding_indicator.dart';
@@ -29,12 +28,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         padding: EdgeInsets.symmetric(horizontal: 20.0.w),
         child: Column(
           children: [
-            verticalSpace(context.height * 0.06),
-            const OnBoardingPageView(),
-            verticalSpace(context.height * 0.05),
+            const Expanded(
+              child: OnBoardingPageView(),
+            ),
             const OnBoardingIndicator(),
-            verticalSpace(context.height * 0.05),
+            verticalSpace(20.0),
             const OnBoardingButton(),
+            verticalSpace(40.0),
           ],
         ),
       ),
