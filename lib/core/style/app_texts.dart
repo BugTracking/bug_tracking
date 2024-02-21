@@ -24,4 +24,9 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
         color: AppColor.bluish,
       );
+  static TextStyle get text16GreyLatoBold => GoogleFonts.lato(
+        fontSize: 16.sp,
+        fontWeight: AppFontWeight.regular,
+        color: AppColor.greyish,
+      );
 }

@@ -1,5 +1,4 @@
 import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -18,12 +17,11 @@ class AppTheme {
       onBackground: AppColor.blackish,
     ),
     brightness: Brightness.light,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
-      iconTheme: const IconThemeData(color: AppColor.blackish),
-      titleTextStyle: AppTexts.text21BlackLatoBold,
+      iconTheme: IconThemeData(color: AppColor.blackish),
     ),
   );
   static ThemeData darkTheme = ThemeData(
@@ -39,12 +37,11 @@ class AppTheme {
       onBackground: Colors.white,
     ),
     brightness: Brightness.dark,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
-      iconTheme: const IconThemeData(color: Colors.white),
-      titleTextStyle: AppTexts.text21WhiteLatoBold,
+      iconTheme: IconThemeData(color: Colors.white),
     ),
   );
 }
