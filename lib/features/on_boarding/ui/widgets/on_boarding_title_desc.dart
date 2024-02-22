@@ -17,12 +17,12 @@ class OnBoardingTitleDescription extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppTexts.text21BlackLatoBold,
+          style: AppTexts.text21OnBackgroundColorNunitoSansBold,
         ),
         verticalSpace(16),
         Text(
           description,
-          style: AppTexts.text16GreyLatoRegular,
+          style: AppTexts.text16GreyNunitoSansRegular,
           textAlign: TextAlign.center,
         ),
       ],

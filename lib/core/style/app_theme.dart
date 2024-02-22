@@ -1,5 +1,8 @@
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/core/style/font_weight.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   AppTheme._();
@@ -17,11 +20,16 @@ class AppTheme {
       onBackground: AppColor.blackish,
     ),
     brightness: Brightness.light,
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
-      iconTheme: IconThemeData(color: AppColor.blackish),
+      iconTheme: const IconThemeData(color: AppColor.blackish),
+      titleTextStyle: GoogleFonts.nunitoSans(
+        color: AppColor.blackish,
+        fontSize: 21,
+        fontWeight: AppFontWeight.bold,
+      ),
     ),
   );
   static ThemeData darkTheme = ThemeData(
@@ -37,11 +45,14 @@ class AppTheme {
       onBackground: Colors.white,
     ),
     brightness: Brightness.dark,
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
-      iconTheme: IconThemeData(color: Colors.white),
+      iconTheme: const IconThemeData(
+        color: Colors.white,
+      ),
+      titleTextStyle: AppTexts.text21OnPrimaryNunitoSansBold,
     ),
   );
 }
