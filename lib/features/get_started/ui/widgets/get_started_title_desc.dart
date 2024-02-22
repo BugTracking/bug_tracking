@@ -13,12 +13,12 @@ class GetStartedTitleDescription extends StatelessWidget {
       children: [
         Text(
           'Welcome to BUG Tracker ',
-          style: AppTexts.text21BlackLatoBold,
+          style: AppTexts.text21BlackNunitoSansBold,
         ),
         verticalSpace(16),
         Text(
           'The best way to track your bugs.',
-          style: AppTexts.text16GreyLatoRegular,
+          style: AppTexts.text16GreyNunitoSansRegular,
           textAlign: TextAlign.center,
         ),
       ],

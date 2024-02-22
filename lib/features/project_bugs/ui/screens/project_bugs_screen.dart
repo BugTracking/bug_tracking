@@ -5,6 +5,13 @@ class ProjectBugsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Drug App'),
+      ),
+      body: const Center(
+        child: Text('Project Bugs'),
+      ),
+    );
   }
 }

@@ -19,7 +19,7 @@ class SkipTextButton extends StatelessWidget {
       ),
       child: Text(
         'Skip',
-        style: AppTexts.text16GreyLatoRegular,
+        style: AppTexts.text16GreyNunitoSansRegular,
       ),
     );
   }
