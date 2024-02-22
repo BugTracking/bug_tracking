@@ -7,12 +7,16 @@ class ProjectBugsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemBuilder: (context, index) {
-        return const ProjectBugTile();
-      },
-      separatorBuilder: (context, index) => verticalSpace(20.0),
-      itemCount: 3,
+    return SafeArea(
+      child: ListView.separated(
+        itemBuilder: (context, index) {
+          return const ProjectBugTile();
+        },
+        clipBehavior: Clip.none,
+        separatorBuilder: (context, index) => verticalSpace(20.0),
+        shrinkWrap: true,
+        itemCount: 10,
+      ),
     );
   }
 }
