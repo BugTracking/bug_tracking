@@ -16,7 +16,7 @@ class BugTrackingApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.projectBugs,
+        initialRoute: Routes.onBoarding,
         onGenerateRoute: appRouter.onGeneratedRoute,
         theme: AppTheme.lightTheme,
       ),
