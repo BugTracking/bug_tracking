@@ -33,8 +33,8 @@ class CustomButton extends StatelessWidget {
         child: Text(
           text,
           style: textColor == Colors.white
-              ? AppTexts.text16WhiteNunitoSansBold
-              : AppTexts.text16BlueNunitoSansBold,
+              ? AppTexts.text16OnPrimaryNunitoSansBold
+              : AppTexts.text16PrimaryNunitoSansBold,
         ),
       ),
     );

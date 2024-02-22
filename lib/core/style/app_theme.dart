@@ -52,7 +52,7 @@ class AppTheme {
       iconTheme: const IconThemeData(
         color: Colors.white,
       ),
-      titleTextStyle: AppTexts.text21WhiteNunitoSansBold,
+      titleTextStyle: AppTexts.text21OnPrimaryNunitoSansBold,
     ),
   );
 }
