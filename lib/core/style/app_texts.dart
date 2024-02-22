@@ -63,6 +63,12 @@ class AppTexts {
         color: AppColor.bluish,
       );
 
+  static TextStyle get text10OnPrimaryNunitoSansBold => GoogleFonts.nunitoSans(
+        fontSize: 10.sp,
+        fontWeight: AppFontWeight.bold,
+        color: Colors.white,
+      );
+
   static TextStyle get text14GreyCairoSemiBold => GoogleFonts.cairo(
         fontSize: 14.sp,
         fontWeight: AppFontWeight.semiBold,

@@ -11,8 +11,8 @@ class ProjectBugsList extends StatelessWidget {
       itemBuilder: (context, index) {
         return const ProjectBugTile();
       },
-      separatorBuilder: (context, index) => verticalSpace(10.0),
-      itemCount: 1,
+      separatorBuilder: (context, index) => verticalSpace(20.0),
+      itemCount: 3,
     );
   }
 }
