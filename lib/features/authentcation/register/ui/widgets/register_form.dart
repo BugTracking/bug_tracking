@@ -30,7 +30,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 children: [
                   CustomTextField(
                     hintText: 'Name',
-                    prefixIcon: Icon(Icons.lock, color: AppColor.greyish),
+                    prefixIcon: Icon(Icons.person, color: AppColor.greyish),
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
                     errorMsg: 'Field cannot be empty',
                     keyboardType: TextInputType.text,
