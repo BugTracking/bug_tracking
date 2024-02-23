@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
+
 class RoleDropDownList extends StatefulWidget {
   const RoleDropDownList({Key? key}) : super(key: key);
 
@@ -7,27 +11,71 @@ class RoleDropDownList extends StatefulWidget {
 }
 
 class _RoleDropDownListState extends State<RoleDropDownList> {
-  final List<String> role_list=['admin','user'];
-  String dropdownValue = 'Role';
+  List<String> role_list = ['User', 'Admin'];
+
+
+
+  String? selectedRole;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        child: DropdownButton(
-          value: dropdownValue,
-          items: role_list.map((String value) {
-            return DropdownMenuItem(
-              value: value,
-              child: Text(value),
-            );
-          }).toList(),
-          onChanged: (String? newvalue) {
-            setState(() {
-              dropdownValue = newvalue!;
-            });
-          },
-        ), // Add a closing parenthesis here
+    return DropdownButtonFormField2<String>(
+      isExpanded: true,
+      decoration: InputDecoration(
+        prefixIcon: Icon(Icons.groups, color: AppColor.greyish),
+        contentPadding: const EdgeInsets.symmetric(vertical: 16),
+        border: OutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(
+          borderSide:
+          BorderSide(color: AppColor.lightGrey, width: 0.8),
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+
+      ),
+      hint: Text(
+        'Role',
+        style: AppTexts.text16GreyNunitoSansRegular,
+      ),
+      value: selectedRole,
+      items: role_list.map((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value,
+          style: AppTexts.text16GreyNunitoSansRegular,),
+        );
+      }).toList(),
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'choose a role';
+        }
+        return null;
+      },
+      onChanged: (String? newValue) {
+        setState(() {
+          selectedRole = newValue!;
+        });
+      },
+      buttonStyleData: const ButtonStyleData(
+        padding: EdgeInsets.only(right: 8),
+      ),
+      iconStyleData: const IconStyleData(
+        icon: Icon(
+          Icons.arrow_drop_down,
+          color: AppColor.greyish,
+        ),
+        iconSize: 24,
+      ),
+      dropdownStyleData: DropdownStyleData(
+          isOverButton:true,
+        decoration: BoxDecoration(
+
+          borderRadius: BorderRadius.circular(10.0),
+
+
+        ),
+      ),
+      menuItemStyleData: const MenuItemStyleData(
+        padding: EdgeInsets.symmetric(horizontal: 16),
       ),
     );
   }
