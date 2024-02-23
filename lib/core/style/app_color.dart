@@ -14,4 +14,7 @@ class AppColor {
   static const Color blackish = Color(0xff303030);
 
   static const Color gradientYellowOrange = Color(0xffF1BD22);
+  static const Color lightGrey = Color(0xffD9D9D9);
+
+
 }
