@@ -6,6 +6,7 @@ import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/features/authentcation/login/ui/widgets/have_acc.dart';
 
 class LoginForm extends StatefulWidget {
@@ -17,6 +18,8 @@ class LoginForm extends StatefulWidget {
 
 class _LoginFormState extends State<LoginForm> {
 
+
+final _formKey=GlobalKey<FormState>();
      bool _isVisible = true;
     @override
     Widget build(BuildContext context) {
@@ -24,6 +27,7 @@ class _LoginFormState extends State<LoginForm> {
         child: Container(
           child: SingleChildScrollView(
             child: Form(
+              key: _formKey,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,6 +37,9 @@ class _LoginFormState extends State<LoginForm> {
                         hintText: 'User Name',
                         prefixIcon: Icon(Icons.person, color: AppColor.greyish),
                         hintStyle:AppTexts.text16GreyNunitoSansRegular,
+                      errorMsg: 'Field cannot be empty',
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.done,
                     ),
 
                     verticalSpace(16.0),
@@ -52,12 +59,19 @@ class _LoginFormState extends State<LoginForm> {
                         icon: Icon(_isVisible?Icons.visibility_off:Icons.visibility,
                             color: AppColor.greyish),
                       ),
+                      errorMsg: 'Field cannot be empty',
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.done,
 
                     ),
 
                     verticalSpace(17.0),
 
-                    CustomButton(onPressed: (){}, text: 'Log In',),
+                    CustomButton(onPressed: (){
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.pushNamed(context, Routes.projectBugs);
+                      }
+                    }, text: 'Log In',),
 
                    HaveAccount(),
                   ],
