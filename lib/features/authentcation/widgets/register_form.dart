@@ -1,3 +1,4 @@
+import 'package:bug_tracking/features/authentcation/widgets/dropdown_role.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
@@ -5,7 +6,6 @@ import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/custom_textfield.dart';
 import 'package:bug_tracking/core/router/routes.dart';
-import 'package:bug_tracking/features/authentcation/register/ui/widgets/dropdown_role.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({Key? key}) : super(key: key);
@@ -30,7 +30,8 @@ class _RegisterFormState extends State<RegisterForm> {
                 children: [
                   CustomTextField(
                     hintText: 'Name',
-                    prefixIcon: Icon(Icons.person, color: AppColor.greyish),
+                    prefixIcon:
+                        const Icon(Icons.person, color: AppColor.greyish),
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
                     errorMsg: 'Field cannot be empty',
                     keyboardType: TextInputType.text,
@@ -39,7 +40,8 @@ class _RegisterFormState extends State<RegisterForm> {
                   verticalSpace(16.0),
                   CustomTextField(
                     hintText: 'User Name',
-                    prefixIcon: Icon(Icons.person, color: AppColor.greyish),
+                    prefixIcon:
+                        const Icon(Icons.person, color: AppColor.greyish),
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
                     errorMsg: 'Field cannot be empty',
                     keyboardType: TextInputType.text,
@@ -48,7 +50,10 @@ class _RegisterFormState extends State<RegisterForm> {
                   verticalSpace(16.0),
                   CustomTextField(
                     hintText: 'Email',
-                    prefixIcon: Icon(Icons.email, color: AppColor.greyish),
+                    prefixIcon: const Icon(
+                      Icons.email,
+                      color: AppColor.greyish,
+                    ),
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
                     errorMsg: 'Field cannot be empty',
                     keyboardType: TextInputType.text,
@@ -59,8 +64,10 @@ class _RegisterFormState extends State<RegisterForm> {
 
                   CustomTextField(
                     hintText: 'Phone',
-                    prefixIcon:
-                        Icon(Icons.phone_android, color: AppColor.greyish),
+                    prefixIcon: const Icon(
+                      Icons.phone_android,
+                      color: AppColor.greyish,
+                    ),
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
                     errorMsg: 'Field cannot be empty',
                     keyboardType: TextInputType.number,
@@ -73,7 +80,10 @@ class _RegisterFormState extends State<RegisterForm> {
                     obscureText: _isVisible,
                     hintText: 'Password',
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
-                    prefixIcon: Icon(Icons.lock, color: AppColor.greyish),
+                    prefixIcon: const Icon(
+                      Icons.lock,
+                      color: AppColor.greyish,
+                    ),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -94,7 +104,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     obscureText: _isVisible,
                     hintText: 'Confirm Password',
                     hintStyle: AppTexts.text16GreyNunitoSansRegular,
-                    prefixIcon: Icon(Icons.lock, color: AppColor.greyish),
+                    prefixIcon: const Icon(Icons.lock, color: AppColor.greyish),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -112,7 +122,7 @@ class _RegisterFormState extends State<RegisterForm> {
 
                   verticalSpace(16.0),
 
-                  RoleDropDownList(),
+                  const RoleDropDownList(),
 
                   verticalSpace(16.0),
                   CustomButton(

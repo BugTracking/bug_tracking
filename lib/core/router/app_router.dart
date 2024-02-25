@@ -1,14 +1,13 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/features/authentcation/screens/login_screen.dart';
+import 'package:bug_tracking/features/authentcation/screens/register_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:bug_tracking/features/project_bugs/ui/screens/project_bugs_screen.dart';
-import 'package:bug_tracking/features/authentcation/login/ui/screens/login_screen.dart';
-import 'package:bug_tracking/features/authentcation/register/ui/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 class AppRouter {
   Route? onGeneratedRoute(RouteSettings settings) {
