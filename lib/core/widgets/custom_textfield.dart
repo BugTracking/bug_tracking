@@ -12,7 +12,6 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
 
-
   const CustomTextField(
       {super.key,
       required this.hintText,
@@ -30,17 +29,15 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       obscureText: obscureText,
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: AppColor.lightGrey, width: 0.8),
+          borderSide: const BorderSide(color: AppColor.lightGrey, width: 0.8),
           borderRadius: BorderRadius.circular(8.0),
         ),
         hintText: hintText,
         hintStyle: hintStyle,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-
-
       ),
       textInputAction: textInputAction,
       validator: (value) {
@@ -51,6 +48,5 @@ class CustomTextField extends StatelessWidget {
       },
       keyboardType: keyboardType,
     );
-
   }
 }
