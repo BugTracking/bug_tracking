@@ -1,7 +1,7 @@
-import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
-import 'package:bug_tracking/core/widgets/custom_text_button.dart';
+import 'package:bug_tracking/core/widgets/custom_project_info_text.dart';
+import 'package:bug_tracking/features/project_details/ui/widgets/project_details_app_bar_title.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProjectDetailsScreen extends StatelessWidget {
   const ProjectDetailsScreen({super.key});
@@ -10,28 +10,15 @@ class ProjectDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        title: const ProjectDetailsAppBarTitle(),
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 10.0.w),
+        child: const Column(
           children: [
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Drug App'),
-                  SizedBox(width: 8),
-                  CustomPriorityStatusContainer(
-                    text: 'New',
-                    color: AppColor.greenish,
-                  ),
-                ],
-              ),
-            ),
-            CustomTextButton(),
+            CustomProjectInfo(),
           ],
         ),
-      ),
-      body: const Center(
-        child: Text('Project Details'),
       ),
     );
   }
