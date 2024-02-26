@@ -12,6 +12,7 @@ class ProjectBugBody extends StatelessWidget {
         Expanded(
           child: Text(
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry .',
+            maxLines: 3,
             style: AppTexts.text14GreyCairoSemiBold,
           ),
         ),
