@@ -1,8 +1,10 @@
 //import 'package:bug_tracking/features/edit_profile/ui/widgets/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-//import 'package:bug_tracking/features/edit_profile/ui/widgets/edit_form.dart';
+import 'package:bug_tracking/features/edit_profile/ui/widgets/edit_form.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/widgets/custom_button.dart';
+import 'package:bug_tracking/core/widgets/dropdown_role.dart';
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({Key? key}) : super(key: key);
 
@@ -22,7 +24,20 @@ class EditProfileScreen extends StatelessWidget {
             verticalSpace(10.0),
             //ImagePickerWidget(),
             verticalSpace(40.0),
-            //EditForm(),
+            const EditForm(),
+            verticalSpace(16.0),
+
+           const RoleDropDownList(),
+
+            verticalSpace(16.0),
+            CustomButton(
+              onPressed: () {
+
+              },
+              text: 'Save Changes',
+            ),
+
+            verticalSpace(17.0),
           ],
         ),
       ),

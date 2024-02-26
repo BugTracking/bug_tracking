@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/auth_icon.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/features/authentcation/widgets/dropdown_role.dart';
+import 'package:bug_tracking/core/widgets/dropdown_role.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
