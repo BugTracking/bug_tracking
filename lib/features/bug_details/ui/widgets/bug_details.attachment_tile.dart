@@ -9,7 +9,7 @@ class BugDetailesAttachmentsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 140.w,
+      width: 120.w,
       height: double.infinity,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(

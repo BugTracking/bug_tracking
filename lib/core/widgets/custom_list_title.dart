@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomListTitle extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String title;
   const CustomListTitle({
     super.key,
-    required this.onPressed,
+    this.onPressed,
     required this.title,
   });
 
@@ -23,7 +23,8 @@ class CustomListTitle extends StatelessWidget {
             style: AppTexts.text16OnBackgroundNunitoSansBold,
           ),
           const Spacer(),
-          CustomTextButton(onPressed: onPressed, text: 'View All'),
+          if (onPressed != null)
+            CustomTextButton(onPressed: onPressed ?? () {}, text: 'View All'),
         ],
       ),
     );

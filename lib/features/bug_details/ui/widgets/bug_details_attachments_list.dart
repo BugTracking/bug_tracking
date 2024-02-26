@@ -10,7 +10,7 @@ class BugDetailsAttachmentsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 140.h,
+      height: 120.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => const BugDetailesAttachmentsTile(),
