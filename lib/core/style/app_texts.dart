@@ -20,6 +20,12 @@ class AppTexts {
         color: Colors.white,
       );
 
+  static TextStyle get text14PrimaryNunitoSansBold => GoogleFonts.nunitoSans(
+        fontSize: 14.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.bluish,
+      );
+
   static TextStyle get text16OnPrimaryNunitoSansBold => GoogleFonts.nunitoSans(
         fontSize: 16.sp,
         fontWeight: AppFontWeight.bold,
