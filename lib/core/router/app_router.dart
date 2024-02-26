@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
@@ -31,6 +32,11 @@ class AppRouter {
       case Routes.projectDetails:
         return MaterialPageRoute(
           builder: (context) => const ProjectDetailsScreen(),
+        );
+
+      case Routes.bugDetails:
+        return MaterialPageRoute(
+          builder: (context) => const BugDetailsScreen(),
         );
       default:
         return null;
