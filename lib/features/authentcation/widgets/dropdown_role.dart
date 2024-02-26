@@ -22,12 +22,12 @@ class _RoleDropDownListState extends State<RoleDropDownList> {
     return DropdownButtonFormField2<String>(
       isExpanded: true,
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.groups, color: AppColor.greyish),
+        prefixIcon:const Icon(Icons.groups, color: AppColor.greyish,
+        ),
         contentPadding: const EdgeInsets.symmetric(vertical: 16),
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
-          borderSide:
-          BorderSide(color: AppColor.lightGrey, width: 0.8),
+          borderSide:const BorderSide(color: AppColor.lightGrey, width: 0.8,),
           borderRadius: BorderRadius.circular(8.0),
         ),
 

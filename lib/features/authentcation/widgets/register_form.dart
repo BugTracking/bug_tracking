@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
@@ -19,8 +18,7 @@ class _RegisterFormState extends State<RegisterForm> {
   bool _confirmPasswordVisible = true;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Form(
+    return Form(
           key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -119,13 +117,9 @@ class _RegisterFormState extends State<RegisterForm> {
               ),
 
 
-
-
-
-
               // HaveAccount(),
             ],
-          )),
+          ),
     );
   }
 }

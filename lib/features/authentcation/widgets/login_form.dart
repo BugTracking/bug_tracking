@@ -18,8 +18,7 @@ class _LoginFormState extends State<LoginForm> {
   bool _isVisible = true;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Form(
+    return Form(
           key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -27,7 +26,8 @@ class _LoginFormState extends State<LoginForm> {
             children: [
               CustomTextField(
                 hintText: 'User Name',
-                prefixIcon: Icon(Icons.person, color: AppColor.greyish),
+                prefixIcon: const Icon(Icons.person, color: AppColor.greyish,
+                ),
                 hintStyle: AppTexts.text16GreyNunitoSansRegular,
                 errorMsg: 'Field cannot be empty',
                 keyboardType: TextInputType.text,
@@ -38,7 +38,8 @@ class _LoginFormState extends State<LoginForm> {
                 obscureText: _isVisible,
                 hintText: 'Password',
                 hintStyle: AppTexts.text16GreyNunitoSansRegular,
-                prefixIcon: Icon(Icons.lock, color: AppColor.greyish),
+                prefixIcon: const Icon(Icons.lock, color: AppColor.greyish,
+                ),
                 suffixIcon: IconButton(
                   onPressed: () {
                     setState(() {
@@ -56,7 +57,7 @@ class _LoginFormState extends State<LoginForm> {
 
 
             ],
-          )),
+          ),
     );
   }
 }
