@@ -4,6 +4,7 @@ import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:bug_tracking/features/project_bugs/ui/screens/project_bugs_screen.dart';
+import 'package:bug_tracking/features/project_details/ui/screens/project_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -25,6 +26,11 @@ class AppRouter {
       case Routes.projectBugs:
         return MaterialPageRoute(
           builder: (context) => const ProjectBugsScreen(),
+        );
+
+      case Routes.projectDetails:
+        return MaterialPageRoute(
+          builder: (context) => const ProjectDetailsScreen(),
         );
       default:
         return null;
