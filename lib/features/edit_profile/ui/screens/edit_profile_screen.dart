@@ -1,4 +1,4 @@
-//import 'package:bug_tracking/features/edit_profile/ui/widgets/image_picker.dart';
+import 'package:bug_tracking/features/edit_profile/ui/widgets/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/features/edit_profile/ui/widgets/edit_form.dart';
@@ -22,7 +22,7 @@ class EditProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             verticalSpace(10.0),
-            //ImagePickerWidget(),
+            const ImagePickerWidget(),
             verticalSpace(40.0),
             const EditForm(),
             verticalSpace(16.0),
