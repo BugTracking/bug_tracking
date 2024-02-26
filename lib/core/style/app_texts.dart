@@ -14,10 +14,28 @@ class AppTexts {
         color: AppColor.blackish,
       );
 
+  static TextStyle get text12GreyCairoSemiBold => GoogleFonts.cairo(
+        fontSize: 12.sp,
+        fontWeight: AppFontWeight.semiBold,
+        color: AppColor.greyish,
+      );
+
+  static TextStyle get text12OnBackgroundCairoBold => GoogleFonts.cairo(
+        fontSize: 12.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
+
   static TextStyle get text21OnPrimaryNunitoSansBold => GoogleFonts.nunitoSans(
         fontSize: 21.sp,
         fontWeight: AppFontWeight.bold,
         color: Colors.white,
+      );
+
+  static TextStyle get text14PrimaryNunitoSansBold => GoogleFonts.nunitoSans(
+        fontSize: 14.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.bluish,
       );
 
   static TextStyle get text16OnPrimaryNunitoSansBold => GoogleFonts.nunitoSans(
@@ -47,6 +65,13 @@ class AppTexts {
       GoogleFonts.nunitoSans(
         fontSize: 16.sp,
         fontWeight: AppFontWeight.semiBold,
+        color: AppColor.blackish,
+      );
+
+  static TextStyle get text16OnBackgroundNunitoSansBold =>
+      GoogleFonts.nunitoSans(
+        fontSize: 16.sp,
+        fontWeight: AppFontWeight.bold,
         color: AppColor.blackish,
       );
 
