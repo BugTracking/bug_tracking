@@ -8,6 +8,7 @@ import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.
 import 'package:bug_tracking/features/project_bugs/ui/screens/project_bugs_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bug_tracking/features/edit_profile/ui/screens/edit_profile_screen.dart';
 
 class AppRouter {
   Route? onGeneratedRoute(RouteSettings settings) {
@@ -37,6 +38,11 @@ class AppRouter {
       case Routes.register:
         return MaterialPageRoute(
           builder: (context) => const RegisterScreen(),
+        );
+
+      case Routes.editProfile:
+        return MaterialPageRoute(
+          builder: (context) => const EditProfileScreen(),
         );
       default:
         return null;

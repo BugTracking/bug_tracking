@@ -33,8 +33,8 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
             child: CircleAvatar(
               backgroundImage: image != null
                   ? FileImage(File(image!.path)) as ImageProvider<Object>?
-                  : const AssetImage("assets/images/avatar.png.png") as ImageProvider<Object>?,
-              backgroundColor: Colors.grey,
+                  : const AssetImage("assets/images/avatar.png") as ImageProvider<Object>?,
+              backgroundColor: Colors.white,
             ),
           ),
           Positioned(
