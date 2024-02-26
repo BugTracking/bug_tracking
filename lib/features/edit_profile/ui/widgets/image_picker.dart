@@ -32,8 +32,9 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
             },
             child: CircleAvatar(
               backgroundImage: image != null
-                  ? FileImage(File(image!.path)) as ImageProvider<Object>?
-                  : const AssetImage("assets/images/avatar.png") as ImageProvider<Object>?,
+                  ? FileImage(File(image!.path))
+                  : const AssetImage("assets/images/avatar.png")
+                      as ImageProvider,
               backgroundColor: Colors.white,
             ),
           ),
@@ -42,12 +43,14 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
             right: -25,
             child: RawMaterialButton(
               onPressed: () {},
-
-
               elevation: 2.0,
-               child:const Icon(Icons.camera_alt_rounded, color: Colors.blue, size: 40.0,),
-              padding:const EdgeInsets.all(2.0),
+              padding: const EdgeInsets.all(2.0),
               shape: const CircleBorder(),
+              child: const Icon(
+                Icons.camera_alt_rounded,
+                color: Colors.blue,
+                size: 40.0,
+              ),
             ),
           ),
         ],
