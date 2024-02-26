@@ -21,7 +21,12 @@ class ProjectDetailsScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 10.0.w),
         child: Column(
           children: [
-            const CustomProjectInfo(),
+            const CustomProjectInfo(
+              lastUpdateOnText: '10/10/2022',
+              updatedByText: 'Adel Mohamed',
+              createdByText: 'Adel Mohamed',
+              createdAtText: '10/10/2022',
+            ),
             verticalSpace(10.0),
             const CustomDivider(),
             CustomListTitle(
