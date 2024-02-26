@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
@@ -48,7 +49,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
               shape: const CircleBorder(),
               child: const Icon(
                 Icons.camera_alt_rounded,
-                color: Colors.blue,
+                color: AppColor.bluish,
                 size: 40.0,
               ),
             ),
