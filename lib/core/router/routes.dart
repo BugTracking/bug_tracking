@@ -3,4 +3,6 @@ class Routes {
   static const String onBoarding = '/onBoarding';
   static const String getStarted = '/getStarted';
   static const String projectBugs = '/projectBugs';
+  static const String login = '/login';
+  static const String register = '/register';
 }
