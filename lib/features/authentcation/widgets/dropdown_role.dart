@@ -11,9 +11,7 @@ class RoleDropDownList extends StatefulWidget {
 }
 
 class _RoleDropDownListState extends State<RoleDropDownList> {
-  List<String> role_list = ['User', 'Admin'];
-
-
+  List<String> roles = ['User', 'Admin'];
 
   String? selectedRole;
 
@@ -22,26 +20,32 @@ class _RoleDropDownListState extends State<RoleDropDownList> {
     return DropdownButtonFormField2<String>(
       isExpanded: true,
       decoration: InputDecoration(
-        prefixIcon:const Icon(Icons.groups, color: AppColor.greyish,
+        prefixIcon: const Icon(
+          Icons.groups,
+          color: AppColor.greyish,
         ),
         contentPadding: const EdgeInsets.symmetric(vertical: 16),
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
-          borderSide:const BorderSide(color: AppColor.lightGrey, width: 0.8,),
+          borderSide: const BorderSide(
+            color: AppColor.lightGrey,
+            width: 0.8,
+          ),
           borderRadius: BorderRadius.circular(8.0),
         ),
-
       ),
       hint: Text(
         'Role',
         style: AppTexts.text16GreyNunitoSansRegular,
       ),
       value: selectedRole,
-      items: role_list.map((String value) {
+      items: roles.map((String value) {
         return DropdownMenuItem<String>(
           value: value,
-          child: Text(value,
-          style: AppTexts.text16GreyNunitoSansRegular,),
+          child: Text(
+            value,
+            style: AppTexts.text16GreyNunitoSansRegular,
+          ),
         );
       }).toList(),
       validator: (value) {
@@ -66,12 +70,9 @@ class _RoleDropDownListState extends State<RoleDropDownList> {
         iconSize: 24,
       ),
       dropdownStyleData: DropdownStyleData(
-          isOverButton:true,
+        isOverButton: true,
         decoration: BoxDecoration(
-
           borderRadius: BorderRadius.circular(10.0),
-
-
         ),
       ),
       menuItemStyleData: const MenuItemStyleData(
