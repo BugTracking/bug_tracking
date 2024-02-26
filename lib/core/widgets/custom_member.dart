@@ -23,10 +23,10 @@ class CustomMember extends StatelessWidget {
         Column(
           children: [
             CircleAvatar(
-              radius: 36,
+              radius: 30,
               backgroundColor: AppColor.bluish,
               child: CircleAvatar(
-                radius: 35,
+                radius: 28,
                 child: ClipOval(
                   child: CachedNetworkImage(
                     imageUrl:
