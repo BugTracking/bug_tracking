@@ -17,27 +17,27 @@ class ProjectDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const ProjectDetailsAppBarTitle(),
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 10.0.w),
-        child: Column(
-          children: [
-            const CustomProjectInfo(),
-            verticalSpace(10.0),
-            const CustomDivider(),
-            CustomListTitle(
-              onPressed: () {},
-              title: 'Bugs',
-            ),
-            verticalSpace(10.0),
-            const ProjectDetailsBugsList(),
-            CustomListTitle(
-              onPressed: () {},
-              title: 'Members',
-            ),
-            const Expanded(
-              child: ProjectDetailsMembers(),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 10.0.w),
+          child: Column(
+            children: [
+              const CustomProjectInfo(),
+              verticalSpace(10.0),
+              const CustomDivider(),
+              CustomListTitle(
+                onPressed: () {},
+                title: 'Bugs',
+              ),
+              verticalSpace(10.0),
+              const ProjectDetailsBugsList(),
+              CustomListTitle(
+                onPressed: () {},
+                title: 'Members',
+              ),
+              const ProjectDetailsMembers(),
+            ],
+          ),
         ),
       ),
     );

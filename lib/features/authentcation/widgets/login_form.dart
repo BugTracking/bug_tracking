@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/core/widgets/custom_textfield.dart';
+import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 
@@ -23,6 +23,7 @@ class _LoginFormState extends State<LoginForm> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CustomTextField(
+            controller: TextEditingController(),
             hintText: 'User Name',
             prefixIcon: const Icon(
               Icons.person,
@@ -35,6 +36,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
+            controller: TextEditingController(),
             obscureText: _isVisible,
             hintText: 'Password',
             hintStyle: AppTexts.text16GreyNunitoSansRegular,

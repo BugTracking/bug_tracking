@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 
 class CustomTextField extends StatelessWidget {
+  final TextEditingController controller;
   final String hintText;
   final Icon? prefixIcon;
   final IconButton? suffixIcon;
@@ -14,12 +15,13 @@ class CustomTextField extends StatelessWidget {
 
   const CustomTextField(
       {super.key,
+      required this.controller,
       required this.hintText,
       this.prefixIcon,
       this.color,
       this.hintStyle,
       this.suffixIcon,
-      this.obscureText = true,
+      this.obscureText = false,
       this.keyboardType,
       this.errorMsg,
       required this.textInputAction});

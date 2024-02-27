@@ -1,4 +1,3 @@
-import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_state.dart';
@@ -26,7 +25,7 @@ class OnBoardingPageView extends StatelessWidget {
                 OnBoardingImage(
                   image: cubit.onBoardingList[index].image,
                 ),
-                verticalSpace(context.height * 0.05),
+                verticalSpace(50),
                 OnBoardingTitleDescription(
                   title: cubit.onBoardingList[index].title,
                   description: cubit.onBoardingList[index].description,

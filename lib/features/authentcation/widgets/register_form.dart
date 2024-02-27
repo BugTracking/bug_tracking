@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/core/widgets/custom_textfield.dart';
+import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({Key? key}) : super(key: key);
@@ -24,6 +24,7 @@ class _RegisterFormState extends State<RegisterForm> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CustomTextField(
+            controller: TextEditingController(),
             hintText: 'Name',
             prefixIcon: const Icon(Icons.person, color: AppColor.greyish),
             hintStyle: AppTexts.text16GreyNunitoSansRegular,
@@ -33,6 +34,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
+            controller: TextEditingController(),
             hintText: 'User Name',
             prefixIcon: const Icon(Icons.person, color: AppColor.greyish),
             hintStyle: AppTexts.text16GreyNunitoSansRegular,
@@ -42,6 +44,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
+            controller: TextEditingController(),
             hintText: 'Email',
             prefixIcon: const Icon(
               Icons.email,
@@ -52,10 +55,9 @@ class _RegisterFormState extends State<RegisterForm> {
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
           ),
-
           verticalSpace(16.0),
-
           CustomTextField(
+            controller: TextEditingController(),
             hintText: 'Phone',
             prefixIcon: const Icon(
               Icons.phone_android,
@@ -66,10 +68,9 @@ class _RegisterFormState extends State<RegisterForm> {
             keyboardType: TextInputType.number,
             textInputAction: TextInputAction.done,
           ),
-
           verticalSpace(16.0),
-
           CustomTextField(
+            controller: TextEditingController(),
             obscureText: _passwordVisible,
             hintText: 'Password',
             hintStyle: AppTexts.text16GreyNunitoSansRegular,
@@ -92,9 +93,9 @@ class _RegisterFormState extends State<RegisterForm> {
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
           ),
-
           verticalSpace(16.0),
           CustomTextField(
+            controller: TextEditingController(),
             obscureText: _confirmPasswordVisible,
             hintText: 'Confirm Password',
             hintStyle: AppTexts.text16GreyNunitoSansRegular,
@@ -116,8 +117,6 @@ class _RegisterFormState extends State<RegisterForm> {
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
           ),
-
-          // HaveAccount(),
         ],
       ),
     );

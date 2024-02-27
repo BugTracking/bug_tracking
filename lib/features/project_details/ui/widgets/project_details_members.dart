@@ -16,6 +16,8 @@ class ProjectDetailsMembers extends StatelessWidget {
       ),
       separatorBuilder: (context, index) => verticalSpace(8.0),
       itemCount: 8,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
     );
   }
 }

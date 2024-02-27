@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTexts {
   AppTexts._();
-
   static TextStyle get text21OnBackgroundColorNunitoSansBold =>
       GoogleFonts.nunitoSans(
         fontSize: 21.sp,
