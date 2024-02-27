@@ -3,6 +3,7 @@ import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/core/widgets/custom_list_title.dart';
 import 'package:bug_tracking/core/widgets/custom_project_info_text.dart';
 import 'package:bug_tracking/core/widgets/custom_text_button.dart';
+import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_attachments_list.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_attachments_text.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_comments_list.dart';
@@ -10,6 +11,7 @@ import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_members
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_summary_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class BugDetailsScreen extends StatelessWidget {
   const BugDetailsScreen({super.key});
@@ -25,9 +27,11 @@ class BugDetailsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20.0.w,
-            vertical: 10.0.h,
+          padding: EdgeInsets.only(
+            left: 20.0.w,
+            right: 20.0.w,
+            top: 10.0.h,
+            bottom: 30.0.h,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,11 +59,21 @@ class BugDetailsScreen extends StatelessWidget {
                 title: 'Members',
               ),
               const BugDetailsMembersList(),
+              verticalSpace(8.0),
               const CustomListTitle(
                 title: 'Comments',
               ),
               const BugDetailsCommentsList(),
-              // TODO : Add Comment text field
+              verticalSpace(16.0),
+              CustomTextField(
+                controller: TextEditingController(),
+                hintText: 'Add a comment',
+                textInputAction: TextInputAction.done,
+                suffixIcon: IconButton(
+                  onPressed: () {},
+                  icon: SvgPicture.asset('assets/icons/post_icon.svg'),
+                ),
+              ),
             ],
           ),
         ),

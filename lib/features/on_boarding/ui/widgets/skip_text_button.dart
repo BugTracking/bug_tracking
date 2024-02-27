@@ -11,7 +11,7 @@ class SkipTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => context.push(Routes.bugDetails),
+      onPressed: () => context.push(Routes.getStarted),
       style: TextButton.styleFrom(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),

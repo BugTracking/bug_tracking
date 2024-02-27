@@ -18,7 +18,8 @@ class BugDetailsCommentsList extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       separatorBuilder: (context, index) => verticalSpace(5.0),
-      itemCount: 1,
+      padding: EdgeInsets.zero,
+      itemCount: 2,
     );
   }
 }
