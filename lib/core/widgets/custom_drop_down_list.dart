@@ -2,29 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class RoleDropDownList extends StatefulWidget {
-  const RoleDropDownList({Key? key}) : super(key: key);
-
-  @override
-  State<RoleDropDownList> createState() => _RoleDropDownListState();
-}
-
-class _RoleDropDownListState extends State<RoleDropDownList> {
-  List<String> roles = ['User', 'Admin'];
-
-  String? selectedRole;
+class CustomDropDownList extends StatelessWidget {
+  final List<String> items;
+  final Widget? prefixWidget;
+  final Widget? suffixWidget;
+  final String hintText;
+  final String selectedItem;
+  final void Function(String?) onChanged;
+  final String errorMsg;
+  const CustomDropDownList({
+    Key? key,
+    required this.items,
+    this.prefixWidget,
+    this.suffixWidget,
+    required this.hintText,
+    required this.selectedItem,
+    required this.onChanged,
+    required this.errorMsg,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField2<String>(
       isExpanded: true,
       decoration: InputDecoration(
-        prefixIcon: const Icon(
-          Icons.groups,
-          color: AppColor.greyish,
-        ),
-        contentPadding: const EdgeInsets.symmetric(vertical: 16),
+        prefixIcon: prefixWidget,
+        contentPadding: EdgeInsets.symmetric(vertical: 16.h),
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
@@ -35,30 +40,26 @@ class _RoleDropDownListState extends State<RoleDropDownList> {
         ),
       ),
       hint: Text(
-        'Role',
-        style: AppTexts.text16GreyNunitoSansRegular,
+        hintText,
+        style: AppTexts.text14GreyNunitoSansSemiBold,
       ),
-      value: selectedRole,
-      items: roles.map((String value) {
+      value: null,
+      items: items.map((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(
             value,
-            style: AppTexts.text16GreyNunitoSansRegular,
+            style: AppTexts.text16OnBackgroundNunitoSansSemiBold,
           ),
         );
       }).toList(),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'choose a role';
+          return errorMsg;
         }
         return null;
       },
-      onChanged: (String? newValue) {
-        setState(() {
-          selectedRole = newValue!;
-        });
-      },
+      onChanged: onChanged,
       buttonStyleData: const ButtonStyleData(
         padding: EdgeInsets.only(right: 8),
       ),

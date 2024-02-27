@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/widgets/custom_drop_down_list.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
@@ -14,6 +15,8 @@ class EditForm extends StatefulWidget {
 class _EditFormState extends State<EditForm> {
   final _formKey = GlobalKey<FormState>();
   bool _isVisible = true;
+  String roleSelected = '';
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -78,6 +81,22 @@ class _EditFormState extends State<EditForm> {
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
+          ),
+          verticalSpace(16.0),
+          CustomDropDownList(
+            hintText: 'Role',
+            prefixWidget: const Icon(
+              Icons.groups,
+              color: AppColor.greyish,
+            ),
+            onChanged: (value) {
+              setState(() {
+                roleSelected = value ?? '';
+              });
+            },
+            items: const ['User', 'Admin'],
+            selectedItem: roleSelected,
+            errorMsg: 'Choose a role',
           ),
         ],
       ),
