@@ -53,6 +53,8 @@ dependencies:
   flutter_bloc: ^8.1.4
   flutter_launcher_icons: ^0.13.1
   firebase_core: ^2.25.4
+  persistent_bottom_nav_bar:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
