@@ -69,6 +69,7 @@ class BugDetailsScreen extends StatelessWidget {
                 controller: TextEditingController(),
                 hintText: 'Add a comment',
                 textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.text,
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset('assets/icons/post_icon.svg'),

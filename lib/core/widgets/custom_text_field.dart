@@ -10,21 +10,22 @@ class CustomTextField extends StatelessWidget {
   final TextStyle? hintStyle;
   final bool obscureText;
   final String? errorMsg;
-  final TextInputType? keyboardType;
-  final TextInputAction? textInputAction;
+  final TextInputType keyboardType;
+  final TextInputAction textInputAction;
 
-  const CustomTextField(
-      {super.key,
-      required this.controller,
-      required this.hintText,
-      this.prefixIcon,
-      this.color,
-      this.hintStyle,
-      this.suffixIcon,
-      this.obscureText = false,
-      this.keyboardType,
-      this.errorMsg,
-      required this.textInputAction});
+  const CustomTextField({
+    super.key,
+    required this.controller,
+    required this.hintText,
+    this.prefixIcon,
+    this.color,
+    this.hintStyle,
+    this.suffixIcon,
+    this.obscureText = false,
+    required this.keyboardType,
+    this.errorMsg,
+    required this.textInputAction,
+  });
 
   @override
   Widget build(BuildContext context) {
