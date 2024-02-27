@@ -5,6 +5,7 @@ import 'package:bug_tracking/features/edit_profile/ui/widgets/edit_form.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/dropdown_role.dart';
+
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({Key? key}) : super(key: key);
 
@@ -26,17 +27,12 @@ class EditProfileScreen extends StatelessWidget {
             verticalSpace(40.0),
             const EditForm(),
             verticalSpace(16.0),
-
-           const RoleDropDownList(),
-
+            const RoleDropDownList(),
             verticalSpace(16.0),
             CustomButton(
-              onPressed: () {
-
-              },
+              onPressed: () {},
               text: 'Save Changes',
             ),
-
             verticalSpace(17.0),
           ],
         ),

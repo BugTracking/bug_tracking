@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
@@ -30,7 +29,6 @@ class _EditFormState extends State<EditForm> {
               Icons.person,
               color: AppColor.greyish,
             ),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -43,7 +41,6 @@ class _EditFormState extends State<EditForm> {
               Icons.person,
               color: AppColor.greyish,
             ),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -56,7 +53,6 @@ class _EditFormState extends State<EditForm> {
               Icons.email,
               color: AppColor.greyish,
             ),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -66,7 +62,6 @@ class _EditFormState extends State<EditForm> {
             controller: TextEditingController(),
             obscureText: _isVisible,
             hintText: 'Password',
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             prefixIcon: const Icon(
               Icons.lock,
               color: AppColor.greyish,

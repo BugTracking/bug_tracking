@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 
@@ -6,8 +7,6 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final Icon? prefixIcon;
   final IconButton? suffixIcon;
-  final Color? color;
-  final TextStyle? hintStyle;
   final bool obscureText;
   final String? errorMsg;
   final TextInputType keyboardType;
@@ -18,8 +17,6 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     required this.hintText,
     this.prefixIcon,
-    this.color,
-    this.hintStyle,
     this.suffixIcon,
     this.obscureText = false,
     required this.keyboardType,
@@ -34,11 +31,14 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: AppColor.lightGrey, width: 0.8),
+          borderSide: const BorderSide(
+            color: AppColor.lightGrey,
+            width: 0.8,
+          ),
           borderRadius: BorderRadius.circular(8.0),
         ),
         hintText: hintText,
-        hintStyle: hintStyle,
+        hintStyle: AppTexts.text16GreyNunitoSansRegular,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),

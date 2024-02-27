@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 
@@ -27,7 +26,6 @@ class _RegisterFormState extends State<RegisterForm> {
             controller: TextEditingController(),
             hintText: 'Name',
             prefixIcon: const Icon(Icons.person, color: AppColor.greyish),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -37,7 +35,6 @@ class _RegisterFormState extends State<RegisterForm> {
             controller: TextEditingController(),
             hintText: 'User Name',
             prefixIcon: const Icon(Icons.person, color: AppColor.greyish),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -50,7 +47,6 @@ class _RegisterFormState extends State<RegisterForm> {
               Icons.email,
               color: AppColor.greyish,
             ),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -63,7 +59,6 @@ class _RegisterFormState extends State<RegisterForm> {
               Icons.phone_android,
               color: AppColor.greyish,
             ),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.number,
             textInputAction: TextInputAction.done,
@@ -73,7 +68,6 @@ class _RegisterFormState extends State<RegisterForm> {
             controller: TextEditingController(),
             obscureText: _passwordVisible,
             hintText: 'Password',
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             prefixIcon: const Icon(
               Icons.lock,
               color: AppColor.greyish,
@@ -98,7 +92,6 @@ class _RegisterFormState extends State<RegisterForm> {
             controller: TextEditingController(),
             obscureText: _confirmPasswordVisible,
             hintText: 'Confirm Password',
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             prefixIcon: const Icon(Icons.lock, color: AppColor.greyish),
             suffixIcon: IconButton(
               onPressed: () {

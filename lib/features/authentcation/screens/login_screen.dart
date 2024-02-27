@@ -4,6 +4,7 @@ import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/auth_icon.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -25,7 +26,11 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
+            padding: EdgeInsets.only(
+              top: 20.0.h,
+              left: 15.0.w,
+              right: 15.0.w,
+            ),
             child: Column(
               children: [
                 const AuthScreenIcon(),
@@ -39,10 +44,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 verticalSpace(17.0),
                 CustomButton(
                   onPressed: () {},
-
                   text: 'Log In',
                 ),
-
               ],
             ),
           ),

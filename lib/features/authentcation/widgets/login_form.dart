@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
-import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 
 class LoginForm extends StatefulWidget {
@@ -29,7 +28,6 @@ class _LoginFormState extends State<LoginForm> {
               Icons.person,
               color: AppColor.greyish,
             ),
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.done,
@@ -39,7 +37,6 @@ class _LoginFormState extends State<LoginForm> {
             controller: TextEditingController(),
             obscureText: _isVisible,
             hintText: 'Password',
-            hintStyle: AppTexts.text16GreyNunitoSansRegular,
             prefixIcon: const Icon(
               Icons.lock,
               color: AppColor.greyish,
