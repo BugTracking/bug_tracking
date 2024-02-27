@@ -3,10 +3,11 @@ import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomOutlinedButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
-  const CustomButton({
+
+  const CustomOutlinedButton({
     super.key,
     required this.onPressed,
     required this.text,
@@ -17,16 +18,23 @@ class CustomButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: 45.0.h,
-      child: ElevatedButton(
+      child: OutlinedButton(
         onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.bluish,
+        style: OutlinedButton.styleFrom(
+          animationDuration: const Duration(milliseconds: 300),
           foregroundColor: AppColor.greyish,
+          side: const BorderSide(
+            color: Colors.blue,
+            style: BorderStyle.solid,
+          ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(12.0),
           ),
         ),
-        child: Text(text, style: AppTexts.text16OnPrimaryNunitoSansBold),
+        child: Text(
+          text,
+          style: AppTexts.text16PrimaryNunitoSansBold,
+        ),
       ),
     );
   }

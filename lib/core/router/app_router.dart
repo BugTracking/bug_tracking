@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
-import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
+import 'package:bug_tracking/features/authentcation/screens/login_screen.dart';
+import 'package:bug_tracking/features/authentcation/screens/register_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
@@ -8,6 +9,7 @@ import 'package:bug_tracking/features/project_bugs/ui/screens/project_bugs_scree
 import 'package:bug_tracking/features/project_details/ui/screens/project_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bug_tracking/features/edit_profile/ui/screens/edit_profile_screen.dart';
 
 class AppRouter {
   Route? onGeneratedRoute(RouteSettings settings) {
@@ -33,10 +35,19 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const ProjectDetailsScreen(),
         );
-
-      case Routes.bugDetails:
+      case Routes.login:
         return MaterialPageRoute(
-          builder: (context) => const BugDetailsScreen(),
+          builder: (context) => const LoginScreen(),
+        );
+
+      case Routes.register:
+        return MaterialPageRoute(
+          builder: (context) => const RegisterScreen(),
+        );
+
+      case Routes.editProfile:
+        return MaterialPageRoute(
+          builder: (context) => const EditProfileScreen(),
         );
       default:
         return null;

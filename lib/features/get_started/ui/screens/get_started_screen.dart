@@ -1,4 +1,3 @@
-import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/features/get_started/ui/widgets/get_started_buttons.dart';
 import 'package:bug_tracking/features/get_started/ui/widgets/get_started_image.dart';
@@ -23,7 +22,7 @@ class GetStartedScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const GetStartedImage(),
-                  verticalSpace(context.height * 0.05),
+                  verticalSpace(100),
                   const GetStartedTitleDescription(),
                 ],
               ),

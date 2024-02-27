@@ -49,9 +49,11 @@ class CustomProjectInfo extends StatelessWidget {
                     style: AppTexts.text12GreyCairoSemiBold,
                   ),
                   horizontalSpace(5),
-                  Text(
-                    updatedByText,
-                    style: AppTexts.text12OnBackgroundCairoBold,
+                  Expanded(
+                    child: Text(
+                      'Mohammed Adel',
+                      style: AppTexts.text12OnBackgroundCairoBold,
+                    ),
                   ),
                 ],
               ),
