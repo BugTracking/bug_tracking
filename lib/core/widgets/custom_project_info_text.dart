@@ -3,7 +3,17 @@ import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 
 class CustomProjectInfo extends StatelessWidget {
-  const CustomProjectInfo({super.key});
+  final String lastUpdateOnText;
+  final String updatedByText;
+  final String createdByText;
+  final String createdAtText;
+  const CustomProjectInfo({
+    super.key,
+    required this.lastUpdateOnText,
+    required this.updatedByText,
+    required this.createdByText,
+    required this.createdAtText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +34,7 @@ class CustomProjectInfo extends StatelessWidget {
                   horizontalSpace(5),
                   Expanded(
                     child: Text(
-                      '20 jun',
+                      lastUpdateOnText,
                       style: AppTexts.text12OnBackgroundCairoBold,
                     ),
                   ),
@@ -65,7 +75,7 @@ class CustomProjectInfo extends StatelessWidget {
                   horizontalSpace(5),
                   Expanded(
                     child: Text(
-                      '20 jun',
+                      createdByText,
                       style: AppTexts.text12OnBackgroundCairoBold,
                     ),
                   ),
@@ -82,7 +92,7 @@ class CustomProjectInfo extends StatelessWidget {
                   horizontalSpace(5),
                   Expanded(
                     child: Text(
-                      'Mohammed Adel',
+                      createdAtText,
                       style: AppTexts.text12OnBackgroundCairoBold,
                     ),
                   ),

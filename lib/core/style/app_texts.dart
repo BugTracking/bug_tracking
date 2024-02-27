@@ -79,6 +79,11 @@ class AppTexts {
         fontWeight: AppFontWeight.semiBold,
         color: AppColor.greyish,
       );
+  static TextStyle get text14GreyNunitoSansSemiBold => GoogleFonts.nunitoSans(
+        fontSize: 14.sp,
+        fontWeight: AppFontWeight.semiBold,
+        color: AppColor.greyish,
+      );
 
   static TextStyle get text10PrimaryNunitoSansSemiBold =>
       GoogleFonts.nunitoSans(
