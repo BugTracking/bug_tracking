@@ -3,6 +3,7 @@ import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/features/authentcation/screens/login_screen.dart';
 import 'package:bug_tracking/features/authentcation/screens/register_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
+import 'package:bug_tracking/features/home/ui/screens/home_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:bug_tracking/features/project_bugs/ui/screens/project_bugs_screen.dart';
@@ -45,6 +46,10 @@ class AppRouter {
           builder: (context) => const RegisterScreen(),
         );
 
+      case Routes.home:
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        );
       case Routes.editProfile:
         return MaterialPageRoute(
           builder: (context) => const EditProfileScreen(),
