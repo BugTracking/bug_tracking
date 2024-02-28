@@ -15,9 +15,10 @@ class AllProjectsScreen extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: const Icon(
-              Icons.settings,
+              Icons.settings_input_component_outlined,
               color: AppColor.blackish,
-              size: 35,
+              size: 25,
+
             ),
           ),
         ],
