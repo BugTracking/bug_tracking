@@ -26,7 +26,7 @@ class AllProjectsScreen extends StatelessWidget {
           horizontal: 16.0.w,
           vertical: 20.0.h,
         ),
-        //child: const ProjectList(),
+        child: const ProjectList(),
       ),
     );
   }
