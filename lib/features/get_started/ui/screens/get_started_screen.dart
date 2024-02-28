@@ -22,7 +22,7 @@ class GetStartedScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const GetStartedImage(),
-                  verticalSpace(100),
+                  verticalSpace(20),
                   const GetStartedTitleDescription(),
                 ],
               ),
