@@ -6,14 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
-  final Color? color;
-  final Color? textColor;
   const CustomButton({
     super.key,
     required this.onPressed,
     required this.text,
-    this.color = AppColor.bluish,
-    this.textColor = Colors.white,
   });
 
   @override
@@ -21,21 +17,16 @@ class CustomButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: 45.0.h,
-      child: MaterialButton(
+      child: ElevatedButton(
         onPressed: onPressed,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-          side: const BorderSide(
-            color: AppColor.bluish,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColor.bluish,
+          foregroundColor: AppColor.greyish,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.0),
           ),
         ),
-        color: color,
-        child: Text(
-          text,
-          style: textColor == Colors.white
-              ? AppTexts.text16OnPrimaryNunitoSansBold
-              : AppTexts.text16PrimaryNunitoSansBold,
-        ),
+        child: Text(text, style: AppTexts.text16OnPrimaryNunitoSansBold),
       ),
     );
   }

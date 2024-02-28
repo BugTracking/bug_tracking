@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 
-extension MediaQueryEx on BuildContext {
-  double get height => MediaQuery.sizeOf(this).height;
-  double get width => MediaQuery.sizeOf(this).width;
-}
-
 extension NavigationEx on BuildContext {
   void push(String routerName, {Object? arguments}) {
     Navigator.pushNamed(
@@ -32,6 +27,9 @@ extension NavigationEx on BuildContext {
   }
 
   void pop() {
-    Navigator.pop(this);
+    FocusScope.of(this).unfocus();
+    Future.delayed(const Duration(milliseconds: 200), () {
+      Navigator.of(this).pop();
+    });
   }
 }
