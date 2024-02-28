@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,7 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         selectedItemColor: AppColor.bluish,
-        unselectedItemColor: AppColor.blackish,
+        unselectedItemColor: AppColor.greyish,
+        selectedLabelStyle: AppTexts.text12PrimaryNunitoSansBold,
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: (index) {
