@@ -21,7 +21,6 @@ class AppColor {
 
   static const Color grayWithScale = Color(0xffA0AEC0);
 
-
   static const Color lightRed = Color(0xffE93C3C);
 
   static const Color darkYellow = Color(0xffD9A600);
