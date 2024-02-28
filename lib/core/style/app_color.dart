@@ -21,12 +21,11 @@ class AppColor {
 
   static const Color grayWithScale = Color(0xffA0AEC0);
 
-  static const Color lightRed = Color(0xffE93C3C);
+  static const Color darkYellowish = Color(0xffD9A600);
 
-  static const Color darkYellow = Color(0xffD9A600);
+  static const Color redish = Color(0xffE93C3C);
 
-  static const Color lighterGreyish = Color(0xffB4B4B4);
+  static const Color semiLightGreyish = Color(0xffD9D9D9);
 
-  static const Color lighterGrey = Color(0xffF4FAFF);
-
+  static const Color darkGreyish = Color(0xffB4B4B4);
 }
