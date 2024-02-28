@@ -13,6 +13,11 @@ void main() async {
   );
   setupGetIt();
   await ScreenUtil.ensureScreenSize();
+  // for splash screen duration
+  await Future.delayed(
+    const Duration(milliseconds: 1500),
+  );
+
   runApp(BugTrackingApp(
     appRouter: AppRouter(),
   ));
