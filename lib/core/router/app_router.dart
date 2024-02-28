@@ -30,7 +30,7 @@ class AppRouter {
 
       case Routes.home:
         return MaterialPageRoute(
-          builder: (context) => HomeScreen(),
+          builder: (context) => const HomeScreen(),
         );
       default:
         return null;
