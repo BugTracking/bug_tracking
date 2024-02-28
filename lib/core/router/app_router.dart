@@ -46,6 +46,10 @@ class AppRouter {
           builder: (context) => const RegisterScreen(),
         );
 
+      case Routes.home:
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        );
       case Routes.editProfile:
         return MaterialPageRoute(
           builder: (context) => const EditProfileScreen(),
