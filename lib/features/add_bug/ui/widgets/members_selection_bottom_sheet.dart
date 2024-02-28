@@ -2,7 +2,6 @@ import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/custom_member.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MembersSelectionBottomSheet extends StatelessWidget {
