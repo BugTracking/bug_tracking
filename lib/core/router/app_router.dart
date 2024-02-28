@@ -11,7 +11,6 @@ import 'package:bug_tracking/features/project_details/ui/screens/project_details
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bug_tracking/features/edit_profile/ui/screens/edit_profile_screen.dart';
-import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
 
 class AppRouter {
   Route? onGeneratedRoute(RouteSettings settings) {
@@ -56,10 +55,6 @@ class AppRouter {
           builder: (context) => const EditProfileScreen(),
         );
 
-      case Routes.allProjects:
-        return MaterialPageRoute(
-          builder: (context) => const AllProjectsScreen(),
-        );
       default:
         return null;
     }
