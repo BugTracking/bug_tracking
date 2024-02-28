@@ -13,7 +13,7 @@ class ProjectBody extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(right:65.0,top: 10.0),
+          padding: const EdgeInsets.only(right:65.0,top: 13.0),
           child:  Column(
             children: [
 
