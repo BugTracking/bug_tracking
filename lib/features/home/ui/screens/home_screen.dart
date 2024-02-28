@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,8 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
           FloatingActionButtonLocation.miniCenterDocked,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.black45,
+        selectedItemColor: AppColor.bluish,
+        unselectedItemColor: AppColor.blackish,
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: (index) {
