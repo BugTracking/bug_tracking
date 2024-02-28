@@ -3,27 +3,30 @@ import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 
-class RoleDropDownList extends StatefulWidget {
-  const RoleDropDownList({Key? key}) : super(key: key);
-
-  @override
-  State<RoleDropDownList> createState() => _RoleDropDownListState();
-}
-
-class _RoleDropDownListState extends State<RoleDropDownList> {
-  List<String> roles = ['User', 'Admin'];
-
-  String? selectedRole;
+class CustomDropDownList extends StatelessWidget {
+  final List<String> items;
+  final Widget? prefixWidget;
+  final Widget? suffixWidget;
+  final String hintText;
+  final String selectedItem;
+  final void Function(String?) onChanged;
+  const CustomDropDownList({
+    Key? key,
+    required this.items,
+    this.prefixWidget,
+    this.suffixWidget,
+    required this.hintText,
+    required this.selectedItem,
+    required this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print(selectedItem);
     return DropdownButtonFormField2<String>(
       isExpanded: true,
       decoration: InputDecoration(
-        prefixIcon: const Icon(
-          Icons.groups,
-          color: AppColor.greyish,
-        ),
+        prefixIcon: prefixWidget,
         contentPadding: const EdgeInsets.symmetric(vertical: 16),
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
@@ -35,11 +38,11 @@ class _RoleDropDownListState extends State<RoleDropDownList> {
         ),
       ),
       hint: Text(
-        'Role',
+        hintText,
         style: AppTexts.text16GreyNunitoSansRegular,
       ),
-      value: selectedRole,
-      items: roles.map((String value) {
+      value: selectedItem,
+      items: items.map((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(
@@ -54,11 +57,7 @@ class _RoleDropDownListState extends State<RoleDropDownList> {
         }
         return null;
       },
-      onChanged: (String? newValue) {
-        setState(() {
-          selectedRole = newValue!;
-        });
-      },
+      onChanged: onChanged,
       buttonStyleData: const ButtonStyleData(
         padding: EdgeInsets.only(right: 8),
       ),

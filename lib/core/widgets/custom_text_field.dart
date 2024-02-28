@@ -37,6 +37,13 @@ class CustomTextField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(8.0),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: AppColor.bluish,
+            width: 0.8,
+          ),
+          borderRadius: BorderRadius.circular(8.0),
+        ),
         hintText: hintText,
         hintStyle: AppTexts.text16GreyNunitoSansRegular,
         prefixIcon: prefixIcon,

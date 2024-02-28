@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/features/add_bug/ui/widgets/add_bug_form.dart';
 
 import 'package:bug_tracking/features/add_bug/ui/widgets/upload_attachments.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class AddBugScreen extends StatelessWidget {
           width: double.infinity,
           child: Padding(
             padding: EdgeInsets.only(
-              top: 30.0.h,
+              top: 25.0.h,
               left: 20.0.w,
               right: 20.0.w,
             ),
@@ -26,6 +27,8 @@ class AddBugScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const UploadAttachments(),
+                verticalSpace(10.0),
+                const AddBugForm(),
                 verticalSpace(10.0),
               ],
             ),

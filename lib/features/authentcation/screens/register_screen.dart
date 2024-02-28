@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/auth_icon.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/core/widgets/dropdown_role.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +15,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  String roleSelected = '';
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -46,8 +46,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const AuthScreenIcon(),
                   verticalSpace(32.0),
                   const RegisterForm(),
-                  verticalSpace(16.0),
-                  const RoleDropDownList(),
                   verticalSpace(16.0),
                   CustomButton(
                     onPressed: () {},
