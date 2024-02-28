@@ -28,7 +28,7 @@ class _RegisterFormState extends State<RegisterForm> {
             prefixIcon: const Icon(Icons.person, color: AppColor.greyish),
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.done,
+            textInputAction: TextInputAction.next,
           ),
           verticalSpace(16.0),
           CustomTextField(
@@ -37,7 +37,7 @@ class _RegisterFormState extends State<RegisterForm> {
             prefixIcon: const Icon(Icons.person, color: AppColor.greyish),
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.done,
+            textInputAction: TextInputAction.next,
           ),
           verticalSpace(16.0),
           CustomTextField(
@@ -49,7 +49,7 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.done,
+            textInputAction: TextInputAction.next,
           ),
           verticalSpace(16.0),
           CustomTextField(
@@ -61,7 +61,7 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.number,
-            textInputAction: TextInputAction.done,
+            textInputAction: TextInputAction.next,
           ),
           verticalSpace(16.0),
           CustomTextField(
@@ -85,7 +85,7 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.done,
+            textInputAction: TextInputAction.next,
           ),
           verticalSpace(16.0),
           CustomTextField(

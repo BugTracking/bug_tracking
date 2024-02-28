@@ -30,7 +30,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
             errorMsg: 'Field cannot be empty',
             keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.done,
+            textInputAction: TextInputAction.next,
           ),
           verticalSpace(16.0),
           CustomTextField(
