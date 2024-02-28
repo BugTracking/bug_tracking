@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: AppColor.bluish,
           foregroundColor: AppColor.greyish,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(12.0),
           ),
         ),
         child: Text(text, style: AppTexts.text16OnPrimaryNunitoSansBold),

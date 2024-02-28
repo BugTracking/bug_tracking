@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomDropDownList extends StatelessWidget {
   final List<String> items;
@@ -10,6 +11,7 @@ class CustomDropDownList extends StatelessWidget {
   final String hintText;
   final String selectedItem;
   final void Function(String?) onChanged;
+  final String errorMsg;
   const CustomDropDownList({
     Key? key,
     required this.items,
@@ -18,16 +20,16 @@ class CustomDropDownList extends StatelessWidget {
     required this.hintText,
     required this.selectedItem,
     required this.onChanged,
+    required this.errorMsg,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print(selectedItem);
     return DropdownButtonFormField2<String>(
       isExpanded: true,
       decoration: InputDecoration(
         prefixIcon: prefixWidget,
-        contentPadding: const EdgeInsets.symmetric(vertical: 16),
+        contentPadding: EdgeInsets.symmetric(vertical: 16.h),
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
@@ -39,21 +41,21 @@ class CustomDropDownList extends StatelessWidget {
       ),
       hint: Text(
         hintText,
-        style: AppTexts.text16GreyNunitoSansRegular,
+        style: AppTexts.text14GreyNunitoSansSemiBold,
       ),
-      value: selectedItem,
+      value: null,
       items: items.map((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(
             value,
-            style: AppTexts.text16GreyNunitoSansRegular,
+            style: AppTexts.text16OnBackgroundNunitoSansSemiBold,
           ),
         );
       }).toList(),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'choose a role';
+          return errorMsg;
         }
         return null;
       },

@@ -6,6 +6,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTexts {
   AppTexts._();
+  static TextStyle get text12BlackSFProBold => GoogleFonts.cairo(
+        fontSize: 12.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
   static TextStyle get text21OnBackgroundColorNunitoSansBold =>
       GoogleFonts.nunitoSans(
         fontSize: 21.sp,
@@ -22,6 +27,11 @@ class AppTexts {
   static TextStyle get text12OnBackgroundCairoBold => GoogleFonts.cairo(
         fontSize: 12.sp,
         fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
+  static TextStyle get text14OnBackgroundCairoSemiBold => GoogleFonts.cairo(
+        fontSize: 14.sp,
+        fontWeight: AppFontWeight.semiBold,
         color: AppColor.blackish,
       );
   static TextStyle get text12OnBackgroundNunitoSansSemiBold =>

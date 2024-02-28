@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -11,6 +12,7 @@ class CustomTextField extends StatelessWidget {
   final String? errorMsg;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
+  final bool isEnabled;
 
   const CustomTextField({
     super.key,
@@ -22,6 +24,7 @@ class CustomTextField extends StatelessWidget {
     required this.keyboardType,
     this.errorMsg,
     required this.textInputAction,
+    this.isEnabled = true,
   });
 
   @override
@@ -29,8 +32,18 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       obscureText: obscureText,
       decoration: InputDecoration(
+        enabled: isEnabled,
+        contentPadding:
+            EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.0.w),
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: AppColor.lightGrey,
+            width: 0.8,
+          ),
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        disabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: AppColor.lightGrey,
             width: 0.8,
@@ -45,7 +58,7 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.0),
         ),
         hintText: hintText,
-        hintStyle: AppTexts.text16GreyNunitoSansRegular,
+        hintStyle: AppTexts.text14GreyNunitoSansSemiBold,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),

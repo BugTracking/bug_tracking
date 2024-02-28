@@ -15,7 +15,7 @@ class _RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
   bool _passwordVisible = true;
   bool _confirmPasswordVisible = true;
-  String roleSelected = 'User';
+  String roleSelected = '';
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -126,6 +126,7 @@ class _RegisterFormState extends State<RegisterForm> {
             },
             items: const ['User', 'Admin'],
             selectedItem: roleSelected,
+            errorMsg: 'Choose a role',
           ),
         ],
       ),
