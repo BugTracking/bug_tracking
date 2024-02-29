@@ -54,6 +54,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const EditProfileScreen(),
         );
+
       default:
         return null;
     }
