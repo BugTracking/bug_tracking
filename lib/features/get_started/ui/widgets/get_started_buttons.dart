@@ -11,7 +11,9 @@ class GetStartedButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+
         CustomButton(
+
           onPressed: () {
             Navigator.pushNamed(context, Routes.register);
           },
