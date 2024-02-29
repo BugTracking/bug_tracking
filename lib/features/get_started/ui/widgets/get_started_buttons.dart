@@ -14,14 +14,6 @@ class GetStartedButtons extends StatelessWidget {
         CustomButton(
 
           onPressed: () {
-            Navigator.pushNamed(context, Routes.notfications);
-          },
-          text: 'notfications',
-        ),
-        verticalSpace(10.0),
-        CustomButton(
-
-          onPressed: () {
             Navigator.pushNamed(context, Routes.register);
           },
           text: 'Register',

@@ -11,7 +11,7 @@ class NotficationsHeader extends StatelessWidget {
      children: [
        Row(
          children: [
-
+           verticalSpace(12),
            Image.asset('assets/icons/notfications_icon.png'),
            horizontalSpace(16),
            Text('Notfications Tile',style: AppTexts.text12OnBackgroundNunitoSansSemiBold,

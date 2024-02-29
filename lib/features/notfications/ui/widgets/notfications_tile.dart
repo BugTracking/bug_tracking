@@ -21,11 +21,7 @@ class NotificationsTile extends StatelessWidget {
           child:  const Column(
             children: [
                NotficationsHeader(),
-
-              NotficationsBody(),
-
-
-
+               NotficationsBody(),
             ],
           ),
         ),
