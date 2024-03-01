@@ -1,5 +1,7 @@
+import 'package:bug_tracking/core/helpers/show_bottom_sheet_function.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/features/project_members/ui/widgets/add_member.dart';
 import 'package:bug_tracking/features/project_members/ui/widgets/project_members_list.dart';
 import 'package:bug_tracking/features/project_members/ui/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,9 @@ class ProjectMembersScreen extends StatelessWidget {
           title: const Text('Members'),
         actions: [
           IconButton(
-            onPressed: (){},
+            onPressed: (){
+             showCustomBottomSheet(context, const [AddMember()]);
+            },
             icon: const Icon(Icons.add,color: AppColor.bluish,),
           ),
         ],
@@ -28,7 +32,7 @@ class ProjectMembersScreen extends StatelessWidget {
         child:  SingleChildScrollView(
           child: Column(
             children: [
-               const SearchWidget(),
+               const SearchWidget(hintText: 'Search Here...',),
                verticalSpace(10),
                const ProjectMembersList(),
             ],
