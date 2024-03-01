@@ -17,7 +17,9 @@ class _SearchWidgetState extends State<SearchWidget> {
         hintText: 'Search Here...',
         keyboardType: TextInputType.text,
         textInputAction: TextInputAction.done,
-      prefixIcon:const Icon(Icons.search,color: AppColor.lightGrey,
+        prefixIcon:const Icon(
+          Icons.search,
+        color: AppColor.lightGrey,
       ),
     );
   }
