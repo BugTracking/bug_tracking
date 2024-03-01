@@ -11,7 +11,6 @@ class GetStartedButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         CustomButton(
 
           onPressed: () {

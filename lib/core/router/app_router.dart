@@ -55,6 +55,7 @@ class AppRouter {
           builder: (context) => const EditProfileScreen(),
         );
 
+
       default:
         return null;
     }
