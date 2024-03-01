@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/features/add_project/ui/screens/add_project_screen.dart';
 import 'package:flutter/material.dart';
 
 class SkipTextButton extends StatelessWidget {
@@ -11,7 +12,12 @@ class SkipTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => context.push(Routes.getStarted),
+      onPressed: () => Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AddProjectScreen(),
+          ),
+          (route) => false),
       style: TextButton.styleFrom(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
