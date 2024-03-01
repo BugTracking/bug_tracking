@@ -13,49 +13,39 @@ class ProjectBody extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(right:65.0,top: 13.0),
-          child:  Column(
+          padding: const EdgeInsets.only(right: 65.0, top: 13.0),
+          child: Column(
             children: [
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Drug App", style: AppTexts.text16OnBackgroundNunitoSansSemiBold),
-
+                  Text("Drug App",
+                      style: AppTexts.text16OnBackgroundNunitoSansSemiBold),
                   const CustomPriorityStatusContainer(
                     text: 'Not Started Yet',
                     color: AppColor.redish,
                   ),
-
                 ],
-
               ),
               verticalSpace(8.0),
               Row(
-               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-
-                  Text("Last Update on 20 Jun",style: AppTexts.text8GreyNunitoSansRegular),
-                  Text("Created on 10 May",style: AppTexts.text8GreyNunitoSansRegular),
-
+                  Text("Last Update on 20 Jun",
+                      style: AppTexts.text8GreyNunitoSansRegular),
+                  Text("Created on 10 May",
+                      style: AppTexts.text8GreyNunitoSansRegular),
                 ],
               ),
-
             ],
-
-
           ),
         ),
-
         const Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-             ProjectMembers(),
-          ],),
-
-
-
-
+            ProjectMembers(),
+          ],
+        ),
       ],
     );
   }
