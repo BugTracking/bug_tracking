@@ -1,5 +1,7 @@
+import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/features/project_members/ui/widgets/project_members_list.dart';
-import 'package:bug_tracking/features/project_members/ui/widgets/search.dart';
+import 'package:bug_tracking/features/project_members/ui/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,7 +16,7 @@ class ProjectMembersScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: (){},
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add,color: AppColor.bluish,),
           ),
         ],
       ),
@@ -23,11 +25,14 @@ class ProjectMembersScreen extends StatelessWidget {
           horizontal: 16.0.w,
           vertical: 20.0.h,
         ),
-        child: const Column(
-          children: [
-             SearchWidget(),
-             ProjectMembersList(),
-          ],
+        child:  SingleChildScrollView(
+          child: Column(
+            children: [
+               const SearchWidget(),
+               verticalSpace(10),
+               const ProjectMembersList(),
+            ],
+          ),
         ),
       ),
 
