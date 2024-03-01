@@ -6,17 +6,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomOutlinedButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
+  final double? width;
 
   const CustomOutlinedButton({
     super.key,
     required this.onPressed,
     required this.text,
+    this.width,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width:width?? double.infinity,
       height: 45.0.h,
       child: OutlinedButton(
         onPressed: onPressed,

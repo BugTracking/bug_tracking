@@ -6,16 +6,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
+  final double? width;
+
   const CustomButton({
     super.key,
     required this.onPressed,
     required this.text,
+    this.width,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: width??double.infinity,
       height: 45.0.h,
       child: ElevatedButton(
         onPressed: onPressed,
