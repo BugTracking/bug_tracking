@@ -23,10 +23,8 @@ class ProjectTile extends StatelessWidget {
             children: [
               //const ProjectHeader(),
               const ProjectBody(),
-
-
               verticalSpace(10.0),
-             // const ProjectBugBody(),
+
             ],
           ),
         ),

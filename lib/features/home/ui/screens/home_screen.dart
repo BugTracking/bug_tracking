@@ -26,16 +26,20 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text('Home',style: AppTexts.text21OnBackgroundColorNunitoSansBold,),
       ),
-      body: Padding(
-        padding:  EdgeInsets.all(8.0.w),
-        child: Column(
-          children: [
-            const BugProjectContainers(),
-            verticalSpace(20),
-            //LatestProjects(),
-            LatestBugs(),
-          ],
-
+      body: SingleChildScrollView(
+        child: Padding(
+          padding:  EdgeInsets.all(8.0.w),
+          child: Column(
+            children: [
+              verticalSpace(20),
+              const BugProjectContainers(),
+              verticalSpace(20),
+              LatestProjects(),
+              verticalSpace(20),
+              LatestBugs(),
+            ],
+        
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
