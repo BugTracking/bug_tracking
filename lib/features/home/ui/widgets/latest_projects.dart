@@ -31,7 +31,7 @@ class LatestProjects extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
           ),
           child:
-              LatestProjectBody()
+              const LatestProjectBody()
 
         ),
 
