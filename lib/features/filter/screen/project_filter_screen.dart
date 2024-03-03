@@ -1,8 +1,9 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
-import 'package:bug_tracking/core/widgets/custom_outlined_button.dart';
+import 'package:bug_tracking/features/filter/widgets/filter_box.dart';
+import 'package:bug_tracking/features/filter/widgets/filter_buttons.dart';
 import 'package:bug_tracking/features/filter/widgets/filter_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,8 +19,8 @@ class ProjectFilterScreen extends StatefulWidget {
 class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
   List<String> projectNames = [
     'All',
-    'Saveto' 'BugTracker',
-    'Salla',
+    'Saveto'
+        'hello',
     'ToDo',
     'Bug'
   ];
@@ -33,31 +34,7 @@ class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Text(
-                  "Filter ",
-                  style: AppTexts.text24OnBackgroundNunitoSansSemiBold,
-                ),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      padding: const EdgeInsets.all(10.0),
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.black,
-                    ),
-                    child: const Icon(
-                      Icons.close,
-                      size: 30.0,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            const FilterBox(),
             verticalSpace(20.0),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -89,29 +66,12 @@ class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
                   dateName: "Created date ",
                   date: '13/2/2024',
                 ),
-                verticalSpace(15.0),
+                
                 const DugDate(date: '', dateName: "Last Updated "),
               ],
             ),
             verticalSpace(30.0),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(
-                    width: 150.0.w,
-                    child: CustomOutlinedButton(
-                      text: 'Reset',
-                      onPressed: () {},
-                    )),
-                horizontalSpace(10.0.w),
-                SizedBox(
-                    width: 150.0.w,
-                    child: CustomButton(
-                      text: 'Apply',
-                      onPressed: () {},
-                    )),
-              ],
-            ),
+            const FilterButtons(),
           ],
         ),
       ),
