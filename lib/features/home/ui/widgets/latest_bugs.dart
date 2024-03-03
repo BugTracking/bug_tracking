@@ -16,9 +16,8 @@ class LatestBugs extends StatelessWidget {
             Text('Latest Bugs',style: AppTexts.text16OnBackgroundNunitoSansBold,),
             CustomTextButton(onPressed: (){}, text: 'View All'),
           ],
-
         ),
-      verticalSpace(15),
+        verticalSpace(5),
         LatestBugsList(),
       ],
     );
