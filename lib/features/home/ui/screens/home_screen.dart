@@ -1,5 +1,6 @@
-
+import 'package:bug_tracking/core/helpers/show_bottom_sheet_function.dart';
 import 'package:bug_tracking/core/widgets/custom_buttom_Navigation.dart';
+import 'package:bug_tracking/features/home/ui/widgets/add_radio_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,7 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+         showCustomBottomSheet(context,const[AddRadioList()]);
+        },
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),
