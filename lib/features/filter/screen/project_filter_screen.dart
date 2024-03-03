@@ -1,5 +1,4 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
@@ -7,7 +6,7 @@ import 'package:bug_tracking/core/widgets/custom_outlined_button.dart';
 import 'package:bug_tracking/features/filter/widgets/filter_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:bug_tracking/features/filter/widgets/bug_date..dart';
+import 'package:bug_tracking/features/filter/widgets/bug_date.dart';
 
 class ProjectFilterScreen extends StatefulWidget {
   const ProjectFilterScreen({super.key});
@@ -17,6 +16,15 @@ class ProjectFilterScreen extends StatefulWidget {
 }
 
 class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
+  List<String> projectNames = [
+    'All',
+    'Saveto' 'BugTracker',
+    'Salla',
+    'ToDo',
+    'Bug'
+  ];
+  int projectNameSelected = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +50,9 @@ class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
                       backgroundColor: Colors.white,
                       foregroundColor: Colors.black,
                     ),
-                    child: Text(
-                      "x",
-                      style: AppTexts.text24OnBackgroundNunitoSansSemiBold,
+                    child: const Icon(
+                      Icons.close,
+                      size: 30.0,
                     ),
                   ),
                 ),
@@ -58,39 +66,38 @@ class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
                 Text("Project Name ",
                     style: AppTexts.text14PrimaryNunitoSansBold),
                 verticalSpace(10.0),
-                const Row(
-                  children: [
-                    FilterContainer(
-                      text: "all",
+                Wrap(
+                  runSpacing: 8.0,
+                  children: List.generate(
+                    projectNames.length,
+                    (index) => GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          projectNameSelected = index;
+                        });
+                      },
+                      child: FilterContainer(
+                        text: projectNames[index],
+                        isSelected: projectNameSelected == index,
+                      ),
                     ),
-                    FilterContainer(
-                      text: "Drug all",
-                    ),
-                    FilterContainer(
-                      text: "Saveto",
-                    ),
-                  ],
-                ),
-                verticalSpace(10.0),
-                const FilterContainer(
-                  text: "Saveto",
+                  ),
                 ),
                 verticalSpace(15.0),
                 const CustomDivider(),
-                const DugDateScreen(
-                  DateName: "Created date ",
-                  Date: '13/2/2024',
+                const DugDate(
+                  dateName: "Created date ",
+                  date: '13/2/2024',
                 ),
                 verticalSpace(15.0),
-                const DugDateScreen(Date: '', DateName: "Last Updated "),
+                const DugDate(date: '', dateName: "Last Updated "),
               ],
             ),
             verticalSpace(30.0),
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
-              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                     width: 150.0.w,
                     child: CustomOutlinedButton(
                       text: 'Reset',
