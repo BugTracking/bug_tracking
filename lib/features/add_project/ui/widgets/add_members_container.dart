@@ -2,8 +2,8 @@ import 'package:bug_tracking/core/widgets/add_container.dart';
 import 'package:bug_tracking/features/add_bug/ui/widgets/members_selection_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
-class AssignedToContainer extends StatelessWidget {
-  const AssignedToContainer({super.key});
+class AddMembersContainer extends StatelessWidget {
+  const AddMembersContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class AssignedToContainer extends StatelessWidget {
         );
       },
       child: const AddContainer(
-        title: 'Assigned To',
+        title: 'Add Members',
       ),
     );
   }

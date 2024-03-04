@@ -2,6 +2,7 @@ import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 import 'package:bug_tracking/core/widgets/selected_items.dart';
+import 'package:bug_tracking/features/add_project/ui/widgets/add_members_container.dart';
 import 'package:flutter/material.dart';
 
 class AddProjectForm extends StatelessWidget {
@@ -39,20 +40,7 @@ class AddProjectForm extends StatelessWidget {
             items: const ['Category 1', 'Category 2', 'Category 3'],
           ),
           verticalSpace(10.0),
-          CustomTextField(
-            controller: TextEditingController(),
-            hintText: 'Add Members',
-            keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.next,
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.add,
-                color: AppColor.bluish,
-                size: 30,
-              ),
-            ),
-          ),
+          const AddMembersContainer(),
           verticalSpace(10.0),
           SelectedItems(
             onClosePressed: (index) {},

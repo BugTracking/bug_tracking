@@ -1,5 +1,4 @@
-
-import 'package:bug_tracking/core/widgets/custom_buttom_Navigation.dart';
+import 'package:bug_tracking/core/widgets/custom_button_navigation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,14 +9,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-
-      ),
+      body: Container(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         shape: const CircleBorder(),
@@ -25,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterDocked,
-      bottomNavigationBar: const CustomButtomNavigation(),
+      bottomNavigationBar: const CustomButtonNavigation(),
     );
   }
 }
