@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/features/allbugs/ui/widgets/bugs_list.dart';
+import 'package:bug_tracking/features/filter/screen/bug_filter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +14,13 @@ class AllBugsScreen extends StatelessWidget {
         title: const Text('Bugs'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                builder: (context) => const BugFilterScreen(),
+              );
+            },
             icon: const Icon(
               Icons.settings_input_component_outlined,
               color: AppColor.blackish,

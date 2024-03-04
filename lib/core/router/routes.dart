@@ -13,4 +13,5 @@ class Routes {
   static const String bugDetails = '/bugDetails';
   static const String allProjects = '/allProjects';
   static const String members = '/members';
+  static const String allBugs = '/allBugs';
 }

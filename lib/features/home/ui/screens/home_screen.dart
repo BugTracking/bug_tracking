@@ -3,7 +3,7 @@ import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
-import 'package:bug_tracking/features/home/ui/widgets/add_radio_list.dart';
+import 'package:bug_tracking/features/home/ui/widgets/add_bug_project_buttons.dart';
 import 'package:bug_tracking/features/notfications/ui/screens/notfications_screen.dart';
 import 'package:bug_tracking/features/settings/ui/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: screens[currentIndex],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showCustomBottomSheet(context, const [AddRadioList()]);
+          showCustomBottomSheet(context, const [
+            AddBugProjectButtons(),
+          ]);
         },
         shape: const CircleBorder(),
         child: const Icon(Icons.add),

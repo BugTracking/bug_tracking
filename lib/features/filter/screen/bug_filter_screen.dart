@@ -31,7 +31,10 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 50.0.h),
+        padding: EdgeInsets.symmetric(
+          horizontal: 20.w,
+          vertical: 50.0.h,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

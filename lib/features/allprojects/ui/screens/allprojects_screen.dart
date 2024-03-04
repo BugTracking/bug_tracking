@@ -15,8 +15,9 @@ class AllProjectsScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              showBottomSheet(
+              showModalBottomSheet(
                 context: context,
+                isScrollControlled: true,
                 builder: (context) => const ProjectFilterScreen(),
               );
             },
