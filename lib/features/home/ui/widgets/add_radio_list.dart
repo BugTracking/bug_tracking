@@ -1,5 +1,8 @@
-import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/widgets/custom_button.dart';
+import 'package:bug_tracking/core/widgets/custom_outlined_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class AddRadioList extends StatefulWidget {
   const AddRadioList({Key? key}) : super(key: key);
 
@@ -8,34 +11,17 @@ class AddRadioList extends StatefulWidget {
 }
 
 class _AddRadioListState extends State<AddRadioList> {
-  int _selectedOption = 0;
+
   @override
   Widget build(BuildContext context) {
     return Column(
+
       children: [
-        RadioListTile(
-          title: Text('Add Bug',
-            style: AppTexts.text14OnBackgroundCairoSemiBold,
-          ),
-          value: 0,
-          groupValue: _selectedOption,
-          onChanged: (value) {
-            setState(() {
-              _selectedOption = value!;
-            });
-          },
-        ),
-        RadioListTile(
-          title: Text('Add Project',
-            style: AppTexts.text14OnBackgroundCairoSemiBold,),
-          value: 1,
-          groupValue: _selectedOption,
-          onChanged: (value) {
-            setState(() {
-              _selectedOption = value!;
-            });
-          },
-        ),
+        verticalSpace(20),
+        CustomButton(onPressed: (){}, text: 'Add Bug',width: 250.w,),
+        verticalSpace(20),
+        CustomOutlinedButton(onPressed: (){}, text: 'Add Project',width: 250.w,),
+
       ],
     );
   }
