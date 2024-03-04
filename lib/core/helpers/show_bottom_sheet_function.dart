@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void showCustomBottomSheet(BuildContext context, List<Widget> children) {
   showModalBottomSheet(
     context: context,
+    isScrollControlled: true,
     builder: (BuildContext context) {
       return ClipRect(
         child: Container(

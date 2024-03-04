@@ -2,8 +2,8 @@ import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/features/filter/widgets/bug_date.dart';
+import 'package:bug_tracking/features/filter/widgets/bug_filter_submit.dart';
 import 'package:bug_tracking/features/filter/widgets/filter_box.dart';
-import 'package:bug_tracking/features/filter/widgets/filter_buttons.dart';
 import 'package:bug_tracking/features/filter/widgets/filter_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,10 +30,11 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 50.0.h),
-          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 50.0.h),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
             const FilterBox(),
             verticalSpace(20.0),
             Column(
@@ -99,8 +100,9 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
                 const DugDate(date: '', dateName: "Last Updated "),
               ],
             ),
-            const FilterButtons(),
-          ]),
+            const Spacer(),
+            const BugFilterSubmit(),
+          ],
         ),
       ),
     );

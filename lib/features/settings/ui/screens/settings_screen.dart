@@ -1,7 +1,11 @@
+import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/core/widgets/custom_text_button.dart';
 import 'package:bug_tracking/features/edit_profile/ui/widgets/image_picker.dart';
+import 'package:bug_tracking/features/members/ui/widgets/add_member.dart';
 import 'package:bug_tracking/features/settings/ui/widgets/settings_container.dart';
 import 'package:bug_tracking/features/settings/ui/widgets/logout_button.dart';
 import 'package:flutter/material.dart';
@@ -26,23 +30,22 @@ class _SettingScreenState extends State<SettingScreen> {
           style: AppTexts.text21OnBackgroundColorNunitoSansBold,
         ),
       ),
-      body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(children: [
-            verticalSpace(10.0),
-            const Center(child: ImagePickerWidget()),
-            TextButton(
-                onPressed: () {},
-                child: Text(
-                  "Edit Profile",
-                  style: AppTexts.text16PrimaryNunitoSansBold,
-                )),
-            InkWell(
-              child: Container(
+      body: SingleChildScrollView(
+        child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(children: [
+              verticalSpace(10.0),
+              const Center(child: ImagePickerWidget()),
+              CustomTextButton(
+                onPressed: () => context.push(Routes.editProfile),
+                text: 'Edit Profile',
+              ),
+              Container(
                 height: 56.w,
                 decoration: BoxDecoration(
-                    color: AppColor.lightGrey,
-                    borderRadius: BorderRadius.circular(10.0)),
+                  color: AppColor.lightGrey,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 child: Row(
                   children: [
                     Padding(
@@ -71,28 +74,41 @@ class _SettingScreenState extends State<SettingScreen> {
                   ],
                 ),
               ),
-            ),
-            verticalSpace(
-              10.0,
-            ),
-            const SettingsContainer(
-              text: "Terms&conditions",
-            ),
-            const SettingsContainer(
-              text: "Members",
-              icon: Icons.arrow_forward_ios,
-            ),
-            const SettingsContainer(
-              text: "Add Member ",
-              icon: Icons.arrow_forward_ios,
-            ),
-            const SettingsContainer(
-              text: "Delete Account",
-              color: AppColor.redish,
-              icon: Icons.arrow_forward_ios,
-            ),
-            const LogoutButton(),
-          ])),
+              verticalSpace(
+                10.0,
+              ),
+              SettingsContainer(
+                text: "Terms&conditions",
+                onTap: () {},
+              ),
+              SettingsContainer(
+                text: "Members",
+                icon: Icons.arrow_forward_ios,
+                onTap: () => context.push(Routes.members),
+              ),
+              SettingsContainer(
+                text: "Add Member ",
+                icon: Icons.arrow_forward_ios,
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero,
+                    ),
+                    builder: (context) => const AddMember(),
+                  );
+                },
+              ),
+              SettingsContainer(
+                text: "Delete Account",
+                color: AppColor.redish,
+                icon: Icons.arrow_forward_ios,
+                onTap: () {},
+              ),
+              const LogoutButton(),
+            ])),
+      ),
     );
   }
 }

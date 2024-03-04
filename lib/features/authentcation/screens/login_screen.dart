@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/features/authentcation/widgets/login_form.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
@@ -53,7 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   const LoginForm(),
                   verticalSpace(17.0),
                   CustomButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushAndRemoveUntil(Routes.home);
+                    },
                     text: 'Log In',
                   ),
                   verticalSpace(17.0),

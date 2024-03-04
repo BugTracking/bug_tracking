@@ -1,4 +1,6 @@
+import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/core/widgets/custom_list_title.dart';
 import 'package:bug_tracking/core/widgets/custom_project_info_text.dart';
@@ -37,7 +39,7 @@ class ProjectDetailsScreen extends StatelessWidget {
               verticalSpace(10.0),
               const ProjectDetailsBugsList(),
               CustomListTitle(
-                onPressed: () {},
+                onPressed: () => context.push(Routes.members),
                 title: 'Members',
               ),
               const ProjectDetailsMembers(),

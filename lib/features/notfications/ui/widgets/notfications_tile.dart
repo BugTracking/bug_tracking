@@ -1,6 +1,7 @@
 import 'package:bug_tracking/features/notfications/ui/widgets/notfications_body.dart';
 import 'package:bug_tracking/features/notfications/ui/widgets/notfications_header.dart';
 import 'package:flutter/material.dart';
+
 class NotificationsTile extends StatelessWidget {
   const NotificationsTile({Key? key}) : super(key: key);
 
@@ -18,14 +19,13 @@ class NotificationsTile extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child:  const Column(
+          child: const Column(
             children: [
-               NotficationsHeader(),
-               NotficationsBody(),
+              NotficationsHeader(),
+              NotficationsBody(),
             ],
           ),
         ),
-
       ],
     );
   }

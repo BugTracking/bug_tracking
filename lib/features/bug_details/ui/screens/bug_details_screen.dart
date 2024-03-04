@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/core/widgets/custom_list_title.dart';
 import 'package:bug_tracking/core/widgets/custom_project_info_text.dart';
@@ -64,7 +65,7 @@ class BugDetailsScreen extends StatelessWidget {
                       'Lorem Ipsum is simply dummy text of the printing and typesetting industry . Lorem Ipsum is simply dummy text of the printing and typesetting industry .',
                 ),
                 CustomListTitle(
-                  onPressed: () {},
+                  onPressed: () => context.push(Routes.members),
                   title: 'Members',
                 ),
                 const BugDetailsMembersList(),

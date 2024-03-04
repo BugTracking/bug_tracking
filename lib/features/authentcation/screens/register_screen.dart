@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/features/authentcation/widgets/register_form.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
@@ -48,7 +49,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const RegisterForm(),
                   verticalSpace(16.0),
                   CustomButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushAndRemoveUntil(Routes.home);
+                    },
                     text: 'Register',
                   ),
                   verticalSpace(17.0),

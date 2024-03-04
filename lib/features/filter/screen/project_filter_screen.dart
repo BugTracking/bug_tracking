@@ -1,10 +1,9 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
-
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/features/filter/widgets/filter_box.dart';
-import 'package:bug_tracking/features/filter/widgets/filter_buttons.dart';
 import 'package:bug_tracking/features/filter/widgets/filter_container.dart';
+import 'package:bug_tracking/features/filter/widgets/project_filter_submit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:bug_tracking/features/filter/widgets/bug_date.dart';
@@ -33,6 +32,7 @@ class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 50.0.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
           children: [
             const FilterBox(),
             verticalSpace(20.0),
@@ -66,12 +66,12 @@ class _ProjectFilterScreenState extends State<ProjectFilterScreen> {
                   dateName: "Created date ",
                   date: '13/2/2024',
                 ),
-                
                 const DugDate(date: '', dateName: "Last Updated "),
               ],
             ),
             verticalSpace(30.0),
-            const FilterButtons(),
+            const Spacer(),
+            const ProjectFilterSubmit(),
           ],
         ),
       ),

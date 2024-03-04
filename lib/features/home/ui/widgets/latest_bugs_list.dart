@@ -16,6 +16,7 @@ class LatestBugsList extends StatelessWidget {
         separatorBuilder: (context, index) => verticalSpace(20.0),
         shrinkWrap: true,
         itemCount: 3,
+        physics: const NeverScrollableScrollPhysics(),
       ),
     );
   }

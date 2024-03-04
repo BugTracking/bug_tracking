@@ -4,42 +4,41 @@ import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SettingsContainer extends StatefulWidget {
+class SettingsContainer extends StatelessWidget {
   final String text;
   final Color? color;
   final IconData? icon;
-
+  final VoidCallback onTap;
   const SettingsContainer({
     super.key,
     required this.text,
     this.color,
     this.icon,
+    required this.onTap,
   });
 
-  @override
-  State<SettingsContainer> createState() => _SettingsContainerState();
-}
-
-class _SettingsContainerState extends State<SettingsContainer> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        InkWell(
-          child: Container(
-            height: 56.h,
-            decoration: BoxDecoration(
-                color: AppColor.lightGrey,
-                borderRadius: BorderRadius.circular(10.0)),
+        Container(
+          height: 56.h,
+          decoration: BoxDecoration(
+            color: AppColor.lightGrey,
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          child: InkWell(
+            onTap: onTap,
+            radius: 10,
             child: Row(
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.0.w),
                   child: Text(
-                    widget.text,
-                    style: widget.color != null
+                    text,
+                    style: color != null
                         ? AppTexts.text14OnBackgroundCairoSemiBold
-                            .copyWith(color: widget.color)
+                            .copyWith(color: color)
                         : AppTexts.text14OnBackgroundCairoSemiBold,
                   ),
                 ),
@@ -47,7 +46,7 @@ class _SettingsContainerState extends State<SettingsContainer> {
                 Padding(
                   padding: EdgeInsets.only(right: 10.0.w),
                   child: Icon(
-                    widget.icon,
+                    icon,
                     size: 20.0,
                     color: AppColor.blackish,
                   ),
