@@ -2,7 +2,7 @@ import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/features/allprojects/ui/widgets/project_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:bug_tracking/features/home/ui/widgets/custom_button_navigation.dart';
+import 'package:bug_tracking/features/home/ui/widgets/custom_bottom_navigation.dart';
 
 class AllProjectsScreen extends StatelessWidget {
   const AllProjectsScreen({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class AllProjectsScreen extends StatelessWidget {
       ),
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterDocked,
-      bottomNavigationBar: const CustomButtonNavigation(),
+      bottomNavigationBar: const CustomBottomNavigation(),
     );
   }
 }

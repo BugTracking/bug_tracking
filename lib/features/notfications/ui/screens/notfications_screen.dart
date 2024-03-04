@@ -1,6 +1,6 @@
 import 'package:bug_tracking/features/notfications/ui/widgets/notfications_list.dart';
 import 'package:flutter/material.dart';
-import 'package:bug_tracking/features/home/ui/widgets/custom_button_navigation.dart';
+import 'package:bug_tracking/features/home/ui/widgets/custom_bottom_navigation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotficationsScreen extends StatelessWidget {
@@ -26,7 +26,7 @@ class NotficationsScreen extends StatelessWidget {
       ),
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterDocked,
-      bottomNavigationBar: const CustomButtonNavigation(),
+      bottomNavigationBar: const CustomBottomNavigation(),
     );
   }
 }

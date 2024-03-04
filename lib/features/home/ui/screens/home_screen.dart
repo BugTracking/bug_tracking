@@ -1,4 +1,4 @@
-import 'package:bug_tracking/features/home/ui/widgets/custom_button_navigation.dart';
+import 'package:bug_tracking/features/home/ui/widgets/custom_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniCenterDocked,
-      bottomNavigationBar: const CustomButtonNavigation(),
+      bottomNavigationBar: const CustomBottomNavigation(),
     );
   }
 }

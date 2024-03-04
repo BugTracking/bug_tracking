@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 
-class CustomButtonNavigation extends StatefulWidget {
-  const CustomButtonNavigation({Key? key}) : super(key: key);
+class CustomBottomNavigation extends StatefulWidget {
+  const CustomBottomNavigation({Key? key}) : super(key: key);
 
   @override
-  State<CustomButtonNavigation> createState() => _State();
+  State<CustomBottomNavigation> createState() => _State();
 }
 
-class _State extends State<CustomButtonNavigation> {
+class _State extends State<CustomBottomNavigation> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
