@@ -1,4 +1,4 @@
-import 'package:bug_tracking/core/widgets/custom_button_navigation.dart';
+import 'package:bug_tracking/features/home/ui/widgets/custom_button_navigation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

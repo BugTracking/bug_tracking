@@ -1,6 +1,6 @@
 import 'package:bug_tracking/features/notfications/ui/widgets/notfications_list.dart';
 import 'package:flutter/material.dart';
-import 'package:bug_tracking/core/widgets/custom_button_navigation.dart';
+import 'package:bug_tracking/features/home/ui/widgets/custom_button_navigation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotficationsScreen extends StatelessWidget {
