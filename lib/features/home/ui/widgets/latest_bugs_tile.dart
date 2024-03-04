@@ -1,9 +1,9 @@
-import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/features/allprojects/ui/widgets/project_body.dart';
+import 'package:bug_tracking/features/home/ui/widgets/latest_bug_body.dart';
+
 import 'package:flutter/material.dart';
 
-class ProjectTile extends StatelessWidget {
-  const ProjectTile({Key? key}) : super(key: key);
+class LatestBugTile extends StatelessWidget {
+  const LatestBugTile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +19,8 @@ class ProjectTile extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Column(
-            children: [
-              //const ProjectHeader(),
-              const ProjectBody(),
-              verticalSpace(10.0),
-
-            ],
-          ),
+          child: const LatestBugBody(),
         ),
-
       ],
     );
   }
