@@ -1,6 +1,3 @@
-import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
 import 'package:bug_tracking/features/home/ui/widgets/latest_bug_body.dart';
 
 import 'package:flutter/material.dart';
@@ -22,14 +19,8 @@ class LatestBugTile extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Column(
-            children: [
-              const LatestBugBody(),
-
-            ],
-          ),
+          child: const LatestBugBody(),
         ),
-
       ],
     );
   }

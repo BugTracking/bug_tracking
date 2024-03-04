@@ -7,7 +7,6 @@ class SkipTextButton extends StatelessWidget {
   const SkipTextButton({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return TextButton(

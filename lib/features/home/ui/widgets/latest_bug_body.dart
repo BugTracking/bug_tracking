@@ -1,5 +1,4 @@
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/features/allprojects/ui/widgets/project_members.dart';
 import 'package:bug_tracking/features/home/ui/widgets/bug_members.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
@@ -14,7 +13,7 @@ class LatestBugBody extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const  EdgeInsets.only(right: 65.0, top: 13.0),
+          padding: const EdgeInsets.only(right: 65.0, top: 13.0),
           child: Column(
             children: [
               Row(

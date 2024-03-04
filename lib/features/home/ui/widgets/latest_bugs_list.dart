@@ -1,6 +1,4 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/core/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/features/home/ui/widgets/latest_bugs_tile.dart';
 

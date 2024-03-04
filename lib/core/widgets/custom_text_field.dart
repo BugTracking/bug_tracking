@@ -33,19 +33,21 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText,
       decoration: InputDecoration(
         enabled: isEnabled,
-        contentPadding:
-            EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.0.w),
+        contentPadding: EdgeInsets.symmetric(
+          vertical: 16.h,
+          horizontal: 16.0.w,
+        ),
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: AppColor.lightGrey,
+            color: AppColor.darkGreyish,
             width: 0.8,
           ),
           borderRadius: BorderRadius.circular(8.0),
         ),
         disabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: AppColor.lightGrey,
+            color: AppColor.darkGreyish,
             width: 0.8,
           ),
           borderRadius: BorderRadius.circular(8.0),

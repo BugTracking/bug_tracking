@@ -33,7 +33,7 @@ class CustomDropDownList extends StatelessWidget {
         border: const OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(
-            color: AppColor.lightGrey,
+            color: AppColor.darkGreyish,
             width: 0.8,
           ),
           borderRadius: BorderRadius.circular(8.0),
