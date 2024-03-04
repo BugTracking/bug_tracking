@@ -1,6 +1,5 @@
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/features/filter/screen/project_filter_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -23,11 +22,11 @@ class FilterBox extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {
               Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProjectFilterScreen(),
-                          ),
-                        );
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProjectFilterScreen(),
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),

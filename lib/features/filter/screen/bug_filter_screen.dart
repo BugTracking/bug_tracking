@@ -1,5 +1,4 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/features/filter/widgets/bug_date.dart';
@@ -71,7 +70,6 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 Text("Dug Status ",
                     style: AppTexts.text14PrimaryNunitoSansBold),
                 verticalSpace(10.0),
@@ -94,16 +92,13 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
                 ),
                 verticalSpace(20.0),
                 const CustomDivider(),
-               
                 const DugDate(
                   dateName: "Created date ",
                   date: '13/2/2024',
                 ),
-               
                 const DugDate(date: '', dateName: "Last Updated "),
               ],
             ),
-           
             const FilterButtons(),
           ]),
         ),
