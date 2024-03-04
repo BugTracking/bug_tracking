@@ -24,8 +24,8 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
     'Bug'
   ];
   int projectNameSelected = 0;
-  List<String> BugStatus = ['To DO', 'In progress', 'Done'];
-  int BugStatusSelected = 0;
+  List<String> bugStatus = ['To DO', 'In progress', 'Done'];
+  int bugStatusSelected = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -76,16 +76,16 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
                 Wrap(
                   runSpacing: 6.0,
                   children: List.generate(
-                    BugStatus.length,
+                    bugStatus.length,
                     (index) => GestureDetector(
                       onTap: () {
                         setState(() {
-                          BugStatusSelected = index;
+                          bugStatusSelected = index;
                         });
                       },
                       child: FilterContainer(
                         text: projectNames[index],
-                        isSelected: BugStatusSelected == index,
+                        isSelected: bugStatusSelected == index,
                       ),
                     ),
                   ),
