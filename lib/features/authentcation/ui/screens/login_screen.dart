@@ -1,6 +1,6 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/router/routes.dart';
-import 'package:bug_tracking/features/authentcation/widgets/login_form.dart';
+import 'package:bug_tracking/features/authentcation/ui/widgets/login_form.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/auth_icon.dart';
