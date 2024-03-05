@@ -12,28 +12,30 @@ class _ApiService implements ApiService {
   _ApiService(
     this._dio, {
     this.baseUrl,
-  });
+  }) {
+    baseUrl ??= 'http://localhost:3000/';
+  }
 
   final Dio _dio;
 
   String? baseUrl;
 
   @override
-  Future<Map<String, String>> login(Map<String, String> body) async {
+  Future<LoginResponseModel> login(LoginRequestModel loginRequestModel) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(body);
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<Map<String, String>>(Options(
+    _data.addAll(loginRequestModel.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<LoginResponseModel>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '',
+              'auth/login',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -42,7 +44,7 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data!.cast<String, String>();
+    final value = LoginResponseModel.fromJson(_result.data!);
     return value;
   }
 

@@ -3,4 +3,4 @@
       "**/*.freezed.dart": true,
       "**/*.g.dart": true
     },
-  }
+}
