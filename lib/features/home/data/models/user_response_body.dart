@@ -12,7 +12,7 @@ class UserResponseBody {
       _$UserResponseBodyFromJson(json);
 }
 
-@JsonSerializable()
+@JsonSerializable() 
 class UserData {
   @JsonKey(name: 'user')
   final UserModel user;

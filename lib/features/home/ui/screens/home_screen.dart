@@ -34,15 +34,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          if (userData.user.id == '') {
-            return ListView.separated(
-              itemBuilder: (context, index) => const CustomShimmer(),
-              separatorBuilder: (context, index) => verticalSpace(10.0),
-              itemCount: 30,
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-            );
-          }
+          // if (userData.user.id == '') {
+          //   return ListView.separated(
+          //     itemBuilder: (context, index) => const CustomShimmer(),
+          //     separatorBuilder: (context, index) => verticalSpace(10.0),
+          //     itemCount: 30,
+          //     physics: const NeverScrollableScrollPhysics(),
+          //     shrinkWrap: true,
+          //   );
+          // }
           return screens[currentIndex];
         },
       ),
