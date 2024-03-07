@@ -58,6 +58,7 @@ dependencies:
   image_picker: ^1.0.7
   flutter_svg: ^2.0.10+1
   dotted_border: ^2.1.0
+  flutter_spinkit: ^5.2.0
 
 dev_dependencies:
   flutter_test:
