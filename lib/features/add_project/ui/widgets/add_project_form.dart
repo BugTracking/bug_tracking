@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
@@ -76,15 +77,20 @@ class _AddProjectFormState extends State<AddProjectForm> {
                 items: cubit.categoryTitles,
               ),
               verticalSpace(10.0),
-              const AddProjectMembersContainer(),
-              verticalSpace(10.0),
-              SelectedItems(
-                onClosePressed: (index) => cubit.removeMember(
-                  cubit.memberIds[index],
-                  cubit.memberNames[index],
+              if (userData.user.role == 'admin')
+                Column(
+                  children: [
+                    const AddProjectMembersContainer(),
+                    verticalSpace(10.0),
+                    SelectedItems(
+                      onClosePressed: (index) => cubit.removeMember(
+                        cubit.memberIds[index],
+                        cubit.memberNames[index],
+                      ),
+                      items: cubit.memberNames,
+                    ),
+                  ],
                 ),
-                items: cubit.memberNames,
-              ),
             ],
           ),
         );
