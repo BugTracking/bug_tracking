@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
+import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
@@ -6,16 +9,31 @@ import 'package:bug_tracking/features/add_project/data/repos/add_project_repo.da
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AddProjectCubit extends Cubit<AddProjectState> {
   final AddProjectRepo _addProjectRepo;
   AddProjectCubit(this._addProjectRepo)
       : super(const AddProjectState.initial());
 
+  File? imageFile;
+
+  void emitPickImageState() async {
+    emit(const AddProjectState.initial());
+    if (await checkPermission()) {
+      ImagePicker imagePicker = ImagePicker();
+      XFile? image = await imagePicker.pickImage(source: ImageSource.gallery);
+      if (image != null) {
+        imageFile = File(image.path);
+      }
+      emit(const AddProjectState.pickImageSuccess());
+    }
+  }
+
   List<String> memberIds = [];
   List<String> memberNames = [];
   void emitSelectMembersState(UserModel member) {
-    emit(const AddProjectState.selectMembersLoading());
+    emit(const AddProjectState.initial());
     if (memberIds.contains(member.id)) {
       memberIds.remove(member.id);
       memberNames.remove(member.name);
@@ -27,7 +45,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
   }
 
   void removeMember(String memberId, String memberName) {
-    emit(const AddProjectState.selectMembersLoading());
+    emit(const AddProjectState.initial());
     memberIds.remove(memberId);
     memberNames.remove(memberName);
     emit(const AddProjectState.selectMembersSuccess());
@@ -57,7 +75,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
   final formKey = GlobalKey<FormState>();
   List<CategoryModel> categoryFilteredList = [];
   void emitFilterCategories(String text) {
-    emit(const AddProjectState.filterCategoriesLoading());
+    emit(const AddProjectState.initial());
     categoryFilteredList = categories
         .where((element) =>
             element.title.toLowerCase().contains(text.toLowerCase()))
@@ -67,7 +85,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
 
   List<String> categoryTitles = [];
   void emitSelectCategoriesState(String categoryTitle) {
-    emit(const AddProjectState.selectCategoriesLoading());
+    emit(const AddProjectState.initial());
     if (categoryTitle != '') {
       if (categoryTitles.contains(categoryTitle)) {
         categoryTitles.remove(categoryTitle);
@@ -81,7 +99,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
   }
 
   void removeCategory(String categoryTitle) {
-    emit(const AddProjectState.selectCategoriesLoading());
+    emit(const AddProjectState.initial());
     categoryTitles.remove(categoryTitle);
     emit(const AddProjectState.selectCategoriesSuccess());
   }

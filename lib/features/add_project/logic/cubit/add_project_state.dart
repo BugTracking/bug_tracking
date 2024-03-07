@@ -11,22 +11,14 @@ class AddProjectState with _$AddProjectState {
 
   const factory AddProjectState.error({required String message}) = Error;
 
-  const factory AddProjectState.selectMembersLoading() = SelectMembersLoading;
-
   const factory AddProjectState.selectMembersSuccess() = SelectMembersSuccess;
 
   const factory AddProjectState.getCategoriesLoading() = GetCateogriesLoading;
 
   const factory AddProjectState.getCategoriesSuccess() = GetCateogriesSucess;
 
-  const factory AddProjectState.filterCategoriesLoading() =
-      FilterCateogriesLoading;
-
   const factory AddProjectState.filterCategoriesSuccess() =
       FilterCateogriesSucess;
-
-  const factory AddProjectState.selectCategoriesLoading() =
-      SelectCateogriesLoading;
 
   const factory AddProjectState.selectCategoriesSuccess() =
       SelectCateogriesSucess;
@@ -39,4 +31,6 @@ class AddProjectState with _$AddProjectState {
 
   const factory AddProjectState.addCategoriesError(String error) =
       AddCateogriesError;
+
+  const factory AddProjectState.pickImageSuccess() = PickImageSuccess;
 }

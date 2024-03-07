@@ -7,12 +7,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UploadAttachments extends StatelessWidget {
-  const UploadAttachments({super.key});
+  final String title;
+  final VoidCallback onPressed;
+
+  const UploadAttachments({
+    super.key,
+    required this.title,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onPressed,
       child: DottedBorder(
         padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 16.0.w),
         radius: const Radius.circular(10),
@@ -23,7 +30,7 @@ class UploadAttachments extends StatelessWidget {
             SvgPicture.asset('assets/icons/upload.svg'),
             verticalSpace(15.0),
             Text(
-              'Upload Attachments',
+              title,
               style: AppTexts.text12OnBackgroundNunitoSansSemiBold,
             ),
           ],
