@@ -14,7 +14,6 @@ class RegisterForm extends StatefulWidget {
 }
 
 class _RegisterFormState extends State<RegisterForm> {
-  final _formKey = GlobalKey<FormState>();
   bool _passwordVisible = true;
   bool _confirmPasswordVisible = true;
   String roleSelected = '';
@@ -45,7 +44,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller:  context.read<AuthCubit>().emailController,
+            controller: context.read<AuthCubit>().emailController,
             hintText: 'Email',
             prefixIcon: const Icon(
               Icons.email,
@@ -69,7 +68,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller:  context.read<AuthCubit>().passwordController,
+            controller: context.read<AuthCubit>().passwordController,
             obscureText: _passwordVisible,
             hintText: 'Password',
             prefixIcon: const Icon(
@@ -93,7 +92,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller: TextEditingController(),
+            controller: context.read<AuthCubit>().confirmPasswordController,
             obscureText: _confirmPasswordVisible,
             hintText: 'Confirm Password',
             prefixIcon: const Icon(Icons.lock, color: AppColor.greyish),
@@ -124,7 +123,7 @@ class _RegisterFormState extends State<RegisterForm> {
             onChanged: (value) {
               setState(() {
                 roleSelected = value ?? '';
-                context.read<AuthCubit>().roleController.text=value!;
+                context.read<AuthCubit>().roleController.text = value!;
               });
             },
             items: const ['User', 'Admin'],

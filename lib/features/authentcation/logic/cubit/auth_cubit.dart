@@ -10,15 +10,22 @@ class AuthCubit extends Cubit<AuthState> {
   final AuthRepo _authRepo;
   AuthCubit(this._authRepo) : super(AuthInitial());
 
-  final TextEditingController userNameAndEmailController = TextEditingController();
+  final TextEditingController userNameAndEmailController =
+      TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController roleController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
+  void saveTokenToPrefs(String token) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('token', token);
+  }
 
   LoginRequestModel getLoginRequestModel() {
     late LoginRequestModel loginRequestModel;
@@ -27,11 +34,6 @@ class AuthCubit extends Cubit<AuthState> {
       r'^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$',
       caseSensitive: false,
     );
-
-    void saveTokenToPrefs(String token) async {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      await prefs.setString('token', token);
-    }
 
     if (emailRegex.hasMatch(userNameAndEmailController.text)) {
       loginRequestModel = LoginRequestModel(
@@ -58,7 +60,6 @@ class AuthCubit extends Cubit<AuthState> {
       );
       response.when(
         success: (data) {
-
           saveTokenToPrefs(data.token!);
           emit(AuthSuccess('You are logged in sucessfully'));
         },
@@ -72,15 +73,14 @@ class AuthCubit extends Cubit<AuthState> {
   RegisterRequestModel getRegisterRequestModel() {
     late RegisterRequestModel registerRequestModel;
 
-
-      registerRequestModel = RegisterRequestModel(
-        emailController.text,
-        userNameController.text,
-        nameController.text,
-        passwordController.text,
-        phoneController.text,
-        roleController.text,
-      );
+    registerRequestModel = RegisterRequestModel(
+      emailController.text,
+      userNameController.text,
+      nameController.text,
+      passwordController.text,
+      phoneController.text,
+      roleController.text,
+    );
 
     return registerRequestModel;
   }
