@@ -6,8 +6,9 @@ class CategoriesResponseBody {
   @JsonKey(name: 'data')
   final List<CategoryModel> categories;
   final bool status;
+  final String? message;
 
-  CategoriesResponseBody(this.categories, this.status);
+  CategoriesResponseBody(this.categories, this.status, this.message);
 
   factory CategoriesResponseBody.fromJson(Map<String, dynamic> json) =>
       _$CategoriesResponseBodyFromJson(json);

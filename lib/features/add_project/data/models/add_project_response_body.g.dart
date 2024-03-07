@@ -11,6 +11,7 @@ AddProjectResponseBody _$AddProjectResponseBodyFromJson(
     AddProjectResponseBody(
       status: json['status'] as bool,
       data: AddprojectModel.fromJson(json['data'] as Map<String, dynamic>),
+      message: json['message'] as String?,
     );
 
 Map<String, dynamic> _$AddProjectResponseBodyToJson(
@@ -18,6 +19,7 @@ Map<String, dynamic> _$AddProjectResponseBodyToJson(
     <String, dynamic>{
       'status': instance.status,
       'data': instance.data,
+      'message': instance.message,
     };
 
 AddprojectModel _$AddprojectModelFromJson(Map<String, dynamic> json) =>

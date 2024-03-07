@@ -31,7 +31,6 @@ mixin _$AddProjectState {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,7 +48,6 @@ mixin _$AddProjectState {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,7 +65,6 @@ mixin _$AddProjectState {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -88,7 +85,6 @@ mixin _$AddProjectState {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -106,7 +102,6 @@ mixin _$AddProjectState {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -124,7 +119,6 @@ mixin _$AddProjectState {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -199,7 +193,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return initial();
   }
@@ -220,7 +213,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return initial?.call();
   }
@@ -241,7 +233,6 @@ class _$InitialImpl implements _Initial {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -268,7 +259,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return initial(this);
   }
@@ -289,7 +279,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return initial?.call(this);
   }
@@ -310,7 +299,6 @@ class _$InitialImpl implements _Initial {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -375,7 +363,6 @@ class _$LoadingImpl implements Loading {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return loading();
   }
@@ -396,7 +383,6 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return loading?.call();
   }
@@ -417,7 +403,6 @@ class _$LoadingImpl implements Loading {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -444,7 +429,6 @@ class _$LoadingImpl implements Loading {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return loading(this);
   }
@@ -465,7 +449,6 @@ class _$LoadingImpl implements Loading {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return loading?.call(this);
   }
@@ -486,7 +469,6 @@ class _$LoadingImpl implements Loading {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -551,7 +533,6 @@ class _$SuccessImpl implements Success {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return success();
   }
@@ -572,7 +553,6 @@ class _$SuccessImpl implements Success {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return success?.call();
   }
@@ -593,7 +573,6 @@ class _$SuccessImpl implements Success {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -620,7 +599,6 @@ class _$SuccessImpl implements Success {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return success(this);
   }
@@ -641,7 +619,6 @@ class _$SuccessImpl implements Success {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return success?.call(this);
   }
@@ -662,7 +639,6 @@ class _$SuccessImpl implements Success {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -753,7 +729,6 @@ class _$ErrorImpl implements Error {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return error(message);
   }
@@ -774,7 +749,6 @@ class _$ErrorImpl implements Error {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return error?.call(message);
   }
@@ -795,7 +769,6 @@ class _$ErrorImpl implements Error {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -822,7 +795,6 @@ class _$ErrorImpl implements Error {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return error(this);
   }
@@ -843,7 +815,6 @@ class _$ErrorImpl implements Error {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return error?.call(this);
   }
@@ -864,7 +835,6 @@ class _$ErrorImpl implements Error {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -935,7 +905,6 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return selectMembersSuccess();
   }
@@ -956,7 +925,6 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return selectMembersSuccess?.call();
   }
@@ -977,7 +945,6 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (selectMembersSuccess != null) {
@@ -1004,7 +971,6 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return selectMembersSuccess(this);
   }
@@ -1025,7 +991,6 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return selectMembersSuccess?.call(this);
   }
@@ -1046,7 +1011,6 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (selectMembersSuccess != null) {
@@ -1112,7 +1076,6 @@ class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return getCategoriesLoading();
   }
@@ -1133,7 +1096,6 @@ class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return getCategoriesLoading?.call();
   }
@@ -1154,7 +1116,6 @@ class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (getCategoriesLoading != null) {
@@ -1181,7 +1142,6 @@ class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return getCategoriesLoading(this);
   }
@@ -1202,7 +1162,6 @@ class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return getCategoriesLoading?.call(this);
   }
@@ -1223,7 +1182,6 @@ class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (getCategoriesLoading != null) {
@@ -1289,7 +1247,6 @@ class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return getCategoriesSuccess();
   }
@@ -1310,7 +1267,6 @@ class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return getCategoriesSuccess?.call();
   }
@@ -1331,7 +1287,6 @@ class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (getCategoriesSuccess != null) {
@@ -1358,7 +1313,6 @@ class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return getCategoriesSuccess(this);
   }
@@ -1379,7 +1333,6 @@ class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return getCategoriesSuccess?.call(this);
   }
@@ -1400,7 +1353,6 @@ class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (getCategoriesSuccess != null) {
@@ -1468,7 +1420,6 @@ class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return filterCategoriesSuccess();
   }
@@ -1489,7 +1440,6 @@ class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return filterCategoriesSuccess?.call();
   }
@@ -1510,7 +1460,6 @@ class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (filterCategoriesSuccess != null) {
@@ -1537,7 +1486,6 @@ class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return filterCategoriesSuccess(this);
   }
@@ -1558,7 +1506,6 @@ class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return filterCategoriesSuccess?.call(this);
   }
@@ -1579,7 +1526,6 @@ class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (filterCategoriesSuccess != null) {
@@ -1647,7 +1593,6 @@ class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return selectCategoriesSuccess();
   }
@@ -1668,7 +1613,6 @@ class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return selectCategoriesSuccess?.call();
   }
@@ -1689,7 +1633,6 @@ class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (selectCategoriesSuccess != null) {
@@ -1716,7 +1659,6 @@ class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return selectCategoriesSuccess(this);
   }
@@ -1737,7 +1679,6 @@ class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return selectCategoriesSuccess?.call(this);
   }
@@ -1758,7 +1699,6 @@ class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (selectCategoriesSuccess != null) {
@@ -1823,7 +1763,6 @@ class _$GetCateogriesErrorImpl implements GetCateogriesError {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return getCategoriesError();
   }
@@ -1844,7 +1783,6 @@ class _$GetCateogriesErrorImpl implements GetCateogriesError {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return getCategoriesError?.call();
   }
@@ -1865,7 +1803,6 @@ class _$GetCateogriesErrorImpl implements GetCateogriesError {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (getCategoriesError != null) {
@@ -1892,7 +1829,6 @@ class _$GetCateogriesErrorImpl implements GetCateogriesError {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return getCategoriesError(this);
   }
@@ -1913,7 +1849,6 @@ class _$GetCateogriesErrorImpl implements GetCateogriesError {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return getCategoriesError?.call(this);
   }
@@ -1934,7 +1869,6 @@ class _$GetCateogriesErrorImpl implements GetCateogriesError {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (getCategoriesError != null) {
@@ -2000,7 +1934,6 @@ class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return addCategoriesLoading();
   }
@@ -2021,7 +1954,6 @@ class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return addCategoriesLoading?.call();
   }
@@ -2042,7 +1974,6 @@ class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (addCategoriesLoading != null) {
@@ -2069,7 +2000,6 @@ class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return addCategoriesLoading(this);
   }
@@ -2090,7 +2020,6 @@ class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return addCategoriesLoading?.call(this);
   }
@@ -2111,7 +2040,6 @@ class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (addCategoriesLoading != null) {
@@ -2177,7 +2105,6 @@ class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return addCategoriesSuccess();
   }
@@ -2198,7 +2125,6 @@ class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return addCategoriesSuccess?.call();
   }
@@ -2219,7 +2145,6 @@ class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (addCategoriesSuccess != null) {
@@ -2246,7 +2171,6 @@ class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return addCategoriesSuccess(this);
   }
@@ -2267,7 +2191,6 @@ class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return addCategoriesSuccess?.call(this);
   }
@@ -2288,7 +2211,6 @@ class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (addCategoriesSuccess != null) {
@@ -2380,7 +2302,6 @@ class _$AddCateogriesErrorImpl implements AddCateogriesError {
     required TResult Function() addCategoriesLoading,
     required TResult Function() addCategoriesSuccess,
     required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
   }) {
     return addCategoriesError(this.error);
   }
@@ -2401,7 +2322,6 @@ class _$AddCateogriesErrorImpl implements AddCateogriesError {
     TResult? Function()? addCategoriesLoading,
     TResult? Function()? addCategoriesSuccess,
     TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
   }) {
     return addCategoriesError?.call(this.error);
   }
@@ -2422,7 +2342,6 @@ class _$AddCateogriesErrorImpl implements AddCateogriesError {
     TResult Function()? addCategoriesLoading,
     TResult Function()? addCategoriesSuccess,
     TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (addCategoriesError != null) {
@@ -2449,7 +2368,6 @@ class _$AddCateogriesErrorImpl implements AddCateogriesError {
     required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
     required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
     required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
   }) {
     return addCategoriesError(this);
   }
@@ -2470,7 +2388,6 @@ class _$AddCateogriesErrorImpl implements AddCateogriesError {
     TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
   }) {
     return addCategoriesError?.call(this);
   }
@@ -2491,7 +2408,6 @@ class _$AddCateogriesErrorImpl implements AddCateogriesError {
     TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
     TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
     TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
     required TResult orElse(),
   }) {
     if (addCategoriesError != null) {
@@ -2509,180 +2425,4 @@ abstract class AddCateogriesError implements AddProjectState {
   @JsonKey(ignore: true)
   _$$AddCateogriesErrorImplCopyWith<_$AddCateogriesErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$PickImageSuccessImplCopyWith<$Res> {
-  factory _$$PickImageSuccessImplCopyWith(_$PickImageSuccessImpl value,
-          $Res Function(_$PickImageSuccessImpl) then) =
-      __$$PickImageSuccessImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$PickImageSuccessImplCopyWithImpl<$Res>
-    extends _$AddProjectStateCopyWithImpl<$Res, _$PickImageSuccessImpl>
-    implements _$$PickImageSuccessImplCopyWith<$Res> {
-  __$$PickImageSuccessImplCopyWithImpl(_$PickImageSuccessImpl _value,
-      $Res Function(_$PickImageSuccessImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$PickImageSuccessImpl implements PickImageSuccess {
-  const _$PickImageSuccessImpl();
-
-  @override
-  String toString() {
-    return 'AddProjectState.pickImageSuccess()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$PickImageSuccessImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function() success,
-    required TResult Function(String message) error,
-    required TResult Function() selectMembersSuccess,
-    required TResult Function() getCategoriesLoading,
-    required TResult Function() getCategoriesSuccess,
-    required TResult Function() filterCategoriesSuccess,
-    required TResult Function() selectCategoriesSuccess,
-    required TResult Function() getCategoriesError,
-    required TResult Function() addCategoriesLoading,
-    required TResult Function() addCategoriesSuccess,
-    required TResult Function(String error) addCategoriesError,
-    required TResult Function() pickImageSuccess,
-  }) {
-    return pickImageSuccess();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function()? success,
-    TResult? Function(String message)? error,
-    TResult? Function()? selectMembersSuccess,
-    TResult? Function()? getCategoriesLoading,
-    TResult? Function()? getCategoriesSuccess,
-    TResult? Function()? filterCategoriesSuccess,
-    TResult? Function()? selectCategoriesSuccess,
-    TResult? Function()? getCategoriesError,
-    TResult? Function()? addCategoriesLoading,
-    TResult? Function()? addCategoriesSuccess,
-    TResult? Function(String error)? addCategoriesError,
-    TResult? Function()? pickImageSuccess,
-  }) {
-    return pickImageSuccess?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function()? success,
-    TResult Function(String message)? error,
-    TResult Function()? selectMembersSuccess,
-    TResult Function()? getCategoriesLoading,
-    TResult Function()? getCategoriesSuccess,
-    TResult Function()? filterCategoriesSuccess,
-    TResult Function()? selectCategoriesSuccess,
-    TResult Function()? getCategoriesError,
-    TResult Function()? addCategoriesLoading,
-    TResult Function()? addCategoriesSuccess,
-    TResult Function(String error)? addCategoriesError,
-    TResult Function()? pickImageSuccess,
-    required TResult orElse(),
-  }) {
-    if (pickImageSuccess != null) {
-      return pickImageSuccess();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Error value) error,
-    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
-    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
-    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
-    required TResult Function(FilterCateogriesSucess value)
-        filterCategoriesSuccess,
-    required TResult Function(SelectCateogriesSucess value)
-        selectCategoriesSuccess,
-    required TResult Function(GetCateogriesError value) getCategoriesError,
-    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
-    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
-    required TResult Function(AddCateogriesError value) addCategoriesError,
-    required TResult Function(PickImageSuccess value) pickImageSuccess,
-  }) {
-    return pickImageSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Error value)? error,
-    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
-    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
-    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
-    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
-    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
-    TResult? Function(GetCateogriesError value)? getCategoriesError,
-    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
-    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
-    TResult? Function(AddCateogriesError value)? addCategoriesError,
-    TResult? Function(PickImageSuccess value)? pickImageSuccess,
-  }) {
-    return pickImageSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Error value)? error,
-    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
-    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
-    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
-    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
-    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
-    TResult Function(GetCateogriesError value)? getCategoriesError,
-    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
-    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
-    TResult Function(AddCateogriesError value)? addCategoriesError,
-    TResult Function(PickImageSuccess value)? pickImageSuccess,
-    required TResult orElse(),
-  }) {
-    if (pickImageSuccess != null) {
-      return pickImageSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PickImageSuccess implements AddProjectState {
-  const factory PickImageSuccess() = _$PickImageSuccessImpl;
 }

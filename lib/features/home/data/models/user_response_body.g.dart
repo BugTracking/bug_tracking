@@ -12,12 +12,14 @@ UserResponseBody _$UserResponseBodyFromJson(Map<String, dynamic> json) =>
       json['data'] == null
           ? null
           : UserData.fromJson(json['data'] as Map<String, dynamic>),
+      json['message'] as String?,
     );
 
 Map<String, dynamic> _$UserResponseBodyToJson(UserResponseBody instance) =>
     <String, dynamic>{
       'status': instance.status,
       'data': instance.data,
+      'message': instance.message,
     };
 
 UserData _$UserDataFromJson(Map<String, dynamic> json) => UserData(

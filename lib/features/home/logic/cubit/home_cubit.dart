@@ -15,7 +15,7 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.getUserSuccess(data.data!));
       },
       failure: (error) {
-        emit(HomeState.getUserFailure(error.apiErrorModel.message));
+        emit(HomeState.getUserFailure(error));
       },
     );
   }

@@ -13,6 +13,7 @@ CategoriesResponseBody _$CategoriesResponseBodyFromJson(
           .map((e) => CategoryModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       json['status'] as bool,
+      json['message'] as String?,
     );
 
 Map<String, dynamic> _$CategoriesResponseBodyToJson(
@@ -20,6 +21,7 @@ Map<String, dynamic> _$CategoriesResponseBodyToJson(
     <String, dynamic>{
       'data': instance.categories,
       'status': instance.status,
+      'message': instance.message,
     };
 
 CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) =>

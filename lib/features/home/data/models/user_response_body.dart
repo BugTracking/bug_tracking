@@ -5,8 +5,9 @@ part 'user_response_body.g.dart';
 class UserResponseBody {
   final bool status;
   final UserData? data;
+  final String? message;
 
-  UserResponseBody(this.status, this.data);
+  UserResponseBody(this.status, this.data, this.message);
 
   factory UserResponseBody.fromJson(Map<String, dynamic> json) =>
       _$UserResponseBodyFromJson(json);

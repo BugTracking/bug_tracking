@@ -31,6 +31,4 @@ class AddProjectState with _$AddProjectState {
 
   const factory AddProjectState.addCategoriesError(String error) =
       AddCateogriesError;
-
-  const factory AddProjectState.pickImageSuccess() = PickImageSuccess;
 }

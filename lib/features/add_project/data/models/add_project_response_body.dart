@@ -6,9 +6,11 @@ part 'add_project_response_body.g.dart';
 class AddProjectResponseBody {
   final bool status;
   final AddprojectModel data;
+  final String? message;
   AddProjectResponseBody({
     required this.status,
     required this.data,
+    required this.message,
   });
 
   factory AddProjectResponseBody.fromJson(Map<String, dynamic> json) =>

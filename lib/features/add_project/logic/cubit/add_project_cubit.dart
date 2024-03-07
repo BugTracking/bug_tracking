@@ -1,7 +1,4 @@
-import 'dart:io';
-
 import 'package:bloc/bloc.dart';
-import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
@@ -9,26 +6,11 @@ import 'package:bug_tracking/features/add_project/data/repos/add_project_repo.da
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 class AddProjectCubit extends Cubit<AddProjectState> {
   final AddProjectRepo _addProjectRepo;
   AddProjectCubit(this._addProjectRepo)
       : super(const AddProjectState.initial());
-
-  File? imageFile;
-
-  void emitPickImageState() async {
-    emit(const AddProjectState.initial());
-    if (await checkPermission()) {
-      ImagePicker imagePicker = ImagePicker();
-      XFile? image = await imagePicker.pickImage(source: ImageSource.gallery);
-      if (image != null) {
-        imageFile = File(image.path);
-      }
-      emit(const AddProjectState.pickImageSuccess());
-    }
-  }
 
   List<String> memberIds = [];
   List<String> memberNames = [];
@@ -62,7 +44,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
       },
       failure: (failure) => emit(
         AddProjectState.error(
-          message: failure.apiErrorModel.message,
+          message: failure,
         ),
       ),
     );
@@ -114,7 +96,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
     response.when(
       success: (data) => emit(const AddProjectState.addCategoriesSuccess()),
       failure: (failure) => emit(
-        AddProjectState.addCategoriesError(failure.apiErrorModel.message),
+        AddProjectState.addCategoriesError(failure),
       ),
     );
   }
@@ -135,7 +117,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
         success: (data) => emit(const AddProjectState.success()),
         failure: (failure) => emit(
           AddProjectState.error(
-            message: failure.apiErrorModel.message,
+            message: failure,
           ),
         ),
       );

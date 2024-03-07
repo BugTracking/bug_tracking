@@ -1,4 +1,3 @@
-import 'package:bug_tracking/core/networking/api_error_handler.dart';
 import 'package:bug_tracking/core/networking/api_result.dart';
 import 'package:bug_tracking/core/networking/api_service.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
@@ -19,11 +18,9 @@ class AddProjectRepo {
       if (response.status) {
         return ApiResult.success(response);
       }
-      return ApiResult.failure(
-        ErrorHandler.handle('Error to get cateogries'),
-      );
+      return ApiResult.failure(response.message ?? '');
     } on DioException catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e.message));
+      return ApiResult.failure(e.message ?? '');
     }
   }
 
@@ -35,11 +32,9 @@ class AddProjectRepo {
       if (response.status) {
         return ApiResult.success(response);
       }
-      return ApiResult.failure(
-        ErrorHandler.handle('The category already exists'),
-      );
+      return ApiResult.failure(response.message ?? '');
     } on DioException catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e.message));
+      return ApiResult.failure(e.message ?? '');
     }
   }
 
@@ -47,17 +42,15 @@ class AddProjectRepo {
       AddProjectRequestBody addProjectRequestBody) async {
     try {
       const String token =
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU5MDliNWQwNzIyYzZmMTFjMThmZDAiLCJpYXQiOjE3MDk3ODgxMDJ9.jXzSK6sA3HXuaR4WpTNgF3KwfddSek-9meab9--XkSU';
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU5MDliNWQwNzIyYzZmMTFjMThmZDAiLCJpYXQiOjE3MDk4NDk4MTF9.vtds0XLzvVGtR9fepMmYkec5EHi88E20DhnhZEX2IjE';
       final response =
           await _apiService.addProject(addProjectRequestBody, token);
       if (response.status) {
         return ApiResult.success(response);
       }
-      return ApiResult.failure(
-        ErrorHandler.handle('The project title already exists'),
-      );
+      return ApiResult.failure(response.message ?? '');
     } on DioException catch (e) {
-      return ApiResult.failure(ErrorHandler.handle(e.message));
+      return ApiResult.failure(e.message ?? '');
     }
   }
 }

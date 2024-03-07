@@ -4,7 +4,6 @@ import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
 import 'package:bug_tracking/features/add_project/ui/widgets/add_project_form.dart';
 import 'package:bug_tracking/features/add_project/ui/widgets/save_project_submit.dart';
-import 'package:bug_tracking/features/add_project/ui/widgets/upload_project_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,8 +32,6 @@ class AddProjectScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  const UploadProjectImage(),
-                  verticalSpace(10.0),
                   const AddProjectForm(),
                   verticalSpace(10.0),
                   const SaveProjectSubmit(),
