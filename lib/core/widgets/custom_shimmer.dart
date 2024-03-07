@@ -9,7 +9,7 @@ class CustomShimmer extends StatelessWidget {
   const CustomShimmer({
     Key? key,
     this.width = double.infinity,
-    this.height = double.infinity,
+    this.height = 100,
     this.shapeBorder = const RoundedRectangleBorder(),
   }) : super(key: key);
 

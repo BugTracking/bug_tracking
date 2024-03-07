@@ -1,5 +1,7 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
+import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:dio/dio.dart';
+import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
 part 'api_service.g.dart';
 
@@ -9,4 +11,7 @@ abstract class ApiService {
 
   @POST(ApiConstance.login)
   Future<Map<String, String>> login(@Body() Map<String, String> body);
+
+  @GET('${ApiConstance.users}/{id}')
+  Future<UserResponseBody> getUser(@Path('id') String userId);
 }

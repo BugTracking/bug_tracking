@@ -8,6 +8,7 @@ import 'package:bug_tracking/features/authentcation/ui/screens/login_screen.dart
 import 'package:bug_tracking/features/authentcation/ui/screens/register_screen.dart';
 import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
+import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_screen.dart';
 import 'package:bug_tracking/features/members/ui/screens/members_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
@@ -58,7 +59,10 @@ class AppRouter {
 
       case Routes.home:
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<HomeCubit>()..emitUserDataState(),
+            child: const HomeScreen(),
+          ),
         );
       case Routes.editProfile:
         return MaterialPageRoute(
