@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
+import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/repos/add_project_repo.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
@@ -31,12 +33,77 @@ class AddProjectCubit extends Cubit<AddProjectState> {
     emit(const AddProjectState.selectMembersSuccess());
   }
 
+  List<CategoryModel> categories = [];
+  void emitGetCategoriesState() async {
+    emit(const AddProjectState.getCategoriesLoading());
+    final response = await _addProjectRepo.getCategories();
+    response.when(
+      success: (data) {
+        categories = data.categories;
+        emit(const AddProjectState.getCategoriesSuccess());
+      },
+      failure: (failure) => emit(
+        AddProjectState.error(
+          message: failure.apiErrorModel.message,
+        ),
+      ),
+    );
+  }
+
   final TextEditingController titleController = TextEditingController();
   final TextEditingController descriptionController = TextEditingController();
+  final TextEditingController categoryController = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
+  List<CategoryModel> categoryFilteredList = [];
+  void emitFilterCategories(String text) {
+    emit(const AddProjectState.filterCategoriesLoading());
+    categoryFilteredList = categories
+        .where((element) =>
+            element.title.toLowerCase().contains(text.toLowerCase()))
+        .toList();
+    emit(const AddProjectState.filterCategoriesSuccess());
+  }
+
+  List<String> categoryTitles = [];
+  void emitSelectCategoriesState(String categoryTitle) {
+    emit(const AddProjectState.selectCategoriesLoading());
+    if (categoryTitle != '') {
+      if (categoryTitles.contains(categoryTitle)) {
+        categoryTitles.remove(categoryTitle);
+      } else {
+        categoryTitles.add(categoryTitle);
+      }
+      categoryFilteredList = [];
+      categoryController.text = '';
+    }
+    emit(const AddProjectState.selectCategoriesSuccess());
+  }
+
+  void removeCategory(String categoryTitle) {
+    emit(const AddProjectState.selectCategoriesLoading());
+    categoryTitles.remove(categoryTitle);
+    emit(const AddProjectState.selectCategoriesSuccess());
+  }
+
+  void emitAddCategoryState() async {
+    emit(const AddProjectState.addCategoriesLoading());
+    final response = await _addProjectRepo.addCategories(
+      AddCategoriesRequestBody(
+        categories: categoryTitles,
+      ),
+    );
+    response.when(
+      success: (data) => emit(const AddProjectState.addCategoriesSuccess()),
+      failure: (failure) => emit(
+        AddProjectState.addCategoriesError(failure.apiErrorModel.message),
+      ),
+    );
+  }
 
   void emitAddProjectState() async {
     if (formKey.currentState!.validate()) {
+      emitAddCategoryState();
       emit(const AddProjectState.loading());
       final response = await _addProjectRepo.addProject(
         AddProjectRequestBody(

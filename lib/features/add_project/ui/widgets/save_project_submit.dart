@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/helpers/toasts.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
@@ -15,11 +16,14 @@ class SaveProjectSubmit extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           success: () {
-            context.showSnackBar('Project created successfully');
+            showToast(message: 'Project created successfully');
             context.pop();
           },
           error: (message) {
-            context.showSnackBar(message, isError: true);
+            showToast(
+              message: 'Project has already been created',
+              isError: true,
+            );
           },
         );
       },

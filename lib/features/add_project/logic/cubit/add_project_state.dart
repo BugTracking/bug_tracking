@@ -14,4 +14,29 @@ class AddProjectState with _$AddProjectState {
   const factory AddProjectState.selectMembersLoading() = SelectMembersLoading;
 
   const factory AddProjectState.selectMembersSuccess() = SelectMembersSuccess;
+
+  const factory AddProjectState.getCategoriesLoading() = GetCateogriesLoading;
+
+  const factory AddProjectState.getCategoriesSuccess() = GetCateogriesSucess;
+
+  const factory AddProjectState.filterCategoriesLoading() =
+      FilterCateogriesLoading;
+
+  const factory AddProjectState.filterCategoriesSuccess() =
+      FilterCateogriesSucess;
+
+  const factory AddProjectState.selectCategoriesLoading() =
+      SelectCateogriesLoading;
+
+  const factory AddProjectState.selectCategoriesSuccess() =
+      SelectCateogriesSucess;
+
+  const factory AddProjectState.getCategoriesError() = GetCateogriesError;
+
+  const factory AddProjectState.addCategoriesLoading() = AddCateogriesLoading;
+
+  const factory AddProjectState.addCategoriesSuccess() = AddCateogriesSuccess;
+
+  const factory AddProjectState.addCategoriesError(String error) =
+      AddCateogriesError;
 }

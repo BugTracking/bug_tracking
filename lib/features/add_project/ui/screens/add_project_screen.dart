@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
 import 'package:bug_tracking/features/add_project/ui/widgets/add_project_form.dart';
@@ -18,6 +19,11 @@ class AddProjectScreen extends StatelessWidget {
       ),
       body: BlocBuilder<AddProjectCubit, AddProjectState>(
         builder: (context, state) {
+          if (state is GetCateogriesLoading) {
+            return const Center(
+              child: CustomLoadingIndicator(),
+            );
+          }
           return SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0.w, vertical: 20.h),

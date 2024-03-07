@@ -84,7 +84,8 @@ class AppRouter {
       case Routes.addProject:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => getIt<AddProjectCubit>(),
+            create: (context) =>
+                getIt<AddProjectCubit>()..emitGetCategoriesState(),
             child: const AddProjectScreen(),
           ),
         );

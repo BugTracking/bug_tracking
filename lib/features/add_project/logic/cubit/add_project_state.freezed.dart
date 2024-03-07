@@ -24,6 +24,16 @@ mixin _$AddProjectState {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +44,16 @@ mixin _$AddProjectState {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +64,16 @@ mixin _$AddProjectState {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +85,20 @@ mixin _$AddProjectState {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +109,16 @@ mixin _$AddProjectState {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +129,16 @@ mixin _$AddProjectState {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -142,6 +206,16 @@ class _$InitialImpl implements _Initial {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) {
     return initial();
   }
@@ -155,6 +229,16 @@ class _$InitialImpl implements _Initial {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) {
     return initial?.call();
   }
@@ -168,6 +252,16 @@ class _$InitialImpl implements _Initial {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -185,6 +279,20 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) {
     return initial(this);
   }
@@ -198,6 +306,16 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) {
     return initial?.call(this);
   }
@@ -211,6 +329,16 @@ class _$InitialImpl implements _Initial {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -268,6 +396,16 @@ class _$LoadingImpl implements Loading {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) {
     return loading();
   }
@@ -281,6 +419,16 @@ class _$LoadingImpl implements Loading {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) {
     return loading?.call();
   }
@@ -294,6 +442,16 @@ class _$LoadingImpl implements Loading {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -311,6 +469,20 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) {
     return loading(this);
   }
@@ -324,6 +496,16 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) {
     return loading?.call(this);
   }
@@ -337,6 +519,16 @@ class _$LoadingImpl implements Loading {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -394,6 +586,16 @@ class _$SuccessImpl implements Success {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) {
     return success();
   }
@@ -407,6 +609,16 @@ class _$SuccessImpl implements Success {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) {
     return success?.call();
   }
@@ -420,6 +632,16 @@ class _$SuccessImpl implements Success {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -437,6 +659,20 @@ class _$SuccessImpl implements Success {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) {
     return success(this);
   }
@@ -450,6 +686,16 @@ class _$SuccessImpl implements Success {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) {
     return success?.call(this);
   }
@@ -463,6 +709,16 @@ class _$SuccessImpl implements Success {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -546,6 +802,16 @@ class _$ErrorImpl implements Error {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) {
     return error(message);
   }
@@ -559,6 +825,16 @@ class _$ErrorImpl implements Error {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) {
     return error?.call(message);
   }
@@ -572,6 +848,16 @@ class _$ErrorImpl implements Error {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -589,6 +875,20 @@ class _$ErrorImpl implements Error {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) {
     return error(this);
   }
@@ -602,6 +902,16 @@ class _$ErrorImpl implements Error {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) {
     return error?.call(this);
   }
@@ -615,6 +925,16 @@ class _$ErrorImpl implements Error {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -678,6 +998,16 @@ class _$SelectMembersLoadingImpl implements SelectMembersLoading {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) {
     return selectMembersLoading();
   }
@@ -691,6 +1021,16 @@ class _$SelectMembersLoadingImpl implements SelectMembersLoading {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) {
     return selectMembersLoading?.call();
   }
@@ -704,6 +1044,16 @@ class _$SelectMembersLoadingImpl implements SelectMembersLoading {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (selectMembersLoading != null) {
@@ -721,6 +1071,20 @@ class _$SelectMembersLoadingImpl implements SelectMembersLoading {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) {
     return selectMembersLoading(this);
   }
@@ -734,6 +1098,16 @@ class _$SelectMembersLoadingImpl implements SelectMembersLoading {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) {
     return selectMembersLoading?.call(this);
   }
@@ -747,6 +1121,16 @@ class _$SelectMembersLoadingImpl implements SelectMembersLoading {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (selectMembersLoading != null) {
@@ -805,6 +1189,16 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     required TResult Function(String message) error,
     required TResult Function() selectMembersLoading,
     required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
   }) {
     return selectMembersSuccess();
   }
@@ -818,6 +1212,16 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult? Function(String message)? error,
     TResult? Function()? selectMembersLoading,
     TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
   }) {
     return selectMembersSuccess?.call();
   }
@@ -831,6 +1235,16 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult Function(String message)? error,
     TResult Function()? selectMembersLoading,
     TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (selectMembersSuccess != null) {
@@ -848,6 +1262,20 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     required TResult Function(Error value) error,
     required TResult Function(SelectMembersLoading value) selectMembersLoading,
     required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
   }) {
     return selectMembersSuccess(this);
   }
@@ -861,6 +1289,16 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult? Function(Error value)? error,
     TResult? Function(SelectMembersLoading value)? selectMembersLoading,
     TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
   }) {
     return selectMembersSuccess?.call(this);
   }
@@ -874,6 +1312,16 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
     TResult Function(Error value)? error,
     TResult Function(SelectMembersLoading value)? selectMembersLoading,
     TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
     required TResult orElse(),
   }) {
     if (selectMembersSuccess != null) {
@@ -885,4 +1333,1953 @@ class _$SelectMembersSuccessImpl implements SelectMembersSuccess {
 
 abstract class SelectMembersSuccess implements AddProjectState {
   const factory SelectMembersSuccess() = _$SelectMembersSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$GetCateogriesLoadingImplCopyWith<$Res> {
+  factory _$$GetCateogriesLoadingImplCopyWith(_$GetCateogriesLoadingImpl value,
+          $Res Function(_$GetCateogriesLoadingImpl) then) =
+      __$$GetCateogriesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCateogriesLoadingImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$GetCateogriesLoadingImpl>
+    implements _$$GetCateogriesLoadingImplCopyWith<$Res> {
+  __$$GetCateogriesLoadingImplCopyWithImpl(_$GetCateogriesLoadingImpl _value,
+      $Res Function(_$GetCateogriesLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCateogriesLoadingImpl implements GetCateogriesLoading {
+  const _$GetCateogriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.getCategoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCateogriesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return getCategoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return getCategoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesLoading != null) {
+      return getCategoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return getCategoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return getCategoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesLoading != null) {
+      return getCategoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCateogriesLoading implements AddProjectState {
+  const factory GetCateogriesLoading() = _$GetCateogriesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$GetCateogriesSucessImplCopyWith<$Res> {
+  factory _$$GetCateogriesSucessImplCopyWith(_$GetCateogriesSucessImpl value,
+          $Res Function(_$GetCateogriesSucessImpl) then) =
+      __$$GetCateogriesSucessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCateogriesSucessImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$GetCateogriesSucessImpl>
+    implements _$$GetCateogriesSucessImplCopyWith<$Res> {
+  __$$GetCateogriesSucessImplCopyWithImpl(_$GetCateogriesSucessImpl _value,
+      $Res Function(_$GetCateogriesSucessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCateogriesSucessImpl implements GetCateogriesSucess {
+  const _$GetCateogriesSucessImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.getCategoriesSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCateogriesSucessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return getCategoriesSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return getCategoriesSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesSuccess != null) {
+      return getCategoriesSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return getCategoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return getCategoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesSuccess != null) {
+      return getCategoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCateogriesSucess implements AddProjectState {
+  const factory GetCateogriesSucess() = _$GetCateogriesSucessImpl;
+}
+
+/// @nodoc
+abstract class _$$FilterCateogriesLoadingImplCopyWith<$Res> {
+  factory _$$FilterCateogriesLoadingImplCopyWith(
+          _$FilterCateogriesLoadingImpl value,
+          $Res Function(_$FilterCateogriesLoadingImpl) then) =
+      __$$FilterCateogriesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FilterCateogriesLoadingImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$FilterCateogriesLoadingImpl>
+    implements _$$FilterCateogriesLoadingImplCopyWith<$Res> {
+  __$$FilterCateogriesLoadingImplCopyWithImpl(
+      _$FilterCateogriesLoadingImpl _value,
+      $Res Function(_$FilterCateogriesLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FilterCateogriesLoadingImpl implements FilterCateogriesLoading {
+  const _$FilterCateogriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.filterCategoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FilterCateogriesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return filterCategoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return filterCategoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (filterCategoriesLoading != null) {
+      return filterCategoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return filterCategoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return filterCategoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (filterCategoriesLoading != null) {
+      return filterCategoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FilterCateogriesLoading implements AddProjectState {
+  const factory FilterCateogriesLoading() = _$FilterCateogriesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FilterCateogriesSucessImplCopyWith<$Res> {
+  factory _$$FilterCateogriesSucessImplCopyWith(
+          _$FilterCateogriesSucessImpl value,
+          $Res Function(_$FilterCateogriesSucessImpl) then) =
+      __$$FilterCateogriesSucessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FilterCateogriesSucessImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$FilterCateogriesSucessImpl>
+    implements _$$FilterCateogriesSucessImplCopyWith<$Res> {
+  __$$FilterCateogriesSucessImplCopyWithImpl(
+      _$FilterCateogriesSucessImpl _value,
+      $Res Function(_$FilterCateogriesSucessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$FilterCateogriesSucessImpl implements FilterCateogriesSucess {
+  const _$FilterCateogriesSucessImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.filterCategoriesSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FilterCateogriesSucessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return filterCategoriesSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return filterCategoriesSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (filterCategoriesSuccess != null) {
+      return filterCategoriesSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return filterCategoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return filterCategoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (filterCategoriesSuccess != null) {
+      return filterCategoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FilterCateogriesSucess implements AddProjectState {
+  const factory FilterCateogriesSucess() = _$FilterCateogriesSucessImpl;
+}
+
+/// @nodoc
+abstract class _$$SelectCateogriesLoadingImplCopyWith<$Res> {
+  factory _$$SelectCateogriesLoadingImplCopyWith(
+          _$SelectCateogriesLoadingImpl value,
+          $Res Function(_$SelectCateogriesLoadingImpl) then) =
+      __$$SelectCateogriesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SelectCateogriesLoadingImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$SelectCateogriesLoadingImpl>
+    implements _$$SelectCateogriesLoadingImplCopyWith<$Res> {
+  __$$SelectCateogriesLoadingImplCopyWithImpl(
+      _$SelectCateogriesLoadingImpl _value,
+      $Res Function(_$SelectCateogriesLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SelectCateogriesLoadingImpl implements SelectCateogriesLoading {
+  const _$SelectCateogriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.selectCategoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectCateogriesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return selectCategoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return selectCategoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (selectCategoriesLoading != null) {
+      return selectCategoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return selectCategoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return selectCategoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (selectCategoriesLoading != null) {
+      return selectCategoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SelectCateogriesLoading implements AddProjectState {
+  const factory SelectCateogriesLoading() = _$SelectCateogriesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SelectCateogriesSucessImplCopyWith<$Res> {
+  factory _$$SelectCateogriesSucessImplCopyWith(
+          _$SelectCateogriesSucessImpl value,
+          $Res Function(_$SelectCateogriesSucessImpl) then) =
+      __$$SelectCateogriesSucessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SelectCateogriesSucessImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$SelectCateogriesSucessImpl>
+    implements _$$SelectCateogriesSucessImplCopyWith<$Res> {
+  __$$SelectCateogriesSucessImplCopyWithImpl(
+      _$SelectCateogriesSucessImpl _value,
+      $Res Function(_$SelectCateogriesSucessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SelectCateogriesSucessImpl implements SelectCateogriesSucess {
+  const _$SelectCateogriesSucessImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.selectCategoriesSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectCateogriesSucessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return selectCategoriesSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return selectCategoriesSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (selectCategoriesSuccess != null) {
+      return selectCategoriesSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return selectCategoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return selectCategoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (selectCategoriesSuccess != null) {
+      return selectCategoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SelectCateogriesSucess implements AddProjectState {
+  const factory SelectCateogriesSucess() = _$SelectCateogriesSucessImpl;
+}
+
+/// @nodoc
+abstract class _$$GetCateogriesErrorImplCopyWith<$Res> {
+  factory _$$GetCateogriesErrorImplCopyWith(_$GetCateogriesErrorImpl value,
+          $Res Function(_$GetCateogriesErrorImpl) then) =
+      __$$GetCateogriesErrorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCateogriesErrorImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$GetCateogriesErrorImpl>
+    implements _$$GetCateogriesErrorImplCopyWith<$Res> {
+  __$$GetCateogriesErrorImplCopyWithImpl(_$GetCateogriesErrorImpl _value,
+      $Res Function(_$GetCateogriesErrorImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCateogriesErrorImpl implements GetCateogriesError {
+  const _$GetCateogriesErrorImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.getCategoriesError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetCateogriesErrorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return getCategoriesError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return getCategoriesError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesError != null) {
+      return getCategoriesError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return getCategoriesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return getCategoriesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesError != null) {
+      return getCategoriesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCateogriesError implements AddProjectState {
+  const factory GetCateogriesError() = _$GetCateogriesErrorImpl;
+}
+
+/// @nodoc
+abstract class _$$AddCateogriesLoadingImplCopyWith<$Res> {
+  factory _$$AddCateogriesLoadingImplCopyWith(_$AddCateogriesLoadingImpl value,
+          $Res Function(_$AddCateogriesLoadingImpl) then) =
+      __$$AddCateogriesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddCateogriesLoadingImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$AddCateogriesLoadingImpl>
+    implements _$$AddCateogriesLoadingImplCopyWith<$Res> {
+  __$$AddCateogriesLoadingImplCopyWithImpl(_$AddCateogriesLoadingImpl _value,
+      $Res Function(_$AddCateogriesLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AddCateogriesLoadingImpl implements AddCateogriesLoading {
+  const _$AddCateogriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.addCategoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddCateogriesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return addCategoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return addCategoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (addCategoriesLoading != null) {
+      return addCategoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return addCategoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return addCategoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (addCategoriesLoading != null) {
+      return addCategoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddCateogriesLoading implements AddProjectState {
+  const factory AddCateogriesLoading() = _$AddCateogriesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AddCateogriesSuccessImplCopyWith<$Res> {
+  factory _$$AddCateogriesSuccessImplCopyWith(_$AddCateogriesSuccessImpl value,
+          $Res Function(_$AddCateogriesSuccessImpl) then) =
+      __$$AddCateogriesSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddCateogriesSuccessImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$AddCateogriesSuccessImpl>
+    implements _$$AddCateogriesSuccessImplCopyWith<$Res> {
+  __$$AddCateogriesSuccessImplCopyWithImpl(_$AddCateogriesSuccessImpl _value,
+      $Res Function(_$AddCateogriesSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AddCateogriesSuccessImpl implements AddCateogriesSuccess {
+  const _$AddCateogriesSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AddProjectState.addCategoriesSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddCateogriesSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return addCategoriesSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return addCategoriesSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (addCategoriesSuccess != null) {
+      return addCategoriesSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return addCategoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return addCategoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (addCategoriesSuccess != null) {
+      return addCategoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddCateogriesSuccess implements AddProjectState {
+  const factory AddCateogriesSuccess() = _$AddCateogriesSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AddCateogriesErrorImplCopyWith<$Res> {
+  factory _$$AddCateogriesErrorImplCopyWith(_$AddCateogriesErrorImpl value,
+          $Res Function(_$AddCateogriesErrorImpl) then) =
+      __$$AddCateogriesErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$AddCateogriesErrorImplCopyWithImpl<$Res>
+    extends _$AddProjectStateCopyWithImpl<$Res, _$AddCateogriesErrorImpl>
+    implements _$$AddCateogriesErrorImplCopyWith<$Res> {
+  __$$AddCateogriesErrorImplCopyWithImpl(_$AddCateogriesErrorImpl _value,
+      $Res Function(_$AddCateogriesErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$AddCateogriesErrorImpl(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddCateogriesErrorImpl implements AddCateogriesError {
+  const _$AddCateogriesErrorImpl(this.error);
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'AddProjectState.addCategoriesError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddCateogriesErrorImpl &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddCateogriesErrorImplCopyWith<_$AddCateogriesErrorImpl> get copyWith =>
+      __$$AddCateogriesErrorImplCopyWithImpl<_$AddCateogriesErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() selectMembersLoading,
+    required TResult Function() selectMembersSuccess,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function() getCategoriesSuccess,
+    required TResult Function() filterCategoriesLoading,
+    required TResult Function() filterCategoriesSuccess,
+    required TResult Function() selectCategoriesLoading,
+    required TResult Function() selectCategoriesSuccess,
+    required TResult Function() getCategoriesError,
+    required TResult Function() addCategoriesLoading,
+    required TResult Function() addCategoriesSuccess,
+    required TResult Function(String error) addCategoriesError,
+  }) {
+    return addCategoriesError(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? selectMembersLoading,
+    TResult? Function()? selectMembersSuccess,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function()? getCategoriesSuccess,
+    TResult? Function()? filterCategoriesLoading,
+    TResult? Function()? filterCategoriesSuccess,
+    TResult? Function()? selectCategoriesLoading,
+    TResult? Function()? selectCategoriesSuccess,
+    TResult? Function()? getCategoriesError,
+    TResult? Function()? addCategoriesLoading,
+    TResult? Function()? addCategoriesSuccess,
+    TResult? Function(String error)? addCategoriesError,
+  }) {
+    return addCategoriesError?.call(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? selectMembersLoading,
+    TResult Function()? selectMembersSuccess,
+    TResult Function()? getCategoriesLoading,
+    TResult Function()? getCategoriesSuccess,
+    TResult Function()? filterCategoriesLoading,
+    TResult Function()? filterCategoriesSuccess,
+    TResult Function()? selectCategoriesLoading,
+    TResult Function()? selectCategoriesSuccess,
+    TResult Function()? getCategoriesError,
+    TResult Function()? addCategoriesLoading,
+    TResult Function()? addCategoriesSuccess,
+    TResult Function(String error)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (addCategoriesError != null) {
+      return addCategoriesError(this.error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(SelectMembersLoading value) selectMembersLoading,
+    required TResult Function(SelectMembersSuccess value) selectMembersSuccess,
+    required TResult Function(GetCateogriesLoading value) getCategoriesLoading,
+    required TResult Function(GetCateogriesSucess value) getCategoriesSuccess,
+    required TResult Function(FilterCateogriesLoading value)
+        filterCategoriesLoading,
+    required TResult Function(FilterCateogriesSucess value)
+        filterCategoriesSuccess,
+    required TResult Function(SelectCateogriesLoading value)
+        selectCategoriesLoading,
+    required TResult Function(SelectCateogriesSucess value)
+        selectCategoriesSuccess,
+    required TResult Function(GetCateogriesError value) getCategoriesError,
+    required TResult Function(AddCateogriesLoading value) addCategoriesLoading,
+    required TResult Function(AddCateogriesSuccess value) addCategoriesSuccess,
+    required TResult Function(AddCateogriesError value) addCategoriesError,
+  }) {
+    return addCategoriesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult? Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult? Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult? Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult? Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult? Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult? Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult? Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult? Function(GetCateogriesError value)? getCategoriesError,
+    TResult? Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult? Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult? Function(AddCateogriesError value)? addCategoriesError,
+  }) {
+    return addCategoriesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(SelectMembersLoading value)? selectMembersLoading,
+    TResult Function(SelectMembersSuccess value)? selectMembersSuccess,
+    TResult Function(GetCateogriesLoading value)? getCategoriesLoading,
+    TResult Function(GetCateogriesSucess value)? getCategoriesSuccess,
+    TResult Function(FilterCateogriesLoading value)? filterCategoriesLoading,
+    TResult Function(FilterCateogriesSucess value)? filterCategoriesSuccess,
+    TResult Function(SelectCateogriesLoading value)? selectCategoriesLoading,
+    TResult Function(SelectCateogriesSucess value)? selectCategoriesSuccess,
+    TResult Function(GetCateogriesError value)? getCategoriesError,
+    TResult Function(AddCateogriesLoading value)? addCategoriesLoading,
+    TResult Function(AddCateogriesSuccess value)? addCategoriesSuccess,
+    TResult Function(AddCateogriesError value)? addCategoriesError,
+    required TResult orElse(),
+  }) {
+    if (addCategoriesError != null) {
+      return addCategoriesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddCateogriesError implements AddProjectState {
+  const factory AddCateogriesError(final String error) =
+      _$AddCateogriesErrorImpl;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$AddCateogriesErrorImplCopyWith<_$AddCateogriesErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
