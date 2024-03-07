@@ -1,9 +1,6 @@
-import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/show_bottom_sheet_function.dart';
-import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/core/widgets/custom_shimmer.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';

@@ -7,11 +7,13 @@ class ProjectREsponseBody {
   final bool status;
   final List<ProjectModel>? data;
   ProjectREsponseBody(this.status, this.data);
-  factory ProjectREsponseBody.fromJson(Map<String, dynamic> json) => _$ProjectREsponseBodyFromJson(json);
+  factory ProjectREsponseBody.fromJson(Map<String, dynamic> json) =>
+      _$ProjectREsponseBodyFromJson(json);
 }
 
 @JsonSerializable()
 class ProjectModel {
+  @JsonKey(name: '_id')
   final String id;
   final String title;
   final String description;
@@ -31,6 +33,6 @@ class ProjectModel {
     this.timeCreated,
     this.lastUpdatedAt,
   );
-  factory ProjectModel.fromJson(Map<String, dynamic> json) => _$ProjectModelFromJson(json);
-
+  factory ProjectModel.fromJson(Map<String, dynamic> json) =>
+      _$ProjectModelFromJson(json);
 }

@@ -22,7 +22,7 @@ Map<String, dynamic> _$ProjectREsponseBodyToJson(
     };
 
 ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) => ProjectModel(
-      json['id'] as String,
+      json['_id'] as String,
       json['title'] as String,
       json['description'] as String,
       json['status'] as String,
@@ -34,7 +34,7 @@ ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) => ProjectModel(
 
 Map<String, dynamic> _$ProjectModelToJson(ProjectModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
+      '_id': instance.id,
       'title': instance.title,
       'description': instance.description,
       'status': instance.status,
