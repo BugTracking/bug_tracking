@@ -53,7 +53,8 @@ class _AddProjectFormState extends State<AddProjectForm> {
                 suffixIcon: IconButton(
                   onPressed: () {
                     cubit.emitSelectCategoriesState(
-                        cubit.categoryController.text);
+                      cubit.categoryController.text.toLowerCase(),
+                    );
                   },
                   icon: const Icon(
                     Icons.add,

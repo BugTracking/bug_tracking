@@ -22,7 +22,7 @@ class CategoryTile extends StatelessWidget {
         AddProjectCubit cubit = context.read<AddProjectCubit>();
         return InkWell(
           onTap: () {
-            cubit.emitSelectCategoriesState(categoryModel.title);
+            cubit.emitSelectCategoriesState(categoryModel.title.toLowerCase());
           },
           borderRadius: BorderRadius.circular(10.0),
           child: Container(
