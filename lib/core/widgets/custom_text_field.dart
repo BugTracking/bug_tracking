@@ -13,6 +13,8 @@ class CustomTextField extends StatelessWidget {
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
   final bool isEnabled;
+  final int? maxLines;
+  final Function(String)? oncChange;
 
   const CustomTextField({
     super.key,
@@ -25,12 +27,16 @@ class CustomTextField extends StatelessWidget {
     this.errorMsg,
     required this.textInputAction,
     this.isEnabled = true,
+    this.maxLines = 1,
+    this.oncChange,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       obscureText: obscureText,
+      maxLines: maxLines,
       decoration: InputDecoration(
         enabled: isEnabled,
         contentPadding: EdgeInsets.symmetric(
@@ -64,6 +70,7 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),
+      onChanged: oncChange,
       textInputAction: textInputAction,
       validator: (value) {
         if (value == null || value.isEmpty) {

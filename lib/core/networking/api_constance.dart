@@ -2,6 +2,8 @@ class ApiConstance {
   static const String baseUrl = 'http://localhost:3000/';
   static const String login = '';
   static const String users = 'users';
+  static const String categories = 'categories';
+  static const String projects = 'projects';
 }
 
 class ApiErrors {

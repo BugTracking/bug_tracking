@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/features/add_bug/ui/screens/add_bug_screen.dart';
+import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
 import 'package:bug_tracking/features/add_project/ui/screens/add_project_screen.dart';
 import 'package:bug_tracking/features/allbugs/ui/screens/allbugs_screen.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
@@ -82,7 +83,11 @@ class AppRouter {
         );
       case Routes.addProject:
         return MaterialPageRoute(
-          builder: (context) => const AddProjectScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<AddProjectCubit>()..emitGetCategoriesState(),
+            child: const AddProjectScreen(),
+          ),
         );
       case Routes.allBugs:
         return MaterialPageRoute(

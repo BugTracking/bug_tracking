@@ -1,5 +1,4 @@
 import 'package:bug_tracking/core/widgets/add_container.dart';
-import 'package:bug_tracking/features/add_bug/ui/widgets/members_selection_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class AssignedToContainer extends StatelessWidget {
@@ -9,14 +8,16 @@ class AssignedToContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        showModalBottomSheet(
-          enableDrag: true,
-          context: context,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero,
-          ),
-          builder: (context) => const MembersSelectionBottomSheet(),
-        );
+        // showModalBottomSheet(
+        //   enableDrag: true,
+        //   context: context,
+        //   shape: const RoundedRectangleBorder(
+        //     borderRadius: BorderRadius.zero,
+        //   ),
+        //   builder: (_) => AddProjectMembersSelection(
+        //     context: context,
+        //   ),
+        // );
       },
       child: const AddContainer(
         title: 'Assigned To',
