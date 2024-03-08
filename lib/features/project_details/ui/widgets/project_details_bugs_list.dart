@@ -1,10 +1,12 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_tile.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProjectDetailsBugsList extends StatelessWidget {
-  const ProjectDetailsBugsList({super.key});
+  final List<BugModel> bugs;
+  const ProjectDetailsBugsList({super.key, required this.bugs});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,11 @@ class ProjectDetailsBugsList extends StatelessWidget {
         clipBehavior: Clip.none,
         itemBuilder: (context, index) => SizedBox(
           width: 300.w,
-          child: const ProjectBugTile(),
+          child: ProjectBugTile(bug: bugs[index]),
         ),
         separatorBuilder: (context, index) => horizontalSpace(5.0),
-        itemCount: 4,
+        itemCount: bugs.length > 3 ? 3 : bugs.length,
+        reverse: true,
       ),
     );
   }

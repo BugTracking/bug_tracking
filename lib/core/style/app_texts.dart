@@ -34,6 +34,11 @@ class AppTexts {
         fontWeight: AppFontWeight.semiBold,
         color: AppColor.blackish,
       );
+  static TextStyle get text14OnBackgroundCairoBold => GoogleFonts.cairo(
+        fontSize: 14.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
   static TextStyle get text12OnBackgroundNunitoSansSemiBold =>
       GoogleFonts.nunitoSans(
         fontSize: 12.sp,
