@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/core/router/app_router.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_theme.dart';
@@ -16,7 +17,7 @@ class BugTrackingApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.onBoarding,
+        initialRoute: CacheHelper.token == '' ? Routes.onBoarding : Routes.home,
         onGenerateRoute: appRouter.onGeneratedRoute,
         theme: AppTheme.lightTheme,
       ),

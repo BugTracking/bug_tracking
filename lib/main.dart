@@ -3,10 +3,11 @@ import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:bug_tracking/core/helpers/cache_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await CacheHelper.init();
   setupGetIt();
   await ScreenUtil.ensureScreenSize();
   // for splash screen duration
