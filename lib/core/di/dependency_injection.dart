@@ -7,6 +7,8 @@ import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.
 import 'package:bug_tracking/features/home/data/repos/home_repo.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
+import 'package:bug_tracking/features/project_details/data/repos/project_details_repo.dart';
+import 'package:bug_tracking/features/project_details/logic/cubit/project_details_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -29,4 +31,10 @@ void setupGetIt() async {
   // Add Project
   getIt.registerLazySingleton<AddProjectRepo>(() => AddProjectRepo(getIt()));
   getIt.registerFactory<AddProjectCubit>(() => AddProjectCubit(getIt()));
+
+  // Project Details
+  getIt.registerLazySingleton<ProjectDetailsRepo>(
+      () => ProjectDetailsRepo(getIt()));
+  getIt
+      .registerFactory<ProjectDetailsCubit>(() => ProjectDetailsCubit(getIt()));
 }

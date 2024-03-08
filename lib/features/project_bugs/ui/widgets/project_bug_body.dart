@@ -1,8 +1,12 @@
+import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBugBody extends StatelessWidget {
-  const ProjectBugBody({super.key});
+  final BugModel bug;
+  const ProjectBugBody({super.key, required this.bug});
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +15,18 @@ class ProjectBugBody extends StatelessWidget {
       children: [
         Expanded(
           child: Text(
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry .',
+            bug.description,
             maxLines: 3,
-            style: AppTexts.text14GreyCairoSemiBold,
+            style: AppTexts.text14GreyCairoSemiBold.copyWith(height: 1.3),
+            overflow: TextOverflow.ellipsis,
           ),
         ),
+        horizontalSpace(5.0),
         CircleAvatar(
           backgroundColor: const Color(0xffD9D9D9),
           radius: 16,
           child: Text(
-            'MR',
+            bug.lastUpdatedBy.name.toShortcutEachWord(),
             style: AppTexts.text10PrimaryNunitoSansSemiBold,
           ),
         )
