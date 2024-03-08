@@ -49,8 +49,7 @@ class AppRouter {
             create: (context) => getIt<ProjectDetailsCubit>()
               ..emitProjectDetailsState(args.projectId),
             child: ProjectDetailsScreen(
-              projectId: args.projectId,
-              projectTitle: args.projectTitle,
+              args: args,
             ),
           ),
         );

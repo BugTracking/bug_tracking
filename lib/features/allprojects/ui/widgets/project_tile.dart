@@ -13,8 +13,11 @@ class ProjectTile extends StatelessWidget {
     return InkWell(
       onTap: () => context.push(
         Routes.projectDetails,
-        arguments:
-            ProjectDetailsScreenArgs('65e94b2eabfdfbe3e32dbee6', 'Salla App'),
+        arguments: ProjectDetailsScreenArgs(
+          '65e94b2eabfdfbe3e32dbee6',
+          'Salla App',
+          'Done',
+        ),
       ),
       borderRadius: BorderRadius.circular(10.0),
       child: Stack(

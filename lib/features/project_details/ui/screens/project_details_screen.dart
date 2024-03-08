@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/core/widgets/custom_list_title.dart';
 import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
@@ -15,20 +16,20 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProjectDetailsScreen extends StatelessWidget {
-  final String projectId;
-  final String projectTitle;
+  final ProjectDetailsScreenArgs args;
 
   const ProjectDetailsScreen({
     super.key,
-    required this.projectId,
-    required this.projectTitle,
+    required this.args,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const ProjectDetailsAppBarTitle(),
+        title: ProjectDetailsAppBarTitle(
+          args: args,
+        ),
       ),
       body: BlocBuilder<ProjectDetailsCubit, ProjectDetailsState>(
         builder: (context, state) {
@@ -41,7 +42,6 @@ class ProjectDetailsScreen extends StatelessWidget {
             );
           }
           ProjectDetailsModel projectDetails = cubit.projectDetailsModel!;
-
           ProjectModel project = projectDetails.project;
 
           return SingleChildScrollView(

@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/helpers/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppColor {
@@ -28,4 +29,22 @@ class AppColor {
   static const Color semiLightGreyish = Color(0xffD9D9D9);
 
   static const Color darkGreyish = Color(0xffB4B4B4);
+}
+
+Color getPriorityOrSevertyColor(String text) {
+  if (text.contains('Low')) return AppColor.redish;
+  if (text.contains('Medium')) return AppColor.greenish;
+  return AppColor.bluish;
+}
+
+Color getBugStatusColor(String text) {
+  if (text == toDo) return AppColor.bluish;
+  if (text == done) return AppColor.redish;
+  return AppColor.greenish;
+}
+
+Color getProjectStatusColor(String text) {
+  if (text == open) return AppColor.bluish;
+  if (text == inProgress) return AppColor.yellowish;
+  return AppColor.redish;
 }
