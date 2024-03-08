@@ -5,7 +5,7 @@ import 'package:bug_tracking/features/add_bug/ui/screens/add_bug_screen.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
 import 'package:bug_tracking/features/add_project/ui/screens/add_project_screen.dart';
 import 'package:bug_tracking/features/allbugs/ui/screens/allbugs_screen.dart';
-import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
+import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/authentcation/ui/screens/login_screen.dart';
 import 'package:bug_tracking/features/authentcation/ui/screens/register_screen.dart';
 import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
@@ -80,7 +80,7 @@ class AppRouter {
         );
       case Routes.allProjects:
         return MaterialPageRoute(
-          builder: (context) => const AllProjectsScreen(),
+          builder: (context) => const ProjectsScreen(),
         );
       case Routes.members:
         return MaterialPageRoute(

@@ -1,4 +1,6 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
+import 'package:bug_tracking/features/allprojects/data/model/project_response_body.dart';
+
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -32,6 +34,10 @@ abstract class ApiService {
   @GET('${ApiConstance.users}/{id}')
   Future<UserResponseBody> getUser(@Path('id') String userId);
 
+  @GET(ApiConstance.projects)
+  Future<ProjectResponseBody> getProjects(
+    @Header('authorization') String token,
+  );
   @GET(ApiConstance.categories)
   Future<CategoriesResponseBody> getCategories();
 

@@ -70,7 +70,7 @@ extension StringEx on String {
     if (split(' ').length > 1) {
       return '${split(' ')[0][0].toUpperCase()}${split(' ')[1][0].toUpperCase()}';
     }
-    return '${[0]}${[1]}';
+    return '${this[0]}${this[1]}';
   }
 
   String toShortcut() {
