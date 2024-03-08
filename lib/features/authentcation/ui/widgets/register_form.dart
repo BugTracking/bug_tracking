@@ -44,7 +44,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller:  context.read<AuthCubit>().emailController,
+            controller: context.read<AuthCubit>().emailController,
             hintText: 'Email',
             prefixIcon: const Icon(
               Icons.email,
@@ -68,7 +68,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller:  context.read<AuthCubit>().passwordController,
+            controller: context.read<AuthCubit>().passwordController,
             obscureText: _passwordVisible,
             hintText: 'Password',
             prefixIcon: const Icon(
@@ -123,7 +123,7 @@ class _RegisterFormState extends State<RegisterForm> {
             onChanged: (value) {
               setState(() {
                 roleSelected = value ?? '';
-                context.read<AuthCubit>().roleController.text=value!;
+                context.read<AuthCubit>().roleController.text = value!;
               });
             },
             items: const ['User', 'Admin'],
