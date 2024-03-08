@@ -1,7 +1,11 @@
+import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/features/allprojects/logic/cubit/projects_cubit.dart';
+import 'package:bug_tracking/features/allprojects/logic/cubit/projects_states.dart';
 import 'package:bug_tracking/features/allprojects/ui/widgets/project_list.dart';
 import 'package:bug_tracking/features/filter/screen/project_filter_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AllProjectsScreen extends StatelessWidget {
@@ -29,13 +33,19 @@ class AllProjectsScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 16.0.w,
-          vertical: 20.0.h,
-        ),
-        child: const ProjectList(),
-      ),
+      body:
+BlocProvider(
+            create: (context) => getIt<ProjectsCubit>()..emitProjectData(),
+            child: BlocBuilder<ProjectsCubit, ProjectStates>(builder: (context, state) {
+                    return Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 16.0.w,
+              vertical: 20.0.h,
+            ),
+            child: const ProjectList(),
+                    );
+                  }),
+          ),
     );
   }
 }

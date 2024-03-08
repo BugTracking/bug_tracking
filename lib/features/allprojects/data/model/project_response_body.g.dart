@@ -6,16 +6,16 @@ part of 'project_response_body.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProjectREsponseBody _$ProjectREsponseBodyFromJson(Map<String, dynamic> json) =>
-    ProjectREsponseBody(
+ProjectResponseBody _$ProjectResponseBodyFromJson(Map<String, dynamic> json) =>
+    ProjectResponseBody(
       json['status'] as bool,
       (json['data'] as List<dynamic>?)
           ?.map((e) => ProjectModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$ProjectREsponseBodyToJson(
-        ProjectREsponseBody instance) =>
+Map<String, dynamic> _$ProjectResponseBodyToJson(
+        ProjectResponseBody instance) =>
     <String, dynamic>{
       'status': instance.status,
       'data': instance.data,
@@ -28,8 +28,8 @@ ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) => ProjectModel(
       json['status'] as String,
       UserModel.fromJson(json['creator'] as Map<String, dynamic>),
       UserModel.fromJson(json['lastUpdatedBy'] as Map<String, dynamic>),
-      DateTime.parse(json['timeCreated'] as String),
-      DateTime.parse(json['lastUpdatedAt'] as String),
+      json['timeCreated'] as String,
+      json['lastUpdatedAt'] as String,
     );
 
 Map<String, dynamic> _$ProjectModelToJson(ProjectModel instance) =>
@@ -40,6 +40,6 @@ Map<String, dynamic> _$ProjectModelToJson(ProjectModel instance) =>
       'status': instance.status,
       'creator': instance.creator,
       'lastUpdatedBy': instance.lastUpdatedBy,
-      'timeCreated': instance.timeCreated.toIso8601String(),
-      'lastUpdatedAt': instance.lastUpdatedAt.toIso8601String(),
+      'timeCreated': instance.timeCreated,
+      'lastUpdatedAt': instance.lastUpdatedAt,
     };

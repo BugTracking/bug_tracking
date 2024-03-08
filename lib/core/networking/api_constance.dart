@@ -1,5 +1,5 @@
 class ApiConstance {
-  static const String baseUrl = 'http://localhost:3000/';
+  static const String baseUrl = 'https://bugtracking-1.onrender.com/';
   static const String login = '';
   static const String users = 'users';
    static const String projects = 'projects';

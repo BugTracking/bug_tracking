@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://localhost:3000/';
+    baseUrl ??= 'https://bugtracking-1.onrender.com/';
   }
 
   final Dio _dio;
@@ -76,14 +76,14 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<ProjectREsponseBody> getProjects(String token) async {
+  Future<ProjectResponseBody> getProjects(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'authorization': token};
     _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ProjectREsponseBody>(Options(
+        _setStreamType<ProjectResponseBody>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -99,7 +99,7 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = ProjectREsponseBody.fromJson(_result.data!);
+    final value = ProjectResponseBody.fromJson(_result.data!);
     return value;
   }
 

@@ -1,12 +1,12 @@
 import 'package:bug_tracking/features/allprojects/data/model/project_response_body.dart';
-import 'package:bug_tracking/features/allprojects/data/repos/allproject_repos.dart';
+import 'package:bug_tracking/features/allprojects/data/repos/aprojects_repos.dart';
 import 'package:bug_tracking/features/allprojects/logic/cubit/projects_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ProjectCubit extends Cubit<ProjectStates> {
+class ProjectsCubit extends Cubit<ProjectStates> {
   final ProjectsRepo _projectsRepo;
 
-  ProjectCubit(this._projectsRepo) : super(const ProjectStates.initial());
+  ProjectsCubit(this._projectsRepo) : super(const ProjectStates.initial());
 
   List<ProjectModel> projects = [];
   void emitProjectData() async {
@@ -14,6 +14,8 @@ class ProjectCubit extends Cubit<ProjectStates> {
     response.when(
       success: (data) {
         projects = data.data ?? [];
+        print("this");
+        print(projects.length);
         emit(ProjectStates.getProjectsSuccess(data.data ?? []));
       },
       failure: (error) {

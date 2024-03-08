@@ -18,6 +18,6 @@ abstract class ApiService {
   Future<UserResponseBody> getUser(@Path('id') String userId);
 
   @GET(ApiConstance.projects)
-  Future<ProjectREsponseBody> getProjects(
+  Future<ProjectResponseBody> getProjects(
       @Header('authorization') String token);
 }
