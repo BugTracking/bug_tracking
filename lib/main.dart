@@ -10,9 +10,6 @@ import 'package:bug_tracking/core/helpers/cache_helper.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
   setupGetIt();
   await ScreenUtil.ensureScreenSize();
   // for splash screen duration
