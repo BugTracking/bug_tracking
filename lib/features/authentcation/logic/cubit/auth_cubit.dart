@@ -10,8 +10,6 @@ class AuthCubit extends Cubit<AuthState> {
   final AuthRepo _authRepo;
   AuthCubit(this._authRepo) : super(AuthInitial());
 
-
-
   final TextEditingController userNameAndEmailController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController userNameController = TextEditingController();
@@ -57,8 +55,7 @@ class AuthCubit extends Cubit<AuthState> {
         success: (data)  async  {
           await CacheHelper.setString(key: 'token', value:data.token!);
           emit(AuthSuccess('You are logged in sucessfully'));
-          //print('Token from login response: ${data.token}');
-          //print(CacheHelper.getString(key: 'token'));
+
         },
         failure: (error) {
           emit(AuthFailure(error.apiErrorModel.message));
@@ -92,8 +89,8 @@ class AuthCubit extends Cubit<AuthState> {
         getRegisterRequestModel(),
       );
       response.when(
-        success: (data) {
-         // saveTokenToPrefs(data.token!);
+        success: (data) async {
+          await CacheHelper.setString(key: 'token', value:data.token!);
           emit(AuthSuccess('You registered sucessfully'));
         },
         failure: (error) {
