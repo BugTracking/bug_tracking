@@ -13,7 +13,7 @@ class _ApiService implements ApiService {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://localhost:3000/';
+    baseUrl ??= 'https://bugtracking-1.onrender.com/';
   }
 
   final Dio _dio;

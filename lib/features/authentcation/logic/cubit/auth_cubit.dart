@@ -4,17 +4,20 @@ import 'package:bug_tracking/features/authentcation/data/repos/auth_repo.dart';
 import 'package:bug_tracking/features/authentcation/logic/cubit/auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:bug_tracking/core/helpers/cache_helper.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   final AuthRepo _authRepo;
   AuthCubit(this._authRepo) : super(AuthInitial());
+
+
 
   final TextEditingController userNameAndEmailController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController roleController = TextEditingController();
 
@@ -27,12 +30,6 @@ class AuthCubit extends Cubit<AuthState> {
       r'^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$',
       caseSensitive: false,
     );
-
-    void saveTokenToPrefs(String token) async {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      await prefs.setString('token', token);
-    }
-
     if (emailRegex.hasMatch(userNameAndEmailController.text)) {
       loginRequestModel = LoginRequestModel(
         userNameAndEmailController.text,
@@ -57,16 +54,18 @@ class AuthCubit extends Cubit<AuthState> {
         getLoginRequestModel(),
       );
       response.when(
-        success: (data) {
-
-          saveTokenToPrefs(data.token!);
+        success: (data)  async  {
+          await CacheHelper.setString(key: 'token', value:data.token!);
           emit(AuthSuccess('You are logged in sucessfully'));
+          //print('Token from login response: ${data.token}');
+          //print(CacheHelper.getString(key: 'token'));
         },
         failure: (error) {
           emit(AuthFailure(error.apiErrorModel.message));
         },
       );
     }
+
   }
 
   RegisterRequestModel getRegisterRequestModel() {
@@ -94,7 +93,7 @@ class AuthCubit extends Cubit<AuthState> {
       );
       response.when(
         success: (data) {
-          saveTokenToPrefs(data.token!);
+         // saveTokenToPrefs(data.token!);
           emit(AuthSuccess('You registered sucessfully'));
         },
         failure: (error) {

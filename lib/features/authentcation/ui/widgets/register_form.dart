@@ -14,7 +14,6 @@ class RegisterForm extends StatefulWidget {
 }
 
 class _RegisterFormState extends State<RegisterForm> {
-  final _formKey = GlobalKey<FormState>();
   bool _passwordVisible = true;
   bool _confirmPasswordVisible = true;
   String roleSelected = '';
@@ -93,7 +92,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller: TextEditingController(),
+            controller: context.read<AuthCubit>().confirmPasswordController,
             obscureText: _confirmPasswordVisible,
             hintText: 'Confirm Password',
             prefixIcon: const Icon(Icons.lock, color: AppColor.greyish),
