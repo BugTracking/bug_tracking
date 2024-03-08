@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:bug_tracking/features/allprojects/ui/widgets/project_body.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,11 @@ class ProjectTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => context.push(Routes.projectDetails),
+      onTap: () => context.push(
+        Routes.projectDetails,
+        arguments:
+            ProjectDetailsScreenArgs('65e94b2eabfdfbe3e32dbee6', 'Salla App'),
+      ),
       borderRadius: BorderRadius.circular(10.0),
       child: Stack(
         clipBehavior: Clip.none,

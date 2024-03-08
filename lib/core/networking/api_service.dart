@@ -8,6 +8,8 @@ import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
+
+import '../../features/project_details/data/models/project_details_response.dart';
 part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConstance.baseUrl)
@@ -32,4 +34,8 @@ abstract class ApiService {
     @Body() AddProjectRequestBody addProjectRequestBody,
     @Header('authorization') String token,
   );
+
+  @GET('${ApiConstance.projects}/{id}')
+  Future<ProjectDetailsResponse> getProjectDetails(
+      @Path('id') String projectId);
 }

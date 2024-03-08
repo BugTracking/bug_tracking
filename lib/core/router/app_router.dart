@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:bug_tracking/features/add_bug/ui/screens/add_bug_screen.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
 import 'package:bug_tracking/features/add_project/ui/screens/add_project_screen.dart';
@@ -15,6 +16,7 @@ import 'package:bug_tracking/features/members/ui/screens/members_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:bug_tracking/features/project_bugs/ui/screens/project_bugs_screen.dart';
+import 'package:bug_tracking/features/project_details/logic/cubit/project_details_cubit.dart';
 import 'package:bug_tracking/features/project_details/ui/screens/project_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,8 +43,16 @@ class AppRouter {
         );
 
       case Routes.projectDetails:
+        var args = settings.arguments as ProjectDetailsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const ProjectDetailsScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<ProjectDetailsCubit>()
+              ..emitProjectDetailsState(args.projectId),
+            child: ProjectDetailsScreen(
+              projectId: args.projectId,
+              projectTitle: args.projectTitle,
+            ),
+          ),
         );
       case Routes.bugDetails:
         return MaterialPageRoute(
