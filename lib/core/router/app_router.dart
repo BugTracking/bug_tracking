@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/features/add_bug/ui/screens/add_bug_screen.dart';
+import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
 import 'package:bug_tracking/features/add_project/ui/screens/add_project_screen.dart';
 import 'package:bug_tracking/features/allbugs/ui/screens/allbugs_screen.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
@@ -8,6 +9,7 @@ import 'package:bug_tracking/features/authentcation/ui/screens/login_screen.dart
 import 'package:bug_tracking/features/authentcation/ui/screens/register_screen.dart';
 import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
+import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_screen.dart';
 import 'package:bug_tracking/features/members/ui/screens/members_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
@@ -58,7 +60,10 @@ class AppRouter {
 
       case Routes.home:
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<HomeCubit>()..emitUserDataState(),
+            child: const HomeScreen(),
+          ),
         );
       case Routes.editProfile:
         return MaterialPageRoute(
@@ -78,7 +83,11 @@ class AppRouter {
         );
       case Routes.addProject:
         return MaterialPageRoute(
-          builder: (context) => const AddProjectScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<AddProjectCubit>()..emitGetCategoriesState(),
+            child: const AddProjectScreen(),
+          ),
         );
       case Routes.allBugs:
         return MaterialPageRoute(

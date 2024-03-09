@@ -1,8 +1,6 @@
 import 'package:bug_tracking/bug_tracking_app.dart';
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/app_router.dart';
-import 'package:bug_tracking/firebase_options.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:bug_tracking/core/helpers/cache_helper.dart';

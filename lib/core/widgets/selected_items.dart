@@ -29,43 +29,56 @@ class SelectedItems extends StatelessWidget {
       ),
       child: ConstrainedBox(
         constraints: BoxConstraints(maxHeight: 90.h),
-        child: SingleChildScrollView(
-          child: Wrap(
-            spacing: 8.0,
-            children: List.generate(
-              items.length,
-              (index) => Container(
-                padding: EdgeInsets.only(
-                  right: 8.0.w,
-                  left: 3.w,
-                  top: 8.h,
-                  bottom: 8.h,
+        child: Builder(
+          builder: (context) {
+            if (items.isEmpty) {
+              return Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.0.h),
+                child: Text(
+                  'No items Selected',
+                  style: AppTexts.text12OnBackgroundCairoBold,
                 ),
-                decoration: BoxDecoration(
-                  color: const Color(0xffF8F8F8),
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-                margin: EdgeInsets.symmetric(vertical: 5.h),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    InkWell(
-                      onTap: () => onClosePressed(index),
-                      child: const Icon(
-                        Icons.close,
-                        color: AppColor.grayWithScale,
-                      ),
+              );
+            }
+            return SingleChildScrollView(
+              child: Wrap(
+                spacing: 8.0,
+                children: List.generate(
+                  items.length,
+                  (index) => Container(
+                    padding: EdgeInsets.only(
+                      right: 8.0.w,
+                      left: 3.w,
+                      top: 8.h,
+                      bottom: 8.h,
                     ),
-                    horizontalSpace(5),
-                    Text(
-                      items[index],
-                      style: AppTexts.text12BlackSFProBold,
+                    decoration: BoxDecoration(
+                      color: const Color(0xffF8F8F8),
+                      borderRadius: BorderRadius.circular(10.r),
                     ),
-                  ],
+                    margin: EdgeInsets.symmetric(vertical: 5.h),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        InkWell(
+                          onTap: () => onClosePressed(index),
+                          child: const Icon(
+                            Icons.close,
+                            color: AppColor.grayWithScale,
+                          ),
+                        ),
+                        horizontalSpace(5),
+                        Text(
+                          items[index],
+                          style: AppTexts.text12BlackSFProBold,
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
+            );
+          },
         ),
       ),
     );

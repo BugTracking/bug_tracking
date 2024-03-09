@@ -1,4 +1,3 @@
-import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -50,17 +49,6 @@ extension CustomBottomSheetExtension on BuildContext {
           ),
         );
       },
-    );
-  }
-}
-
-extension SnackBarExtension on BuildContext {
-  void showSnackBar(String message, {bool isError = false}) {
-    ScaffoldMessenger.of(this).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: isError ? AppColor.redish : AppColor.greenish,
-      ),
     );
   }
 }
