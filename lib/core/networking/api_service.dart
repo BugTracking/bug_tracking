@@ -1,4 +1,8 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
+import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
+import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
+import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
+import 'package:bug_tracking/features/authentcation/data/models/register_response_model.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
@@ -19,7 +23,11 @@ abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
   @POST(ApiConstance.login)
-  Future<Map<String, String>> login(@Body() Map<String, String> body);
+  Future<LoginResponseModel> login(@Body() LoginRequestModel loginRequestModel);
+
+  @POST(ApiConstance.register)
+  Future<RegisterResponseModel> register(
+      @Body() RegisterRequestModel registerRequestModel);
 
   @GET('${ApiConstance.users}/{id}')
   Future<UserResponseBody> getUser(@Path('id') String userId);
