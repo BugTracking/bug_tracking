@@ -19,7 +19,11 @@ abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
   @POST(ApiConstance.login)
-  Future<Map<String, String>> login(@Body() Map<String, String> body);
+  Future<LoginResponseModel> login(@Body() LoginRequestModel loginRequestModel);
+
+  @POST(ApiConstance.register)
+  Future<RegisterResponseModel> register(
+      @Body() RegisterRequestModel registerRequestModel);
 
   @GET('${ApiConstance.users}/{id}')
   Future<UserResponseBody> getUser(@Path('id') String userId);

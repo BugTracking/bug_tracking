@@ -19,6 +19,9 @@ void setupGetIt() async {
   // Onboarding
   getIt.registerFactory<OnBoardingCubit>(() => OnBoardingCubit());
 
+  // Auth
+  getIt.registerLazySingleton<AuthRepo>(() => AuthRepo(getIt()));
+  getIt.registerFactory<AuthCubit>(() => AuthCubit(getIt()));
   // home
   getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
   getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));

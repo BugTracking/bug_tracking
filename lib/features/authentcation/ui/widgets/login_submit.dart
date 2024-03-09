@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/helpers/toasts.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/widgets/custom_button.dart';
 import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
@@ -15,12 +16,12 @@ class LoginSubmit extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is AuthSuccess) {
-          context.showSnackBar(state.message);
+          showToast(message: state.message);
           if (context.mounted) {
             context.pushAndRemoveUntil(Routes.home);
           }
         } else if (state is AuthFailure) {
-          context.showSnackBar(state.error, isError: true);
+          showToast(message: state.error, isError: true);
         }
       },
       builder: (context, state) {

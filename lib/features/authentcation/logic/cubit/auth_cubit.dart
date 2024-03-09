@@ -10,12 +10,14 @@ class AuthCubit extends Cubit<AuthState> {
   final AuthRepo _authRepo;
   AuthCubit(this._authRepo) : super(AuthInitial());
 
-  final TextEditingController userNameAndEmailController = TextEditingController();
+  final TextEditingController userNameAndEmailController =
+      TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController roleController = TextEditingController();
 
@@ -52,31 +54,28 @@ class AuthCubit extends Cubit<AuthState> {
         getLoginRequestModel(),
       );
       response.when(
-        success: (data)  async  {
-          await CacheHelper.setString(key: 'token', value:data.token!);
+        success: (data) async {
+          await CacheHelper.setString(key: 'token', value: data.token!);
           emit(AuthSuccess('You are logged in sucessfully'));
-
         },
         failure: (error) {
-          emit(AuthFailure(error.apiErrorModel.message));
+          emit(AuthFailure(error));
         },
       );
     }
-
   }
 
   RegisterRequestModel getRegisterRequestModel() {
     late RegisterRequestModel registerRequestModel;
 
-
-      registerRequestModel = RegisterRequestModel(
-        emailController.text,
-        userNameController.text,
-        nameController.text,
-        passwordController.text,
-        phoneController.text,
-        roleController.text,
-      );
+    registerRequestModel = RegisterRequestModel(
+      emailController.text,
+      userNameController.text,
+      nameController.text,
+      passwordController.text,
+      phoneController.text,
+      roleController.text,
+    );
 
     return registerRequestModel;
   }
@@ -90,11 +89,11 @@ class AuthCubit extends Cubit<AuthState> {
       );
       response.when(
         success: (data) async {
-          await CacheHelper.setString(key: 'token', value:data.token!);
+          await CacheHelper.setString(key: 'token', value: data.token!);
           emit(AuthSuccess('You registered sucessfully'));
         },
         failure: (error) {
-          emit(AuthFailure(error.apiErrorModel.message));
+          emit(AuthFailure(error));
         },
       );
     }

@@ -1,4 +1,3 @@
-import 'package:bug_tracking/core/networking/api_error_handler.dart';
 import 'package:bug_tracking/core/networking/api_result.dart';
 import 'package:bug_tracking/core/networking/api_service.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
@@ -20,11 +19,11 @@ class AuthRepo {
         return ApiResult.success(response);
       }
       return ApiResult.failure(
-        ErrorHandler.handle('Email,username or Password is wrong'),
+        response.message ?? '',
       );
     } on DioException catch (e) {
       return ApiResult.failure(
-        ErrorHandler.handle(e.toString()),
+        e.message ?? '',
       );
     }
   }
@@ -37,13 +36,12 @@ class AuthRepo {
         return ApiResult.success(response);
       }
       return ApiResult.failure(
-        ErrorHandler.handle('Something went wrong'),
+        response.message ?? '',
       );
     } on DioException catch (e) {
       return ApiResult.failure(
-        ErrorHandler.handle(e.toString()),
+        e.message ?? '',
       );
     }
   }
-
 }
