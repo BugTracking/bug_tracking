@@ -42,33 +42,3 @@ Map<String, dynamic> _$ProjectDetailsModelToJson(
       'membersList': instance.members,
       'bugs': instance.bugs,
     };
-
-BugModel _$BugModelFromJson(Map<String, dynamic> json) => BugModel(
-      json['_id'] as String,
-      json['project'] as String,
-      json['title'] as String,
-      json['description'] as String,
-      json['status'] as String,
-      json['priority'] as String,
-      json['severity'] as String,
-      CategoryModel.fromJson(json['category'] as Map<String, dynamic>),
-      UserModel.fromJson(json['creator'] as Map<String, dynamic>),
-      UserModel.fromJson(json['lastUpdatedBy'] as Map<String, dynamic>),
-      json['timeCreated'] as String,
-      json['lastUpdatedAt'] as String,
-    );
-
-Map<String, dynamic> _$BugModelToJson(BugModel instance) => <String, dynamic>{
-      '_id': instance.id,
-      'project': instance.projectId,
-      'title': instance.title,
-      'description': instance.description,
-      'status': instance.status,
-      'priority': instance.priority,
-      'severity': instance.severity,
-      'category': instance.category,
-      'creator': instance.creator,
-      'lastUpdatedBy': instance.lastUpdatedBy,
-      'timeCreated': instance.timeCreated,
-      'lastUpdatedAt': instance.lastUpdatedAt,
-    };
