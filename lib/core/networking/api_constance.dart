@@ -6,6 +6,8 @@ class ApiConstance {
   static const String bugs = 'bugs';
   static const String register = 'auth/signup';
   static const String categories = 'categories';
+  static const String editUser = 'users';
+  static const String notifications = 'notifications';
 }
 
 class ApiErrors {
