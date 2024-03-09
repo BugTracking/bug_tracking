@@ -10,6 +10,6 @@ String toDo = 'To Do';
 String inProgress = 'In Progress';
 String done = 'Done';
 
-String open = 'Open';
-String inProgresss = 'In Progress';
-String closed = 'Closed';
+String openStatus = 'Open';
+String notStartedYetStatus = 'Not Started Yet';
+String closedStatus = 'Closed';

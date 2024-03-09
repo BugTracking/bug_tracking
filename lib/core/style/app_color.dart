@@ -44,7 +44,7 @@ Color getBugStatusColor(String text) {
 }
 
 Color getProjectStatusColor(String text) {
-  if (text == open) return AppColor.bluish;
-  if (text == inProgress) return AppColor.yellowish;
+  if (text == openStatus) return AppColor.bluish;
+  if (text == closedStatus) return AppColor.greenish;
   return AppColor.redish;
 }

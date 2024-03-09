@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:bug_tracking/core/helpers/constants.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
 import 'package:bug_tracking/features/project_details/data/repos/project_details_repo.dart';
 import 'package:bug_tracking/features/project_details/logic/cubit/project_details_state.dart';
 import 'package:flutter/material.dart';
@@ -34,8 +36,29 @@ class ProjectDetailsCubit extends Cubit<ProjectDetailsState> {
     );
   }
 
-  void emitChangeProjectState(String value) {
+  void emitEditProjectState(String projectId) async {
+    emit(const ProjectDetailsState.editProjectLoading());
+    final result = await _projectDetailsRepo.editProject(
+      projectId,
+      ProjectEditRequestBody(
+        title: projectTitleController.text,
+        description: projectDescriptionController.text,
+        status: projectStatus ?? openStatus,
+      ),
+    );
+    result.when(
+      success: (response) {
+        emit(ProjectDetailsState.editProjectSuccess(response.message));
+        emitProjectDetailsState(projectId);
+      },
+      failure: (error) {
+        emit(ProjectDetailsState.editProjectFailure(error));
+      },
+    );
+  }
+
+  void emitChangeProjectStatusState(String value) {
     projectStatus = value;
-    emit(const ProjectDetailsState.changeProjectStateSuccess());
+    emit(const ProjectDetailsState.changeProjectStatusSuccess());
   }
 }

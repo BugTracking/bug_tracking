@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/helpers/constants.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_drop_down_list.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
@@ -27,16 +28,18 @@ class ProjectEditForm extends StatelessWidget {
           CustomTextField(
             controller: cubit.projectDescriptionController,
             hintText: 'Project Description',
-            keyboardType: TextInputType.text,
+            keyboardType: TextInputType.multiline,
             textInputAction: TextInputAction.next,
+            maxLines: null,
             errorMsg: 'Please enter project description',
           ),
           verticalSpace(10),
           CustomDropDownList(
-            items: const ['Open', 'Closed', 'In Progress'],
+            items: [openStatus, closedStatus, notStartedYetStatus],
             hintText: 'Project Status',
             selectedItem: cubit.projectStatus ?? '',
-            onChanged: (value) => cubit.emitChangeProjectState(value ?? ''),
+            onChanged: (value) =>
+                cubit.emitChangeProjectStatusState(value ?? ''),
             errorMsg: 'Please select project status',
           ),
         ],

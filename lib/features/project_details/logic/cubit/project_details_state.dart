@@ -14,6 +14,14 @@ class ProjectDetailsState with _$ProjectDetailsState {
   const factory ProjectDetailsState.success(ProjectDetailsResponse response) =
       Success;
 
-  const factory ProjectDetailsState.changeProjectStateSuccess() =
+  const factory ProjectDetailsState.changeProjectStatusSuccess() =
       ChangeProjectStateSuccess;
+
+  const factory ProjectDetailsState.editProjectSuccess(String message) =
+      EditProjectSuccess;
+
+  const factory ProjectDetailsState.editProjectLoading() = EditProjectLoading;
+
+  const factory ProjectDetailsState.editProjectFailure(String message) =
+      EditProjectFailure;
 }

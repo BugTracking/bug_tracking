@@ -36,7 +36,10 @@ class ProjectDetailsAppBarTitle extends StatelessWidget {
                 borderRadius: BorderRadius.zero,
               ),
               builder: (_) {
-                return ProjectEditBottomSheet(context: context);
+                return ProjectEditBottomSheet(
+                  context: context,
+                  projectId: args.projectId,
+                );
               },
             );
           },

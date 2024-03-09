@@ -22,7 +22,10 @@ mixin _$ProjectDetailsState {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
-    required TResult Function() changeProjectStateSuccess,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +34,10 @@ mixin _$ProjectDetailsState {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
-    TResult? Function()? changeProjectStateSuccess,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +46,10 @@ mixin _$ProjectDetailsState {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
-    TResult Function()? changeProjectStateSuccess,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,7 +60,10 @@ mixin _$ProjectDetailsState {
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
     required TResult Function(ChangeProjectStateSuccess value)
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,7 +73,10 @@ mixin _$ProjectDetailsState {
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
     TResult? Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,7 +86,10 @@ mixin _$ProjectDetailsState {
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
     TResult Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -137,7 +155,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
-    required TResult Function() changeProjectStateSuccess,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
   }) {
     return initial();
   }
@@ -149,7 +170,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
-    TResult? Function()? changeProjectStateSuccess,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
   }) {
     return initial?.call();
   }
@@ -161,7 +185,10 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
-    TResult Function()? changeProjectStateSuccess,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -178,7 +205,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
     required TResult Function(ChangeProjectStateSuccess value)
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
   }) {
     return initial(this);
   }
@@ -191,7 +221,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
     TResult? Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
   }) {
     return initial?.call(this);
   }
@@ -204,7 +237,10 @@ class _$InitialImpl implements _Initial {
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
     TResult Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -260,7 +296,10 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
-    required TResult Function() changeProjectStateSuccess,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
   }) {
     return loading();
   }
@@ -272,7 +311,10 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
-    TResult? Function()? changeProjectStateSuccess,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
   }) {
     return loading?.call();
   }
@@ -284,7 +326,10 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
-    TResult Function()? changeProjectStateSuccess,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -301,7 +346,10 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
     required TResult Function(ChangeProjectStateSuccess value)
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
   }) {
     return loading(this);
   }
@@ -314,7 +362,10 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
     TResult? Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
   }) {
     return loading?.call(this);
   }
@@ -327,7 +378,10 @@ class _$LoadingImpl implements Loading {
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
     TResult Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -409,7 +463,10 @@ class _$FailureImpl implements Failure {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
-    required TResult Function() changeProjectStateSuccess,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
   }) {
     return failure(message);
   }
@@ -421,7 +478,10 @@ class _$FailureImpl implements Failure {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
-    TResult? Function()? changeProjectStateSuccess,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
   }) {
     return failure?.call(message);
   }
@@ -433,7 +493,10 @@ class _$FailureImpl implements Failure {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
-    TResult Function()? changeProjectStateSuccess,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -450,7 +513,10 @@ class _$FailureImpl implements Failure {
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
     required TResult Function(ChangeProjectStateSuccess value)
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
   }) {
     return failure(this);
   }
@@ -463,7 +529,10 @@ class _$FailureImpl implements Failure {
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
     TResult? Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
   }) {
     return failure?.call(this);
   }
@@ -476,7 +545,10 @@ class _$FailureImpl implements Failure {
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
     TResult Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -564,7 +636,10 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
-    required TResult Function() changeProjectStateSuccess,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
   }) {
     return success(response);
   }
@@ -576,7 +651,10 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
-    TResult? Function()? changeProjectStateSuccess,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
   }) {
     return success?.call(response);
   }
@@ -588,7 +666,10 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
-    TResult Function()? changeProjectStateSuccess,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -605,7 +686,10 @@ class _$SuccessImpl implements Success {
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
     required TResult Function(ChangeProjectStateSuccess value)
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
   }) {
     return success(this);
   }
@@ -618,7 +702,10 @@ class _$SuccessImpl implements Success {
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
     TResult? Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
   }) {
     return success?.call(this);
   }
@@ -631,7 +718,10 @@ class _$SuccessImpl implements Success {
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
     TResult Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -676,7 +766,7 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
 
   @override
   String toString() {
-    return 'ProjectDetailsState.changeProjectStateSuccess()';
+    return 'ProjectDetailsState.changeProjectStatusSuccess()';
   }
 
   @override
@@ -696,9 +786,12 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
-    required TResult Function() changeProjectStateSuccess,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
   }) {
-    return changeProjectStateSuccess();
+    return changeProjectStatusSuccess();
   }
 
   @override
@@ -708,9 +801,12 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
-    TResult? Function()? changeProjectStateSuccess,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
   }) {
-    return changeProjectStateSuccess?.call();
+    return changeProjectStatusSuccess?.call();
   }
 
   @override
@@ -720,11 +816,14 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
-    TResult Function()? changeProjectStateSuccess,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
     required TResult orElse(),
   }) {
-    if (changeProjectStateSuccess != null) {
-      return changeProjectStateSuccess();
+    if (changeProjectStatusSuccess != null) {
+      return changeProjectStatusSuccess();
     }
     return orElse();
   }
@@ -737,9 +836,12 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
     required TResult Function(ChangeProjectStateSuccess value)
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
   }) {
-    return changeProjectStateSuccess(this);
+    return changeProjectStatusSuccess(this);
   }
 
   @override
@@ -750,9 +852,12 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
     TResult? Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
   }) {
-    return changeProjectStateSuccess?.call(this);
+    return changeProjectStatusSuccess?.call(this);
   }
 
   @override
@@ -763,11 +868,14 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
     TResult Function(ChangeProjectStateSuccess value)?
-        changeProjectStateSuccess,
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
     required TResult orElse(),
   }) {
-    if (changeProjectStateSuccess != null) {
-      return changeProjectStateSuccess(this);
+    if (changeProjectStatusSuccess != null) {
+      return changeProjectStatusSuccess(this);
     }
     return orElse();
   }
@@ -775,4 +883,493 @@ class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
 
 abstract class ChangeProjectStateSuccess implements ProjectDetailsState {
   const factory ChangeProjectStateSuccess() = _$ChangeProjectStateSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$EditProjectSuccessImplCopyWith<$Res> {
+  factory _$$EditProjectSuccessImplCopyWith(_$EditProjectSuccessImpl value,
+          $Res Function(_$EditProjectSuccessImpl) then) =
+      __$$EditProjectSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$EditProjectSuccessImplCopyWithImpl<$Res>
+    extends _$ProjectDetailsStateCopyWithImpl<$Res, _$EditProjectSuccessImpl>
+    implements _$$EditProjectSuccessImplCopyWith<$Res> {
+  __$$EditProjectSuccessImplCopyWithImpl(_$EditProjectSuccessImpl _value,
+      $Res Function(_$EditProjectSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$EditProjectSuccessImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditProjectSuccessImpl implements EditProjectSuccess {
+  const _$EditProjectSuccessImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'ProjectDetailsState.editProjectSuccess(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProjectSuccessImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProjectSuccessImplCopyWith<_$EditProjectSuccessImpl> get copyWith =>
+      __$$EditProjectSuccessImplCopyWithImpl<_$EditProjectSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) failure,
+    required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
+  }) {
+    return editProjectSuccess(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? failure,
+    TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
+  }) {
+    return editProjectSuccess?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? failure,
+    TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
+    required TResult orElse(),
+  }) {
+    if (editProjectSuccess != null) {
+      return editProjectSuccess(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
+  }) {
+    return editProjectSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
+  }) {
+    return editProjectSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Failure value)? failure,
+    TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
+    required TResult orElse(),
+  }) {
+    if (editProjectSuccess != null) {
+      return editProjectSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProjectSuccess implements ProjectDetailsState {
+  const factory EditProjectSuccess(final String message) =
+      _$EditProjectSuccessImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$EditProjectSuccessImplCopyWith<_$EditProjectSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditProjectLoadingImplCopyWith<$Res> {
+  factory _$$EditProjectLoadingImplCopyWith(_$EditProjectLoadingImpl value,
+          $Res Function(_$EditProjectLoadingImpl) then) =
+      __$$EditProjectLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EditProjectLoadingImplCopyWithImpl<$Res>
+    extends _$ProjectDetailsStateCopyWithImpl<$Res, _$EditProjectLoadingImpl>
+    implements _$$EditProjectLoadingImplCopyWith<$Res> {
+  __$$EditProjectLoadingImplCopyWithImpl(_$EditProjectLoadingImpl _value,
+      $Res Function(_$EditProjectLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EditProjectLoadingImpl implements EditProjectLoading {
+  const _$EditProjectLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProjectDetailsState.editProjectLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EditProjectLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) failure,
+    required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
+  }) {
+    return editProjectLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? failure,
+    TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
+  }) {
+    return editProjectLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? failure,
+    TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
+    required TResult orElse(),
+  }) {
+    if (editProjectLoading != null) {
+      return editProjectLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
+  }) {
+    return editProjectLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
+  }) {
+    return editProjectLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Failure value)? failure,
+    TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
+    required TResult orElse(),
+  }) {
+    if (editProjectLoading != null) {
+      return editProjectLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProjectLoading implements ProjectDetailsState {
+  const factory EditProjectLoading() = _$EditProjectLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$EditProjectFailureImplCopyWith<$Res> {
+  factory _$$EditProjectFailureImplCopyWith(_$EditProjectFailureImpl value,
+          $Res Function(_$EditProjectFailureImpl) then) =
+      __$$EditProjectFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$EditProjectFailureImplCopyWithImpl<$Res>
+    extends _$ProjectDetailsStateCopyWithImpl<$Res, _$EditProjectFailureImpl>
+    implements _$$EditProjectFailureImplCopyWith<$Res> {
+  __$$EditProjectFailureImplCopyWithImpl(_$EditProjectFailureImpl _value,
+      $Res Function(_$EditProjectFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$EditProjectFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditProjectFailureImpl implements EditProjectFailure {
+  const _$EditProjectFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'ProjectDetailsState.editProjectFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProjectFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProjectFailureImplCopyWith<_$EditProjectFailureImpl> get copyWith =>
+      __$$EditProjectFailureImplCopyWithImpl<_$EditProjectFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) failure,
+    required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStatusSuccess,
+    required TResult Function(String message) editProjectSuccess,
+    required TResult Function() editProjectLoading,
+    required TResult Function(String message) editProjectFailure,
+  }) {
+    return editProjectFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? failure,
+    TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStatusSuccess,
+    TResult? Function(String message)? editProjectSuccess,
+    TResult? Function()? editProjectLoading,
+    TResult? Function(String message)? editProjectFailure,
+  }) {
+    return editProjectFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? failure,
+    TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStatusSuccess,
+    TResult Function(String message)? editProjectSuccess,
+    TResult Function()? editProjectLoading,
+    TResult Function(String message)? editProjectFailure,
+    required TResult orElse(),
+  }) {
+    if (editProjectFailure != null) {
+      return editProjectFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStatusSuccess,
+    required TResult Function(EditProjectSuccess value) editProjectSuccess,
+    required TResult Function(EditProjectLoading value) editProjectLoading,
+    required TResult Function(EditProjectFailure value) editProjectFailure,
+  }) {
+    return editProjectFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStatusSuccess,
+    TResult? Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult? Function(EditProjectLoading value)? editProjectLoading,
+    TResult? Function(EditProjectFailure value)? editProjectFailure,
+  }) {
+    return editProjectFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Failure value)? failure,
+    TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStatusSuccess,
+    TResult Function(EditProjectSuccess value)? editProjectSuccess,
+    TResult Function(EditProjectLoading value)? editProjectLoading,
+    TResult Function(EditProjectFailure value)? editProjectFailure,
+    required TResult orElse(),
+  }) {
+    if (editProjectFailure != null) {
+      return editProjectFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProjectFailure implements ProjectDetailsState {
+  const factory EditProjectFailure(final String message) =
+      _$EditProjectFailureImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$EditProjectFailureImplCopyWith<_$EditProjectFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
