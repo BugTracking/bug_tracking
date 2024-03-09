@@ -1,5 +1,5 @@
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/features/home/ui/widgets/bug_members.dart';
+import 'package:bug_tracking/features/allbugs/ui/widgets/bugs_members.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
@@ -43,7 +43,7 @@ class BugsBody extends StatelessWidget {
         const Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            BugMembers(),
+            BugsMembers(),
           ],
         ),
       ],

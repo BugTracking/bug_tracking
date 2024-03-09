@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/home/data/repos/home_repo.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 
@@ -24,10 +25,25 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
 
+  List<BugModel> bugs = [];
+  void emitBugDataState() async {
+    final response = await _homeRepo.getAllBugs(CacheHelper.token);
+    response.when(
+      success: (data) {
+        bugs = data.bugdata?? [];
+        emit(HomeState.getBugsSuccess(bugs));
+      },
+      failure: (error) {
+        emit(HomeState.getBugsFailure(error));
+      },
+    );
+  }
+
 
 
   void emitUserDataState() async {
-    final response = await _homeRepo.getUser('65e875faac8199af8b808772');
+    //final response = await _homeRepo.getUser('65e875faac8199af8b808772');
+    final response = await _homeRepo.getUser(CacheHelper.userId);
     response.when(
       success: (data) {
         userData = data.data!;

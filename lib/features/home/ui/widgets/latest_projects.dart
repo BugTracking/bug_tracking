@@ -18,7 +18,7 @@ class LatestProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit,HomeState>(
       builder: (context,state) {
-        ProjectModel project = context.read<HomeCubit>().projects[1];
+        ProjectModel project = context.read<HomeCubit>().projects[0];
         return Column(
           children: [
             Row(

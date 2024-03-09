@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:bug_tracking/features/home/ui/widgets/bug_project_containers.dart';
@@ -23,6 +24,12 @@ class HomeBodyScreen extends StatelessWidget {
       ),
       body: BlocBuilder<HomeCubit,HomeState>(
         builder: (context,state) {
+          if(state is GetProjectsLoading){
+            if(state is GetBugsLoading){
+              return const  CustomLoadingIndicator();
+            }
+
+          }
           return SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(8.0.w),

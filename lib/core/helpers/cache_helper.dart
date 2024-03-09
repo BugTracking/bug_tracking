@@ -16,4 +16,6 @@ class CacheHelper {
   }
 
   static get token => sharedPreferences.getString('token');
+
+  static get userId => sharedPreferences.getString('userId');
 }

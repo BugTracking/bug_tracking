@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
-
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 class LatestBugBody extends StatelessWidget {
-  const LatestBugBody({Key? key}) : super(key: key);
+  final BugModel bug;
+  const LatestBugBody({super.key,required this.bug});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +20,10 @@ class LatestBugBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Drug App",
+                  Text(bug.title,
                       style: AppTexts.text16OnBackgroundNunitoSansSemiBold),
-                  const CustomPriorityStatusContainer(
-                    text: 'Done',
+                   CustomPriorityStatusContainer(
+                    text: bug.status,
                     color: AppColor.bluish,
                   ),
                 ],
@@ -31,19 +32,19 @@ class LatestBugBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Last Update on 20 Jun",
+                  Text("Last Update on ${bug.lastUpdatedAt}",
                       style: AppTexts.text8GreyNunitoSansRegular),
-                  Text("Created on 10 May",
+                  Text("Created on ${bug.lastUpdatedAt}",
                       style: AppTexts.text8GreyNunitoSansRegular),
                 ],
               ),
             ],
           ),
         ),
-        const Row(
+         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            BugMembers(),
+            BugMembers(bug:bug),
           ],
         ),
       ],

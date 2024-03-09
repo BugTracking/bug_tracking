@@ -52,3 +52,25 @@ extension CustomBottomSheetExtension on BuildContext {
     );
   }
 }
+
+extension StringEx on String {
+  String extractDate() {
+    return split('T')[0];
+  }
+
+  String extractTime() {
+    return split('T')[1];
+  }
+
+  String extractTimeOnly() {
+    return split('T')[1].split('.')[0];
+  }
+
+  String toShortcutEachWord() {
+    if (split(' ').length > 1) {
+      return '${split(' ')[0][0].toUpperCase()}${split(' ')[1][0].toUpperCase()}';
+    }
+    return '${this[0]}${this[1]}';
+  }
+}
+

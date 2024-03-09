@@ -5,6 +5,7 @@ class ApiConstance {
   static const String users = 'users';
   static const String categories = 'categories';
   static const String projects = 'projects';
+  static const String bugs = 'bugs';
 }
 
 class ApiErrors {

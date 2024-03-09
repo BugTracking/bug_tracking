@@ -1,11 +1,13 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/home/ui/widgets/latest_bug_body.dart';
 
 import 'package:flutter/material.dart';
 
 class LatestBugTile extends StatelessWidget {
-  const LatestBugTile({super.key});
+  final BugModel bug;
+  const LatestBugTile({super.key,required this.bug});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class LatestBugTile extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(10.0),
             ),
-            child: const LatestBugBody(),
+            child:  LatestBugBody(bug:bug),
           ),
         ],
       ),

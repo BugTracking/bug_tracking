@@ -65,11 +65,11 @@ class LatestProjectBody extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Last Update on ${project.lastUpdatedAt}',
+                          'Last Update on ${project.lastUpdatedAt.extractDate()}',
                           style: AppTexts.text8GreyNunitoSansRegular,
                         ),
                         Text(
-                          'Created on ${project.timeCreated}',
+                          'Created on ${project.timeCreated.extractDate()}',
                           style: AppTexts.text8GreyNunitoSansRegular,
                         ),
                       ],

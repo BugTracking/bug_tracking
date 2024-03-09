@@ -56,6 +56,7 @@ class AuthCubit extends Cubit<AuthState> {
       response.when(
         success: (data) async {
           await CacheHelper.setString(key: 'token', value: data.token!);
+          await CacheHelper.setString(key: 'userId', value: data.userModel!.id);
           emit(AuthSuccess('You are logged in sucessfully'));
         },
         failure: (error) {
@@ -89,7 +90,9 @@ class AuthCubit extends Cubit<AuthState> {
       );
       response.when(
         success: (data) async {
+
           await CacheHelper.setString(key: 'token', value: data.token!);
+          await CacheHelper.setString(key: 'userId', value: data.userModel!.id);
           emit(AuthSuccess('You registered sucessfully'));
         },
         failure: (error) {

@@ -10,6 +10,7 @@ import 'package:bug_tracking/features/add_project/data/models/add_project_respon
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
@@ -44,6 +45,11 @@ abstract class ApiService {
 
   @GET(ApiConstance.projects)
   Future<ProjectResponseBody> getProjects(
+      @Header('authorization') String token,
+      );
+
+  @GET(ApiConstance.bugs)
+  Future<BugResponseBody> getBugs(
       @Header('authorization') String token,
       );
 }

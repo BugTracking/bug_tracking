@@ -1,10 +1,12 @@
+import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 
 class BugMembers extends StatelessWidget {
-  const BugMembers({Key? key}) : super(key: key);
-
+  final BugModel bug;
+  const BugMembers({super.key,required this.bug});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,7 +23,7 @@ class BugMembers extends StatelessWidget {
               backgroundColor:AppColor.darkGreyish,
               radius: 13,
               child: Text(
-                'MR',
+                bug.assignTo[0].toShortcutEachWord(),
                 style: AppTexts.text10PrimaryNunitoSansSemiBold,
               ),
             ),
@@ -30,7 +32,7 @@ class BugMembers extends StatelessWidget {
             backgroundColor: const Color(0xffD9D9D9),
             radius: 17,
             child: Text(
-              'MR',
+              bug.assignTo[1].toShortcutEachWord(),
               style: AppTexts.text10PrimaryNunitoSansSemiBold,
             ),
           ),
