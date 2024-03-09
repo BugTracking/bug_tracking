@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/core/networking/api_result.dart';
 import 'package:bug_tracking/core/networking/api_service.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
@@ -28,8 +29,7 @@ class ProjectDetailsRepo {
     String projectId,
     ProjectEditRequestBody projectEditRequestBody,
   ) async {
-    const String token =
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU5MDliNWQwNzIyYzZmMTFjMThmZDAiLCJpYXQiOjE3MDk5MDQ1NDZ9.uJqp611Ro6B-n9bHs7eCtDbc-bA9e8l17AVgPTbnIYs';
+    final String token = CacheHelper.token;
     try {
       final response = await _apiService.editProject(
         projectId,

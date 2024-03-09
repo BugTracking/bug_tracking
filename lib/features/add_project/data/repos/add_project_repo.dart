@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/core/networking/api_result.dart';
 import 'package:bug_tracking/core/networking/api_service.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
@@ -41,8 +42,7 @@ class AddProjectRepo {
   Future<ApiResult<AddProjectResponseBody>> addProject(
       AddProjectRequestBody addProjectRequestBody) async {
     try {
-      const String token =
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU5MDliNWQwNzIyYzZmMTFjMThmZDAiLCJpYXQiOjE3MDk4NDk4MTF9.vtds0XLzvVGtR9fepMmYkec5EHi88E20DhnhZEX2IjE';
+      final String token = CacheHelper.token;
       final response =
           await _apiService.addProject(addProjectRequestBody, token);
       if (response.status) {
