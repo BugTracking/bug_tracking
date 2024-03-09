@@ -26,3 +26,10 @@ class ProjectBugsScreenArgs extends ScreenArgs {
   final String projectTitle;
   ProjectBugsScreenArgs(this.bugs, this.projectTitle);
 }
+
+class AddBugScreenArgs extends ScreenArgs {
+  final String projectId;
+  AddBugScreenArgs(
+    this.projectId,
+  );
+}
