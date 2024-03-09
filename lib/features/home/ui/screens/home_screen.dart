@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/data/app_data.dart';
-import 'package:bug_tracking/core/helpers/show_bottom_sheet_function.dart';
+import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_shimmer_list.dart';
@@ -7,7 +8,6 @@ import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dar
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
-import 'package:bug_tracking/features/home/ui/widgets/add_bug_project_buttons.dart';
 import 'package:bug_tracking/features/notfications/ui/screens/notfications_screen.dart';
 import 'package:bug_tracking/features/settings/ui/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -40,11 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showCustomBottomSheet(context, const [
-            AddBugProjectButtons(),
-          ]);
-        },
+        onPressed: () => context.push(Routes.addProject),
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),
