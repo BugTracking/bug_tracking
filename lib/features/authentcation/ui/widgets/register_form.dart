@@ -16,7 +16,7 @@ class RegisterForm extends StatefulWidget {
 class _RegisterFormState extends State<RegisterForm> {
   bool _passwordVisible = true;
   bool _confirmPasswordVisible = true;
-  String roleSelected = '';
+  String roleSelected = 'User';
   @override
   Widget build(BuildContext context) {
     return Form(
