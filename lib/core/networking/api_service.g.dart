@@ -249,6 +249,37 @@ class _ApiService implements ApiService {
   }
 
   @override
+  Future<NotificationResponseModel> getNotfications(
+    String token,
+    String reciverId,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<NotificationResponseModel>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'notifications/${reciverId}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = NotificationResponseModel.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
   Future<ProjectDetailsResponse> getProjectDetails(String projectId) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -305,6 +336,37 @@ class _ApiService implements ApiService {
               baseUrl,
             ))));
     final value = ProjectEditResponseBody.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<UserResponseModel> editProfile(
+    String userId,
+    UserEditRequestModel userEditRequestModel,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(userEditRequestModel.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<UserResponseModel>(Options(
+      method: 'PUT',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'users/${userId}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = UserResponseModel.fromJson(_result.data!);
     return value;
   }
 
