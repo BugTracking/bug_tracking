@@ -104,8 +104,9 @@ class AppRouter {
           ),
         );
       case Routes.allBugs:
+       BugsScreenArgs args = settings.arguments as BugsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const AllBugsScreen(),
+          builder: (context) => AllBugsScreen(bugs: args.bugs),
         );
       default:
         return null;

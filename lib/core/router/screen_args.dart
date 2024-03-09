@@ -1,3 +1,4 @@
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 
 abstract class ScreenArgs {}
@@ -18,4 +19,9 @@ class ProjectsScreenArgs extends ScreenArgs {
   final List<ProjectModel> projects;
 
   ProjectsScreenArgs(this.projects);
+}
+class BugsScreenArgs extends ScreenArgs {
+  final List<BugModel> bugs;
+
+  BugsScreenArgs(this.bugs);
 }

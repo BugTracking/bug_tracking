@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BugFilterScreen extends StatefulWidget {
+  
   const BugFilterScreen({Key? key}) : super(key: key);
 
   @override

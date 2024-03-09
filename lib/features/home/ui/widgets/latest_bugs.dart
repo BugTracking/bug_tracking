@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_text_button.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
@@ -10,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LatestBugs extends StatelessWidget {
+
   const LatestBugs({Key? key}) : super(key: key);
 
   @override
@@ -28,6 +30,7 @@ class LatestBugs extends StatelessWidget {
               CustomTextButton(
                   onPressed: () => context.push(
                         Routes.allBugs,
+                        arguments: BugsScreenArgs(context.read<HomeCubit>().bugs ?? [])
                       ),
                   text: 'View All'),
             ],

@@ -1,35 +1,21 @@
-import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:bug_tracking/features/allbugs/ui/widgets/bugs_body.dart';
+import 'package:bug_tracking/core/widgets/custom_project_bug_container.dart';
+
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:flutter/material.dart';
 
 class BugsTile extends StatelessWidget {
-  const BugsTile({Key? key}) : super(key: key);
+  final BugModel bug;
+  const BugsTile({Key? key, required this.bug}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(16.0),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: const Color(0xffE9EAEC),
-              width: 1,
-            ),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          child: Column(
-            children: [
-              //const ProjectHeader(),
-              const BugsBody(),
-              verticalSpace(10.0),
-
-            ],
-          ),
-        ),
-
-      ],
-    );
+    return CustomProjectBugContainer(
+        title: bug.title,
+        lastUpdateAt: bug.lastUpdatedAt,
+        status: bug.status,
+        createdOn: bug.timeCreated,
+        creator: bug.creator.name,
+        lastUpdatedBy: bug.lastUpdatedBy.name,
+        isProject: false);
   }
 }
