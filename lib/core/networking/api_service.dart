@@ -5,6 +5,8 @@ import 'package:bug_tracking/features/add_project/data/models/add_project_reques
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
@@ -38,4 +40,11 @@ abstract class ApiService {
   @GET('${ApiConstance.projects}/{id}')
   Future<ProjectDetailsResponse> getProjectDetails(
       @Path('id') String projectId);
+
+  @PUT('${ApiConstance.projects}/{id}')
+  Future<ProjectEditResponseBody> editProject(
+    @Path('id') String projectId,
+    @Body() ProjectEditRequestBody projectEditRequestBody,
+    @Header('authorization') String token,
+  );
 }

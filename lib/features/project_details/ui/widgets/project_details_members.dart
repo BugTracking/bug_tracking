@@ -1,7 +1,9 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_member.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProjectDetailsMembers extends StatelessWidget {
   final List<UserModel> members;
@@ -9,6 +11,17 @@ class ProjectDetailsMembers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (members.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0.h),
+          child: Text(
+            'No Members added yet',
+            style: AppTexts.text16OnBackgroundNunitoSansBold,
+          ),
+        ),
+      );
+    }
     return ListView.separated(
       itemBuilder: (context, index) => CustomMember(
         image: members[index].avatar ??

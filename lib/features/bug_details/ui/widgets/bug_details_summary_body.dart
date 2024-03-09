@@ -24,6 +24,8 @@ class _BugDetailsSummaryBodyState extends State<BugDetailsSummaryBody> {
 
     if (widget.text.length > 70) {
       finalText = '${widget.text.substring(0, 70)}...';
+    } else {
+      finalText = widget.text;
     }
   }
 
@@ -37,26 +39,27 @@ class _BugDetailsSummaryBodyState extends State<BugDetailsSummaryBody> {
             text: finalText,
             style: AppTexts.text14GreyCairoSemiBold,
           ),
-          TextSpan(
-            text: isTextFull ? 'Less' : 'See more',
-            style: AppTexts.text14PrimaryNunitoSansBold.copyWith(
-              decoration: TextDecoration.underline,
-              decorationColor: AppColor.bluish,
-            ),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () => setState(() {
-                    if (isTextFull) {
-                      maxLines = 2;
-                      if (widget.text.length > 70) {
-                        finalText = '${widget.text.substring(0, 70)}...';
+          if (widget.text.length > 70)
+            TextSpan(
+              text: isTextFull ? 'Less' : 'See more',
+              style: AppTexts.text14PrimaryNunitoSansBold.copyWith(
+                decoration: TextDecoration.underline,
+                decorationColor: AppColor.bluish,
+              ),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () => setState(() {
+                      if (isTextFull) {
+                        maxLines = 2;
+                        if (widget.text.length > 70) {
+                          finalText = '${widget.text.substring(0, 70)}...';
+                        }
+                      } else {
+                        maxLines = null;
+                        finalText = widget.text;
                       }
-                    } else {
-                      maxLines = null;
-                      finalText = widget.text;
-                    }
-                    isTextFull = !isTextFull;
-                  }),
-          ),
+                      isTextFull = !isTextFull;
+                    }),
+            ),
         ],
       ),
     );

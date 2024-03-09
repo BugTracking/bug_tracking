@@ -22,6 +22,7 @@ mixin _$ProjectDetailsState {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStateSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$ProjectDetailsState {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStateSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$ProjectDetailsState {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStateSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,8 @@ mixin _$ProjectDetailsState {
     required TResult Function(Loading value) loading,
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStateSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +60,8 @@ mixin _$ProjectDetailsState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +70,8 @@ mixin _$ProjectDetailsState {
     TResult Function(Loading value)? loading,
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +137,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStateSuccess,
   }) {
     return initial();
   }
@@ -139,6 +149,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStateSuccess,
   }) {
     return initial?.call();
   }
@@ -150,6 +161,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +177,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStateSuccess,
   }) {
     return initial(this);
   }
@@ -176,6 +190,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +203,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +260,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStateSuccess,
   }) {
     return loading();
   }
@@ -253,6 +272,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStateSuccess,
   }) {
     return loading?.call();
   }
@@ -264,6 +284,7 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -279,6 +300,8 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStateSuccess,
   }) {
     return loading(this);
   }
@@ -290,6 +313,8 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
   }) {
     return loading?.call(this);
   }
@@ -301,6 +326,8 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -382,6 +409,7 @@ class _$FailureImpl implements Failure {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStateSuccess,
   }) {
     return failure(message);
   }
@@ -393,6 +421,7 @@ class _$FailureImpl implements Failure {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStateSuccess,
   }) {
     return failure?.call(message);
   }
@@ -404,6 +433,7 @@ class _$FailureImpl implements Failure {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -419,6 +449,8 @@ class _$FailureImpl implements Failure {
     required TResult Function(Loading value) loading,
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStateSuccess,
   }) {
     return failure(this);
   }
@@ -430,6 +462,8 @@ class _$FailureImpl implements Failure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
   }) {
     return failure?.call(this);
   }
@@ -441,6 +475,8 @@ class _$FailureImpl implements Failure {
     TResult Function(Loading value)? loading,
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -528,6 +564,7 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(String message) failure,
     required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStateSuccess,
   }) {
     return success(response);
   }
@@ -539,6 +576,7 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(String message)? failure,
     TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStateSuccess,
   }) {
     return success?.call(response);
   }
@@ -550,6 +588,7 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(String message)? failure,
     TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -565,6 +604,8 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Failure value) failure,
     required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStateSuccess,
   }) {
     return success(this);
   }
@@ -576,6 +617,8 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Failure value)? failure,
     TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
   }) {
     return success?.call(this);
   }
@@ -587,6 +630,8 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Failure value)? failure,
     TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -603,4 +648,131 @@ abstract class Success implements ProjectDetailsState {
   @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeProjectStateSuccessImplCopyWith<$Res> {
+  factory _$$ChangeProjectStateSuccessImplCopyWith(
+          _$ChangeProjectStateSuccessImpl value,
+          $Res Function(_$ChangeProjectStateSuccessImpl) then) =
+      __$$ChangeProjectStateSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeProjectStateSuccessImplCopyWithImpl<$Res>
+    extends _$ProjectDetailsStateCopyWithImpl<$Res,
+        _$ChangeProjectStateSuccessImpl>
+    implements _$$ChangeProjectStateSuccessImplCopyWith<$Res> {
+  __$$ChangeProjectStateSuccessImplCopyWithImpl(
+      _$ChangeProjectStateSuccessImpl _value,
+      $Res Function(_$ChangeProjectStateSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeProjectStateSuccessImpl implements ChangeProjectStateSuccess {
+  const _$ChangeProjectStateSuccessImpl();
+
+  @override
+  String toString() {
+    return 'ProjectDetailsState.changeProjectStateSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeProjectStateSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) failure,
+    required TResult Function(ProjectDetailsResponse response) success,
+    required TResult Function() changeProjectStateSuccess,
+  }) {
+    return changeProjectStateSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? failure,
+    TResult? Function(ProjectDetailsResponse response)? success,
+    TResult? Function()? changeProjectStateSuccess,
+  }) {
+    return changeProjectStateSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? failure,
+    TResult Function(ProjectDetailsResponse response)? success,
+    TResult Function()? changeProjectStateSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeProjectStateSuccess != null) {
+      return changeProjectStateSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Failure value) failure,
+    required TResult Function(Success value) success,
+    required TResult Function(ChangeProjectStateSuccess value)
+        changeProjectStateSuccess,
+  }) {
+    return changeProjectStateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(Success value)? success,
+    TResult? Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
+  }) {
+    return changeProjectStateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Failure value)? failure,
+    TResult Function(Success value)? success,
+    TResult Function(ChangeProjectStateSuccess value)?
+        changeProjectStateSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeProjectStateSuccess != null) {
+      return changeProjectStateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeProjectStateSuccess implements ProjectDetailsState {
+  const factory ChangeProjectStateSuccess() = _$ChangeProjectStateSuccessImpl;
 }

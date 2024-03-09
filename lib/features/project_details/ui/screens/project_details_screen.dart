@@ -10,6 +10,7 @@ import 'package:bug_tracking/features/project_details/logic/cubit/project_detail
 import 'package:bug_tracking/features/project_details/logic/cubit/project_details_state.dart';
 import 'package:bug_tracking/features/project_details/ui/widgets/project_details_app_bar_title.dart';
 import 'package:bug_tracking/features/project_details/ui/widgets/project_details_bugs_list.dart';
+import 'package:bug_tracking/features/project_details/ui/widgets/project_details_desc.dart';
 import 'package:bug_tracking/features/project_details/ui/widgets/project_details_members.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -49,6 +50,7 @@ class ProjectDetailsScreen extends StatelessWidget {
               padding:
                   EdgeInsets.symmetric(vertical: 20.0.h, horizontal: 10.0.w),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomProjectInfo(
                     lastUpdateOnText: project.lastUpdatedAt.extractDate(),
@@ -58,6 +60,12 @@ class ProjectDetailsScreen extends StatelessWidget {
                   ),
                   verticalSpace(10.0),
                   const CustomDivider(),
+                  const CustomListTitle(
+                    title: 'Description',
+                  ),
+                  ProjectDetailsDesc(
+                    description: project.description,
+                  ),
                   CustomListTitle(
                     onPressed: () {},
                     title: 'Bugs',
