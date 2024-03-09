@@ -34,6 +34,11 @@ class AppTexts {
         fontWeight: AppFontWeight.semiBold,
         color: AppColor.blackish,
       );
+  static TextStyle get text14OnBackgroundCairoBold => GoogleFonts.cairo(
+        fontSize: 14.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
   static TextStyle get text12OnBackgroundNunitoSansSemiBold =>
       GoogleFonts.nunitoSans(
         fontSize: 12.sp,
@@ -113,6 +118,17 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
         color: Colors.white,
       );
+  static TextStyle get text12OnPrimaryCairoBold => GoogleFonts.cairo(
+        fontSize: 12.sp,
+        fontWeight: AppFontWeight.bold,
+        color: Colors.white,
+      );
+
+  static TextStyle get text12PrimaryCairoBold => GoogleFonts.cairo(
+        fontSize: 12.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.bluish,
+      );
 
   static TextStyle get text14GreyCairoSemiBold => GoogleFonts.cairo(
         fontSize: 14.sp,
@@ -130,7 +146,7 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
         color: AppColor.redish,
       );
-      
+
   static TextStyle get text24OnBackgroundNunitoSansSemiBold =>
       GoogleFonts.nunitoSans(
         fontSize: 24.sp,

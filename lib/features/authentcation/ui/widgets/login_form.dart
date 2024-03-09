@@ -1,7 +1,9 @@
+import 'package:bug_tracking/features/authentcation/logic/cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -11,19 +13,18 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  final _formKey = GlobalKey<FormState>();
   bool _isVisible = true;
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      key: context.read<AuthCubit>().formKey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CustomTextField(
-            controller: TextEditingController(),
-            hintText: 'User Name',
+            controller: context.read<AuthCubit>().userNameAndEmailController,
+            hintText: 'Username or Email',
             prefixIcon: const Icon(
               Icons.person,
               color: AppColor.greyish,
@@ -34,7 +35,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           verticalSpace(16.0),
           CustomTextField(
-            controller: TextEditingController(),
+            controller: context.read<AuthCubit>().passwordController,
             obscureText: _isVisible,
             hintText: 'Password',
             prefixIcon: const Icon(

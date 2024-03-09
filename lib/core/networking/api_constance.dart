@@ -2,7 +2,9 @@ class ApiConstance {
   static const String baseUrl = 'https://bugtracking-1.onrender.com/';
   static const String login = '';
   static const String users = 'users';
-   static const String projects = 'projects';
+  static const String projects = 'projects';
+  static const String register = 'auth/signup';
+  static const String categories = 'categories';
 }
 
 class ApiErrors {

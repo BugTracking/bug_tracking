@@ -1,5 +1,5 @@
 import 'package:bug_tracking/features/allprojects/data/model/project_response_body.dart';
-import 'package:bug_tracking/features/allprojects/data/repos/aprojects_repos.dart';
+import 'package:bug_tracking/features/allprojects/data/repos/projects_repo.dart';
 import 'package:bug_tracking/features/allprojects/logic/cubit/projects_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,7 +17,7 @@ class ProjectsCubit extends Cubit<ProjectStates> {
         emit(ProjectStates.getProjectsSuccess(data.data ?? []));
       },
       failure: (error) {
-        emit(ProjectStates.getProjectsFailure(error.apiErrorModel.message));
+        emit(ProjectStates.getProjectsFailure(error));
       },
     );
   }

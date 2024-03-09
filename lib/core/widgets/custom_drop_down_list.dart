@@ -43,7 +43,7 @@ class CustomDropDownList extends StatelessWidget {
         hintText,
         style: AppTexts.text14GreyNunitoSansSemiBold,
       ),
-      value: null,
+      value: selectedItem,
       items: items.map((String value) {
         return DropdownMenuItem<String>(
           value: value,

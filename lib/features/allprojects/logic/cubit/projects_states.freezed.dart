@@ -201,25 +201,25 @@ abstract class _Initial implements ProjectStates {
 }
 
 /// @nodoc
-abstract class _$$getProjectsLoadingImplCopyWith<$Res> {
-  factory _$$getProjectsLoadingImplCopyWith(_$getProjectsLoadingImpl value,
-          $Res Function(_$getProjectsLoadingImpl) then) =
-      __$$getProjectsLoadingImplCopyWithImpl<$Res>;
+abstract class _$$ProjectsLoadingImplCopyWith<$Res> {
+  factory _$$ProjectsLoadingImplCopyWith(_$ProjectsLoadingImpl value,
+          $Res Function(_$ProjectsLoadingImpl) then) =
+      __$$ProjectsLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$getProjectsLoadingImplCopyWithImpl<$Res>
-    extends _$ProjectStatesCopyWithImpl<$Res, _$getProjectsLoadingImpl>
-    implements _$$getProjectsLoadingImplCopyWith<$Res> {
-  __$$getProjectsLoadingImplCopyWithImpl(_$getProjectsLoadingImpl _value,
-      $Res Function(_$getProjectsLoadingImpl) _then)
+class __$$ProjectsLoadingImplCopyWithImpl<$Res>
+    extends _$ProjectStatesCopyWithImpl<$Res, _$ProjectsLoadingImpl>
+    implements _$$ProjectsLoadingImplCopyWith<$Res> {
+  __$$ProjectsLoadingImplCopyWithImpl(
+      _$ProjectsLoadingImpl _value, $Res Function(_$ProjectsLoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$getProjectsLoadingImpl implements ProjectsLoading {
-  const _$getProjectsLoadingImpl();
+class _$ProjectsLoadingImpl implements ProjectsLoading {
+  const _$ProjectsLoadingImpl();
 
   @override
   String toString() {
@@ -229,7 +229,7 @@ class _$getProjectsLoadingImpl implements ProjectsLoading {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$getProjectsLoadingImpl);
+        (other.runtimeType == runtimeType && other is _$ProjectsLoadingImpl);
   }
 
   @override
@@ -311,24 +311,24 @@ class _$getProjectsLoadingImpl implements ProjectsLoading {
 }
 
 abstract class ProjectsLoading implements ProjectStates {
-  const factory ProjectsLoading() = _$getProjectsLoadingImpl;
+  const factory ProjectsLoading() = _$ProjectsLoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$getProjectsFailureImplCopyWith<$Res> {
-  factory _$$getProjectsFailureImplCopyWith(_$getProjectsFailureImpl value,
-          $Res Function(_$getProjectsFailureImpl) then) =
-      __$$getProjectsFailureImplCopyWithImpl<$Res>;
+abstract class _$$ProjectsFailureImplCopyWith<$Res> {
+  factory _$$ProjectsFailureImplCopyWith(_$ProjectsFailureImpl value,
+          $Res Function(_$ProjectsFailureImpl) then) =
+      __$$ProjectsFailureImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$getProjectsFailureImplCopyWithImpl<$Res>
-    extends _$ProjectStatesCopyWithImpl<$Res, _$getProjectsFailureImpl>
-    implements _$$getProjectsFailureImplCopyWith<$Res> {
-  __$$getProjectsFailureImplCopyWithImpl(_$getProjectsFailureImpl _value,
-      $Res Function(_$getProjectsFailureImpl) _then)
+class __$$ProjectsFailureImplCopyWithImpl<$Res>
+    extends _$ProjectStatesCopyWithImpl<$Res, _$ProjectsFailureImpl>
+    implements _$$ProjectsFailureImplCopyWith<$Res> {
+  __$$ProjectsFailureImplCopyWithImpl(
+      _$ProjectsFailureImpl _value, $Res Function(_$ProjectsFailureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -336,7 +336,7 @@ class __$$getProjectsFailureImplCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$getProjectsFailureImpl(
+    return _then(_$ProjectsFailureImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -347,8 +347,8 @@ class __$$getProjectsFailureImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getProjectsFailureImpl implements ProjectsFailure {
-  const _$getProjectsFailureImpl(this.message);
+class _$ProjectsFailureImpl implements ProjectsFailure {
+  const _$ProjectsFailureImpl(this.message);
 
   @override
   final String message;
@@ -362,7 +362,7 @@ class _$getProjectsFailureImpl implements ProjectsFailure {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$getProjectsFailureImpl &&
+            other is _$ProjectsFailureImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -372,8 +372,8 @@ class _$getProjectsFailureImpl implements ProjectsFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$getProjectsFailureImplCopyWith<_$getProjectsFailureImpl> get copyWith =>
-      __$$getProjectsFailureImplCopyWithImpl<_$getProjectsFailureImpl>(
+  _$$ProjectsFailureImplCopyWith<_$ProjectsFailureImpl> get copyWith =>
+      __$$ProjectsFailureImplCopyWithImpl<_$ProjectsFailureImpl>(
           this, _$identity);
 
   @override
@@ -452,30 +452,29 @@ class _$getProjectsFailureImpl implements ProjectsFailure {
 }
 
 abstract class ProjectsFailure implements ProjectStates {
-  const factory ProjectsFailure(final String message) =
-      _$getProjectsFailureImpl;
+  const factory ProjectsFailure(final String message) = _$ProjectsFailureImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$getProjectsFailureImplCopyWith<_$getProjectsFailureImpl> get copyWith =>
+  _$$ProjectsFailureImplCopyWith<_$ProjectsFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$getProjectsSuccessImplCopyWith<$Res> {
-  factory _$$getProjectsSuccessImplCopyWith(_$getProjectsSuccessImpl value,
-          $Res Function(_$getProjectsSuccessImpl) then) =
-      __$$getProjectsSuccessImplCopyWithImpl<$Res>;
+abstract class _$$ProjectsSuccessImplCopyWith<$Res> {
+  factory _$$ProjectsSuccessImplCopyWith(_$ProjectsSuccessImpl value,
+          $Res Function(_$ProjectsSuccessImpl) then) =
+      __$$ProjectsSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<ProjectModel> projects});
 }
 
 /// @nodoc
-class __$$getProjectsSuccessImplCopyWithImpl<$Res>
-    extends _$ProjectStatesCopyWithImpl<$Res, _$getProjectsSuccessImpl>
-    implements _$$getProjectsSuccessImplCopyWith<$Res> {
-  __$$getProjectsSuccessImplCopyWithImpl(_$getProjectsSuccessImpl _value,
-      $Res Function(_$getProjectsSuccessImpl) _then)
+class __$$ProjectsSuccessImplCopyWithImpl<$Res>
+    extends _$ProjectStatesCopyWithImpl<$Res, _$ProjectsSuccessImpl>
+    implements _$$ProjectsSuccessImplCopyWith<$Res> {
+  __$$ProjectsSuccessImplCopyWithImpl(
+      _$ProjectsSuccessImpl _value, $Res Function(_$ProjectsSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -483,7 +482,7 @@ class __$$getProjectsSuccessImplCopyWithImpl<$Res>
   $Res call({
     Object? projects = null,
   }) {
-    return _then(_$getProjectsSuccessImpl(
+    return _then(_$ProjectsSuccessImpl(
       null == projects
           ? _value._projects
           : projects // ignore: cast_nullable_to_non_nullable
@@ -494,8 +493,8 @@ class __$$getProjectsSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getProjectsSuccessImpl implements ProjectsSuccess {
-  const _$getProjectsSuccessImpl(final List<ProjectModel> projects)
+class _$ProjectsSuccessImpl implements ProjectsSuccess {
+  const _$ProjectsSuccessImpl(final List<ProjectModel> projects)
       : _projects = projects;
 
   final List<ProjectModel> _projects;
@@ -515,7 +514,7 @@ class _$getProjectsSuccessImpl implements ProjectsSuccess {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$getProjectsSuccessImpl &&
+            other is _$ProjectsSuccessImpl &&
             const DeepCollectionEquality().equals(other._projects, _projects));
   }
 
@@ -526,8 +525,8 @@ class _$getProjectsSuccessImpl implements ProjectsSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$getProjectsSuccessImplCopyWith<_$getProjectsSuccessImpl> get copyWith =>
-      __$$getProjectsSuccessImplCopyWithImpl<_$getProjectsSuccessImpl>(
+  _$$ProjectsSuccessImplCopyWith<_$ProjectsSuccessImpl> get copyWith =>
+      __$$ProjectsSuccessImplCopyWithImpl<_$ProjectsSuccessImpl>(
           this, _$identity);
 
   @override
@@ -607,10 +606,10 @@ class _$getProjectsSuccessImpl implements ProjectsSuccess {
 
 abstract class ProjectsSuccess implements ProjectStates {
   const factory ProjectsSuccess(final List<ProjectModel> projects) =
-      _$getProjectsSuccessImpl;
+      _$ProjectsSuccessImpl;
 
   List<ProjectModel> get projects;
   @JsonKey(ignore: true)
-  _$$getProjectsSuccessImplCopyWith<_$getProjectsSuccessImpl> get copyWith =>
+  _$$ProjectsSuccessImplCopyWith<_$ProjectsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
