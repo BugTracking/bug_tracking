@@ -72,5 +72,11 @@ extension StringEx on String {
     }
     return '${this[0]}${this[1]}';
   }
-}
 
+  String toShortcut() {
+    if (split(' ').length > 1) {
+      return '${split(' ')[0]} ${split(' ')[1]}';
+    }
+    return this;
+  }
+}

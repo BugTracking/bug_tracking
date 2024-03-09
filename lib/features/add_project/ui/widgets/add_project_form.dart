@@ -41,6 +41,7 @@ class _AddProjectFormState extends State<AddProjectForm> {
                 hintText: 'Project Description',
                 keyboardType: TextInputType.multiline,
                 textInputAction: TextInputAction.next,
+                maxLines: null,
                 errorMsg: 'Please enter project description',
               ),
               verticalSpace(10.0),

@@ -13,7 +13,7 @@ class UserResponseBody {
       _$UserResponseBodyFromJson(json);
 }
 
-@JsonSerializable()
+@JsonSerializable() 
 class UserData {
   @JsonKey(name: 'user')
   final UserModel user;
@@ -35,7 +35,7 @@ class UserModel {
   final String email;
   final String role;
   final String phone;
-
+  final String? avatar;
   UserModel(
     this.id,
     this.name,
@@ -43,6 +43,7 @@ class UserModel {
     this.email,
     this.role,
     this.phone,
+    this.avatar,
   );
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>

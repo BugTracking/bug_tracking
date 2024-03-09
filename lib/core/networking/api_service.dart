@@ -11,9 +11,13 @@ import 'package:bug_tracking/features/add_project/data/models/categories_respons
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
+
+import '../../features/project_details/data/models/project_details_response.dart';
 part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConstance.baseUrl)
@@ -30,6 +34,10 @@ abstract class ApiService {
   @GET('${ApiConstance.users}/{id}')
   Future<UserResponseBody> getUser(@Path('id') String userId);
 
+  @GET(ApiConstance.projects)
+  Future<ProjectResponseBody> getProjects(
+    @Header('authorization') String token,
+  );
   @GET(ApiConstance.categories)
   Future<CategoriesResponseBody> getCategories();
 
@@ -43,13 +51,8 @@ abstract class ApiService {
     @Header('authorization') String token,
   );
 
-  @GET(ApiConstance.projects)
-  Future<ProjectResponseBody> getProjects(
-      @Header('authorization') String token,
-      );
-
   @GET(ApiConstance.bugs)
   Future<BugResponseBody> getBugs(
-      @Header('authorization') String token,
-      );
+    @Header('authorization') String token,
+  );
 }

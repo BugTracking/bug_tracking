@@ -1,14 +1,13 @@
 import 'package:bug_tracking/core/data/app_data.dart';
-import 'package:bug_tracking/core/helpers/show_bottom_sheet_function.dart';
-import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/core/widgets/custom_shimmer.dart';
-import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
+import 'package:bug_tracking/core/widgets/custom_shimmer_list.dart';
+import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
-import 'package:bug_tracking/features/home/ui/widgets/add_bug_project_buttons.dart';
 import 'package:bug_tracking/features/notfications/ui/screens/notfications_screen.dart';
 import 'package:bug_tracking/features/settings/ui/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
     const HomeBodyScreen(),
-    const AllProjectsScreen(),
+    const ProjectsScreen(),
     const NotficationsScreen(),
     const SettingScreen(),
   ];
@@ -35,23 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           if (userData.user.id == '') {
-            return ListView.separated(
-              itemBuilder: (context, index) => const CustomShimmer(),
-              separatorBuilder: (context, index) => verticalSpace(10.0),
-              itemCount: 30,
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-            );
+            return const CustomShimmerList();
           }
           return screens[currentIndex];
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showCustomBottomSheet(context, const [
-            AddBugProjectButtons(),
-          ]);
-        },
+        onPressed: () => context.push(Routes.addProject),
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),

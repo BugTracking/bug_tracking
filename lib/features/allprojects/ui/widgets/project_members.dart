@@ -1,9 +1,12 @@
+import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/features/allprojects/data/model/project_response_body.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 
 class ProjectMembers extends StatelessWidget {
-  const ProjectMembers({Key? key}) : super(key: key);
+  final ProjectModel project;
+  const ProjectMembers({super.key, required this.project});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +20,10 @@ class ProjectMembers extends StatelessWidget {
             top: -1,
             right: -15,
             child: CircleAvatar(
-
-              backgroundColor:AppColor.darkGreyish,
+              backgroundColor: AppColor.darkGreyish,
               radius: 13,
               child: Text(
-                'MR',
+                project.lastUpdatedBy.name.toShortcutEachWord(),
                 style: AppTexts.text10PrimaryNunitoSansSemiBold,
               ),
             ),
@@ -30,7 +32,7 @@ class ProjectMembers extends StatelessWidget {
             backgroundColor: const Color(0xffD9D9D9),
             radius: 17,
             child: Text(
-              'MR',
+              project.creator.name.toShortcutEachWord(),
               style: AppTexts.text10PrimaryNunitoSansSemiBold,
             ),
           ),

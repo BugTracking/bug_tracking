@@ -19,7 +19,7 @@ class CustomMember extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         CircleAvatar(
           radius: 30,
@@ -30,8 +30,14 @@ class CustomMember extends StatelessWidget {
               child: CachedNetworkImage(
                 imageUrl: image,
                 placeholder: (context, url) => const CustomShimmer(),
-                errorWidget: (context, url, error) => const CustomShimmer(),
+                errorWidget: (context, url, error) => Container(
+                  color: Colors.white,
+                  child: Image.asset(
+                    'assets/images/male.png',
+                  ),
+                ),
                 fit: BoxFit.cover,
+                color: Colors.white,
                 filterQuality: FilterQuality.high,
                 width: double.infinity,
                 height: double.infinity,

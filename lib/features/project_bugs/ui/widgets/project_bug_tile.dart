@@ -1,14 +1,16 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
-import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/core/style/bug_colors.dart';
 import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_body.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_header.dart';
+import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBugTile extends StatelessWidget {
-  const ProjectBugTile({super.key});
+  final BugModel bug;
+  const ProjectBugTile({super.key, required this.bug});
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +30,15 @@ class ProjectBugTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.0),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const ProjectBugHeader(),
+                ProjectBugHeader(
+                  bug: bug,
+                ),
                 verticalSpace(10.0),
-                const ProjectBugBody(),
+                ProjectBugBody(
+                  bug: bug,
+                ),
               ],
             ),
           ),
@@ -40,14 +47,19 @@ class ProjectBugTile extends StatelessWidget {
             right: 0,
             child: Row(
               children: [
-                const CustomPriorityStatusContainer(
-                  text: 'To DO',
-                  color: AppColor.bluish,
+                CustomPriorityStatusContainer(
+                  text: bug.status,
+                  color: getBugStatusColor(bug.status),
                 ),
                 horizontalSpace(10.0),
-                const CustomPriorityStatusContainer(
-                  text: 'High Priority',
-                  color: Colors.red,
+                CustomPriorityStatusContainer(
+                  text: bug.priority,
+                  color: getPriorityOrSevertyColor(bug.priority),
+                ),
+                horizontalSpace(10.0),
+                CustomPriorityStatusContainer(
+                  text: bug.severity,
+                  color: getPriorityOrSevertyColor(bug.severity),
                 ),
               ],
             ),
