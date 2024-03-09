@@ -16,8 +16,6 @@ import 'package:bug_tracking/features/project_details/data/models/project_edit_r
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:bug_tracking/features/edit_profile/data/models/user_edit_request_model.dart';
-import 'package:bug_tracking/features/edit_profile/data/models/user_edit_response_model.dart';
 import 'package:bug_tracking/features/notfications/data/models/notfication_response_model.dart';
 import '../../features/project_details/data/models/project_details_response.dart';
 part 'api_service.g.dart';
@@ -76,11 +74,6 @@ abstract class ApiService {
     @Header('authorization') String token,
   );
 
-  @PUT('${ApiConstance.editUser}/{id}')
-  Future<UserResponseModel> editProfile(
-      @Path('id') String userId,
-      @Body() UserEditRequestModel userEditRequestModel,
-      );
 
 
 }
