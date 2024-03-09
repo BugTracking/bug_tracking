@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/core/widgets/custom_shimmer.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +15,14 @@ class BugProjectContainers extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit,HomeState>(
       builder: (context,state) {
-        int projectsLen = context.read<HomeCubit>().projects.length;
-        int bugsLen = context.read<HomeCubit>().bugs.length;
+        if(context.read<HomeCubit>().projects == null){
+          return  CustomShimmer(
+            height: 20.h,
+          );
+        }
+
+        int projectsLen = context.read<HomeCubit>().projects!.length;
+        int bugsLen = context.read<HomeCubit>().bugs!.length;
         return Row(
           children: [
             Container(

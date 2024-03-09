@@ -10,7 +10,7 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
 
-  List<ProjectModel> projects = [];
+  List<ProjectModel>? projects ;
   void emitProjectDataState() async {
     final response = await _homeRepo.getAllProjects(CacheHelper.token);
     response.when(
@@ -25,13 +25,13 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
 
-  List<BugModel> bugs = [];
+  List<BugModel>? bugs ;
   void emitBugDataState() async {
     final response = await _homeRepo.getAllBugs(CacheHelper.token);
     response.when(
       success: (data) {
-        bugs = data.bugdata?? [];
-        emit(HomeState.getBugsSuccess(bugs));
+        bugs = data.data?? [];
+        emit(HomeState.getBugsSuccess(bugs!));
       },
       failure: (error) {
         emit(HomeState.getBugsFailure(error));

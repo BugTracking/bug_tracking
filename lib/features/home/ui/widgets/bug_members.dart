@@ -1,4 +1,5 @@
-import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/helpers/cache_helper.dart';
+
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
@@ -23,7 +24,7 @@ class BugMembers extends StatelessWidget {
               backgroundColor:AppColor.darkGreyish,
               radius: 13,
               child: Text(
-                bug.assignTo[0].toShortcutEachWord(),
+                CacheHelper.userId,
                 style: AppTexts.text10PrimaryNunitoSansSemiBold,
               ),
             ),
@@ -32,7 +33,7 @@ class BugMembers extends StatelessWidget {
             backgroundColor: const Color(0xffD9D9D9),
             radius: 17,
             child: Text(
-              bug.assignTo[1].toShortcutEachWord(),
+              CacheHelper.userId.toShortcutEachWord(),
               style: AppTexts.text10PrimaryNunitoSansSemiBold,
             ),
           ),

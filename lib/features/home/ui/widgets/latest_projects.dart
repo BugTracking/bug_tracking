@@ -1,7 +1,6 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
-import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:bug_tracking/features/home/ui/widgets/latest_project_body.dart';
@@ -18,7 +17,7 @@ class LatestProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit,HomeState>(
       builder: (context,state) {
-        ProjectModel project = context.read<HomeCubit>().projects[0];
+
         return Column(
           children: [
             Row(
@@ -35,7 +34,7 @@ class LatestProjects extends StatelessWidget {
               ],
             ),
             verticalSpace(5),
-             LatestProjectBody(project:project),
+             LatestProjectBody(),
           ],
         );
       }

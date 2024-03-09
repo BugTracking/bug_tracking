@@ -39,6 +39,7 @@ class HomeRepo {
     try {
       final response = await _apiService.getBugs(token);
       if (response.status) {
+
         return ApiResult.success(response);
       }
       return ApiResult.failure(response.message ?? '');

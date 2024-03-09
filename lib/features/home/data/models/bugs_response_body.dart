@@ -1,48 +1,41 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/categories_response_body.dart';
 part 'bugs_response_body.g.dart';
 
 @JsonSerializable()
 class BugResponseBody {
   final bool status;
   final String? message;
-  final List<BugModel>? bugdata;
-  BugResponseBody(this.status, this.bugdata,this.message);
+  final List<BugModel>? data;
+  BugResponseBody(this.status, this.data,this.message);
   factory BugResponseBody.fromJson(Map<String, dynamic> json) =>
       _$BugResponseBodyFromJson(json);
 }
 
 @JsonSerializable()
 class BugModel {
-  @JsonKey(name: 'id')
-  //final String id;
+  @JsonKey(name: '_id')
+  final String id;
   final String title;
   final String description;
-  final String projectId;
-  final String categoryId;
+  final String project;
+  final CategoryModel category;
   final String status;
   final String priority;
   final String severity;
-  final String userCreatorId;
-  final String timeCreatedAt;
-  final String lastUpdatedBy;
+  final UserModel creator;
+  final UserModel lastUpdatedBy;
+  final String timeCreated;
   final String lastUpdatedAt;
-  final List<String> assignTo;
 
-  BugModel(this.title,
-      this.description,
-      this.projectId,
-      this.categoryId,
-      this.status,
-      this.priority,
-      this.severity,
-      this.userCreatorId,
-      this.timeCreatedAt,
-      this.lastUpdatedBy,
-      this.lastUpdatedAt,
-      this.assignTo);
+
+
 
   factory BugModel.fromJson(Map<String, dynamic> json) =>
       _$BugModelFromJson(json);
+
+  BugModel(this.id, this.title, this.description, this.project, this.category, this.status, this.priority, this.severity, this.creator, this.lastUpdatedBy, this.timeCreated, this.lastUpdatedAt);
 
 
   }
