@@ -22,6 +22,9 @@ mixin _$HomeState {
     required TResult Function() getUserLoading,
     required TResult Function(String message) getUserFailure,
     required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$HomeState {
     TResult? Function()? getUserLoading,
     TResult? Function(String message)? getUserFailure,
     TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$HomeState {
     TResult Function()? getUserLoading,
     TResult Function(String message)? getUserFailure,
     TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$HomeState {
     required TResult Function(GetUserLoading value) getUserLoading,
     required TResult Function(GetUserFailure value) getUserFailure,
     required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$HomeState {
     TResult? Function(GetUserLoading value)? getUserLoading,
     TResult? Function(GetUserFailure value)? getUserFailure,
     TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$HomeState {
     TResult Function(GetUserLoading value)? getUserLoading,
     TResult Function(GetUserFailure value)? getUserFailure,
     TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +145,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() getUserLoading,
     required TResult Function(String message) getUserFailure,
     required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
   }) {
     return initial();
   }
@@ -138,6 +159,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? getUserLoading,
     TResult? Function(String message)? getUserFailure,
     TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
   }) {
     return initial?.call();
   }
@@ -149,6 +173,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? getUserLoading,
     TResult Function(String message)? getUserFailure,
     TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -164,6 +191,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(GetUserLoading value) getUserLoading,
     required TResult Function(GetUserFailure value) getUserFailure,
     required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
   }) {
     return initial(this);
   }
@@ -175,6 +205,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(GetUserLoading value)? getUserLoading,
     TResult? Function(GetUserFailure value)? getUserFailure,
     TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
   }) {
     return initial?.call(this);
   }
@@ -186,6 +219,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(GetUserLoading value)? getUserLoading,
     TResult Function(GetUserFailure value)? getUserFailure,
     TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,6 +277,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     required TResult Function() getUserLoading,
     required TResult Function(String message) getUserFailure,
     required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
   }) {
     return getUserLoading();
   }
@@ -252,6 +291,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult? Function()? getUserLoading,
     TResult? Function(String message)? getUserFailure,
     TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
   }) {
     return getUserLoading?.call();
   }
@@ -263,6 +305,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult Function()? getUserLoading,
     TResult Function(String message)? getUserFailure,
     TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getUserLoading != null) {
@@ -278,6 +323,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     required TResult Function(GetUserLoading value) getUserLoading,
     required TResult Function(GetUserFailure value) getUserFailure,
     required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
   }) {
     return getUserLoading(this);
   }
@@ -289,6 +337,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult? Function(GetUserLoading value)? getUserLoading,
     TResult? Function(GetUserFailure value)? getUserFailure,
     TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
   }) {
     return getUserLoading?.call(this);
   }
@@ -300,6 +351,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult Function(GetUserLoading value)? getUserLoading,
     TResult Function(GetUserFailure value)? getUserFailure,
     TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getUserLoading != null) {
@@ -382,6 +436,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     required TResult Function() getUserLoading,
     required TResult Function(String message) getUserFailure,
     required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
   }) {
     return getUserFailure(message);
   }
@@ -393,6 +450,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult? Function()? getUserLoading,
     TResult? Function(String message)? getUserFailure,
     TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
   }) {
     return getUserFailure?.call(message);
   }
@@ -404,6 +464,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult Function()? getUserLoading,
     TResult Function(String message)? getUserFailure,
     TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getUserFailure != null) {
@@ -419,6 +482,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     required TResult Function(GetUserLoading value) getUserLoading,
     required TResult Function(GetUserFailure value) getUserFailure,
     required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
   }) {
     return getUserFailure(this);
   }
@@ -430,6 +496,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult? Function(GetUserLoading value)? getUserLoading,
     TResult? Function(GetUserFailure value)? getUserFailure,
     TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
   }) {
     return getUserFailure?.call(this);
   }
@@ -441,6 +510,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult Function(GetUserLoading value)? getUserLoading,
     TResult Function(GetUserFailure value)? getUserFailure,
     TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getUserFailure != null) {
@@ -528,6 +600,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     required TResult Function() getUserLoading,
     required TResult Function(String message) getUserFailure,
     required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
   }) {
     return getUserSuccess(user);
   }
@@ -539,6 +614,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult? Function()? getUserLoading,
     TResult? Function(String message)? getUserFailure,
     TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
   }) {
     return getUserSuccess?.call(user);
   }
@@ -550,6 +628,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult Function()? getUserLoading,
     TResult Function(String message)? getUserFailure,
     TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getUserSuccess != null) {
@@ -565,6 +646,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     required TResult Function(GetUserLoading value) getUserLoading,
     required TResult Function(GetUserFailure value) getUserFailure,
     required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
   }) {
     return getUserSuccess(this);
   }
@@ -576,6 +660,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult? Function(GetUserLoading value)? getUserLoading,
     TResult? Function(GetUserFailure value)? getUserFailure,
     TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
   }) {
     return getUserSuccess?.call(this);
   }
@@ -587,6 +674,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult Function(GetUserLoading value)? getUserLoading,
     TResult Function(GetUserFailure value)? getUserFailure,
     TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getUserSuccess != null) {
@@ -602,5 +692,474 @@ abstract class GetUserSuccess implements HomeState {
   UserData get user;
   @JsonKey(ignore: true)
   _$$GetUserSuccessImplCopyWith<_$GetUserSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetProjectsLoadingImplCopyWith<$Res> {
+  factory _$$GetProjectsLoadingImplCopyWith(_$GetProjectsLoadingImpl value,
+          $Res Function(_$GetProjectsLoadingImpl) then) =
+      __$$GetProjectsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetProjectsLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$GetProjectsLoadingImpl>
+    implements _$$GetProjectsLoadingImplCopyWith<$Res> {
+  __$$GetProjectsLoadingImplCopyWithImpl(_$GetProjectsLoadingImpl _value,
+      $Res Function(_$GetProjectsLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetProjectsLoadingImpl implements GetProjectsLoading {
+  const _$GetProjectsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.getProjectsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetProjectsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserLoading,
+    required TResult Function(String message) getUserFailure,
+    required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
+  }) {
+    return getProjectsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserLoading,
+    TResult? Function(String message)? getUserFailure,
+    TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
+  }) {
+    return getProjectsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserLoading,
+    TResult Function(String message)? getUserFailure,
+    TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getProjectsLoading != null) {
+      return getProjectsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetUserLoading value) getUserLoading,
+    required TResult Function(GetUserFailure value) getUserFailure,
+    required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
+  }) {
+    return getProjectsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetUserLoading value)? getUserLoading,
+    TResult? Function(GetUserFailure value)? getUserFailure,
+    TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
+  }) {
+    return getProjectsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetUserLoading value)? getUserLoading,
+    TResult Function(GetUserFailure value)? getUserFailure,
+    TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getProjectsLoading != null) {
+      return getProjectsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetProjectsLoading implements HomeState {
+  const factory GetProjectsLoading() = _$GetProjectsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$GetProjectsFailureImplCopyWith<$Res> {
+  factory _$$GetProjectsFailureImplCopyWith(_$GetProjectsFailureImpl value,
+          $Res Function(_$GetProjectsFailureImpl) then) =
+      __$$GetProjectsFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetProjectsFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$GetProjectsFailureImpl>
+    implements _$$GetProjectsFailureImplCopyWith<$Res> {
+  __$$GetProjectsFailureImplCopyWithImpl(_$GetProjectsFailureImpl _value,
+      $Res Function(_$GetProjectsFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetProjectsFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetProjectsFailureImpl implements GetProjectsFailure {
+  const _$GetProjectsFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'HomeState.getProjectsFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetProjectsFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetProjectsFailureImplCopyWith<_$GetProjectsFailureImpl> get copyWith =>
+      __$$GetProjectsFailureImplCopyWithImpl<_$GetProjectsFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserLoading,
+    required TResult Function(String message) getUserFailure,
+    required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
+  }) {
+    return getProjectsFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserLoading,
+    TResult? Function(String message)? getUserFailure,
+    TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
+  }) {
+    return getProjectsFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserLoading,
+    TResult Function(String message)? getUserFailure,
+    TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getProjectsFailure != null) {
+      return getProjectsFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetUserLoading value) getUserLoading,
+    required TResult Function(GetUserFailure value) getUserFailure,
+    required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
+  }) {
+    return getProjectsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetUserLoading value)? getUserLoading,
+    TResult? Function(GetUserFailure value)? getUserFailure,
+    TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
+  }) {
+    return getProjectsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetUserLoading value)? getUserLoading,
+    TResult Function(GetUserFailure value)? getUserFailure,
+    TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getProjectsFailure != null) {
+      return getProjectsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetProjectsFailure implements HomeState {
+  const factory GetProjectsFailure(final String message) =
+      _$GetProjectsFailureImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$GetProjectsFailureImplCopyWith<_$GetProjectsFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetProjectsSuccessImplCopyWith<$Res> {
+  factory _$$GetProjectsSuccessImplCopyWith(_$GetProjectsSuccessImpl value,
+          $Res Function(_$GetProjectsSuccessImpl) then) =
+      __$$GetProjectsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ProjectModel> projects});
+}
+
+/// @nodoc
+class __$$GetProjectsSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$GetProjectsSuccessImpl>
+    implements _$$GetProjectsSuccessImplCopyWith<$Res> {
+  __$$GetProjectsSuccessImplCopyWithImpl(_$GetProjectsSuccessImpl _value,
+      $Res Function(_$GetProjectsSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? projects = null,
+  }) {
+    return _then(_$GetProjectsSuccessImpl(
+      null == projects
+          ? _value._projects
+          : projects // ignore: cast_nullable_to_non_nullable
+              as List<ProjectModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
+  const _$GetProjectsSuccessImpl(final List<ProjectModel> projects)
+      : _projects = projects;
+
+  final List<ProjectModel> _projects;
+  @override
+  List<ProjectModel> get projects {
+    if (_projects is EqualUnmodifiableListView) return _projects;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_projects);
+  }
+
+  @override
+  String toString() {
+    return 'HomeState.getProjectsSuccess(projects: $projects)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetProjectsSuccessImpl &&
+            const DeepCollectionEquality().equals(other._projects, _projects));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_projects));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetProjectsSuccessImplCopyWith<_$GetProjectsSuccessImpl> get copyWith =>
+      __$$GetProjectsSuccessImplCopyWithImpl<_$GetProjectsSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserLoading,
+    required TResult Function(String message) getUserFailure,
+    required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
+  }) {
+    return getProjectsSuccess(projects);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserLoading,
+    TResult? Function(String message)? getUserFailure,
+    TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
+  }) {
+    return getProjectsSuccess?.call(projects);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserLoading,
+    TResult Function(String message)? getUserFailure,
+    TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getProjectsSuccess != null) {
+      return getProjectsSuccess(projects);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetUserLoading value) getUserLoading,
+    required TResult Function(GetUserFailure value) getUserFailure,
+    required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
+  }) {
+    return getProjectsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetUserLoading value)? getUserLoading,
+    TResult? Function(GetUserFailure value)? getUserFailure,
+    TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
+  }) {
+    return getProjectsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetUserLoading value)? getUserLoading,
+    TResult Function(GetUserFailure value)? getUserFailure,
+    TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getProjectsSuccess != null) {
+      return getProjectsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetProjectsSuccess implements HomeState {
+  const factory GetProjectsSuccess(final List<ProjectModel> projects) =
+      _$GetProjectsSuccessImpl;
+
+  List<ProjectModel> get projects;
+  @JsonKey(ignore: true)
+  _$$GetProjectsSuccessImplCopyWith<_$GetProjectsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

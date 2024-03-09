@@ -9,6 +9,7 @@ import 'package:bug_tracking/features/add_project/data/models/add_project_reques
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
@@ -40,4 +41,9 @@ abstract class ApiService {
     @Body() AddProjectRequestBody addProjectRequestBody,
     @Header('authorization') String token,
   );
+
+  @GET(ApiConstance.projects)
+  Future<ProjectResponseBody> getProjects(
+      @Header('authorization') String token,
+      );
 }
