@@ -10,6 +10,7 @@ class ProjectsCubit extends Cubit<ProjectStates> {
 
   List<ProjectModel> projects = [];
   void emitProjectData() async {
+    emit(const ProjectStates.getProjectsLoading());
     final response = await _projectsRepo.getProjects();
     response.when(
       success: (data) {

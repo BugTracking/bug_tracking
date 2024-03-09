@@ -1,7 +1,9 @@
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/show_bottom_sheet_function.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/features/allprojects/ui/screens/allprojects_screen.dart';
+import 'package:bug_tracking/core/widgets/custom_shimmer_list.dart';
+import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
@@ -22,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
     const HomeBodyScreen(),
-    const AllProjectsScreen(),
+    const ProjectsScreen(),
     const NotficationsScreen(),
     const SettingScreen(),
   ];
@@ -31,15 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          // if (userData.user.id == '') {
-          //   return ListView.separated(
-          //     itemBuilder: (context, index) => const CustomShimmer(),
-          //     separatorBuilder: (context, index) => verticalSpace(10.0),
-          //     itemCount: 30,
-          //     physics: const NeverScrollableScrollPhysics(),
-          //     shrinkWrap: true,
-          //   );
-          // }
+          if (userData.user.id == '') {
+            return const CustomShimmerList();
+          }
           return screens[currentIndex];
         },
       ),

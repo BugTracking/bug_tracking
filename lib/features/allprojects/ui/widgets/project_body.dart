@@ -16,20 +16,16 @@ class ProjectBody extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(right: 65.0, top: 13.0),
-
-
-        
           child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  
                   Text(project.title,
                       style: AppTexts.text16OnBackgroundNunitoSansSemiBold),
-                  const CustomPriorityStatusContainer(
-                    text: 'Not Started Yet',
-                    color: AppColor.redish,
+                  CustomPriorityStatusContainer(
+                    text: project.status,
+                    color: getProjectStatusColor(project.status),
                   ),
                 ],
               ),
@@ -46,10 +42,12 @@ class ProjectBody extends StatelessWidget {
             ],
           ),
         ),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            ProjectMembers(),
+            ProjectMembers(
+              project: project,
+            ),
           ],
         ),
       ],

@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/core/widgets/custom_shimmer_list.dart';
 import 'package:bug_tracking/features/allprojects/logic/cubit/projects_cubit.dart';
 import 'package:bug_tracking/features/allprojects/logic/cubit/projects_states.dart';
 import 'package:bug_tracking/features/allprojects/ui/widgets/project_list.dart';
@@ -8,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AllProjectsScreen extends StatelessWidget {
-  const AllProjectsScreen({Key? key}) : super(key: key);
+class ProjectsScreen extends StatelessWidget {
+  const ProjectsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,9 @@ class AllProjectsScreen extends StatelessWidget {
         create: (context) => getIt<ProjectsCubit>()..emitProjectData(),
         child: BlocBuilder<ProjectsCubit, ProjectStates>(
             builder: (context, state) {
+          if (state is ProjectsLoading) {
+            return const CustomShimmerList();
+          }
           return Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 16.0.w,
