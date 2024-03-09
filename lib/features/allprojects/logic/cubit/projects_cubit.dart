@@ -14,8 +14,6 @@ class ProjectsCubit extends Cubit<ProjectStates> {
     response.when(
       success: (data) {
         projects = data.data ?? [];
-        print("this");
-        print(projects.length);
         emit(ProjectStates.getProjectsSuccess(data.data ?? []));
       },
       failure: (error) {

@@ -28,8 +28,9 @@ class ProjectTile extends StatelessWidget {
             ),
             child: Column(
               children: [
-                //const ProjectHeader(),
-                 ProjectBody(project: project,),
+                ProjectBody(
+                  project: project,
+                ),
                 verticalSpace(10.0),
               ],
             ),

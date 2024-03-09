@@ -44,25 +44,25 @@ mixin _$ProjectStates {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(getProjectsLoading value) getProjectsLoading,
-    required TResult Function(getProjectsFailure value) getProjectsFailure,
-    required TResult Function(getProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(ProjectsLoading value) getProjectsLoading,
+    required TResult Function(ProjectsFailure value) getProjectsFailure,
+    required TResult Function(ProjectsSuccess value) getProjectsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(getProjectsLoading value)? getProjectsLoading,
-    TResult? Function(getProjectsFailure value)? getProjectsFailure,
-    TResult? Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(ProjectsLoading value)? getProjectsLoading,
+    TResult? Function(ProjectsFailure value)? getProjectsFailure,
+    TResult? Function(ProjectsSuccess value)? getProjectsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(getProjectsLoading value)? getProjectsLoading,
-    TResult Function(getProjectsFailure value)? getProjectsFailure,
-    TResult Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(ProjectsLoading value)? getProjectsLoading,
+    TResult Function(ProjectsFailure value)? getProjectsFailure,
+    TResult Function(ProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -162,9 +162,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(getProjectsLoading value) getProjectsLoading,
-    required TResult Function(getProjectsFailure value) getProjectsFailure,
-    required TResult Function(getProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(ProjectsLoading value) getProjectsLoading,
+    required TResult Function(ProjectsFailure value) getProjectsFailure,
+    required TResult Function(ProjectsSuccess value) getProjectsSuccess,
   }) {
     return initial(this);
   }
@@ -173,9 +173,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(getProjectsLoading value)? getProjectsLoading,
-    TResult? Function(getProjectsFailure value)? getProjectsFailure,
-    TResult? Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(ProjectsLoading value)? getProjectsLoading,
+    TResult? Function(ProjectsFailure value)? getProjectsFailure,
+    TResult? Function(ProjectsSuccess value)? getProjectsSuccess,
   }) {
     return initial?.call(this);
   }
@@ -184,9 +184,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(getProjectsLoading value)? getProjectsLoading,
-    TResult Function(getProjectsFailure value)? getProjectsFailure,
-    TResult Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(ProjectsLoading value)? getProjectsLoading,
+    TResult Function(ProjectsFailure value)? getProjectsFailure,
+    TResult Function(ProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -218,7 +218,7 @@ class __$$getProjectsLoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getProjectsLoadingImpl implements getProjectsLoading {
+class _$getProjectsLoadingImpl implements ProjectsLoading {
   const _$getProjectsLoadingImpl();
 
   @override
@@ -276,9 +276,9 @@ class _$getProjectsLoadingImpl implements getProjectsLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(getProjectsLoading value) getProjectsLoading,
-    required TResult Function(getProjectsFailure value) getProjectsFailure,
-    required TResult Function(getProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(ProjectsLoading value) getProjectsLoading,
+    required TResult Function(ProjectsFailure value) getProjectsFailure,
+    required TResult Function(ProjectsSuccess value) getProjectsSuccess,
   }) {
     return getProjectsLoading(this);
   }
@@ -287,9 +287,9 @@ class _$getProjectsLoadingImpl implements getProjectsLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(getProjectsLoading value)? getProjectsLoading,
-    TResult? Function(getProjectsFailure value)? getProjectsFailure,
-    TResult? Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(ProjectsLoading value)? getProjectsLoading,
+    TResult? Function(ProjectsFailure value)? getProjectsFailure,
+    TResult? Function(ProjectsSuccess value)? getProjectsSuccess,
   }) {
     return getProjectsLoading?.call(this);
   }
@@ -298,9 +298,9 @@ class _$getProjectsLoadingImpl implements getProjectsLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(getProjectsLoading value)? getProjectsLoading,
-    TResult Function(getProjectsFailure value)? getProjectsFailure,
-    TResult Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(ProjectsLoading value)? getProjectsLoading,
+    TResult Function(ProjectsFailure value)? getProjectsFailure,
+    TResult Function(ProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsLoading != null) {
@@ -310,8 +310,8 @@ class _$getProjectsLoadingImpl implements getProjectsLoading {
   }
 }
 
-abstract class getProjectsLoading implements ProjectStates {
-  const factory getProjectsLoading() = _$getProjectsLoadingImpl;
+abstract class ProjectsLoading implements ProjectStates {
+  const factory ProjectsLoading() = _$getProjectsLoadingImpl;
 }
 
 /// @nodoc
@@ -347,7 +347,7 @@ class __$$getProjectsFailureImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getProjectsFailureImpl implements getProjectsFailure {
+class _$getProjectsFailureImpl implements ProjectsFailure {
   const _$getProjectsFailureImpl(this.message);
 
   @override
@@ -417,9 +417,9 @@ class _$getProjectsFailureImpl implements getProjectsFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(getProjectsLoading value) getProjectsLoading,
-    required TResult Function(getProjectsFailure value) getProjectsFailure,
-    required TResult Function(getProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(ProjectsLoading value) getProjectsLoading,
+    required TResult Function(ProjectsFailure value) getProjectsFailure,
+    required TResult Function(ProjectsSuccess value) getProjectsSuccess,
   }) {
     return getProjectsFailure(this);
   }
@@ -428,9 +428,9 @@ class _$getProjectsFailureImpl implements getProjectsFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(getProjectsLoading value)? getProjectsLoading,
-    TResult? Function(getProjectsFailure value)? getProjectsFailure,
-    TResult? Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(ProjectsLoading value)? getProjectsLoading,
+    TResult? Function(ProjectsFailure value)? getProjectsFailure,
+    TResult? Function(ProjectsSuccess value)? getProjectsSuccess,
   }) {
     return getProjectsFailure?.call(this);
   }
@@ -439,9 +439,9 @@ class _$getProjectsFailureImpl implements getProjectsFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(getProjectsLoading value)? getProjectsLoading,
-    TResult Function(getProjectsFailure value)? getProjectsFailure,
-    TResult Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(ProjectsLoading value)? getProjectsLoading,
+    TResult Function(ProjectsFailure value)? getProjectsFailure,
+    TResult Function(ProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsFailure != null) {
@@ -451,8 +451,8 @@ class _$getProjectsFailureImpl implements getProjectsFailure {
   }
 }
 
-abstract class getProjectsFailure implements ProjectStates {
-  const factory getProjectsFailure(final String message) =
+abstract class ProjectsFailure implements ProjectStates {
+  const factory ProjectsFailure(final String message) =
       _$getProjectsFailureImpl;
 
   String get message;
@@ -494,7 +494,7 @@ class __$$getProjectsSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$getProjectsSuccessImpl implements getProjectsSuccess {
+class _$getProjectsSuccessImpl implements ProjectsSuccess {
   const _$getProjectsSuccessImpl(final List<ProjectModel> projects)
       : _projects = projects;
 
@@ -571,9 +571,9 @@ class _$getProjectsSuccessImpl implements getProjectsSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(getProjectsLoading value) getProjectsLoading,
-    required TResult Function(getProjectsFailure value) getProjectsFailure,
-    required TResult Function(getProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(ProjectsLoading value) getProjectsLoading,
+    required TResult Function(ProjectsFailure value) getProjectsFailure,
+    required TResult Function(ProjectsSuccess value) getProjectsSuccess,
   }) {
     return getProjectsSuccess(this);
   }
@@ -582,9 +582,9 @@ class _$getProjectsSuccessImpl implements getProjectsSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(getProjectsLoading value)? getProjectsLoading,
-    TResult? Function(getProjectsFailure value)? getProjectsFailure,
-    TResult? Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(ProjectsLoading value)? getProjectsLoading,
+    TResult? Function(ProjectsFailure value)? getProjectsFailure,
+    TResult? Function(ProjectsSuccess value)? getProjectsSuccess,
   }) {
     return getProjectsSuccess?.call(this);
   }
@@ -593,9 +593,9 @@ class _$getProjectsSuccessImpl implements getProjectsSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(getProjectsLoading value)? getProjectsLoading,
-    TResult Function(getProjectsFailure value)? getProjectsFailure,
-    TResult Function(getProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(ProjectsLoading value)? getProjectsLoading,
+    TResult Function(ProjectsFailure value)? getProjectsFailure,
+    TResult Function(ProjectsSuccess value)? getProjectsSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsSuccess != null) {
@@ -605,8 +605,8 @@ class _$getProjectsSuccessImpl implements getProjectsSuccess {
   }
 }
 
-abstract class getProjectsSuccess implements ProjectStates {
-  const factory getProjectsSuccess(final List<ProjectModel> projects) =
+abstract class ProjectsSuccess implements ProjectStates {
+  const factory ProjectsSuccess(final List<ProjectModel> projects) =
       _$getProjectsSuccessImpl;
 
   List<ProjectModel> get projects;

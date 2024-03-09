@@ -10,8 +10,6 @@ class ProjectList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("herrrreeeeeeee");
-    print(context.read<ProjectsCubit>().projects.length);
     return SafeArea(
       child: ListView.separated(
         itemBuilder: (context, index) {

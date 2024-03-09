@@ -33,19 +33,19 @@ class AllProjectsScreen extends StatelessWidget {
           ),
         ],
       ),
-      body:
-BlocProvider(
-            create: (context) => getIt<ProjectsCubit>()..emitProjectData(),
-            child: BlocBuilder<ProjectsCubit, ProjectStates>(builder: (context, state) {
-                    return Padding(
+      body: BlocProvider(
+        create: (context) => getIt<ProjectsCubit>()..emitProjectData(),
+        child: BlocBuilder<ProjectsCubit, ProjectStates>(
+            builder: (context, state) {
+          return Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 16.0.w,
               vertical: 20.0.h,
             ),
             child: const ProjectList(),
-                    );
-                  }),
-          ),
+          );
+        }),
+      ),
     );
   }
 }

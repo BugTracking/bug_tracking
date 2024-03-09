@@ -6,10 +6,10 @@ part 'projects_states.freezed.dart';
 @freezed
 class ProjectStates with _$ProjectStates {
   const factory ProjectStates.initial() = _Initial;
-  const factory ProjectStates.getProjectsLoading() = getProjectsLoading;
+  const factory ProjectStates.getProjectsLoading() = ProjectsLoading;
   const factory ProjectStates.getProjectsFailure(String message) =
-      getProjectsFailure;
+      ProjectsFailure;
 
   const factory ProjectStates.getProjectsSuccess(List<ProjectModel> projects) =
-      getProjectsSuccess;
+      ProjectsSuccess;
 }
