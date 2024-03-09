@@ -5,6 +5,7 @@ import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/core/widgets/custom_list_title.dart';
 import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
 import 'package:bug_tracking/core/widgets/custom_project_info_text.dart';
+import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
 import 'package:bug_tracking/features/project_details/logic/cubit/project_details_cubit.dart';
 import 'package:bug_tracking/features/project_details/logic/cubit/project_details_state.dart';

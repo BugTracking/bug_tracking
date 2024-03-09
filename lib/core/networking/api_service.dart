@@ -1,6 +1,4 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
-import 'package:bug_tracking/features/allprojects/data/model/project_response_body.dart';
-
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -11,6 +9,8 @@ import 'package:bug_tracking/features/add_project/data/models/add_project_reques
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
 import 'package:dio/dio.dart';
@@ -51,6 +51,10 @@ abstract class ApiService {
     @Header('authorization') String token,
   );
 
+  @GET(ApiConstance.bugs)
+  Future<BugResponseBody> getBugs(
+    @Header('authorization') String token,
+  );
   @GET('${ApiConstance.projects}/{id}')
   Future<ProjectDetailsResponse> getProjectDetails(
       @Path('id') String projectId);

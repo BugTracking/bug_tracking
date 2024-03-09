@@ -12,12 +12,14 @@ ProjectResponseBody _$ProjectResponseBodyFromJson(Map<String, dynamic> json) =>
       (json['data'] as List<dynamic>?)
           ?.map((e) => ProjectModel.fromJson(e as Map<String, dynamic>))
           .toList(),
+      json['message'] as String?,
     );
 
 Map<String, dynamic> _$ProjectResponseBodyToJson(
         ProjectResponseBody instance) =>
     <String, dynamic>{
       'status': instance.status,
+      'message': instance.message,
       'data': instance.data,
     };
 

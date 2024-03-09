@@ -1,9 +1,8 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
-import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/router/screen_args.dart';
-import 'package:bug_tracking/features/allprojects/data/model/project_response_body.dart';
-import 'package:bug_tracking/features/allprojects/ui/widgets/project_body.dart';
+import 'package:bug_tracking/core/widgets/custom_project_bug_container.dart';
+import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:flutter/material.dart';
 
 class ProjectTile extends StatelessWidget {
@@ -22,28 +21,14 @@ class ProjectTile extends StatelessWidget {
         ),
       ),
       borderRadius: BorderRadius.circular(10.0),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(16.0),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: const Color(0xffE9EAEC),
-                width: 1,
-              ),
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            child: Column(
-              children: [
-                ProjectBody(
-                  project: project,
-                ),
-                verticalSpace(10.0),
-              ],
-            ),
-          ),
-        ],
+      child: CustomProjectBugContainer(
+        title: project.title,
+        lastUpdateAt: project.lastUpdatedAt,
+        status: project.status,
+        createdOn: project.timeCreated,
+        creator: project.creator.name,
+        lastUpdatedBy: project.lastUpdatedBy.name,
+        isProject: true,
       ),
     );
   }

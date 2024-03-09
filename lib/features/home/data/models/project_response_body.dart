@@ -1,4 +1,3 @@
-
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'project_response_body.g.dart';
@@ -6,8 +5,9 @@ part 'project_response_body.g.dart';
 @JsonSerializable()
 class ProjectResponseBody {
   final bool status;
+  final String? message;
   final List<ProjectModel>? data;
-  ProjectResponseBody(this.status, this.data);
+  ProjectResponseBody(this.status, this.data,this.message);
   factory ProjectResponseBody.fromJson(Map<String, dynamic> json) =>
       _$ProjectResponseBodyFromJson(json);
 }
@@ -25,15 +25,16 @@ class ProjectModel {
   final String lastUpdatedAt;
 
   ProjectModel(
-    this.id,
-    this.title,
-    this.description,
-    this.status,
-    this.creator,
-    this.lastUpdatedBy,
-    this.timeCreated,
-    this.lastUpdatedAt,
-  );
+      this.id,
+      this.title,
+      this.description,
+      this.status,
+      this.creator,
+      this.lastUpdatedBy,
+      this.timeCreated,
+      this.lastUpdatedAt,
+      );
 
-  factory ProjectModel.fromJson(Map<String, dynamic> json) =>  _$ProjectModelFromJson(json);
+  factory ProjectModel.fromJson(Map<String, dynamic> json) =>
+      _$ProjectModelFromJson(json);
 }
