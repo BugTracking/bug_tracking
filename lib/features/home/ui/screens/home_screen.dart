@@ -4,12 +4,8 @@ import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_shimmer_list.dart';
-import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
-import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
-import 'package:bug_tracking/features/notfications/ui/screens/notfications_screen.dart';
-import 'package:bug_tracking/features/settings/ui/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,12 +18,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
-  List<Widget> screens = [
-    const HomeBodyScreen(),
-    const ProjectsScreen(),
-    const NotficationsScreen(),
-    const SettingScreen(),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
           if (userData.user.id == '') {
             return const CustomShimmerList();
           }
-          return screens[currentIndex];
+          return context.read<HomeCubit>().screens[currentIndex];
         },
       ),
       floatingActionButton: FloatingActionButton(

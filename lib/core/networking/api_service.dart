@@ -55,4 +55,14 @@ abstract class ApiService {
   Future<BugResponseBody> getBugs(
     @Header('authorization') String token,
   );
+  @GET('${ApiConstance.projects}/{id}')
+  Future<ProjectDetailsResponse> getProjectDetails(
+      @Path('id') String projectId);
+
+  @PUT('${ApiConstance.projects}/{id}')
+  Future<ProjectEditResponseBody> editProject(
+    @Path('id') String projectId,
+    @Body() ProjectEditRequestBody projectEditRequestBody,
+    @Header('authorization') String token,
+  );
 }

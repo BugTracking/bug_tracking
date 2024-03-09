@@ -3,6 +3,7 @@ class ApiConstance {
   static const String login = 'auth/login';
   static const String users = 'users';
   static const String projects = 'projects';
+  static const String bugs = 'bugs';
   static const String register = 'auth/signup';
   static const String categories = 'categories';
 }

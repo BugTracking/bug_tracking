@@ -9,7 +9,7 @@ part of 'bugs_response_body.dart';
 BugResponseBody _$BugResponseBodyFromJson(Map<String, dynamic> json) =>
     BugResponseBody(
       json['status'] as bool,
-      (json['bugdata'] as List<dynamic>?)
+      (json['data'] as List<dynamic>?)
           ?.map((e) => BugModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       json['message'] as String?,
@@ -19,35 +19,35 @@ Map<String, dynamic> _$BugResponseBodyToJson(BugResponseBody instance) =>
     <String, dynamic>{
       'status': instance.status,
       'message': instance.message,
-      'bugdata': instance.bugdata,
+      'data': instance.data,
     };
 
 BugModel _$BugModelFromJson(Map<String, dynamic> json) => BugModel(
-      json['id'] as String,
+      json['_id'] as String,
+      json['title'] as String,
       json['description'] as String,
-      json['projectId'] as String,
-      json['categoryId'] as String,
+      json['project'] as String,
+      CategoryModel.fromJson(json['category'] as Map<String, dynamic>),
       json['status'] as String,
       json['priority'] as String,
       json['severity'] as String,
-      json['userCreatorId'] as String,
-      json['timeCreatedAt'] as String,
-      json['lastUpdatedBy'] as String,
+      UserModel.fromJson(json['creator'] as Map<String, dynamic>),
+      UserModel.fromJson(json['lastUpdatedBy'] as Map<String, dynamic>),
       json['lastUpdatedAt'] as String,
-      (json['assignTo'] as List<dynamic>).map((e) => e as String).toList(),
+      json['timeCreated'] as String,
     );
 
 Map<String, dynamic> _$BugModelToJson(BugModel instance) => <String, dynamic>{
-      'id': instance.title,
+      '_id': instance.id,
+      'title': instance.title,
       'description': instance.description,
-      'projectId': instance.projectId,
-      'categoryId': instance.categoryId,
+      'project': instance.projectId,
+      'category': instance.category,
       'status': instance.status,
       'priority': instance.priority,
       'severity': instance.severity,
-      'userCreatorId': instance.userCreatorId,
-      'timeCreatedAt': instance.timeCreatedAt,
+      'creator': instance.creator,
       'lastUpdatedBy': instance.lastUpdatedBy,
       'lastUpdatedAt': instance.lastUpdatedAt,
-      'assignTo': instance.assignTo,
+      'timeCreated': instance.timeCreated,
     };

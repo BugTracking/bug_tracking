@@ -8,6 +8,9 @@ class CacheHelper {
     if (!sharedPreferences.containsKey('token')) {
       await setString(key: 'token', value: '');
     }
+    if (!sharedPreferences.containsKey('userId')) {
+      await setString(key: 'userId', value: '');
+    }
   }
 
   static Future<bool> setString(

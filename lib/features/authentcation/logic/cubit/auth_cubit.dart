@@ -47,9 +47,8 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   void emitLoginState() async {
-    emit(AuthLoading());
-
     if (formKey.currentState!.validate()) {
+      emit(AuthLoading());
       final response = await _authRepo.login(
         getLoginRequestModel(),
       );
@@ -82,15 +81,14 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   void emitRegisterState() async {
-    emit(AuthLoading());
-
     if (formKey.currentState!.validate()) {
+      emit(AuthLoading());
+
       final response = await _authRepo.register(
         getRegisterRequestModel(),
       );
       response.when(
         success: (data) async {
-
           await CacheHelper.setString(key: 'token', value: data.token!);
           await CacheHelper.setString(key: 'userId', value: data.userModel!.id);
           emit(AuthSuccess('You registered sucessfully'));

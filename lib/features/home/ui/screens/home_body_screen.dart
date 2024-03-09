@@ -22,31 +22,31 @@ class HomeBodyScreen extends StatelessWidget {
           style: AppTexts.text21OnBackgroundColorNunitoSansBold,
         ),
       ),
-      body: BlocBuilder<HomeCubit,HomeState>(
-        builder: (context,state) {
-          if(state is GetProjectsLoading){
-            if(state is GetBugsLoading){
-              return const  CustomLoadingIndicator();
-            }
-
+      body: BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
+        HomeCubit cubit = context.read<HomeCubit>();
+        if (state is GetProjectsLoading) {
+          if (state is GetBugsLoading) {
+            return const CustomLoadingIndicator();
           }
-          return SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.all(8.0.w),
-              child: Column(
-                children: [
-                  verticalSpace(20),
-                  const BugProjectContainers(),
-                  verticalSpace(20),
-                  const LatestProjects(),
-                  verticalSpace(20),
-                  const LatestBugs(),
-                ],
-              ),
-            ),
-          );
         }
-      ),
+        return SingleChildScrollView(
+          physics:
+              cubit.bugs == null ? const NeverScrollableScrollPhysics() : null,
+          child: Padding(
+            padding: EdgeInsets.all(8.0.w),
+            child: Column(
+              children: [
+                verticalSpace(20),
+                const BugProjectContainers(),
+                verticalSpace(20),
+                const LatestProjects(),
+                verticalSpace(20),
+                const LatestBugs(),
+              ],
+            ),
+          ),
+        );
+      }),
     );
   }
 }

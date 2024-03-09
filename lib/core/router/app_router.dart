@@ -69,7 +69,10 @@ class AppRouter {
       case Routes.home:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => getIt<HomeCubit>()..emitUserDataState()..emitProjectDataState()..emitBugDataState(),
+            create: (context) => getIt<HomeCubit>()
+              ..emitUserDataState()
+              ..emitProjectDataState()
+              ..emitBugDataState(),
             child: const HomeScreen(),
           ),
         );
@@ -78,8 +81,11 @@ class AppRouter {
           builder: (context) => const EditProfileScreen(),
         );
       case Routes.allProjects:
+        ProjectsScreenArgs args = settings.arguments as ProjectsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const ProjectsScreen(),
+          builder: (context) => ProjectsScreen(
+            projects: args.projects,
+          ),
         );
       case Routes.members:
         return MaterialPageRoute(
