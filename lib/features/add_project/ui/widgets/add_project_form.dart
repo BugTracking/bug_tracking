@@ -40,7 +40,7 @@ class _AddProjectFormState extends State<AddProjectForm> {
                 controller: cubit.descriptionController,
                 hintText: 'Project Description',
                 keyboardType: TextInputType.multiline,
-                textInputAction: TextInputAction.next,
+                textInputAction: TextInputAction.newline,
                 maxLines: null,
                 errorMsg: 'Please enter project description',
               ),

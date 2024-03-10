@@ -63,8 +63,9 @@ class AppRouter {
         var args = settings.arguments as BugDetailsScreenArgs;
         return MaterialPageRoute(
           builder: (context) => BlocProvider<BugDetailsCubit>(
-            create: (context) =>
-                getIt<BugDetailsCubit>()..emitBugDetailsState(args.bugId),
+            create: (context) => getIt<BugDetailsCubit>()
+              ..emitBugDetailsState(args.bugId)
+              ..emitCommentsState(args.bugId),
             child: BugDetailsScreen(
               bugId: args.bugId,
               bugTitle: args.bugTitle,

@@ -10,7 +10,10 @@ import 'package:bug_tracking/features/add_project/data/models/add_categories_res
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/add_comment_request_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/add_comment_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/bug_details_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
@@ -83,5 +86,16 @@ abstract class ApiService {
   @GET('${ApiConstance.bugs}/{id}')
   Future<BugDetailsResponseBody> getBugDetails(
     @Path('id') String bugId,
+  );
+
+  @GET('${ApiConstance.comments}/{id}')
+  Future<CommentsResponseBody> getComments(
+    @Path('id') String bugId,
+  );
+
+  @POST(ApiConstance.comments)
+  Future<AddCommentResponseBody> addComment(
+    @Header('authorization') String token,
+    @Body() AddCommentRequestBody addCommentRequestBody,
   );
 }
