@@ -14,7 +14,7 @@ class EditForm extends StatefulWidget {
 }
 
 class _EditFormState extends State<EditForm> {
-  bool _isVisible = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -60,27 +60,7 @@ class _EditFormState extends State<EditForm> {
             textInputAction: TextInputAction.done,
           ),
           verticalSpace(16.0),
-          CustomTextField(
-            controller:  context.read<EditProfileCubit>().passwordController,
-            obscureText: _isVisible,
-            hintText: 'Password',
-            prefixIcon: const Icon(
-              Icons.lock,
-              color: AppColor.greyish,
-            ),
-            suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  _isVisible = !_isVisible;
-                });
-              },
-              icon: Icon(_isVisible ? Icons.visibility_off : Icons.visibility,
-                  color: AppColor.greyish),
-            ),
-            errorMsg: 'Field cannot be empty',
-            keyboardType: TextInputType.text,
-            textInputAction: TextInputAction.done,
-          ),
+
         ],
       ),
     );

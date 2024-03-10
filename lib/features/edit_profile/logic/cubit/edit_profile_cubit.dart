@@ -5,7 +5,7 @@ import 'package:bug_tracking/features/edit_profile/data/models/user_edit_request
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:bug_tracking/features/edit_profile/data/repos/edit_profile_repo.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
+
 import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -38,7 +38,6 @@ class EditProfileCubit extends Cubit<EditProfileState> {
   final TextEditingController nameController = TextEditingController(text:userData.user.name );
   final TextEditingController userNameController = TextEditingController(text:userData.user.userName);
   final TextEditingController emailController = TextEditingController(text:userData.user.email);
-  final TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   UserEditRequestModel getUserEditRequestModel() {
