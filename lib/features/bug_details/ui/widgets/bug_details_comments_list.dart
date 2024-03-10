@@ -33,7 +33,9 @@ class BugDetailsCommentsList extends StatelessWidget {
         return ListView.separated(
           itemBuilder: (context, index) {
             CommentData comment = comments[index];
-            List<String> times = comment.time.extractDate().split('-');
+            List<String> dates = comment.time.extractDate().split('-');
+            List<String> times = comment.time.extractTime().split(':');
+            print(times);
             return Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -50,11 +52,13 @@ class BugDetailsCommentsList extends StatelessWidget {
                   child: Text(
                     getTimeAgo(
                       createdTime: DateTime(
+                        int.parse(dates[0]),
+                        int.parse(dates[1]),
+                        int.parse(
+                          dates[2],
+                        ),
                         int.parse(times[0]),
                         int.parse(times[1]),
-                        int.parse(
-                          times[2],
-                        ),
                       ),
                     ),
                   ),

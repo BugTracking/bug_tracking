@@ -27,6 +27,7 @@ class ProjectDetailsCubit extends Cubit<ProjectDetailsState> {
         projectTitleController.text = projectDetailsModel!.project.title;
         projectDescriptionController.text =
             projectDetailsModel!.project.description;
+        projectStatus = projectDetailsModel!.project.status;
         emit(ProjectDetailsState.success(response));
       },
       failure: (message) {
@@ -58,6 +59,7 @@ class ProjectDetailsCubit extends Cubit<ProjectDetailsState> {
   }
 
   void emitChangeProjectStatusState(String value) {
+    emit(const ProjectDetailsState.initial());
     projectStatus = value;
     emit(const ProjectDetailsState.changeProjectStatusSuccess());
   }

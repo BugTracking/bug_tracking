@@ -21,6 +21,7 @@ class BugDetailsCubit extends Cubit<BugDetailsState> {
     response.when(
       success: (data) {
         bugDetailsModel = data.data;
+        initalizeControllers();
         emit(BugDetailsState.success(data: data));
       },
       failure: (error) {
@@ -80,7 +81,6 @@ class BugDetailsCubit extends Cubit<BugDetailsState> {
   List<CategoryModel>? categories;
   void emitCategoriesState() async {
     emit(const BugDetailsState.categoriesLoading());
-    initalizeControllers();
     final response = await _bugDetailsRepo.getCategories();
     response.when(
       success: (data) {

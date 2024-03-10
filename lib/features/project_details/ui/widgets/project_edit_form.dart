@@ -36,7 +36,7 @@ class ProjectEditForm extends StatelessWidget {
           verticalSpace(10),
           CustomDropDownList(
             items: [openStatus, closedStatus, notStartedYetStatus],
-            hintText: 'Project Status',
+            hintText: cubit.projectStatus ?? '',
             selectedItem: cubit.projectStatus ?? '',
             onChanged: (value) =>
                 cubit.emitChangeProjectStatusState(value ?? ''),

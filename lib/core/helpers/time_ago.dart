@@ -1,8 +1,7 @@
 String getTimeAgo({bool numericDates = true, required DateTime createdTime}) {
   DateTime date = createdTime.toLocal();
-  final date2 = DateTime.now().toLocal();
+  final date2 = DateTime.now();
   final difference = date2.difference(date);
-
   if (difference.inSeconds < 5) {
     return 'Just now';
   } else if (difference.inSeconds <= 60) {
