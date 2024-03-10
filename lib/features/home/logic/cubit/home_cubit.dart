@@ -4,6 +4,7 @@ import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/repos/home_repo.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_state.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
@@ -64,4 +65,19 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
+  List<UserModel>? member;
+
+   void emitMemberDataState() async {
+    final response = await _homeRepo.getUser(CacheHelper.userId);
+    response.when(
+      success: (data) {
+        member = data.data!.members ?? [];
+        emit(HomeState.getMemberSuccess(member!));
+      },
+      failure: (error) {
+        emit(HomeState.getMemberFailure(error));
+      },
+    );
+  }
 }
+

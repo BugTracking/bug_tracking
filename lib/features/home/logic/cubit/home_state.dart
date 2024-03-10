@@ -26,4 +26,12 @@ class HomeState with _$HomeState {
 
   const factory HomeState.getBugsSuccess(List<BugModel> projects) = GetBugsSuccess;
 
+
+  
+  const factory HomeState.getMemberLoading() = getMemberLoading;
+
+  const factory HomeState.getMemberFailure(String message) = getMemberFailure;
+
+  const factory HomeState.getMemberSuccess(List<UserModel> member) = getMemberSuccess;
+
 }

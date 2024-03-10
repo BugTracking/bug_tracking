@@ -19,6 +19,7 @@ import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/members/data/model/member_response_model.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
 import 'package:dio/dio.dart';
@@ -106,5 +107,12 @@ abstract class ApiService {
     @Path('id') String bugId,
     @Header('authorization') String token,
     @Body() EditBugRequestBody editBugRequestBody,
+  );
+
+
+  @POST(ApiConstance.users)
+  Future<AddBugResponseBody> addmember(
+    @Body() AddMemberResponseBody AddMemberResponseBody,
+    @Header('authorization') String token,
   );
 }
