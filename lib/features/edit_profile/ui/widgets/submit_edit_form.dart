@@ -36,18 +36,3 @@ class SubmitEditForm extends StatelessWidget {
     );
   }
 }
-/*
-{
-"data": {
-"_id": "65e875faac8199af8b808772",
-"email": "mo@gmail.com",
-"userName": "mohamedYehia4",
-"name": "Mohamed Yehia",
-"password": "$2b$12$AYlCtCqmzUBTV0E93bKq9.GDMVOnaFw9WjRfIunxUMmaTITm3SpW2",
-"role": "user",
-"phone": "01012345678",
-"__v": 0
-},
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU4NzVmYWFjODE5OWFmOGI4MDg3NzIiLCJpYXQiOjE3MTAwNjEwMTh9.GcuypH5l14pv55qz0krxsevrdxz4GoG-MxxUK-ezR4w",
-"status": true
-}*/

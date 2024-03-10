@@ -1,6 +1,4 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
-import 'package:bug_tracking/features/add_bug/data/models/add_bug_request_body.dart';
-import 'package:bug_tracking/features/add_bug/data/models/add_bug_response_body.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -18,7 +16,17 @@ import 'package:bug_tracking/features/project_details/data/models/project_edit_r
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
-
+import '../../features/add_bug/data/models/add_bug_request_body.dart';
+import '../../features/add_bug/data/models/add_bug_response_body.dart';
+import '../../features/bug_details/data/models/add_comment_request_body.dart';
+import '../../features/bug_details/data/models/add_comment_response_body.dart';
+import '../../features/bug_details/data/models/bug_details_response_body.dart';
+import '../../features/bug_details/data/models/comments_response_body.dart';
+import '../../features/bug_details/data/models/edit_bug_request_body.dart';
+import '../../features/bug_details/data/models/edit_bug_response_body.dart';
+import '../../features/edit_profile/data/models/user_edit_request_model.dart';
+import '../../features/edit_profile/data/models/user_response_model.dart';
+import '../../features/notfications/data/models/notfication_response_model.dart';
 import '../../features/project_details/data/models/project_details_response.dart';
 part 'api_service.g.dart';
 
@@ -44,8 +52,8 @@ abstract class ApiService {
 
   @GET(ApiConstance.projects)
   Future<ProjectResponseBody> getProjects(
-    @Header('authorization') String token,
-  );
+      @Header('authorization') String token,
+      );
   @GET(ApiConstance.categories)
   Future<CategoriesResponseBody> getCategories();
 
@@ -55,14 +63,14 @@ abstract class ApiService {
 
   @POST(ApiConstance.projects)
   Future<AddProjectResponseBody> addProject(
-    @Body() AddProjectRequestBody addProjectRequestBody,
-    @Header('authorization') String token,
-  );
+      @Body() AddProjectRequestBody addProjectRequestBody,
+      @Header('authorization') String token,
+      );
 
   @GET(ApiConstance.bugs)
   Future<BugResponseBody> getBugs(
-    @Header('authorization') String token,
-  );
+      @Header('authorization') String token,
+      );
 
   @GET('${ApiConstance.notifications}/{id}')
   Future<NotificationResponseModel> getNotfications(
@@ -74,37 +82,37 @@ abstract class ApiService {
 
   @PUT('${ApiConstance.projects}/{id}')
   Future<ProjectEditResponseBody> editProject(
-    @Path('id') String projectId,
-    @Body() ProjectEditRequestBody projectEditRequestBody,
-    @Header('authorization') String token,
-  );
+      @Path('id') String projectId,
+      @Body() ProjectEditRequestBody projectEditRequestBody,
+      @Header('authorization') String token,
+      );
 
   @POST(ApiConstance.bugs)
   Future<AddBugResponseBody> addBug(
-    @Body() AddBugRequestBody addBugRequestBody,
-    @Header('authorization') String token,
-  );
+      @Body() AddBugRequestBody addBugRequestBody,
+      @Header('authorization') String token,
+      );
 
   @GET('${ApiConstance.bugs}/{id}')
   Future<BugDetailsResponseBody> getBugDetails(
-    @Path('id') String bugId,
-  );
+      @Path('id') String bugId,
+      );
 
   @GET('${ApiConstance.comments}/{id}')
   Future<CommentsResponseBody> getComments(
-    @Path('id') String bugId,
-  );
+      @Path('id') String bugId,
+      );
 
   @POST(ApiConstance.comments)
   Future<AddCommentResponseBody> addComment(
-    @Header('authorization') String token,
-    @Body() AddCommentRequestBody addCommentRequestBody,
-  );
+      @Header('authorization') String token,
+      @Body() AddCommentRequestBody addCommentRequestBody,
+      );
 
   @PUT('${ApiConstance.bugs}/{id}')
   Future<EditBugResponseBody> editBug(
-    @Path('id') String bugId,
-    @Header('authorization') String token,
-    @Body() EditBugRequestBody editBugRequestBody,
-  );
+      @Path('id') String bugId,
+      @Header('authorization') String token,
+      @Body() EditBugRequestBody editBugRequestBody,
+      );
 }

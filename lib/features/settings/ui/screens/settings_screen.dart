@@ -4,7 +4,7 @@ import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_text_button.dart';
-import 'package:bug_tracking/features/edit_profile/ui/widgets/image_picker.dart';
+import 'package:bug_tracking/features/settings/ui/widgets/image_picker.dart';
 import 'package:bug_tracking/features/members/ui/widgets/add_member.dart';
 import 'package:bug_tracking/features/settings/ui/widgets/settings_container.dart';
 import 'package:bug_tracking/features/settings/ui/widgets/logout_button.dart';

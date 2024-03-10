@@ -18,6 +18,8 @@ class EditProfileState with _$EditProfileState {
 
   const factory EditProfileState.getUserEditSuccess(String message) = GetUserEditSuccess;
 
+  const factory EditProfileState.uploadAttachments() = UploadAttachments;
+
 
 
 }

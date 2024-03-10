@@ -5,6 +5,8 @@ import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:dio/dio.dart';
 import '../models/user_edit_request_model.dart';
 import '../models/user_response_model.dart';
+import 'dart:io';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class EditProfileRepo {
   final ApiService _apiService;
@@ -36,4 +38,20 @@ class EditProfileRepo {
   }
 
 
+  Future<ApiResult<String>> uploadAttachment(File file) async {
+    try {
+      String filePath =
+          'users/${DateTime.now().millisecondsSinceEpoch}_${file.path}';
+      Reference reference = FirebaseStorage.instance.ref().child(filePath);
+      await reference.putFile(file);
+      final String downloadUrl = await reference.getDownloadURL();
+      return ApiResult.success(downloadUrl);
+    } on FirebaseException catch (e) {
+      return ApiResult.failure(e.message ?? '');
+    }
+  }
+
+
 }
+
+

@@ -14,7 +14,6 @@ class EditForm extends StatefulWidget {
 }
 
 class _EditFormState extends State<EditForm> {
-  //final _formKey = GlobalKey<FormState>();
   bool _isVisible = true;
 
   @override
