@@ -17,19 +17,19 @@ class BugResponseBody {
 class BugModel {
   @JsonKey(name: '_id')
   final String id;
-  final String title;
-  final String description;
   @JsonKey(name: 'project')
   final String projectId;
-  @JsonKey(name: 'category')
-  final CategoryModel category;
+  final String title;
+  final String description;
   final String status;
   final String priority;
   final String severity;
+  final CategoryModel category;
   final UserModel creator;
   final UserModel lastUpdatedBy;
-  final String lastUpdatedAt;
   final String timeCreated;
+  final String lastUpdatedAt;
+
   BugModel(
       this.id,
       this.title,

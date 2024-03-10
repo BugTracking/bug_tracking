@@ -38,8 +38,12 @@ class AppRouter {
         );
 
       case Routes.projectBugs:
+        var args = settings.arguments as ProjectBugsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const ProjectBugsScreen(),
+          builder: (context) => ProjectBugsScreen(
+            bugs: args.bugs,
+            projectTitle: args.projectTitle,
+          ),
         );
 
       case Routes.projectDetails:
