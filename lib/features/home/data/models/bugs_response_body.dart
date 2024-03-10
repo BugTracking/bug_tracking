@@ -1,6 +1,6 @@
+import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:bug_tracking/features/home/data/models/categories_response_body.dart';
 part 'bugs_response_body.g.dart';
 
 @JsonSerializable()
@@ -17,19 +17,19 @@ class BugResponseBody {
 class BugModel {
   @JsonKey(name: '_id')
   final String id;
-  final String title;
-  final String description;
   @JsonKey(name: 'project')
   final String projectId;
-  @JsonKey(name: 'category')
-  final CategoryModel category;
+  final String title;
+  final String description;
   final String status;
   final String priority;
   final String severity;
+  final CategoryModel category;
   final UserModel creator;
   final UserModel lastUpdatedBy;
-  final String lastUpdatedAt;
   final String timeCreated;
+  final String lastUpdatedAt;
+
   BugModel(
       this.id,
       this.title,

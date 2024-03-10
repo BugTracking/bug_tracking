@@ -6,11 +6,11 @@ import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AddProjectMembersSelection extends StatelessWidget {
+class AddBugMembersSelection extends StatelessWidget {
   final List<UserModel> members;
   final List<String> memberIds;
   final Function(UserModel) onChanged;
-  const AddProjectMembersSelection({
+  const AddBugMembersSelection({
     super.key,
     required this.members,
     required this.onChanged,

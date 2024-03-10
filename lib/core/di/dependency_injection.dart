@@ -1,5 +1,7 @@
 import 'package:bug_tracking/core/networking/api_service.dart';
 import 'package:bug_tracking/core/networking/dio_factory.dart';
+import 'package:bug_tracking/features/add_bug/data/repos/add_bug_repo.dart';
+import 'package:bug_tracking/features/add_bug/logic/cubit/add_bug_cubit.dart';
 import 'package:bug_tracking/features/allprojects/logic/cubit/projects_cubit.dart';
 import 'package:bug_tracking/features/authentcation/data/repos/auth_repo.dart';
 import 'package:bug_tracking/features/authentcation/logic/cubit/auth_cubit.dart';
@@ -44,11 +46,11 @@ void setupGetIt() async {
   // Projects
   getIt.registerFactory<ProjectsCubit>(() => ProjectsCubit());
 
-
-
   // notfication
   getIt.registerLazySingleton<NotficationRepo>(() => NotficationRepo(getIt()));
   getIt.registerFactory<NotficationCubit>(() => NotficationCubit(getIt()));
 
-
+  // Add bug
+  getIt.registerLazySingleton<AddBugRepo>(() => AddBugRepo(getIt()));
+  getIt.registerFactory<AddBugCubit>(() => AddBugCubit(getIt()));
 }

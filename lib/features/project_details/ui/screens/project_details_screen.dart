@@ -1,6 +1,8 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/router/screen_args.dart';
+import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
 import 'package:bug_tracking/core/widgets/custom_list_title.dart';
 import 'package:bug_tracking/core/widgets/custom_loading_indicator.dart';
@@ -31,6 +33,17 @@ class ProjectDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: ProjectDetailsAppBarTitle(
           args: args,
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColor.bluish,
+        foregroundColor: Colors.white,
+        onPressed: () => context.push(
+          Routes.addBug,
+          arguments: AddBugScreenArgs(args.projectId),
+        ),
+        child: const Icon(
+          Icons.add,
         ),
       ),
       body: BlocBuilder<ProjectDetailsCubit, ProjectDetailsState>(
@@ -68,7 +81,13 @@ class ProjectDetailsScreen extends StatelessWidget {
                     description: project.description,
                   ),
                   CustomListTitle(
-                    onPressed: () {},
+                    onPressed: () => context.push(
+                      Routes.projectBugs,
+                      arguments: ProjectBugsScreenArgs(
+                        projectDetails.bugs,
+                        project.title,
+                      ),
+                    ),
                     title: 'Bugs',
                   ),
                   verticalSpace(10.0),

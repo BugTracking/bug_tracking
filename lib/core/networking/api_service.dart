@@ -1,4 +1,6 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
+import 'package:bug_tracking/features/add_bug/data/models/add_bug_request_body.dart';
+import 'package:bug_tracking/features/add_bug/data/models/add_bug_response_body.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -58,10 +60,7 @@ abstract class ApiService {
 
   @GET('${ApiConstance.notifications}/{id}')
   Future<NotificationResponseModel> getNotfications(
-      @Header('authorization') String token,
-      @Path('id') String reciverId
-      );
-
+      @Header('authorization') String token, @Path('id') String reciverId);
 
   @GET('${ApiConstance.projects}/{id}')
   Future<ProjectDetailsResponse> getProjectDetails(
@@ -74,6 +73,9 @@ abstract class ApiService {
     @Header('authorization') String token,
   );
 
-
-
+  @POST(ApiConstance.bugs)
+  Future<AddBugResponseBody> addBug(
+    @Body() AddBugRequestBody addBugRequestBody,
+    @Header('authorization') String token,
+  );
 }

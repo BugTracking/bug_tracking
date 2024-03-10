@@ -3,9 +3,9 @@ import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/bug_colors.dart';
 import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_body.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_header.dart';
-import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBugTile extends StatelessWidget {
