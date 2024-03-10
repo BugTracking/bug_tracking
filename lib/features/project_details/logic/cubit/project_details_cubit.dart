@@ -27,7 +27,6 @@ class ProjectDetailsCubit extends Cubit<ProjectDetailsState> {
         projectTitleController.text = projectDetailsModel!.project.title;
         projectDescriptionController.text =
             projectDetailsModel!.project.description;
-        projectStatus = projectDetailsModel!.project.status;
         emit(ProjectDetailsState.success(response));
       },
       failure: (message) {
@@ -37,24 +36,26 @@ class ProjectDetailsCubit extends Cubit<ProjectDetailsState> {
   }
 
   void emitEditProjectState(String projectId) async {
-    emit(const ProjectDetailsState.editProjectLoading());
-    final result = await _projectDetailsRepo.editProject(
-      projectId,
-      ProjectEditRequestBody(
-        title: projectTitleController.text,
-        description: projectDescriptionController.text,
-        status: projectStatus ?? openStatus,
-      ),
-    );
-    result.when(
-      success: (response) {
-        emit(ProjectDetailsState.editProjectSuccess(response.message));
-        emitProjectDetailsState(projectId);
-      },
-      failure: (error) {
-        emit(ProjectDetailsState.editProjectFailure(error));
-      },
-    );
+    if (formKey.currentState!.validate() || projectStatus == null) {
+      emit(const ProjectDetailsState.editProjectLoading());
+      final result = await _projectDetailsRepo.editProject(
+        projectId,
+        ProjectEditRequestBody(
+          title: projectTitleController.text,
+          description: projectDescriptionController.text,
+          status: projectStatus ?? openStatus,
+        ),
+      );
+      result.when(
+        success: (response) {
+          emit(ProjectDetailsState.editProjectSuccess(response.message));
+          emitProjectDetailsState(projectId);
+        },
+        failure: (error) {
+          emit(ProjectDetailsState.editProjectFailure(error));
+        },
+      );
+    }
   }
 
   void emitChangeProjectStatusState(String value) {

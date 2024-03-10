@@ -1,6 +1,6 @@
+import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:bug_tracking/features/home/data/models/categories_response_body.dart';
 part 'bugs_response_body.g.dart';
 
 @JsonSerializable()

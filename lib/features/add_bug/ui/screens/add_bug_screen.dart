@@ -9,7 +9,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddBugScreen extends StatelessWidget {
-  const AddBugScreen({super.key});
+  final String projectId;
+  const AddBugScreen({
+    super.key,
+    required this.projectId,
+  });
 
   @override
   Widget build(BuildContext context) {
