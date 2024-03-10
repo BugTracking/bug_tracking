@@ -14,6 +14,7 @@ import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_attachm
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_attachments_text.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_comments_list.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_members_list.dart';
+import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_status.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details_summary_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:flutter/material.dart';
@@ -79,6 +80,8 @@ class BugDetailsScreen extends StatelessWidget {
                     createdAtText: bug.timeCreated.extractDate(),
                   ),
                   verticalSpace(10.0),
+                  const BugDetailsStatus(),
+                  verticalSpace(10.0),
                   const CustomDivider(),
                   const CustomListTitle(
                     title: 'Summary',
@@ -86,12 +89,12 @@ class BugDetailsScreen extends StatelessWidget {
                   BugDetailsSummaryBody(
                     text: bug.description,
                   ),
-                  CustomListTitle(
-                    onPressed: () => context.push(Routes.members),
+                  verticalSpace(10.0),
+                  const CustomListTitle(
                     title: 'Members',
                   ),
                   const BugDetailsMembersList(),
-                  verticalSpace(8.0),
+                  verticalSpace(10.0),
                   const CustomListTitle(
                     title: 'Comments',
                   ),
