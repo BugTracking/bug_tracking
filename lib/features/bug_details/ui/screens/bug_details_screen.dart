@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/widgets/custom_divider.dart';
@@ -111,7 +112,8 @@ class BugDetailsScreen extends StatelessWidget {
                       const CustomListTitle(
                         title: 'Members',
                       ),
-                      const BugDetailsMembersList(),
+                      if (userData.user.role == 'admin')
+                        const BugDetailsMembersList(),
                       verticalSpace(10.0),
                       const CustomListTitle(
                         title: 'Comments',

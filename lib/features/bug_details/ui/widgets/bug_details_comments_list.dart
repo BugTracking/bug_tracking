@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/helpers/time_ago.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_member.dart';
 import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
 import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
@@ -16,9 +17,19 @@ class BugDetailsCommentsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CommentData> comments = context.read<BugDetailsCubit>().comments ?? [];
     return BlocBuilder<BugDetailsCubit, BugDetailsState>(
       builder: (context, state) {
+        List<CommentData> comments =
+            context.read<BugDetailsCubit>().comments ?? [];
+
+        if (comments.isEmpty) {
+          return Center(
+            child: Text(
+              'No comments yet',
+              style: AppTexts.text16OnBackgroundNunitoSansBold,
+            ),
+          );
+        }
         return ListView.separated(
           itemBuilder: (context, index) {
             CommentData comment = comments[index];
