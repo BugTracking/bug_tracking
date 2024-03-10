@@ -28,6 +28,13 @@ mixin _$BugDetailsState {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +49,13 @@ mixin _$BugDetailsState {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +70,13 @@ mixin _$BugDetailsState {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +92,13 @@ mixin _$BugDetailsState {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +113,13 @@ mixin _$BugDetailsState {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +134,13 @@ mixin _$BugDetailsState {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +212,13 @@ class _$InitialImpl implements _Initial {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return initial();
   }
@@ -187,6 +236,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return initial?.call();
   }
@@ -204,6 +260,13 @@ class _$InitialImpl implements _Initial {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -225,6 +288,13 @@ class _$InitialImpl implements _Initial {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return initial(this);
   }
@@ -242,6 +312,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return initial?.call(this);
   }
@@ -259,6 +336,13 @@ class _$InitialImpl implements _Initial {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -320,6 +404,13 @@ class _$LoadingImpl implements Loading {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return loading();
   }
@@ -337,6 +428,13 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return loading?.call();
   }
@@ -354,6 +452,13 @@ class _$LoadingImpl implements Loading {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -375,6 +480,13 @@ class _$LoadingImpl implements Loading {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return loading(this);
   }
@@ -392,6 +504,13 @@ class _$LoadingImpl implements Loading {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return loading?.call(this);
   }
@@ -409,6 +528,13 @@ class _$LoadingImpl implements Loading {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -496,6 +622,13 @@ class _$SuccessImpl implements Success {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return success(data);
   }
@@ -513,6 +646,13 @@ class _$SuccessImpl implements Success {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return success?.call(data);
   }
@@ -530,6 +670,13 @@ class _$SuccessImpl implements Success {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -551,6 +698,13 @@ class _$SuccessImpl implements Success {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return success(this);
   }
@@ -568,6 +722,13 @@ class _$SuccessImpl implements Success {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return success?.call(this);
   }
@@ -585,6 +746,13 @@ class _$SuccessImpl implements Success {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -678,6 +846,13 @@ class _$FailureImpl implements Failure {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return failure(error);
   }
@@ -695,6 +870,13 @@ class _$FailureImpl implements Failure {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return failure?.call(error);
   }
@@ -712,6 +894,13 @@ class _$FailureImpl implements Failure {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -733,6 +922,13 @@ class _$FailureImpl implements Failure {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return failure(this);
   }
@@ -750,6 +946,13 @@ class _$FailureImpl implements Failure {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return failure?.call(this);
   }
@@ -767,6 +970,13 @@ class _$FailureImpl implements Failure {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -833,6 +1043,13 @@ class _$CommentsLoadingImpl implements CommentsLoading {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return commentsLoading();
   }
@@ -850,6 +1067,13 @@ class _$CommentsLoadingImpl implements CommentsLoading {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return commentsLoading?.call();
   }
@@ -867,6 +1091,13 @@ class _$CommentsLoadingImpl implements CommentsLoading {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (commentsLoading != null) {
@@ -888,6 +1119,13 @@ class _$CommentsLoadingImpl implements CommentsLoading {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return commentsLoading(this);
   }
@@ -905,6 +1143,13 @@ class _$CommentsLoadingImpl implements CommentsLoading {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return commentsLoading?.call(this);
   }
@@ -922,6 +1167,13 @@ class _$CommentsLoadingImpl implements CommentsLoading {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (commentsLoading != null) {
@@ -1010,6 +1262,13 @@ class _$CommentsSuccessImpl implements CommentsSuccess {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return commentsSuccess(data);
   }
@@ -1027,6 +1286,13 @@ class _$CommentsSuccessImpl implements CommentsSuccess {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return commentsSuccess?.call(data);
   }
@@ -1044,6 +1310,13 @@ class _$CommentsSuccessImpl implements CommentsSuccess {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (commentsSuccess != null) {
@@ -1065,6 +1338,13 @@ class _$CommentsSuccessImpl implements CommentsSuccess {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return commentsSuccess(this);
   }
@@ -1082,6 +1362,13 @@ class _$CommentsSuccessImpl implements CommentsSuccess {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return commentsSuccess?.call(this);
   }
@@ -1099,6 +1386,13 @@ class _$CommentsSuccessImpl implements CommentsSuccess {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (commentsSuccess != null) {
@@ -1193,6 +1487,13 @@ class _$CommentsFailureImpl implements CommentsFailure {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return commentsFailure(error);
   }
@@ -1210,6 +1511,13 @@ class _$CommentsFailureImpl implements CommentsFailure {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return commentsFailure?.call(error);
   }
@@ -1227,6 +1535,13 @@ class _$CommentsFailureImpl implements CommentsFailure {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (commentsFailure != null) {
@@ -1248,6 +1563,13 @@ class _$CommentsFailureImpl implements CommentsFailure {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return commentsFailure(this);
   }
@@ -1265,6 +1587,13 @@ class _$CommentsFailureImpl implements CommentsFailure {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return commentsFailure?.call(this);
   }
@@ -1282,6 +1611,13 @@ class _$CommentsFailureImpl implements CommentsFailure {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (commentsFailure != null) {
@@ -1349,6 +1685,13 @@ class _$AddCommentLoadingImpl implements AddCommentLoading {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return addCommentsLoading();
   }
@@ -1366,6 +1709,13 @@ class _$AddCommentLoadingImpl implements AddCommentLoading {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return addCommentsLoading?.call();
   }
@@ -1383,6 +1733,13 @@ class _$AddCommentLoadingImpl implements AddCommentLoading {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (addCommentsLoading != null) {
@@ -1404,6 +1761,13 @@ class _$AddCommentLoadingImpl implements AddCommentLoading {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return addCommentsLoading(this);
   }
@@ -1421,6 +1785,13 @@ class _$AddCommentLoadingImpl implements AddCommentLoading {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return addCommentsLoading?.call(this);
   }
@@ -1438,6 +1809,13 @@ class _$AddCommentLoadingImpl implements AddCommentLoading {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (addCommentsLoading != null) {
@@ -1526,6 +1904,13 @@ class _$AddCommentSuccessImpl implements AddCommentSuccess {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return addCommentsSuccess(data);
   }
@@ -1543,6 +1928,13 @@ class _$AddCommentSuccessImpl implements AddCommentSuccess {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return addCommentsSuccess?.call(data);
   }
@@ -1560,6 +1952,13 @@ class _$AddCommentSuccessImpl implements AddCommentSuccess {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (addCommentsSuccess != null) {
@@ -1581,6 +1980,13 @@ class _$AddCommentSuccessImpl implements AddCommentSuccess {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return addCommentsSuccess(this);
   }
@@ -1598,6 +2004,13 @@ class _$AddCommentSuccessImpl implements AddCommentSuccess {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return addCommentsSuccess?.call(this);
   }
@@ -1615,6 +2028,13 @@ class _$AddCommentSuccessImpl implements AddCommentSuccess {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (addCommentsSuccess != null) {
@@ -1709,6 +2129,13 @@ class _$AddCommentFailureImpl implements AddCommentFailure {
     required TResult Function() addCommentsLoading,
     required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
     required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
   }) {
     return addCommentsFailure(error);
   }
@@ -1726,6 +2153,13 @@ class _$AddCommentFailureImpl implements AddCommentFailure {
     TResult? Function()? addCommentsLoading,
     TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
   }) {
     return addCommentsFailure?.call(error);
   }
@@ -1743,6 +2177,13 @@ class _$AddCommentFailureImpl implements AddCommentFailure {
     TResult Function()? addCommentsLoading,
     TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
     TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
     required TResult orElse(),
   }) {
     if (addCommentsFailure != null) {
@@ -1764,6 +2205,13 @@ class _$AddCommentFailureImpl implements AddCommentFailure {
     required TResult Function(AddCommentLoading value) addCommentsLoading,
     required TResult Function(AddCommentSuccess value) addCommentsSuccess,
     required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
   }) {
     return addCommentsFailure(this);
   }
@@ -1781,6 +2229,13 @@ class _$AddCommentFailureImpl implements AddCommentFailure {
     TResult? Function(AddCommentLoading value)? addCommentsLoading,
     TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
   }) {
     return addCommentsFailure?.call(this);
   }
@@ -1798,6 +2253,13 @@ class _$AddCommentFailureImpl implements AddCommentFailure {
     TResult Function(AddCommentLoading value)? addCommentsLoading,
     TResult Function(AddCommentSuccess value)? addCommentsSuccess,
     TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
     required TResult orElse(),
   }) {
     if (addCommentsFailure != null) {
@@ -1814,5 +2276,1481 @@ abstract class AddCommentFailure implements BugDetailsState {
   String get error;
   @JsonKey(ignore: true)
   _$$AddCommentFailureImplCopyWith<_$AddCommentFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CategoriesLoadingImplCopyWith<$Res> {
+  factory _$$CategoriesLoadingImplCopyWith(_$CategoriesLoadingImpl value,
+          $Res Function(_$CategoriesLoadingImpl) then) =
+      __$$CategoriesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CategoriesLoadingImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$CategoriesLoadingImpl>
+    implements _$$CategoriesLoadingImplCopyWith<$Res> {
+  __$$CategoriesLoadingImplCopyWithImpl(_$CategoriesLoadingImpl _value,
+      $Res Function(_$CategoriesLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CategoriesLoadingImpl implements CategoriesLoading {
+  const _$CategoriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'BugDetailsState.categoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CategoriesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return categoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return categoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (categoriesLoading != null) {
+      return categoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return categoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return categoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (categoriesLoading != null) {
+      return categoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CategoriesLoading implements BugDetailsState {
+  const factory CategoriesLoading() = _$CategoriesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$CategoriesSuccessImplCopyWith<$Res> {
+  factory _$$CategoriesSuccessImplCopyWith(_$CategoriesSuccessImpl value,
+          $Res Function(_$CategoriesSuccessImpl) then) =
+      __$$CategoriesSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CategoriesResponseBody data});
+}
+
+/// @nodoc
+class __$$CategoriesSuccessImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$CategoriesSuccessImpl>
+    implements _$$CategoriesSuccessImplCopyWith<$Res> {
+  __$$CategoriesSuccessImplCopyWithImpl(_$CategoriesSuccessImpl _value,
+      $Res Function(_$CategoriesSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$CategoriesSuccessImpl(
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as CategoriesResponseBody,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CategoriesSuccessImpl implements CategoriesSuccess {
+  const _$CategoriesSuccessImpl({required this.data});
+
+  @override
+  final CategoriesResponseBody data;
+
+  @override
+  String toString() {
+    return 'BugDetailsState.categoriesSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CategoriesSuccessImpl &&
+            (identical(other.data, data) || other.data == data));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CategoriesSuccessImplCopyWith<_$CategoriesSuccessImpl> get copyWith =>
+      __$$CategoriesSuccessImplCopyWithImpl<_$CategoriesSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return categoriesSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return categoriesSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (categoriesSuccess != null) {
+      return categoriesSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return categoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return categoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (categoriesSuccess != null) {
+      return categoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CategoriesSuccess implements BugDetailsState {
+  const factory CategoriesSuccess(
+      {required final CategoriesResponseBody data}) = _$CategoriesSuccessImpl;
+
+  CategoriesResponseBody get data;
+  @JsonKey(ignore: true)
+  _$$CategoriesSuccessImplCopyWith<_$CategoriesSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CategoriesFailureImplCopyWith<$Res> {
+  factory _$$CategoriesFailureImplCopyWith(_$CategoriesFailureImpl value,
+          $Res Function(_$CategoriesFailureImpl) then) =
+      __$$CategoriesFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$CategoriesFailureImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$CategoriesFailureImpl>
+    implements _$$CategoriesFailureImplCopyWith<$Res> {
+  __$$CategoriesFailureImplCopyWithImpl(_$CategoriesFailureImpl _value,
+      $Res Function(_$CategoriesFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$CategoriesFailureImpl(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CategoriesFailureImpl implements CategoriesFailure {
+  const _$CategoriesFailureImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'BugDetailsState.categoriesFailure(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CategoriesFailureImpl &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CategoriesFailureImplCopyWith<_$CategoriesFailureImpl> get copyWith =>
+      __$$CategoriesFailureImplCopyWithImpl<_$CategoriesFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return categoriesFailure(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return categoriesFailure?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (categoriesFailure != null) {
+      return categoriesFailure(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return categoriesFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return categoriesFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (categoriesFailure != null) {
+      return categoriesFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CategoriesFailure implements BugDetailsState {
+  const factory CategoriesFailure({required final String error}) =
+      _$CategoriesFailureImpl;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$CategoriesFailureImplCopyWith<_$CategoriesFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectItemImplCopyWith<$Res> {
+  factory _$$SelectItemImplCopyWith(
+          _$SelectItemImpl value, $Res Function(_$SelectItemImpl) then) =
+      __$$SelectItemImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SelectItemImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$SelectItemImpl>
+    implements _$$SelectItemImplCopyWith<$Res> {
+  __$$SelectItemImplCopyWithImpl(
+      _$SelectItemImpl _value, $Res Function(_$SelectItemImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SelectItemImpl implements SelectItem {
+  const _$SelectItemImpl();
+
+  @override
+  String toString() {
+    return 'BugDetailsState.selectItem()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SelectItemImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return selectItem();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return selectItem?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (selectItem != null) {
+      return selectItem();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return selectItem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return selectItem?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (selectItem != null) {
+      return selectItem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SelectItem implements BugDetailsState {
+  const factory SelectItem() = _$SelectItemImpl;
+}
+
+/// @nodoc
+abstract class _$$EditBugLoadingImplCopyWith<$Res> {
+  factory _$$EditBugLoadingImplCopyWith(_$EditBugLoadingImpl value,
+          $Res Function(_$EditBugLoadingImpl) then) =
+      __$$EditBugLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EditBugLoadingImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$EditBugLoadingImpl>
+    implements _$$EditBugLoadingImplCopyWith<$Res> {
+  __$$EditBugLoadingImplCopyWithImpl(
+      _$EditBugLoadingImpl _value, $Res Function(_$EditBugLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EditBugLoadingImpl implements EditBugLoading {
+  const _$EditBugLoadingImpl();
+
+  @override
+  String toString() {
+    return 'BugDetailsState.editBugLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EditBugLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return editBugLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return editBugLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (editBugLoading != null) {
+      return editBugLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return editBugLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return editBugLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (editBugLoading != null) {
+      return editBugLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditBugLoading implements BugDetailsState {
+  const factory EditBugLoading() = _$EditBugLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$EditBugSuccessImplCopyWith<$Res> {
+  factory _$$EditBugSuccessImplCopyWith(_$EditBugSuccessImpl value,
+          $Res Function(_$EditBugSuccessImpl) then) =
+      __$$EditBugSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({EditBugResponseBody data});
+}
+
+/// @nodoc
+class __$$EditBugSuccessImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$EditBugSuccessImpl>
+    implements _$$EditBugSuccessImplCopyWith<$Res> {
+  __$$EditBugSuccessImplCopyWithImpl(
+      _$EditBugSuccessImpl _value, $Res Function(_$EditBugSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$EditBugSuccessImpl(
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as EditBugResponseBody,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditBugSuccessImpl implements EditBugSuccess {
+  const _$EditBugSuccessImpl({required this.data});
+
+  @override
+  final EditBugResponseBody data;
+
+  @override
+  String toString() {
+    return 'BugDetailsState.editBugSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditBugSuccessImpl &&
+            (identical(other.data, data) || other.data == data));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditBugSuccessImplCopyWith<_$EditBugSuccessImpl> get copyWith =>
+      __$$EditBugSuccessImplCopyWithImpl<_$EditBugSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return editBugSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return editBugSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (editBugSuccess != null) {
+      return editBugSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return editBugSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return editBugSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (editBugSuccess != null) {
+      return editBugSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditBugSuccess implements BugDetailsState {
+  const factory EditBugSuccess({required final EditBugResponseBody data}) =
+      _$EditBugSuccessImpl;
+
+  EditBugResponseBody get data;
+  @JsonKey(ignore: true)
+  _$$EditBugSuccessImplCopyWith<_$EditBugSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditBugFailureImplCopyWith<$Res> {
+  factory _$$EditBugFailureImplCopyWith(_$EditBugFailureImpl value,
+          $Res Function(_$EditBugFailureImpl) then) =
+      __$$EditBugFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$EditBugFailureImplCopyWithImpl<$Res>
+    extends _$BugDetailsStateCopyWithImpl<$Res, _$EditBugFailureImpl>
+    implements _$$EditBugFailureImplCopyWith<$Res> {
+  __$$EditBugFailureImplCopyWithImpl(
+      _$EditBugFailureImpl _value, $Res Function(_$EditBugFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$EditBugFailureImpl(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditBugFailureImpl implements EditBugFailure {
+  const _$EditBugFailureImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'BugDetailsState.editBugFailure(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditBugFailureImpl &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditBugFailureImplCopyWith<_$EditBugFailureImpl> get copyWith =>
+      __$$EditBugFailureImplCopyWithImpl<_$EditBugFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(BugDetailsResponseBody data) success,
+    required TResult Function(String error) failure,
+    required TResult Function() commentsLoading,
+    required TResult Function(CommentsResponseBody data) commentsSuccess,
+    required TResult Function(String error) commentsFailure,
+    required TResult Function() addCommentsLoading,
+    required TResult Function(AddCommentResponseBody data) addCommentsSuccess,
+    required TResult Function(String error) addCommentsFailure,
+    required TResult Function() categoriesLoading,
+    required TResult Function(CategoriesResponseBody data) categoriesSuccess,
+    required TResult Function(String error) categoriesFailure,
+    required TResult Function() selectItem,
+    required TResult Function() editBugLoading,
+    required TResult Function(EditBugResponseBody data) editBugSuccess,
+    required TResult Function(String error) editBugFailure,
+  }) {
+    return editBugFailure(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(BugDetailsResponseBody data)? success,
+    TResult? Function(String error)? failure,
+    TResult? Function()? commentsLoading,
+    TResult? Function(CommentsResponseBody data)? commentsSuccess,
+    TResult? Function(String error)? commentsFailure,
+    TResult? Function()? addCommentsLoading,
+    TResult? Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult? Function(String error)? addCommentsFailure,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult? Function(String error)? categoriesFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? editBugLoading,
+    TResult? Function(EditBugResponseBody data)? editBugSuccess,
+    TResult? Function(String error)? editBugFailure,
+  }) {
+    return editBugFailure?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(BugDetailsResponseBody data)? success,
+    TResult Function(String error)? failure,
+    TResult Function()? commentsLoading,
+    TResult Function(CommentsResponseBody data)? commentsSuccess,
+    TResult Function(String error)? commentsFailure,
+    TResult Function()? addCommentsLoading,
+    TResult Function(AddCommentResponseBody data)? addCommentsSuccess,
+    TResult Function(String error)? addCommentsFailure,
+    TResult Function()? categoriesLoading,
+    TResult Function(CategoriesResponseBody data)? categoriesSuccess,
+    TResult Function(String error)? categoriesFailure,
+    TResult Function()? selectItem,
+    TResult Function()? editBugLoading,
+    TResult Function(EditBugResponseBody data)? editBugSuccess,
+    TResult Function(String error)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (editBugFailure != null) {
+      return editBugFailure(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(CommentsLoading value) commentsLoading,
+    required TResult Function(CommentsSuccess value) commentsSuccess,
+    required TResult Function(CommentsFailure value) commentsFailure,
+    required TResult Function(AddCommentLoading value) addCommentsLoading,
+    required TResult Function(AddCommentSuccess value) addCommentsSuccess,
+    required TResult Function(AddCommentFailure value) addCommentsFailure,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesFailure value) categoriesFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(EditBugLoading value) editBugLoading,
+    required TResult Function(EditBugSuccess value) editBugSuccess,
+    required TResult Function(EditBugFailure value) editBugFailure,
+  }) {
+    return editBugFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(CommentsLoading value)? commentsLoading,
+    TResult? Function(CommentsSuccess value)? commentsSuccess,
+    TResult? Function(CommentsFailure value)? commentsFailure,
+    TResult? Function(AddCommentLoading value)? addCommentsLoading,
+    TResult? Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult? Function(AddCommentFailure value)? addCommentsFailure,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesFailure value)? categoriesFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(EditBugLoading value)? editBugLoading,
+    TResult? Function(EditBugSuccess value)? editBugSuccess,
+    TResult? Function(EditBugFailure value)? editBugFailure,
+  }) {
+    return editBugFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(CommentsLoading value)? commentsLoading,
+    TResult Function(CommentsSuccess value)? commentsSuccess,
+    TResult Function(CommentsFailure value)? commentsFailure,
+    TResult Function(AddCommentLoading value)? addCommentsLoading,
+    TResult Function(AddCommentSuccess value)? addCommentsSuccess,
+    TResult Function(AddCommentFailure value)? addCommentsFailure,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesFailure value)? categoriesFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(EditBugLoading value)? editBugLoading,
+    TResult Function(EditBugSuccess value)? editBugSuccess,
+    TResult Function(EditBugFailure value)? editBugFailure,
+    required TResult orElse(),
+  }) {
+    if (editBugFailure != null) {
+      return editBugFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditBugFailure implements BugDetailsState {
+  const factory EditBugFailure({required final String error}) =
+      _$EditBugFailureImpl;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$EditBugFailureImplCopyWith<_$EditBugFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,6 +1,8 @@
+import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/add_comment_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/bug_details_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_body.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'bug_details_state.freezed.dart';
 
@@ -30,4 +32,22 @@ class BugDetailsState with _$BugDetailsState {
 
   const factory BugDetailsState.addCommentsFailure({required String error}) =
       AddCommentFailure;
+
+  const factory BugDetailsState.categoriesLoading() = CategoriesLoading;
+
+  const factory BugDetailsState.categoriesSuccess(
+      {required CategoriesResponseBody data}) = CategoriesSuccess;
+
+  const factory BugDetailsState.categoriesFailure({required String error}) =
+      CategoriesFailure;
+
+  const factory BugDetailsState.selectItem() = SelectItem;
+
+  const factory BugDetailsState.editBugLoading() = EditBugLoading;
+
+  const factory BugDetailsState.editBugSuccess(
+      {required EditBugResponseBody data}) = EditBugSuccess;
+
+  const factory BugDetailsState.editBugFailure({required String error}) =
+      EditBugFailure;
 }
