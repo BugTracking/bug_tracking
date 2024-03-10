@@ -26,8 +26,5 @@ class BugsScreenArgs extends ScreenArgs {
 
   BugsScreenArgs(this.bugs);
 }
-class MembersScreenArgs extends ScreenArgs {
-  final List<UserModel> member;
 
-  MembersScreenArgs(this.member);
-}
+

@@ -4,21 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 
 class MembersList extends StatelessWidget {
-  final List<UserModel> members;
-  const MembersList({Key? key, required this.members}) : super(key: key);
+  
+  const MembersList({Key? key, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView.separated(
         itemBuilder: (context, index) {
-          UserModel member = members[index];
-          return  MembersTile(member: member,);
+          
+          return  MembersTile();
         },
         clipBehavior: Clip.none,
         separatorBuilder: (context, index) => verticalSpace(20.0),
         shrinkWrap: true,
-        itemCount: members.length,
+        itemCount: 3,
       ),
     );
   }

@@ -88,9 +88,9 @@ class AppRouter {
           ),
         );
       case Routes.members:
-        MembersScreenArgs args = settings.arguments as MembersScreenArgs;
+        ;
         return MaterialPageRoute(
-            builder: (context) =>  MembersScreen(members: args.member,
+            builder: (context) =>  MembersScreen(
     
   ),
         );

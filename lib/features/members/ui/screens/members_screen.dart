@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MembersScreen extends StatelessWidget {
-  final List<UserModel> members;
-  const MembersScreen(mem, {Key? key, required this.members}) : super(key: key);
+
+  const MembersScreen( {Key? key, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +47,7 @@ class MembersScreen extends StatelessWidget {
                 hintText: 'Search Here...',
               ),
               verticalSpace(10),
-              MembersList(
-                members: members,
-              ),
+              const MembersList(),
             ],
           ),
         ),
