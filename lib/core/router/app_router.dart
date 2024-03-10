@@ -88,8 +88,11 @@ class AppRouter {
           ),
         );
       case Routes.members:
+        MembersScreenArgs args = settings.arguments as MembersScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const MembersScreen(),
+            builder: (context) =>  MembersScreen(members: args.member,
+    
+  ),
         );
       case Routes.addBug:
         return MaterialPageRoute(
@@ -104,7 +107,7 @@ class AppRouter {
           ),
         );
       case Routes.allBugs:
-       BugsScreenArgs args = settings.arguments as BugsScreenArgs;
+        BugsScreenArgs args = settings.arguments as BugsScreenArgs;
         return MaterialPageRoute(
           builder: (context) => AllBugsScreen(bugs: args.bugs),
         );

@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/members/ui/widgets/add_member.dart';
 import 'package:bug_tracking/features/members/ui/widgets/members_list.dart';
 import 'package:bug_tracking/features/members/ui/widgets/search_widget.dart';
@@ -7,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MembersScreen extends StatelessWidget {
-  const MembersScreen({Key? key}) : super(key: key);
+  final List<UserModel> members;
+  const MembersScreen(mem, {Key? key, required this.members}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,9 @@ class MembersScreen extends StatelessWidget {
                 hintText: 'Search Here...',
               ),
               verticalSpace(10),
-              const MembersList(),
+              MembersList(
+                members: members,
+              ),
             ],
           ),
         ),
