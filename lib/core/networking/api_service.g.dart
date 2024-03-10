@@ -105,6 +105,37 @@ class _ApiService implements ApiService {
   }
 
   @override
+  Future<UserResponseModel> editProfile(
+    String userId,
+    UserEditRequestModel userEditRequestModel,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(userEditRequestModel.toJson());
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<UserResponseModel>(Options(
+      method: 'PUT',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'users/${userId}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = UserResponseModel.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
   Future<ProjectResponseBody> getProjects(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

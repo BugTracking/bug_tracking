@@ -8,6 +8,7 @@ import 'package:bug_tracking/features/add_project/data/models/add_categories_res
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
+import 'package:bug_tracking/features/edit_profile/data/models/user_edit_request_model.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
@@ -17,6 +18,7 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
 
+import '../../features/edit_profile/data/models/user_response_model.dart';
 import '../../features/project_details/data/models/project_details_response.dart';
 part 'api_service.g.dart';
 
@@ -33,6 +35,12 @@ abstract class ApiService {
 
   @GET('${ApiConstance.users}/{id}')
   Future<UserResponseBody> getUser(@Path('id') String userId);
+
+  @PUT('${ApiConstance.users}/{id}')
+  Future<UserResponseModel> editProfile(
+      @Path('id') String userId,
+      @Body() UserEditRequestModel userEditRequestModel,
+      );
 
   @GET(ApiConstance.projects)
   Future<ProjectResponseBody> getProjects(
