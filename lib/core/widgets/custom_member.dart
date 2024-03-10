@@ -23,7 +23,7 @@ class CustomMember extends StatelessWidget {
             ? image!
             : 'assets/images/male.png';
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CircleAvatar(
           radius: 30,

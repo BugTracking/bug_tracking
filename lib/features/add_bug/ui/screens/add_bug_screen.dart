@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/features/add_bug/ui/widgets/add_bug_attachments.dart';
 import 'package:bug_tracking/features/add_bug/ui/widgets/add_bug_form.dart';
@@ -38,10 +39,15 @@ class AddBugScreen extends StatelessWidget {
                 verticalSpace(10.0),
                 const AddBugForm(),
                 verticalSpace(10.0),
-                const AssignedToContainer(),
-                verticalSpace(10.0),
-                const AddBugMembersSelected(),
-                verticalSpace(10.0),
+                if (userData.user.role == 'admin')
+                  Column(
+                    children: [
+                      const AssignedToContainer(),
+                      verticalSpace(10.0),
+                      const AddBugMembersSelected(),
+                      verticalSpace(10.0),
+                    ],
+                  ),
                 const CreateAnotherIssue(),
                 verticalSpace(16),
                 SaveButton(

@@ -11,7 +11,7 @@ class CustomDropDownList extends StatelessWidget {
   final String hintText;
   final String? selectedItem;
   final void Function(String?) onChanged;
-  final String errorMsg;
+  final String? errorMsg;
   const CustomDropDownList({
     Key? key,
     required this.items,

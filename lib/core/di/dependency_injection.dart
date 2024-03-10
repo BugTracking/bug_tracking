@@ -7,6 +7,8 @@ import 'package:bug_tracking/features/authentcation/data/repos/auth_repo.dart';
 import 'package:bug_tracking/features/authentcation/logic/cubit/auth_cubit.dart';
 import 'package:bug_tracking/features/add_project/data/repos/add_project_repo.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
+import 'package:bug_tracking/features/bug_details/data/repos/bug_details_repo.dart';
+import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:bug_tracking/features/home/data/repos/home_repo.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/notfications/data/repos/notfication_repo.dart';
@@ -53,4 +55,8 @@ void setupGetIt() async {
   // Add bug
   getIt.registerLazySingleton<AddBugRepo>(() => AddBugRepo(getIt()));
   getIt.registerFactory<AddBugCubit>(() => AddBugCubit(getIt()));
+
+  // bug details
+  getIt.registerLazySingleton<BugDetailsRepo>(() => BugDetailsRepo(getIt()));
+  getIt.registerFactory<BugDetailsCubit>(() => BugDetailsCubit(getIt()));
 }

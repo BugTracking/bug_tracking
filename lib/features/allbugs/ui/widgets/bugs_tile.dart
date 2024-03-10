@@ -24,11 +24,9 @@ class BugsTile extends StatelessWidget {
               //const ProjectHeader(),
               const BugsBody(),
               verticalSpace(10.0),
-
             ],
           ),
         ),
-
       ],
     );
   }

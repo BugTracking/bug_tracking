@@ -9,6 +9,7 @@ import 'package:bug_tracking/features/allbugs/ui/screens/allbugs_screen.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/authentcation/ui/screens/login_screen.dart';
 import 'package:bug_tracking/features/authentcation/ui/screens/register_screen.dart';
+import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
@@ -59,8 +60,17 @@ class AppRouter {
           ),
         );
       case Routes.bugDetails:
+        var args = settings.arguments as BugDetailsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const BugDetailsScreen(),
+          builder: (context) => BlocProvider<BugDetailsCubit>(
+            create: (context) => getIt<BugDetailsCubit>()
+              ..emitBugDetailsState(args.bugId)
+              ..emitCommentsState(args.bugId),
+            child: BugDetailsScreen(
+              bugId: args.bugId,
+              bugTitle: args.bugTitle,
+            ),
+          ),
         );
       case Routes.login:
         return MaterialPageRoute(

@@ -51,9 +51,10 @@ class _AddBugFormState extends State<AddBugForm> {
               CustomTextField(
                 controller: cubit.summaryController,
                 hintText: 'Summary',
-                keyboardType: TextInputType.text,
-                textInputAction: TextInputAction.next,
+                keyboardType: TextInputType.multiline,
+                textInputAction: TextInputAction.newline,
                 errorMsg: 'Please enter summary',
+                maxLines: null,
               ),
               verticalSpace(10.0),
               CustomDropDownList(

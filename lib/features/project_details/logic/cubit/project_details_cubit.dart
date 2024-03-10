@@ -49,7 +49,6 @@ class ProjectDetailsCubit extends Cubit<ProjectDetailsState> {
       result.when(
         success: (response) {
           emit(ProjectDetailsState.editProjectSuccess(response.message));
-          emitProjectDetailsState(projectId);
         },
         failure: (error) {
           emit(ProjectDetailsState.editProjectFailure(error));
