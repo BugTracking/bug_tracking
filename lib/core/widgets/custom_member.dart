@@ -6,7 +6,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomMember extends StatelessWidget {
-  final String image;
+  final String? image;
   final String name;
   final String body;
   const CustomMember({
@@ -18,6 +18,10 @@ class CustomMember extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String validImageUrl =
+        image != null && Uri.tryParse(image!)?.hasAbsolutePath == true
+            ? image!
+            : 'assets/images/male.png';
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -26,22 +30,30 @@ class CustomMember extends StatelessWidget {
           backgroundColor: AppColor.bluish,
           child: CircleAvatar(
             radius: 28,
+            backgroundColor: Colors.white,
             child: ClipOval(
-              child: CachedNetworkImage(
-                imageUrl: image,
-                placeholder: (context, url) => const CustomShimmer(),
-                errorWidget: (context, url, error) => Container(
-                  color: Colors.white,
-                  child: Image.asset(
-                    'assets/images/male.png',
-                  ),
-                ),
-                fit: BoxFit.cover,
-                color: Colors.white,
-                filterQuality: FilterQuality.high,
-                width: double.infinity,
-                height: double.infinity,
-              ),
+              child: validImageUrl.startsWith('http')
+                  ? CachedNetworkImage(
+                      imageUrl: validImageUrl,
+                      placeholder: (context, url) => const CustomShimmer(),
+                      errorWidget: (context, url, error) => Container(
+                        color: Colors.white,
+                        child: Image.asset(
+                          'assets/images/male.png',
+                        ),
+                      ),
+                      fit: BoxFit.cover,
+                      color: Colors.white,
+                      filterQuality: FilterQuality.high,
+                      width: double.infinity,
+                      height: double.infinity,
+                    )
+                  : Image.asset(
+                      validImageUrl,
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: double.infinity,
+                    ),
             ),
           ),
         ),

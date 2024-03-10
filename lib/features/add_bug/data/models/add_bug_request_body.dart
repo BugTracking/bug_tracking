@@ -11,21 +11,21 @@ class AddBugRequestBody {
   final String status;
   final String priority;
   final String severity;
-  final List<String> memebrs;
+  final List<String> members;
   @JsonKey(name: 'screens')
-  final String attachments;
+  final List<String> attachments;
 
-  AddBugRequestBody(
-    this.title,
-    this.description,
-    this.projectId,
-    this.category,
-    this.status,
-    this.priority,
-    this.severity,
-    this.memebrs,
-    this.attachments,
-  );
+  AddBugRequestBody({
+    required this.title,
+    required this.description,
+    required this.projectId,
+    required this.category,
+    required this.status,
+    required this.priority,
+    required this.severity,
+    required this.members,
+    required this.attachments,
+  });
 
   Map<String, dynamic> toJson() => _$AddBugRequestBodyToJson(this);
 }

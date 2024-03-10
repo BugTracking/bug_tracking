@@ -8,15 +8,17 @@ part of 'add_bug_request_body.dart';
 
 AddBugRequestBody _$AddBugRequestBodyFromJson(Map<String, dynamic> json) =>
     AddBugRequestBody(
-      json['title'] as String,
-      json['description'] as String,
-      json['project'] as String,
-      json['category'] as String,
-      json['status'] as String,
-      json['priority'] as String,
-      json['severity'] as String,
-      (json['memebrs'] as List<dynamic>).map((e) => e as String).toList(),
-      json['screens'] as String,
+      title: json['title'] as String,
+      description: json['description'] as String,
+      projectId: json['project'] as String,
+      category: json['category'] as String,
+      status: json['status'] as String,
+      priority: json['priority'] as String,
+      severity: json['severity'] as String,
+      members:
+          (json['members'] as List<dynamic>).map((e) => e as String).toList(),
+      attachments:
+          (json['screens'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$AddBugRequestBodyToJson(AddBugRequestBody instance) =>
@@ -28,6 +30,6 @@ Map<String, dynamic> _$AddBugRequestBodyToJson(AddBugRequestBody instance) =>
       'status': instance.status,
       'priority': instance.priority,
       'severity': instance.severity,
-      'memebrs': instance.memebrs,
+      'members': instance.members,
       'screens': instance.attachments,
     };

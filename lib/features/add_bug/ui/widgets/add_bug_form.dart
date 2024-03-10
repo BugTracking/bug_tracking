@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/helpers/constants.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 
 import 'package:bug_tracking/core/widgets/custom_drop_down_list.dart';
@@ -15,19 +16,17 @@ class AddBugForm extends StatefulWidget {
 }
 
 class _AddBugFormState extends State<AddBugForm> {
-  String categorySelected = '';
-  String prioritySelected = 'Medium';
-  String severitySelected = 'Medium';
-  String statusSeleted = 'Done';
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AddBugCubit, AddBugState>(
       builder: (context, state) {
+        AddBugCubit cubit = context.read<AddBugCubit>();
         return Form(
+          key: cubit.formKey,
           child: Column(
             children: [
               CustomTextField(
-                controller: TextEditingController(),
+                controller: cubit.titleController,
                 hintText: 'Bug Title',
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.next,
@@ -41,17 +40,16 @@ class _AddBugFormState extends State<AddBugForm> {
                     .map((e) => e.title)
                     .toList(),
                 hintText: 'Category',
-                selectedItem: categorySelected,
-                onChanged: (value) {
-                  setState(() {
-                    categorySelected = value ?? '';
-                  });
-                },
+                selectedItem: cubit.selectedCategory,
+                onChanged: (value) => cubit.selectCategory(cubit.categories
+                    .where((element) => element.title == value)
+                    .first
+                    .id),
                 errorMsg: 'Choose a category',
               ),
               verticalSpace(10.0),
               CustomTextField(
-                controller: TextEditingController(),
+                controller: cubit.summaryController,
                 hintText: 'Summary',
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.next,
@@ -59,38 +57,26 @@ class _AddBugFormState extends State<AddBugForm> {
               ),
               verticalSpace(10.0),
               CustomDropDownList(
-                items: const ['High', 'Medium', 'Low'],
+                items: [highPriority, mediumPriority, lowPriority],
                 hintText: 'Priority',
-                selectedItem: prioritySelected,
-                onChanged: (value) {
-                  setState(() {
-                    prioritySelected = value ?? '';
-                  });
-                },
+                selectedItem: cubit.selectedPriority,
+                onChanged: (value) => cubit.selectPriority(value ?? ''),
                 errorMsg: 'Choose a priority',
               ),
               verticalSpace(10.0),
               CustomDropDownList(
-                items: const ['High', 'Medium', 'Low'],
+                items: [highSeverity, mediumSeverity, lowSeverity],
                 hintText: 'Severity',
-                selectedItem: severitySelected,
-                onChanged: (value) {
-                  setState(() {
-                    severitySelected = value ?? '';
-                  });
-                },
+                selectedItem: cubit.selectedSeverity,
+                onChanged: (value) => cubit.selectSeverity(value ?? ''),
                 errorMsg: 'Choose a severity',
               ),
               verticalSpace(10.0),
               CustomDropDownList(
-                items: const ['To Do', 'In Progress', 'Done'],
+                items: [toDo, inProgress, done],
                 hintText: 'Status',
-                selectedItem: statusSeleted,
-                onChanged: (value) {
-                  setState(() {
-                    statusSeleted = value ?? '';
-                  });
-                },
+                selectedItem: cubit.selectedStatus,
+                onChanged: (value) => cubit.selectStatus(value ?? ''),
                 errorMsg: 'Choose a status',
               ),
             ],

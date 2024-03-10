@@ -12,10 +12,12 @@ AddBugResponseBody _$AddBugResponseBodyFromJson(Map<String, dynamic> json) =>
       json['data'] == null
           ? null
           : BugModel.fromJson(json['data'] as Map<String, dynamic>),
+      json['message'] as String?,
     );
 
 Map<String, dynamic> _$AddBugResponseBodyToJson(AddBugResponseBody instance) =>
     <String, dynamic>{
       'status': instance.status,
       'data': instance.data,
+      'message': instance.message,
     };

@@ -11,4 +11,16 @@ class AddBugState with _$AddBugState {
   const factory AddBugState.categoriesSuccess() = CategoriesSuccess;
 
   const factory AddBugState.categoriesFailure() = CategoriesFailure;
+
+  const factory AddBugState.uploadAttachments() = UploadAttachments;
+
+  const factory AddBugState.selectMembersSuccess() = SelectMembersSuccess;
+
+  const factory AddBugState.selectItem() = SelectItem;
+
+  const factory AddBugState.addBugLoading() = AddBugLoading;
+
+  const factory AddBugState.addBugSuccess(String message) = AddBugSuccess;
+
+  const factory AddBugState.addBugFailure(String error) = AddBugFailure;
 }

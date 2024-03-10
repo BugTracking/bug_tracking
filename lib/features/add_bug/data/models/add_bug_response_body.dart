@@ -6,9 +6,11 @@ part 'add_bug_response_body.g.dart';
 class AddBugResponseBody {
   final bool status;
   final BugModel? data;
+  final String? message;
   AddBugResponseBody(
     this.status,
     this.data,
+    this.message,
   );
   factory AddBugResponseBody.fromJson(Map<String, dynamic> json) =>
       _$AddBugResponseBodyFromJson(json);
