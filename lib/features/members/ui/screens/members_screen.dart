@@ -1,6 +1,5 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/members/ui/widgets/add_member.dart';
 import 'package:bug_tracking/features/members/ui/widgets/members_list.dart';
 import 'package:bug_tracking/features/members/ui/widgets/search_widget.dart';
@@ -8,8 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MembersScreen extends StatelessWidget {
-
-  const MembersScreen( {Key? key, }) : super(key: key);
+  const MembersScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

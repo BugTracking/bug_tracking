@@ -2,7 +2,6 @@ import 'package:bug_tracking/features/allbugs/ui/widgets/bugs_tile.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BugsList extends StatelessWidget {
   final List<BugModel> bugs;
@@ -14,7 +13,9 @@ class BugsList extends StatelessWidget {
       child: ListView.separated(
         itemBuilder: (context, index) {
           BugModel bug = bugs[index];
-          return BugsTile(bug: bug,);
+          return BugsTile(
+            bug: bug,
+          );
         },
         clipBehavior: Clip.none,
         separatorBuilder: (context, index) => verticalSpace(20.0),
