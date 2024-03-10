@@ -1,21 +1,26 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_tile.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBugsList extends StatelessWidget {
-  const ProjectBugsList({super.key});
+  final List<BugModel> bugs;
+  const ProjectBugsList({super.key, required this.bugs});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView.separated(
         itemBuilder: (context, index) {
-          //return ProjectBugTile();
-          return Container();
+          int reverseIndex = bugs.length - 1 - index;
+          return ProjectBugTile(
+            bug: bugs[reverseIndex],
+          );
         },
         clipBehavior: Clip.none,
         separatorBuilder: (context, index) => verticalSpace(20.0),
         shrinkWrap: true,
-        itemCount: 10,
+        itemCount: bugs.length,
       ),
     );
   }

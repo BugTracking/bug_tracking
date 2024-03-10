@@ -39,15 +39,15 @@ BugModel _$BugModelFromJson(Map<String, dynamic> json) => BugModel(
 
 Map<String, dynamic> _$BugModelToJson(BugModel instance) => <String, dynamic>{
       '_id': instance.id,
+      'project': instance.projectId,
       'title': instance.title,
       'description': instance.description,
-      'project': instance.projectId,
-      'category': instance.category,
       'status': instance.status,
       'priority': instance.priority,
       'severity': instance.severity,
+      'category': instance.category,
       'creator': instance.creator,
       'lastUpdatedBy': instance.lastUpdatedBy,
-      'lastUpdatedAt': instance.lastUpdatedAt,
       'timeCreated': instance.timeCreated,
+      'lastUpdatedAt': instance.lastUpdatedAt,
     };

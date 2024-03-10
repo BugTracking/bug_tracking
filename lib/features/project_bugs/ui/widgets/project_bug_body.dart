@@ -1,7 +1,7 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
-import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBugBody extends StatelessWidget {

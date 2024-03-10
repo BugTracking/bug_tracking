@@ -1,11 +1,12 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:bug_tracking/core/style/bug_colors.dart';
 import 'package:bug_tracking/core/widgets/custom_priority_status_container.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_body.dart';
 import 'package:bug_tracking/features/project_bugs/ui/widgets/project_bug_header.dart';
-import 'package:bug_tracking/features/project_details/data/models/project_details_response.dart';
 import 'package:flutter/material.dart';
 
 class ProjectBugTile extends StatelessWidget {
@@ -16,7 +17,13 @@ class ProjectBugTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(10.0),
-      onTap: () => context.push(Routes.bugDetails),
+      onTap: () => context.push(
+        Routes.bugDetails,
+        arguments: BugDetailsScreenArgs(
+          bug.id,
+          bug.title,
+        ),
+      ),
       child: Stack(
         clipBehavior: Clip.none,
         children: [

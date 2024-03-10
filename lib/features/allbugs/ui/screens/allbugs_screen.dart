@@ -1,11 +1,13 @@
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/features/allbugs/ui/widgets/bugs_list.dart';
 import 'package:bug_tracking/features/filter/screen/bug_filter_screen.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AllBugsScreen extends StatelessWidget {
-  const AllBugsScreen({Key? key}) : super(key: key);
+  final List<BugModel> bugs;
+  const AllBugsScreen({Key? key, required this.bugs}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class AllBugsScreen extends StatelessWidget {
           horizontal: 16.0.w,
           vertical: 20.0.h,
         ),
-        child: const BugsList(),
+        child:  BugsList(bugs: bugs,),
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/di/dependency_injection.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/router/screen_args.dart';
+import 'package:bug_tracking/features/add_bug/logic/cubit/add_bug_cubit.dart';
 import 'package:bug_tracking/features/add_bug/ui/screens/add_bug_screen.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_cubit.dart';
 import 'package:bug_tracking/features/add_project/ui/screens/add_project_screen.dart';
@@ -8,6 +9,7 @@ import 'package:bug_tracking/features/allbugs/ui/screens/allbugs_screen.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
 import 'package:bug_tracking/features/authentcation/ui/screens/login_screen.dart';
 import 'package:bug_tracking/features/authentcation/ui/screens/register_screen.dart';
+import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.dart';
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
@@ -38,8 +40,12 @@ class AppRouter {
         );
 
       case Routes.projectBugs:
+        var args = settings.arguments as ProjectBugsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const ProjectBugsScreen(),
+          builder: (context) => ProjectBugsScreen(
+            bugs: args.bugs,
+            projectTitle: args.projectTitle,
+          ),
         );
 
       case Routes.projectDetails:
@@ -54,8 +60,17 @@ class AppRouter {
           ),
         );
       case Routes.bugDetails:
+        var args = settings.arguments as BugDetailsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const BugDetailsScreen(),
+          builder: (context) => BlocProvider<BugDetailsCubit>(
+            create: (context) => getIt<BugDetailsCubit>()
+              ..emitBugDetailsState(args.bugId)
+              ..emitCommentsState(args.bugId),
+            child: BugDetailsScreen(
+              bugId: args.bugId,
+              bugTitle: args.bugTitle,
+            ),
+          ),
         );
       case Routes.login:
         return MaterialPageRoute(
@@ -88,12 +103,21 @@ class AppRouter {
           ),
         );
       case Routes.members:
+        ;
         return MaterialPageRoute(
-          builder: (context) => const MembersScreen(),
+            builder: (context) =>  MembersScreen(
+    
+  ),
         );
       case Routes.addBug:
+        var args = settings.arguments as AddBugScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const AddBugScreen(),
+          builder: (context) => BlocProvider<AddBugCubit>(
+            create: (context) => getIt<AddBugCubit>()..emitCategoriesState(),
+            child: AddBugScreen(
+              projectId: args.projectId,
+            ),
+          ),
         );
       case Routes.addProject:
         return MaterialPageRoute(
@@ -104,8 +128,9 @@ class AppRouter {
           ),
         );
       case Routes.allBugs:
+        BugsScreenArgs args = settings.arguments as BugsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const AllBugsScreen(),
+          builder: (context) => AllBugsScreen(bugs: args.bugs),
         );
       default:
         return null;

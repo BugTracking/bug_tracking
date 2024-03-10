@@ -29,14 +29,14 @@ class ProjectEditForm extends StatelessWidget {
             controller: cubit.projectDescriptionController,
             hintText: 'Project Description',
             keyboardType: TextInputType.multiline,
-            textInputAction: TextInputAction.next,
+            textInputAction: TextInputAction.newline,
             maxLines: null,
             errorMsg: 'Please enter project description',
           ),
           verticalSpace(10),
           CustomDropDownList(
             items: [openStatus, closedStatus, notStartedYetStatus],
-            hintText: 'Project Status',
+            hintText: cubit.projectStatus ?? '',
             selectedItem: cubit.projectStatus ?? '',
             onChanged: (value) =>
                 cubit.emitChangeProjectStatusState(value ?? ''),

@@ -40,7 +40,7 @@ class _AddProjectFormState extends State<AddProjectForm> {
                 controller: cubit.descriptionController,
                 hintText: 'Project Description',
                 keyboardType: TextInputType.multiline,
-                textInputAction: TextInputAction.next,
+                textInputAction: TextInputAction.newline,
                 maxLines: null,
                 errorMsg: 'Please enter project description',
               ),
@@ -79,7 +79,7 @@ class _AddProjectFormState extends State<AddProjectForm> {
                 items: cubit.categoryTitles,
               ),
               verticalSpace(10.0),
-              if (userData.user.role == 'admin')
+              if (userData.user.role == 'Admin')
                 Column(
                   children: [
                     const AddProjectMembersContainer(),

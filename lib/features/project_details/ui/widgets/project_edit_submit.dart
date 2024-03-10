@@ -25,6 +25,10 @@ class ProjectEditSubmit extends StatelessWidget {
           if (state is EditProjectSuccess) {
             showToast(message: state.message);
             context.pop();
+            context.read<ProjectDetailsCubit>().projectDetailsModel = null;
+            context
+                .read<ProjectDetailsCubit>()
+                .emitProjectDetailsState(projectId);
           }
           if (state is EditProjectFailure) {
             showToast(message: state.message);
