@@ -2,7 +2,9 @@ import 'package:bug_tracking/core/widgets/custom_member.dart';
 import 'package:flutter/material.dart';
 
 class MembersTile extends StatelessWidget {
-  const MembersTile({Key? key}) : super(key: key);
+  const MembersTile({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

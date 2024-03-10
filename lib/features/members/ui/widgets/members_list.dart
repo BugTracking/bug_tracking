@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 
 class MembersList extends StatelessWidget {
-  const MembersList({Key? key}) : super(key: key);
+  const MembersList({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class MembersList extends StatelessWidget {
         clipBehavior: Clip.none,
         separatorBuilder: (context, index) => verticalSpace(20.0),
         shrinkWrap: true,
-        itemCount: 4,
+        itemCount: 3,
       ),
     );
   }

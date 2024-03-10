@@ -21,6 +21,12 @@ class ProjectsScreenArgs extends ScreenArgs {
   ProjectsScreenArgs(this.projects);
 }
 
+class BugsScreenArgs extends ScreenArgs {
+  final List<BugModel> bugs;
+
+  BugsScreenArgs(this.bugs);
+}
+
 class ProjectBugsScreenArgs extends ScreenArgs {
   final List<BugModel> bugs;
   final String projectTitle;
