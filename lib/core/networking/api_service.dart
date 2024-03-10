@@ -16,6 +16,8 @@ import 'package:bug_tracking/features/bug_details/data/models/bug_details_respon
 import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/edit_bug_request_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/device_token_request_body.dart';
+import 'package:bug_tracking/features/home/data/models/device_token_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
@@ -106,5 +108,16 @@ abstract class ApiService {
     @Path('id') String bugId,
     @Header('authorization') String token,
     @Body() EditBugRequestBody editBugRequestBody,
+  );
+
+  @POST(ApiConstance.deviceTokens)
+  Future<DeviceTokenResponseBody> addDeviceToken(
+    @Body() DeviceTokenRequestBody deviceTokenRequestBody,
+    @Header('authorization') String token,
+  );
+
+  @GET('${ApiConstance.deviceTokens}/{id}')
+  Future<DeviceTokenResponseBody> getDeviceToken(
+    @Path('id') String userId,
   );
 }

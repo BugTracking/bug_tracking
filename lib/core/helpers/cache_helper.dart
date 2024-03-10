@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CacheHelper {
   static late SharedPreferences sharedPreferences;
 
+  CacheHelper._();
   static Future init() async {
     sharedPreferences = await SharedPreferences.getInstance();
     if (!sharedPreferences.containsKey('token')) {

@@ -9,4 +9,5 @@ class ApiConstance {
   static const String editUser = 'users';
   static const String notifications = 'notifications';
   static const String comments = 'comments';
+  static const String deviceTokens = 'deviceTokens';
 }
