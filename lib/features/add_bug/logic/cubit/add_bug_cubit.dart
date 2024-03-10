@@ -110,7 +110,6 @@ class AddBugCubit extends Cubit<AddBugState> {
       final imagesResponse = await _addBugRepo.uploadAttachments(attachments);
       imagesResponse.when(
         success: (data) async {
-          print(data);
           final addBugResponse = await _addBugRepo.addBug(
             AddBugRequestBody(
               projectId: projectId,
