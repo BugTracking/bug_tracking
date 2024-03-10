@@ -5,11 +5,9 @@ import 'package:bug_tracking/features/edit_profile/data/models/user_edit_request
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:bug_tracking/features/edit_profile/data/repos/edit_profile_repo.dart';
 import 'package:flutter/material.dart';
-
+import 'dart:io';
 import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:image_picker/image_picker.dart';
-
-import '../../../../core/networking/api_result.dart';
 
 
 class EditProfileCubit extends Cubit<EditProfileState> {
@@ -17,7 +15,7 @@ class EditProfileCubit extends Cubit<EditProfileState> {
 
   EditProfileCubit(this._editProfileRepo) : super(const EditProfileState.initial());
 
-   String? avatarAttach;
+  File? avatarAttach;
   void emitUploadAttachmentsState() async {
     emit(const EditProfileState.initial());
     if (await requestPermission()) {
@@ -27,28 +25,28 @@ class EditProfileCubit extends Cubit<EditProfileState> {
         imageQuality: 100,
       );
       if (file != null) {
-        avatarAttach = file.path;
-        emit(const EditProfileState.uploadAttachments());
+        File attachment = File(file.path);
+        avatarAttach=attachment;
       }
     }
-
+    emit(const EditProfileState.uploadAttachments());
   }
 
 
   final TextEditingController nameController = TextEditingController(text:userData.user.name );
   final TextEditingController userNameController = TextEditingController(text:userData.user.userName);
   final TextEditingController emailController = TextEditingController(text:userData.user.email);
+  final TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   UserEditRequestModel getUserEditRequestModel() {
     late UserEditRequestModel userEditRequestModel;
-      userEditRequestModel = UserEditRequestModel(
-        nameController.text,
-        userNameController.text,
-        emailController.text,
-        avatarAttach ,
-
-      );
+    userEditRequestModel = UserEditRequestModel(
+      nameController.text,
+      userNameController.text,
+      emailController.text,
+      avatarAttach != null ? avatarAttach!.path :'assets/images/avatar.png',
+    );
 
     return userEditRequestModel;
   }
@@ -58,11 +56,7 @@ class EditProfileCubit extends Cubit<EditProfileState> {
     final response = await _editProfileRepo.editUser(CacheHelper.userId,getUserEditRequestModel());
     response.when(
       success: (data) {
-        if (response is ApiResult<String>) {
-          userData.user!.avatar = avatarAttach;
-        }
-        print('userData.user!.avatar');
-        print(userData.user!.avatar);
+
         emit(EditProfileState.getUserEditSuccess(data.message!));
       },
       failure: (error) {

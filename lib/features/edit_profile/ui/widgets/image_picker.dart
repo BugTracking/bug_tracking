@@ -1,16 +1,10 @@
 
-import 'dart:io';
-
 import 'package:bug_tracking/core/style/app_color.dart';
-import 'package:bug_tracking/features/edit_profile/data/models/user_response_model.dart';
-
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/data/app_data.dart';
 
 
 
@@ -44,7 +38,7 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
                 },
                 child: CircleAvatar(
                   backgroundImage: cubit.avatarAttach != null
-                      ? FileImage(File(cubit.avatarAttach!))
+                      ? FileImage(cubit.avatarAttach!)
                       : const AssetImage("assets/images/avatar.png")
                           as ImageProvider,
                   backgroundColor: Colors.white,

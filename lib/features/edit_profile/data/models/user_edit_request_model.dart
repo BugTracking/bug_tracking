@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user_edit_request_model.g.dart';
 
@@ -9,6 +7,7 @@ class UserEditRequestModel {
   final String? userName;
   final String? email;
   final String? avatar;
+
 
   UserEditRequestModel( this.name,  this.userName,  this.email,this.avatar);
  // final String password;

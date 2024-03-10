@@ -2,7 +2,6 @@ import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_cubi
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
-
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,8 +13,6 @@ class EditForm extends StatefulWidget {
 }
 
 class _EditFormState extends State<EditForm> {
-
-
   @override
   Widget build(BuildContext context) {
     return Form(
