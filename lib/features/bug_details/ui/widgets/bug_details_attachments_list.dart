@@ -26,8 +26,8 @@ class BugDetailsAttachmentsList extends StatelessWidget {
         height: 150.h,
         viewportFraction: 0.4,
         enlargeCenterPage: true,
-        enableInfiniteScroll: true,
-        autoPlayCurve: Curves.fastOutSlowIn,
+        enableInfiniteScroll: false,
+        animateToClosest: true,
         scrollDirection: Axis.horizontal,
       ),
     );
