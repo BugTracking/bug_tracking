@@ -33,3 +33,13 @@ class AddBugScreenArgs extends ScreenArgs {
     this.projectId,
   );
 }
+
+class BugDetailsScreenArgs extends ScreenArgs {
+  final String bugId;
+  final String bugTitle;
+
+  BugDetailsScreenArgs(
+    this.bugId,
+    this.bugTitle,
+  );
+}

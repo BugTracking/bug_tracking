@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:bug_tracking/core/widgets/custom_project_bug_container.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 
@@ -12,7 +13,13 @@ class LatestBugTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => context.push(Routes.bugDetails),
+      onTap: () => context.push(
+        Routes.bugDetails,
+        arguments: BugDetailsScreenArgs(
+          bug.id,
+          bug.title,
+        ),
+      ),
       borderRadius: BorderRadius.circular(10.0),
       child: CustomProjectBugContainer(
         title: bug.title,

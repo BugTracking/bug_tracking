@@ -1,6 +1,9 @@
-import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/features/bug_details/data/models/bug_details_response_body.dart';
+import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:bug_tracking/features/bug_details/ui/widgets/bug_details.attachment_tile.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BugDetailsAttachmentsList extends StatelessWidget {
@@ -8,14 +11,24 @@ class BugDetailsAttachmentsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 120.h,
-      child: ListView.separated(
+    BugDetailsModel bugDetailsModel =
+        context.read<BugDetailsCubit>().bugDetailsModel!;
+    return CarouselSlider.builder(
+      itemCount: bugDetailsModel.attachments.length,
+      itemBuilder: (context, index, realIndex) {
+        BugAttachmentModel bugAttachmentModel =
+            bugDetailsModel.attachments[index];
+        return BugDetailesAttachmentsTile(
+          bugAttachmentModel: bugAttachmentModel,
+        );
+      },
+      options: CarouselOptions(
+        height: 150.h,
+        viewportFraction: 0.4,
+        enlargeCenterPage: true,
+        enableInfiniteScroll: true,
+        autoPlayCurve: Curves.fastOutSlowIn,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => const BugDetailesAttachmentsTile(),
-        separatorBuilder: (context, index) => horizontalSpace(5.0),
-        itemCount: 10,
       ),
     );
   }

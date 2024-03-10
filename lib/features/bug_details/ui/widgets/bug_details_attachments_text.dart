@@ -1,6 +1,8 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BugDetailsAttachmentsText extends StatelessWidget {
@@ -18,7 +20,13 @@ class BugDetailsAttachmentsText extends StatelessWidget {
           ),
           horizontalSpace(3),
           Text(
-            '3',
+            context
+                    .read<BugDetailsCubit>()
+                    .bugDetailsModel
+                    ?.attachments
+                    .length
+                    .toString() ??
+                '0',
             style: AppTexts.text16PrimaryNunitoSansBold,
           ),
         ],
