@@ -12,8 +12,9 @@ class ProjectBugsList extends StatelessWidget {
     return SafeArea(
       child: ListView.separated(
         itemBuilder: (context, index) {
+          int reverseIndex = bugs.length - 1 - index;
           return ProjectBugTile(
-            bug: bugs[index],
+            bug: bugs[reverseIndex],
           );
         },
         clipBehavior: Clip.none,
