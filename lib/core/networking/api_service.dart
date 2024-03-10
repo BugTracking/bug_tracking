@@ -1,4 +1,6 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
+import 'package:bug_tracking/features/add_bug/data/models/add_bug_request_body.dart';
+import 'package:bug_tracking/features/add_bug/data/models/add_bug_response_body.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -8,6 +10,12 @@ import 'package:bug_tracking/features/add_project/data/models/add_categories_res
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/add_comment_request_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/add_comment_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/bug_details_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/edit_bug_request_body.dart';
+import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
@@ -16,7 +24,7 @@ import 'package:bug_tracking/features/project_details/data/models/project_edit_r
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
-
+import 'package:bug_tracking/features/notfications/data/models/notfication_response_model.dart';
 import '../../features/project_details/data/models/project_details_response.dart';
 part 'api_service.g.dart';
 
@@ -55,6 +63,11 @@ abstract class ApiService {
   Future<BugResponseBody> getBugs(
     @Header('authorization') String token,
   );
+
+  @GET('${ApiConstance.notifications}/{id}')
+  Future<NotificationResponseModel> getNotfications(
+      @Header('authorization') String token, @Path('id') String reciverId);
+
   @GET('${ApiConstance.projects}/{id}')
   Future<ProjectDetailsResponse> getProjectDetails(
       @Path('id') String projectId);
@@ -64,5 +77,34 @@ abstract class ApiService {
     @Path('id') String projectId,
     @Body() ProjectEditRequestBody projectEditRequestBody,
     @Header('authorization') String token,
+  );
+
+  @POST(ApiConstance.bugs)
+  Future<AddBugResponseBody> addBug(
+    @Body() AddBugRequestBody addBugRequestBody,
+    @Header('authorization') String token,
+  );
+
+  @GET('${ApiConstance.bugs}/{id}')
+  Future<BugDetailsResponseBody> getBugDetails(
+    @Path('id') String bugId,
+  );
+
+  @GET('${ApiConstance.comments}/{id}')
+  Future<CommentsResponseBody> getComments(
+    @Path('id') String bugId,
+  );
+
+  @POST(ApiConstance.comments)
+  Future<AddCommentResponseBody> addComment(
+    @Header('authorization') String token,
+    @Body() AddCommentRequestBody addCommentRequestBody,
+  );
+
+  @PUT('${ApiConstance.bugs}/{id}')
+  Future<EditBugResponseBody> editBug(
+    @Path('id') String bugId,
+    @Header('authorization') String token,
+    @Body() EditBugRequestBody editBugRequestBody,
   );
 }

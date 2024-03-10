@@ -9,9 +9,9 @@ class CustomDropDownList extends StatelessWidget {
   final Widget? prefixWidget;
   final Widget? suffixWidget;
   final String hintText;
-  final String selectedItem;
+  final String? selectedItem;
   final void Function(String?) onChanged;
-  final String errorMsg;
+  final String? errorMsg;
   const CustomDropDownList({
     Key? key,
     required this.items,
@@ -43,7 +43,6 @@ class CustomDropDownList extends StatelessWidget {
         hintText,
         style: AppTexts.text14GreyNunitoSansSemiBold,
       ),
-      value: selectedItem,
       items: items.map((String value) {
         return DropdownMenuItem<String>(
           value: value,

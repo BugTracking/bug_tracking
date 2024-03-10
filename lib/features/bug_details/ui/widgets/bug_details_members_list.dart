@@ -1,24 +1,40 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_member.dart';
+import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
+import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BugDetailsMembersList extends StatelessWidget {
   const BugDetailsMembersList({super.key});
 
   @override
   Widget build(BuildContext context) {
+    if (context.read<BugDetailsCubit>().bugDetailsModel!.members.isEmpty) {
+      return Center(
+        child: Text(
+          'No members yet',
+          style: AppTexts.text16OnBackgroundNunitoSansBold,
+        ),
+      );
+    }
     return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
-      itemBuilder: (context, index) => const CustomMember(
-        image:
-            'https://scontent.fcai19-3.fna.fbcdn.net/v/t39.30808-6/371805649_3553651871514319_8256964925996912081_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeHoUobKMmx3bihlpkFxC2EpMLX6OntU1rcwtfo6e1TWt_e-VtAYynoVQBZ1Bs3MlPWbgAJREebqMRfScdtCP0ti&_nc_ohc=tgT5vP924EoAX8Kkttg&_nc_ht=scontent.fcai19-3.fna&oh=00_AfCrTWowo-1th4uHKzCKhIX1hnYatR6q7n3Od99oX6OqTw&oe=65E0794C',
-        name: 'Mohammed Adel',
-        body: 'Software Engineer',
-      ),
+      itemBuilder: (context, index) {
+        UserModel member =
+            context.read<BugDetailsCubit>().bugDetailsModel!.members[index];
+        return CustomMember(
+          image: member.avatar,
+          name: member.name,
+          body: member.email,
+        );
+      },
       separatorBuilder: (context, index) => verticalSpace(8.0),
-      itemCount: 2,
+      itemCount:
+          context.read<BugDetailsCubit>().bugDetailsModel?.members.length ?? 0,
     );
   }
 }

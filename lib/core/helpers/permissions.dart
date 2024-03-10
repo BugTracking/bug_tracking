@@ -1,22 +1,30 @@
-import 'package:bug_tracking/core/helpers/toasts.dart';
+import 'dart:io';
+
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-Future<bool> checkPermission() async {
-  Map<Permission, PermissionStatus> statues = await [
-    Permission.camera,
-    Permission.storage,
-    Permission.photos
-  ].request();
-  PermissionStatus? statusStorage = statues[Permission.storage];
-  bool isGranted = statusStorage == PermissionStatus.granted;
-  if (isGranted) {
-    return true;
+Future<bool> requestPermission() async {
+  bool isHavePermission = false;
+  if (Platform.isAndroid) {
+    final DeviceInfoPlugin info = DeviceInfoPlugin();
+    final AndroidDeviceInfo androidInfo = await info.androidInfo;
+    final int androidVersion = int.parse(androidInfo.version.release);
+
+    if (androidVersion >= 13) {
+      final request = await [
+        Permission.photos,
+      ].request();
+
+      isHavePermission =
+          request.values.every((status) => status == PermissionStatus.granted);
+    } else {
+      final status = await Permission.storage.request();
+      isHavePermission = status.isGranted;
+    }
+  } else {
+    final status = await Permission.storage.request();
+    isHavePermission = status.isGranted;
   }
-  bool isPermanentlyDenied =
-      statusStorage == PermissionStatus.permanentlyDenied;
-  if (isPermanentlyDenied) {
-    showToast(message: 'Please allow all permissions');
-    return false;
-  }
-  return false;
+
+  return isHavePermission;
 }
