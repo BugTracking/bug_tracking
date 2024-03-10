@@ -112,7 +112,7 @@ class BugDetailsScreen extends StatelessWidget {
                       const CustomListTitle(
                         title: 'Members',
                       ),
-                      if (userData.user.role == 'admin')
+                      if (userData.user.role == 'Admin')
                         const BugDetailsMembersList(),
                       verticalSpace(10.0),
                       const CustomListTitle(

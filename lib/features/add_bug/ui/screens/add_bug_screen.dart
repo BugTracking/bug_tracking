@@ -39,7 +39,7 @@ class AddBugScreen extends StatelessWidget {
                 verticalSpace(10.0),
                 const AddBugForm(),
                 verticalSpace(10.0),
-                if (userData.user.role == 'admin')
+                if (userData.user.role == 'Admin')
                   Column(
                     children: [
                       const AssignedToContainer(),
