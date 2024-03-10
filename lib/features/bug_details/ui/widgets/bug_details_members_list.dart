@@ -1,4 +1,5 @@
 import 'package:bug_tracking/core/helpers/spacing.dart';
+import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_member.dart';
 import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
@@ -10,6 +11,14 @@ class BugDetailsMembersList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (context.read<BugDetailsCubit>().bugDetailsModel!.members.isEmpty) {
+      return Center(
+        child: Text(
+          'No members yet',
+          style: AppTexts.text16OnBackgroundNunitoSansBold,
+        ),
+      );
+    }
     return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
