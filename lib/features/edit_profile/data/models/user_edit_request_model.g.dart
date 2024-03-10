@@ -12,6 +12,7 @@ UserEditRequestModel _$UserEditRequestModelFromJson(
       json['name'] as String?,
       json['userName'] as String?,
       json['email'] as String?,
+      json['avatar'] as String?,
     );
 
 Map<String, dynamic> _$UserEditRequestModelToJson(
@@ -20,4 +21,5 @@ Map<String, dynamic> _$UserEditRequestModelToJson(
       'name': instance.name,
       'userName': instance.userName,
       'email': instance.email,
+      'avatar': instance.avatar,
     };

@@ -35,7 +35,7 @@ class UserModel {
   final String email;
   final String role;
   final String phone;
-  final String? avatar;
+  late final String? avatar;
   UserModel(
     this.id,
     this.name,

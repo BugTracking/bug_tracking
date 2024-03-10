@@ -33,12 +33,14 @@ class UserModel {
   final String name;
   final String userName;
   final String email;
+  final String avatar;
 
   UserModel(
       this.id,
       this.name,
       this.userName,
       this.email,
+      this.avatar
 
       );
 
