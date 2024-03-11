@@ -13,9 +13,13 @@ class CacheHelper {
     }
   }
 
-  static Future<bool> setString(
-      {required String key, required String value}) async {
+  static Future<bool> setString({required String key, required String value}) async {
     return sharedPreferences.setString(key, value);
+  }
+
+  Future<void> removeString(String key) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove(key);
   }
 
   static get token => sharedPreferences.getString('token');

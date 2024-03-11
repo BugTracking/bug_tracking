@@ -28,6 +28,7 @@ import '../../features/edit_profile/data/models/user_edit_request_model.dart';
 import '../../features/edit_profile/data/models/user_response_model.dart';
 import '../../features/notfications/data/models/notfication_response_model.dart';
 import '../../features/project_details/data/models/project_details_response.dart';
+import '../../features/settings/data/models/delete_acc_response_model.dart';
 part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConstance.baseUrl)
@@ -49,6 +50,9 @@ abstract class ApiService {
       @Path('id') String userId,
       @Body() UserEditRequestModel userEditRequestModel,
       );
+
+  @DELETE('${ApiConstance.users}/{id}')
+  Future<DeleteAccResponseModel> deleteAccount(@Path('id') String userId,);
 
   @GET(ApiConstance.projects)
   Future<ProjectResponseBody> getProjects(
