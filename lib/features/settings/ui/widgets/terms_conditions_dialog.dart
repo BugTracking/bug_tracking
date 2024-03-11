@@ -2,6 +2,7 @@ import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 class TermsAndCondtionsDialog extends StatelessWidget {
   const TermsAndCondtionsDialog({Key? key}) : super(key: key);
 
@@ -74,10 +75,14 @@ class TermsAndCondtionsDialog extends StatelessWidget {
                       ),
                       SizedBox(height: 8.0.h),
                       Text(
-                     '''In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, Please contact with Mail: to Bug Tracking Team Email
-bugTrackingTeam@gmail.com''',
+                     '''In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, Please contact with Mail: to Bug Tracking Team Email''',
                         style:AppTexts.text12OnBackgroundCairoBold,
                       ),
+                      InkWell(
+                        onTap:()=>_launchEmail('bugTrackingTeam@gmail.com'),
+                        child: Text('bugTrackingTeam@gmail.com',style: TextStyle(color: Colors.blueAccent),) ,
+                      ),
+
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -89,7 +94,7 @@ bugTrackingTeam@gmail.com''',
                             text: 'Accept',
 
                           ),
-                          SizedBox(width: 16.0),
+                          SizedBox(width: 16.0.w),
                           CustomTextButton(
                             onPressed: () {
 
@@ -111,5 +116,17 @@ bugTrackingTeam@gmail.com''',
         ),
       );
     }
+  void _launchEmail(String email) async {
+    final Uri _emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+
+    try {
+      await launch(_emailLaunchUri.toString());
+    } catch (e) {
+      print('Error launching email: $e');
+    }
+  }
   }
 
