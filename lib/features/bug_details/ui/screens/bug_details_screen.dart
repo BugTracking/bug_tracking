@@ -78,53 +78,60 @@ class BugDetailsScreen extends StatelessWidget {
           BugModel bug = bugDetailsModel.bug;
           return BlocBuilder<BugDetailsCubit, BugDetailsState>(
             builder: (context, state) {
-              return SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    left: 20.0.w,
-                    right: 20.0.w,
-                    top: 10.0.h,
-                    bottom: 30.0.h,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const BugDetailsAttachmentsCategoryText(),
-                      const BugDetailsAttachmentsList(),
-                      verticalSpace(10.0),
-                      CustomProjectInfo(
-                        lastUpdateOnText: bug.lastUpdatedAt.extractDate(),
-                        updatedByText: bug.lastUpdatedBy.name.toShortcut(),
-                        createdByText: bug.creator.name.toShortcut(),
-                        createdAtText: bug.timeCreated.extractDate(),
+              return Padding(
+                padding: EdgeInsets.only(
+                  left: 20.0.w,
+                  right: 20.0.w,
+                  top: 10.0.h,
+                  bottom: 20.0.h,
+                ),
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const BugDetailsAttachmentsCategoryText(),
+                            const BugDetailsAttachmentsList(),
+                            verticalSpace(10.0),
+                            CustomProjectInfo(
+                              lastUpdateOnText: bug.lastUpdatedAt.extractDate(),
+                              updatedByText:
+                                  bug.lastUpdatedBy.name.toShortcut(),
+                              createdByText: bug.creator.name.toShortcut(),
+                              createdAtText: bug.timeCreated.extractDate(),
+                            ),
+                            verticalSpace(10.0),
+                            const BugDetailsStatus(),
+                            verticalSpace(10.0),
+                            const CustomDivider(),
+                            const CustomListTitle(
+                              title: 'Summary',
+                            ),
+                            BugDetailsSummaryBody(
+                              text: bug.description,
+                            ),
+                            verticalSpace(10.0),
+                            const CustomListTitle(
+                              title: 'Members',
+                            ),
+                            if (userData.user.role == 'Admin')
+                              const BugDetailsMembersList(),
+                            verticalSpace(10.0),
+                            const CustomListTitle(
+                              title: 'Comments',
+                            ),
+                            const BugDetailsCommentsList(),
+                          ],
+                        ),
                       ),
-                      verticalSpace(10.0),
-                      const BugDetailsStatus(),
-                      verticalSpace(10.0),
-                      const CustomDivider(),
-                      const CustomListTitle(
-                        title: 'Summary',
-                      ),
-                      BugDetailsSummaryBody(
-                        text: bug.description,
-                      ),
-                      verticalSpace(10.0),
-                      const CustomListTitle(
-                        title: 'Members',
-                      ),
-                      if (userData.user.role == 'Admin')
-                        const BugDetailsMembersList(),
-                      verticalSpace(10.0),
-                      const CustomListTitle(
-                        title: 'Comments',
-                      ),
-                      const BugDetailsCommentsList(),
-                      verticalSpace(16.0),
-                      CommentForm(
-                        bugId: bug.id,
-                      ),
-                    ],
-                  ),
+                    ),
+                    verticalSpace(10.0),
+                    CommentForm(
+                      bugId: bug.id,
+                    ),
+                  ],
                 ),
               );
             },

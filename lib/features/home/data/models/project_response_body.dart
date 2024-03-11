@@ -7,7 +7,7 @@ class ProjectResponseBody {
   final bool status;
   final String? message;
   final List<ProjectModel>? data;
-  ProjectResponseBody(this.status, this.data,this.message);
+  ProjectResponseBody(this.status, this.data, this.message);
   factory ProjectResponseBody.fromJson(Map<String, dynamic> json) =>
       _$ProjectResponseBodyFromJson(json);
 }
@@ -25,16 +25,18 @@ class ProjectModel {
   final String lastUpdatedAt;
 
   ProjectModel(
-      this.id,
-      this.title,
-      this.description,
-      this.status,
-      this.creator,
-      this.lastUpdatedBy,
-      this.timeCreated,
-      this.lastUpdatedAt,
-      );
+    this.id,
+    this.title,
+    this.description,
+    this.status,
+    this.creator,
+    this.lastUpdatedBy,
+    this.timeCreated,
+    this.lastUpdatedAt,
+  );
 
   factory ProjectModel.fromJson(Map<String, dynamic> json) =>
       _$ProjectModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProjectModelToJson(this);
 }

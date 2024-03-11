@@ -1,11 +1,14 @@
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
+import 'package:bug_tracking/core/networking/api_constance.dart';
 import 'package:bug_tracking/core/networking/api_result.dart';
 import 'package:bug_tracking/core/networking/api_service.dart';
+import 'package:bug_tracking/core/networking/dio_factory.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
+import 'package:bug_tracking/features/add_project/data/models/sent_notification_request_body.dart';
 import 'package:bug_tracking/features/home/data/models/device_token_response_body.dart';
 import 'package:bug_tracking/features/notfications/data/models/add_notification_request_body.dart';
 import 'package:bug_tracking/features/notfications/data/models/add_notification_response_body.dart';
@@ -87,6 +90,25 @@ class AddProjectRepo {
       return ApiResult.success(tokens);
     } on DioException catch (e) {
       return ApiResult.failure(e.message ?? 'Failed to get token');
+    }
+  }
+
+  Future<ApiResult<bool>> sentNotification(
+    List<SentNotificationRequestBody> requests,
+  ) async {
+    Dio dio = await DioFactory.getInstance();
+    ApiService apiService = ApiService(dio, baseUrl: ApiConstance.fcmUrl);
+    const String token = ApiConstance.serverKey;
+    try {
+      for (int i = 0; i < requests.length; i++) {
+        await apiService.sendNotification(
+          token,
+          requests[i],
+        );
+      }
+      return ApiResult.success(true);
+    } on DioException catch (e) {
+      return ApiResult.failure(e.message ?? 'Failed to send notification');
     }
   }
 }

@@ -1,13 +1,17 @@
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:bug_tracking/core/helpers/toasts.dart';
 import 'package:bug_tracking/features/add_bug/data/models/add_bug_request_body.dart';
 import 'package:bug_tracking/features/add_bug/data/repos/add_bug_repo.dart';
 import 'package:bug_tracking/features/add_bug/logic/cubit/add_bug_state.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
+import 'package:bug_tracking/features/add_project/data/models/sent_notification_request_body.dart';
+import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_request_body.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -124,8 +128,10 @@ class AddBugCubit extends Cubit<AddBugState> {
             ),
           );
           addBugResponse.when(
-            success: (data) => emit(
-                const AddBugState.addBugSuccess('Bug Added Successesfully')),
+            success: (data) async {
+              await getTokens(data.data);
+              emit(const AddBugState.addBugSuccess('Bug Added Successfully'));
+            },
             failure: (error) => emit(AddBugState.addBugFailure(error)),
           );
         },
@@ -141,5 +147,54 @@ class AddBugCubit extends Cubit<AddBugState> {
     emit(const AddBugState.initial());
     isUserWantToCreateAnotherBug = !isUserWantToCreateAnotherBug;
     emit(const AddBugState.selectItem());
+  }
+
+  List<String> tokens = [];
+  Future<void> getTokens(BugModel? bug) async {
+    final response = await _addBugRepo.getTokens(memberIds);
+    response.when(
+      success: (data) {
+        tokens = data.map((e) => e.data?.fcmToken ?? '').toList();
+        sentNotification(tokens, bug);
+      },
+      failure: (error) {},
+    );
+  }
+
+  Future<void> addNotifications() async {
+    await _addBugRepo.addNotifications(
+      AddNotificationsRequestBody(
+        userData.user.name,
+        'You are assigned to ${titleController.text} Bug',
+        memberIds,
+      ),
+    );
+  }
+
+  Future<void> sentNotification(List<String> tokens, BugModel? bug) async {
+    List<SentNotificationRequestBody> requests = [];
+    NotificationModel notification = NotificationModel(
+      userData.user.name,
+      'You are assigned to ${titleController.text} Bug',
+    );
+    for (String token in tokens) {
+      requests.add(
+        SentNotificationRequestBody(
+          token,
+          notification,
+          NotiticationData(
+            senderId: userData.user.id,
+            projectId: null,
+            projectTitle: null,
+            projectStatus: null,
+            bugTitle: bug?.title,
+            bugId: bug?.id,
+          ),
+        ),
+      );
+    }
+    await _addBugRepo.sentNotification(
+      requests,
+    );
   }
 }

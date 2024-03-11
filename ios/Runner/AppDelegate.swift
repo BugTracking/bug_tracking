@@ -2,6 +2,7 @@ import UIKit
 import Flutter
 import flutter_local_notifications
 import Firebase // Import Firebase
+import FirebaseCore
 
 
 @UIApplicationMain

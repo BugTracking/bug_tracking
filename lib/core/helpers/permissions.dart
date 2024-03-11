@@ -10,7 +10,8 @@ Future<bool> requestStoragePermission() async {
   if (Platform.isAndroid) {
     final DeviceInfoPlugin info = DeviceInfoPlugin();
     final AndroidDeviceInfo androidInfo = await info.androidInfo;
-    final int androidVersion = int.parse(androidInfo.version.release);
+    final int androidVersion =
+        int.parse(androidInfo.version.release.split('.')[0]);
 
     if (androidVersion >= 13) {
       final request = await [
@@ -27,7 +28,6 @@ Future<bool> requestStoragePermission() async {
     final status = await Permission.storage.request();
     isHavePermission = status.isGranted;
   }
-
   return isHavePermission;
 }
 

@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
 import 'package:bug_tracking/features/add_bug/data/models/add_bug_request_body.dart';
 import 'package:bug_tracking/features/add_bug/data/models/add_bug_response_body.dart';
+import 'package:bug_tracking/features/add_project/data/models/sent_notification_request_body.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -127,5 +128,11 @@ abstract class ApiService {
   Future<AddNotificationsResponseBody> addNotification(
     @Body() AddNotificationsRequestBody addNotificationRequestBody,
     @Header('authorization') String token,
+  );
+
+  @POST(ApiConstance.fcmEndpoint)
+  Future<int> sendNotification(
+    @Header('Authorization') String token,
+    @Body() SentNotificationRequestBody sentProjectNotificationRequestBody,
   );
 }

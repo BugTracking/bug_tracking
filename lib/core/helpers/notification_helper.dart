@@ -1,4 +1,8 @@
+import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/router/routes.dart';
+import 'package:bug_tracking/core/router/screen_args.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationHelper {
@@ -9,15 +13,15 @@ class NotificationHelper {
   static void initLocalNotifications() {
     const AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('app_icon');
-    const DarwinInitializationSettings initializationSettingsDarwin =
-        DarwinInitializationSettings();
+
     const InitializationSettings initializationSettings =
         InitializationSettings(
       android: initializationSettingsAndroid,
-      iOS: initializationSettingsDarwin,
     );
 
-    _localNotificationsPlugin.initialize(initializationSettings);
+    _localNotificationsPlugin.initialize(
+      initializationSettings,
+    );
 
     const AndroidNotificationChannel channel = AndroidNotificationChannel(
       'your_channel_id', // Same as in the show method
@@ -32,21 +36,32 @@ class NotificationHelper {
         ?.createNotificationChannel(channel);
   }
 
-  static Future<void> _backgroundMessageHandler(RemoteMessage message) async {
-    print('Handling a background message: ${message.messageId}');
-  }
-
-  static Future<void> init() async {
+  static void init(BuildContext context) async {
     initLocalNotifications();
-    FirebaseMessaging.onBackgroundMessage(_backgroundMessageHandler);
-
     FirebaseMessaging.onMessageOpenedApp.listen((message) {
-      print('onMessageOpenedApp called');
-      print(message.data);
+      Map<String, dynamic> data = message.data;
+      if (data['projectId'] != null) {
+        context.push(
+          Routes.projectDetails,
+          arguments: ProjectDetailsScreenArgs(
+            data['projectId'],
+            data['projectTitle'],
+            data['projectStatus'],
+          ),
+        );
+      }
+      if (data['bugId'] != null) {
+        context.push(
+          Routes.bugDetails,
+          arguments: BugDetailsScreenArgs(
+            data['bugId'],
+            data['bugTitle'],
+          ),
+        );
+      }
     });
 
     FirebaseMessaging.onMessage.listen((message) {
-      print('On Message');
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
       if (notification != null && android != null) {
@@ -61,12 +76,6 @@ class NotificationHelper {
               channelDescription: message.notification?.title,
               importance: Importance.max,
               priority: Priority.high,
-            ),
-            iOS: DarwinNotificationDetails(
-              presentAlert: true,
-              presentBadge: true,
-              presentSound: true,
-              subtitle: message.notification?.title,
             ),
           ),
         );
