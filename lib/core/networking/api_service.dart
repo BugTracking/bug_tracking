@@ -110,9 +110,9 @@ abstract class ApiService {
   );
 
 
-  @POST(ApiConstance.users)
-  Future<AddBugResponseBody> addmember(
-    @Body() AddMemberResponseBody AddMemberResponseBody,
-    @Header('authorization') String token,
-  );
+  // @POST(ApiConstance.users)
+  // Future<AddMemberResponseBody> addmember(
+  //   @Body() AddMemberResponseBody addMemberResponseBody,
+  //   @Header('authorization') String token,
+  // );
 }

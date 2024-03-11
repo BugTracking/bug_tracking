@@ -88,7 +88,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 text: "Members",
                 icon: Icons.arrow_forward_ios,
                 onTap: () => context.push(Routes.members,
-                 arguments: MemberScreenArgs(context.read<HomeCubit>().member ?? []),
+                 
                 ),
               ),
               SettingsContainer(

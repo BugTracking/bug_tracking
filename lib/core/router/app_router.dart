@@ -14,6 +14,7 @@ import 'package:bug_tracking/features/bug_details/ui/screens/bug_details_screen.
 import 'package:bug_tracking/features/get_started/ui/screens/get_started_screen.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
 import 'package:bug_tracking/features/home/ui/screens/home_screen.dart';
+import 'package:bug_tracking/features/members/logic/member_cubit.dart';
 import 'package:bug_tracking/features/members/ui/screens/members_screen.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/ui/screens/on_boarding_screen.dart';
@@ -103,11 +104,11 @@ class AppRouter {
           ),
         );
       case Routes.members:
-      MemberScreenArgs args = settings.arguments as MemberScreenArgs;
+      
         return MaterialPageRoute(
-            builder: (context) =>  MembersScreen(members: args.members,
-    
-  ),
+            builder: (context) =>  
+            BlocProvider(create: (context)=>getIt<MembersCubit>()..emitMemberDataState(),
+            child: const MembersScreen() ),
         );
       case Routes.addBug:
         var args = settings.arguments as AddBugScreenArgs;

@@ -3,15 +3,14 @@ import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
 
 class MembersTile extends StatelessWidget {
-  final UserModel member;
+   final UserModel members;
   const MembersTile({
-    Key? key,
-    required this.member,
-  }) : super(key: key);
+  super.key, required this.members})
+  ;
 
   @override
   Widget build(BuildContext context) {
-    print(member.name);
+    
     return Container(
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
@@ -22,9 +21,9 @@ class MembersTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: CustomMember(
-        image: null,
-        name: member.name,
-        body: member.email,
+        image: members.avatar!,
+        name:members.name,
+        body: members.email,
       ),
     );
   }

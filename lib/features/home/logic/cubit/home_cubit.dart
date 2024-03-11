@@ -65,19 +65,6 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
-  List<UserModel>? member;
-
-   void emitMemberDataState() async {
-    final response = await _homeRepo.getUser(CacheHelper.userId);
-    response.when(
-      success: (data) {
-        member = data.data!.members ?? [];
-        emit(HomeState.getMemberSuccess(member!));
-      },
-      failure: (error) {
-        emit(HomeState.getMemberFailure(error));
-      },
-    );
-  }
+ 
 }
 

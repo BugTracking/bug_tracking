@@ -11,6 +11,8 @@ import 'package:bug_tracking/features/bug_details/data/repos/bug_details_repo.da
 import 'package:bug_tracking/features/bug_details/logic/cubit/bug_details_cubit.dart';
 import 'package:bug_tracking/features/home/data/repos/home_repo.dart';
 import 'package:bug_tracking/features/home/logic/cubit/home_cubit.dart';
+import 'package:bug_tracking/features/members/data/repos/add_member_repo.dart';
+import 'package:bug_tracking/features/members/logic/member_cubit.dart';
 import 'package:bug_tracking/features/notfications/data/repos/notfication_repo.dart';
 import 'package:bug_tracking/features/notfications/logic/cubit/notfication_cubit.dart';
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
@@ -59,4 +61,13 @@ void setupGetIt() async {
   // bug details
   getIt.registerLazySingleton<BugDetailsRepo>(() => BugDetailsRepo(getIt()));
   getIt.registerFactory<BugDetailsCubit>(() => BugDetailsCubit(getIt()));
+
+
+  //member
+
+  
+  getIt.registerLazySingleton<MembersRepo>(() => MembersRepo(getIt()));
+  getIt.registerFactory<MembersCubit>(() => MembersCubit(getIt()));
+
+
 }

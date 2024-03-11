@@ -1,9 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'member_response_model.g.dart';
+
 @JsonSerializable()
 class AddMemberResponseBody {
   final bool status;
-  final MembersModel data;
+  final MembersModel? data;
   final String? message;
 
   AddMemberResponseBody({required this.data, this.message, required this.status});

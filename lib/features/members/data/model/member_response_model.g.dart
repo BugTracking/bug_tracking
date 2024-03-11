@@ -9,7 +9,9 @@ part of 'member_response_model.dart';
 AddMemberResponseBody _$AddMemberResponseBodyFromJson(
         Map<String, dynamic> json) =>
     AddMemberResponseBody(
-      data: MembersModel.fromJson(json['data'] as Map<String, dynamic>),
+      data: json['data'] == null
+          ? null
+          : MembersModel.fromJson(json['data'] as Map<String, dynamic>),
       message: json['message'] as String?,
       status: json['status'] as bool,
     );
