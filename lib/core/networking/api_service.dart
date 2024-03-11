@@ -21,6 +21,8 @@ import 'package:bug_tracking/features/home/data/models/device_token_response_bod
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_request_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_response_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
 import 'package:dio/dio.dart';
@@ -119,5 +121,11 @@ abstract class ApiService {
   @GET('${ApiConstance.deviceTokens}/{id}')
   Future<DeviceTokenResponseBody> getDeviceToken(
     @Path('id') String userId,
+  );
+
+  @POST(ApiConstance.notifications)
+  Future<AddNotificationsResponseBody> addNotification(
+    @Body() AddNotificationsRequestBody addNotificationRequestBody,
+    @Header('authorization') String token,
   );
 }

@@ -1,10 +1,12 @@
 import 'package:bloc/bloc.dart';
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
 import 'package:bug_tracking/features/add_project/data/repos/add_project_repo.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_request_body.dart';
 import 'package:flutter/material.dart';
 
 class AddProjectCubit extends Cubit<AddProjectState> {
@@ -114,7 +116,11 @@ class AddProjectCubit extends Cubit<AddProjectState> {
         ),
       );
       response.when(
-        success: (data) => emit(const AddProjectState.success()),
+        success: (data) async {
+          await addNotifications();
+          await getTokens();
+          emit(const AddProjectState.success());
+        },
         failure: (failure) => emit(
           AddProjectState.error(
             message: failure,
@@ -122,5 +128,19 @@ class AddProjectCubit extends Cubit<AddProjectState> {
         ),
       );
     }
+  }
+
+  Future<void> getTokens() async {
+    await _addProjectRepo.getTokens(memberIds);
+  }
+
+  Future<void> addNotifications() async {
+    await _addProjectRepo.addNotifications(
+      AddNotificationsRequestBody(
+        userData.user.name,
+        'You are added to ${titleController.text} Project',
+        memberIds,
+      ),
+    );
   }
 }

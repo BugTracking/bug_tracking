@@ -29,6 +29,13 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
         color: AppColor.blackish,
       );
+
+  static TextStyle get text13OnBackgroundNubitoSansBold =>
+      GoogleFonts.nunitoSans(
+        fontSize: 13.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
   static TextStyle get text14OnBackgroundCairoSemiBold => GoogleFonts.cairo(
         fontSize: 14.sp,
         fontWeight: AppFontWeight.semiBold,

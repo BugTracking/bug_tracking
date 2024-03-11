@@ -31,7 +31,7 @@ class AddBugCubit extends Cubit<AddBugState> {
 
   void emitUploadAttachmentsState() async {
     emit(const AddBugState.initial());
-    if (await requestPermission()) {
+    if (await requestStoragePermission()) {
       ImagePicker imagePicker = ImagePicker();
       List<XFile>? files = await imagePicker.pickMultiImage(imageQuality: 100);
       if (files.isNotEmpty) {

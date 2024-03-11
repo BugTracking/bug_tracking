@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
@@ -18,6 +19,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    requestNotificationPermission();
+  }
 
   @override
   Widget build(BuildContext context) {

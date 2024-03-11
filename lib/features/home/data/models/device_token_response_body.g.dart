@@ -13,6 +13,7 @@ DeviceTokenResponseBody _$DeviceTokenResponseBodyFromJson(
           ? null
           : DeviceTokenModel.fromJson(json['data'] as Map<String, dynamic>),
       json['status'] as bool,
+      json['message'] as String?,
     );
 
 Map<String, dynamic> _$DeviceTokenResponseBodyToJson(
@@ -20,6 +21,7 @@ Map<String, dynamic> _$DeviceTokenResponseBodyToJson(
     <String, dynamic>{
       'data': instance.data,
       'status': instance.status,
+      'message': instance.message,
     };
 
 DeviceTokenModel _$DeviceTokenModelFromJson(Map<String, dynamic> json) =>

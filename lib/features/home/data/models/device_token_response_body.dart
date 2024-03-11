@@ -6,8 +6,9 @@ class DeviceTokenResponseBody {
   @JsonKey(name: 'data')
   final DeviceTokenModel? data;
   final bool status;
+  final String? message;
 
-  DeviceTokenResponseBody(this.data, this.status);
+  DeviceTokenResponseBody(this.data, this.status, this.message);
 
   factory DeviceTokenResponseBody.fromJson(Map<String, dynamic> json) =>
       _$DeviceTokenResponseBodyFromJson(json);
