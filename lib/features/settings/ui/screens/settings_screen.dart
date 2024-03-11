@@ -17,7 +17,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/helpers/toasts.dart';
-import '../widgets/terms_conditions_dialog.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -39,9 +38,9 @@ class _SettingScreenState extends State<SettingScreen> {
         ),
       ),
       body: BlocProvider<SettingsCubit>(
-        create: (context) => getIt<SettingsCubit>(),
-        child: BlocBuilder<SettingsCubit, SettingsState>(
-            builder: (context, state) {
+        create: (context)=>getIt<SettingsCubit>(),
+        child: BlocBuilder<SettingsCubit,SettingsState>(
+        builder: (context,state) {
           return SingleChildScrollView(
             child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -89,17 +88,14 @@ class _SettingScreenState extends State<SettingScreen> {
                   verticalSpace(
                     10.0,
                   ),
-                  SettingsContainer(
-                    text: "Terms&conditions",
-                    onTap: () => {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return const TermsAndCondtionsDialog();
-                        },
-                      ),
-                    },
+
+                  InkWell(
+                    child: SettingsContainer(
+                      text: "Terms&conditions",
+                      onTap: ()=> context.push(Routes.termsandcondtions),
+                    ),
                   ),
+
                   SettingsContainer(
                     text: "Members",
                     icon: Icons.arrow_forward_ios,
@@ -119,31 +115,37 @@ class _SettingScreenState extends State<SettingScreen> {
                       );
                     },
                   ),
-                  BlocConsumer<SettingsCubit, SettingsState>(
-                      listener: (context, state) {
-                    if (state is GetDeleteAccSuccess) {
-                      showToast(message: state.message);
-                    } else if (state is GetDeleteAccFailure) {
-                      showToast(message: state.message, isError: true);
+
+                  BlocConsumer<SettingsCubit,SettingsState>(
+                    listener: (context,state){
+                      if (state is GetDeleteAccSuccess) {
+                        showToast(message: state.message);
+                      }
+                      else if( state is GetDeleteAccFailure){
+                        showToast(message: state.message, isError: true);
+
+                      }
+                    },
+                    builder: (context,state) {
+                      if (state is GetDeleteAccLoading) {
+                        return const Center(child: CustomLoadingIndicator());
+                      }
+                      return SettingsContainer(
+                        text: "Delete Account",
+                        color: AppColor.redish,
+                        icon: Icons.arrow_forward_ios,
+                        onTap: () => context.read<SettingsCubit>().emitDeleteAccountState(),
+                      );
                     }
-                  }, builder: (context, state) {
-                    if (state is GetDeleteAccLoading) {
-                      return const Center(child: CustomLoadingIndicator());
-                    }
-                    return SettingsContainer(
-                      text: "Delete Account",
-                      color: AppColor.redish,
-                      icon: Icons.arrow_forward_ios,
-                      onTap: () => context
-                          .read<SettingsCubit>()
-                          .emitDeleteAccountState(),
-                    );
-                  }),
+                  ),
                   const LogoutButton(),
                 ])),
           );
-        }),
+
+        }
+
       ),
+    ),
     );
   }
 }
