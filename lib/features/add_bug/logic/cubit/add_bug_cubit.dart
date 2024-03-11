@@ -129,6 +129,7 @@ class AddBugCubit extends Cubit<AddBugState> {
           );
           addBugResponse.when(
             success: (data) async {
+              await addNotifications();
               await getTokens(data.data);
               emit(const AddBugState.addBugSuccess('Bug Added Successfully'));
             },
