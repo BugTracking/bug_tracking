@@ -46,16 +46,17 @@ class MembersScreen extends StatelessWidget {
       body: BlocBuilder<MembersCubit, MembersState>(
         builder: (context, state) {
           MembersCubit cubit = context.read<MembersCubit>();
-          if (cubit.members== null || cubit.userData == null ) {
+          if (cubit.userData == null || cubit.userData!.members == null) {
             return const Center(
               child: CustomLoadingIndicator(
                 size: 60,
               ),
             );
           }
-        
-  UserData members = cubit.userData!;
+
+          UserData members = cubit.userData!;
           List<UserModel> member = members.members;
+          print("herreee");
           return SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(
@@ -69,7 +70,9 @@ class MembersScreen extends StatelessWidget {
                       hintText: 'Search Here...',
                     ),
                     verticalSpace(10),
-                    MembersList(members: member,),
+                    MembersList(
+                      members: member,
+                    ),
                   ],
                 ),
               ),
