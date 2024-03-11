@@ -57,36 +57,39 @@ class _AddMemberState extends State<AddMember> {
             horizontal: 16.0.w,
             vertical: 20.0.h,
           ),
-          child: Column(
-            children: [
-              Text(
-                'Add Member',
-                style: AppTexts.text21OnBackgroundColorNunitoSansBold,
-              ),
-              verticalSpace(16),
-              SearchWidget(
-                  hintText: 'Username or Email',
-                  controller: cubit.userNameAndEmailController),
-              verticalSpace(16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CustomOutlinedButton(
-                    onPressed: () => context.pop(),
-                    text: 'Cancel',
-                    width: 120.w,
-                  ),
-                  horizontalSpace(8),
-                  CustomButton(
-                    onPressed: () {
-                      cubit.emitAddMemberState();
-                    },
-                    text: 'Save',
-                    width: 120.w,
-                  )
-                ],
-              )
-            ],
+          child: Form(
+            key:cubit.formKey,
+            child: Column(
+              children: [
+                Text(
+                  'Add Member',
+                  style: AppTexts.text21OnBackgroundColorNunitoSansBold,
+                ),
+                verticalSpace(16),
+                SearchWidget(
+                    hintText: 'Username or Email',
+                    controller: cubit.userNameAndEmailController),
+                verticalSpace(16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomOutlinedButton(
+                      onPressed: () => context.pop(),
+                      text: 'Cancel',
+                      width: 120.w,
+                    ),
+                    horizontalSpace(8),
+                    CustomButton(
+                      onPressed: () {
+                        cubit.emitAddMemberState();
+                      },
+                      text: 'Save',
+                      width: 120.w,
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       );
