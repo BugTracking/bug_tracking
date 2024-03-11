@@ -1,19 +1,19 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-part 'user_response_body.g.dart';
+part 'user_response_model.g.dart';
 
 @JsonSerializable()
-class UserResponseBody {
+class UserResponseModel {
   final bool status;
   final UserData? data;
   final String? message;
 
-  UserResponseBody(this.status, this.data, this.message);
+  UserResponseModel(this.status, this.data, this.message);
 
-  factory UserResponseBody.fromJson(Map<String, dynamic> json) =>
-      _$UserResponseBodyFromJson(json);
+  factory UserResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$UserResponseModelFromJson(json);
 }
 
-@JsonSerializable() 
+@JsonSerializable()
 class UserData {
   @JsonKey(name: 'user')
   final UserModel user;
@@ -33,18 +33,18 @@ class UserModel {
   final String name;
   final String userName;
   final String email;
-  final String role;
-  final String phone;
-  late final String? avatar;
+  final String avatar;
+  final String password;
+
   UserModel(
-    this.id,
-    this.name,
-    this.userName,
-    this.email,
-    this.role,
-    this.phone,
-    this.avatar,
-  );
+      this.id,
+      this.name,
+      this.userName,
+      this.email,
+      this.avatar,
+      this.password
+
+      );
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>
       _$UserModelFromJson(json);

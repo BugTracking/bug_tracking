@@ -29,8 +29,10 @@ import 'package:bug_tracking/features/project_details/data/models/project_edit_r
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:bug_tracking/features/notfications/data/models/notfication_response_model.dart';
+import '../../features/edit_profile/data/models/user_response_model.dart';
+import '../../features/notfications/data/models/notfication_response_model.dart';
 import '../../features/project_details/data/models/project_details_response.dart';
+import '../../features/settings/data/models/delete_acc_response_model.dart';
 part 'api_service.g.dart';
 
 @RestApi(baseUrl: ApiConstance.baseUrl)
@@ -46,6 +48,18 @@ abstract class ApiService {
 
   @GET('${ApiConstance.users}/{id}')
   Future<UserResponseBody> getUser(@Path('id') String userId);
+
+  @PUT('${ApiConstance.users}/{id}')
+  Future<UserResponseModel> editProfile(
+    @Path('id') String userId,
+    @Body() FormData formData,
+    @Header('Content-Type') String contentType,
+  );
+
+  @DELETE('${ApiConstance.users}/{id}')
+  Future<DeleteAccResponseModel> deleteAccount(
+    @Path('id') String userId,
+  );
 
   @GET(ApiConstance.projects)
   Future<ProjectResponseBody> getProjects(

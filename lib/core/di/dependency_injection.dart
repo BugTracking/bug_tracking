@@ -17,8 +17,12 @@ import 'package:bug_tracking/features/notfications/logic/cubit/notfication_cubit
 import 'package:bug_tracking/features/on_boarding/logic/cubit/on_boarding_cubit.dart';
 import 'package:bug_tracking/features/project_details/data/repos/project_details_repo.dart';
 import 'package:bug_tracking/features/project_details/logic/cubit/project_details_cubit.dart';
+import 'package:bug_tracking/features/settings/data/repos/settings_repo.dart';
+import 'package:bug_tracking/features/settings/logic/cubit/settings_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:bug_tracking/features/edit_profile/data/repos/edit_profile_repo.dart';
+import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -62,4 +66,13 @@ void setupGetIt() async {
   // bug details
   getIt.registerLazySingleton<BugDetailsRepo>(() => BugDetailsRepo(getIt()));
   getIt.registerFactory<BugDetailsCubit>(() => BugDetailsCubit(getIt()));
+
+  // editprofile
+  getIt.registerLazySingleton<EditProfileRepo>(() => EditProfileRepo(getIt()));
+  getIt.registerFactory<EditProfileCubit>(() => EditProfileCubit(getIt()));
+
+  // settings
+  getIt.registerLazySingleton<SettingsRepo>(() => SettingsRepo(getIt()));
+  getIt.registerFactory<SettingsCubit>(() => SettingsCubit(getIt()));
+
 }
