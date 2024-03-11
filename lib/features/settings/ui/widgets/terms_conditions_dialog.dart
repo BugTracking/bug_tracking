@@ -1,5 +1,6 @@
 import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_text_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -78,12 +79,12 @@ class TermsAndCondtionsDialog extends StatelessWidget {
                      '''In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, Please contact with Mail: to Bug Tracking Team Email''',
                         style:AppTexts.text12OnBackgroundCairoBold,
                       ),
-                      InkWell(
+                      GestureDetector(
                         onTap:()=>_launchEmail('bugTrackingTeam@gmail.com'),
-                        child: Text('bugTrackingTeam@gmail.com',style: TextStyle(color: Colors.blueAccent),) ,
+                        child: Text('bugTrackingTeam@gmail.com',style: AppTexts.text12PrimaryNunitoSansBold,textAlign: TextAlign.left,) ,
                       ),
 
-
+                      SizedBox(height: 16.0.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
@@ -105,6 +106,7 @@ class TermsAndCondtionsDialog extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(height: 16.0.h),
                     ],
                   ),
 
