@@ -1,5 +1,7 @@
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/members/data/model/member_request_model.dart';
+import 'package:bug_tracking/features/members/data/model/member_response_model.dart';
 
 import 'package:bug_tracking/features/members/data/repos/add_member_repo.dart';
 import 'package:bug_tracking/features/members/logic/member_state.dart';
@@ -12,6 +14,7 @@ class MembersCubit extends Cubit<MembersState> {
   UserData? userData;
   final TextEditingController userNameAndEmailController =
       TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   List<UserModel>? members;
 
@@ -28,4 +31,49 @@ class MembersCubit extends Cubit<MembersState> {
       },
     );
   }
+
+     AddMemberModel getAddMemberModel() {
+    late AddMemberModel addMemberModel;
+
+    final RegExp emailRegex = RegExp(
+      r'^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$',
+      caseSensitive: false,
+    );
+    if (emailRegex.hasMatch(userNameAndEmailController.text)) {
+      addMemberModel = AddMemberModel(
+        userNameAndEmailController.text,
+        null,
+      
+      );
+    } else {
+      addMemberModel = AddMemberModel(
+        null,
+        userNameAndEmailController.text,
+        
+      );
+    }
+    return addMemberModel;
+  }
+
+
+  void emitAddMemberState() async {
+    if (formKey.currentState!.validate()) {
+      emit(const MembersState.loading());
+      final response = await _addMemberRepo.addMember(
+     getAddMemberModel( ),
+      );
+      response.when(
+        success: (data) async {
+         
+          emit(const MembersState.success());
+        },
+        failure: (error) {
+          emit(const MembersState.error(message: 'error'));
+        },
+      );
+    }
+  }
+
+
+
 }

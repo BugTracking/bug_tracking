@@ -12,7 +12,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../data/model/member_response_model.dart';
 
 class MembersScreen extends StatelessWidget {
   const MembersScreen({
@@ -46,7 +45,9 @@ class MembersScreen extends StatelessWidget {
       body: BlocBuilder<MembersCubit, MembersState>(
         builder: (context, state) {
           MembersCubit cubit = context.read<MembersCubit>();
-          if (cubit.userData == null || cubit.userData!.members == null) {
+          if (state is getMemberLoading ||
+              cubit.userData == null ||
+              cubit.members == null) {
             return const Center(
               child: CustomLoadingIndicator(
                 size: 60,
@@ -64,10 +65,11 @@ class MembersScreen extends StatelessWidget {
                 vertical: 20.0.h,
               ),
               child: SingleChildScrollView(
-                child: Column(
+                child:  Column(
                   children: [
-                    const SearchWidget(
+                    SearchWidget(
                       hintText: 'Search Here...',
+                      controller: context.read<MembersCubit>().userNameAndEmailController,
                     ),
                     verticalSpace(10),
                     MembersList(

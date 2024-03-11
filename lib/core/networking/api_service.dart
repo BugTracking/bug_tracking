@@ -19,6 +19,7 @@ import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/members/data/model/member_request_model.dart';
 import 'package:bug_tracking/features/members/data/model/member_response_model.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
@@ -110,9 +111,9 @@ abstract class ApiService {
   );
 
 
-  // @POST(ApiConstance.users)
-  // Future<AddMemberResponseBody> addmember(
-  //   @Body() AddMemberResponseBody addMemberResponseBody,
-  //   @Header('authorization') String token,
-  // );
+  @POST(ApiConstance.users)
+  Future<AddMemberResponseBody> addmember(
+    @Body() AddMemberModel addMemberModel,
+    @Header('authorization') String token,
+  );
 }

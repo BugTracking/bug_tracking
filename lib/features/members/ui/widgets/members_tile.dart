@@ -11,7 +11,7 @@ class MembersTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Container(
+   return Container(
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         border: Border.all(
@@ -22,7 +22,7 @@ class MembersTile extends StatelessWidget {
       ),
       child: CustomMember(
         image: members.avatar!,
-        name:members.name,
+        name: members.name,
         body: members.email,
       ),
     );

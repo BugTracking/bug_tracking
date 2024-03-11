@@ -6,12 +6,11 @@ part 'member_state.freezed.dart';
 class MembersState with _$MembersState {
   const factory MembersState.initial() = _Initial;
 
-  const factory MembersState.addMemberLoading() = addMemberLoading;
+   const factory MembersState.loading() = Loading;
 
-  const factory MembersState.addMemberSuccess(String message) =
-      addMemberSuccess;
+  const factory MembersState.success() = Success;
 
-  const factory MembersState.addMemberFailure(String error) = addMemberFailure;
+  const factory MembersState.error({required String message}) = Error;
 
   const factory MembersState.getMemberLoading() = getMemberLoading;
 

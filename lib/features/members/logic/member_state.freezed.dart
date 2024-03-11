@@ -19,9 +19,9 @@ mixin _$MembersState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
@@ -30,9 +30,9 @@ mixin _$MembersState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
@@ -41,9 +41,9 @@ mixin _$MembersState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
@@ -53,9 +53,9 @@ mixin _$MembersState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
@@ -64,9 +64,9 @@ mixin _$MembersState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
@@ -75,9 +75,9 @@ mixin _$MembersState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
@@ -143,9 +143,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
@@ -157,9 +157,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
@@ -171,9 +171,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
@@ -189,9 +189,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
@@ -203,9 +203,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
@@ -217,9 +217,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
@@ -237,35 +237,35 @@ abstract class _Initial implements MembersState {
 }
 
 /// @nodoc
-abstract class _$$addMemberLoadingImplCopyWith<$Res> {
-  factory _$$addMemberLoadingImplCopyWith(_$addMemberLoadingImpl value,
-          $Res Function(_$addMemberLoadingImpl) then) =
-      __$$addMemberLoadingImplCopyWithImpl<$Res>;
+abstract class _$$LoadingImplCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+      __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$addMemberLoadingImplCopyWithImpl<$Res>
-    extends _$MembersStateCopyWithImpl<$Res, _$addMemberLoadingImpl>
-    implements _$$addMemberLoadingImplCopyWith<$Res> {
-  __$$addMemberLoadingImplCopyWithImpl(_$addMemberLoadingImpl _value,
-      $Res Function(_$addMemberLoadingImpl) _then)
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$MembersStateCopyWithImpl<$Res, _$LoadingImpl>
+    implements _$$LoadingImplCopyWith<$Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$addMemberLoadingImpl implements addMemberLoading {
-  const _$addMemberLoadingImpl();
+class _$LoadingImpl implements Loading {
+  const _$LoadingImpl();
 
   @override
   String toString() {
-    return 'MembersState.addMemberLoading()';
+    return 'MembersState.loading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$addMemberLoadingImpl);
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -275,44 +275,44 @@ class _$addMemberLoadingImpl implements addMemberLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
   }) {
-    return addMemberLoading();
+    return loading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
   }) {
-    return addMemberLoading?.call();
+    return loading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
     required TResult orElse(),
   }) {
-    if (addMemberLoading != null) {
-      return addMemberLoading();
+    if (loading != null) {
+      return loading();
     }
     return orElse();
   }
@@ -321,68 +321,200 @@ class _$addMemberLoadingImpl implements addMemberLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
   }) {
-    return addMemberLoading(this);
+    return loading(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
   }) {
-    return addMemberLoading?.call(this);
+    return loading?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
     required TResult orElse(),
   }) {
-    if (addMemberLoading != null) {
-      return addMemberLoading(this);
+    if (loading != null) {
+      return loading(this);
     }
     return orElse();
   }
 }
 
-abstract class addMemberLoading implements MembersState {
-  const factory addMemberLoading() = _$addMemberLoadingImpl;
+abstract class Loading implements MembersState {
+  const factory Loading() = _$LoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$addMemberSuccessImplCopyWith<$Res> {
-  factory _$$addMemberSuccessImplCopyWith(_$addMemberSuccessImpl value,
-          $Res Function(_$addMemberSuccessImpl) then) =
-      __$$addMemberSuccessImplCopyWithImpl<$Res>;
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$MembersStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SuccessImpl implements Success {
+  const _$SuccessImpl();
+
+  @override
+  String toString() {
+    return 'MembersState.success()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+    required TResult Function() getMemberLoading,
+    required TResult Function(String message) getMemberFailure,
+    required TResult Function(List<UserModel> member) getMemberSuccess,
+  }) {
+    return success();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? getMemberLoading,
+    TResult? Function(String message)? getMemberFailure,
+    TResult? Function(List<UserModel> member)? getMemberSuccess,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    TResult Function()? getMemberLoading,
+    TResult Function(String message)? getMemberFailure,
+    TResult Function(List<UserModel> member)? getMemberSuccess,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(getMemberLoading value) getMemberLoading,
+    required TResult Function(getMemberFailure value) getMemberFailure,
+    required TResult Function(getMemberSuccess value) getMemberSuccess,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(getMemberLoading value)? getMemberLoading,
+    TResult? Function(getMemberFailure value)? getMemberFailure,
+    TResult? Function(getMemberSuccess value)? getMemberSuccess,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(getMemberLoading value)? getMemberLoading,
+    TResult Function(getMemberFailure value)? getMemberFailure,
+    TResult Function(getMemberSuccess value)? getMemberSuccess,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Success implements MembersState {
+  const factory Success() = _$SuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$ErrorImplCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$addMemberSuccessImplCopyWithImpl<$Res>
-    extends _$MembersStateCopyWithImpl<$Res, _$addMemberSuccessImpl>
-    implements _$$addMemberSuccessImplCopyWith<$Res> {
-  __$$addMemberSuccessImplCopyWithImpl(_$addMemberSuccessImpl _value,
-      $Res Function(_$addMemberSuccessImpl) _then)
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$MembersStateCopyWithImpl<$Res, _$ErrorImpl>
+    implements _$$ErrorImplCopyWith<$Res> {
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -390,8 +522,8 @@ class __$$addMemberSuccessImplCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$addMemberSuccessImpl(
-      null == message
+    return _then(_$ErrorImpl(
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -401,22 +533,22 @@ class __$$addMemberSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$addMemberSuccessImpl implements addMemberSuccess {
-  const _$addMemberSuccessImpl(this.message);
+class _$ErrorImpl implements Error {
+  const _$ErrorImpl({required this.message});
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'MembersState.addMemberSuccess(message: $message)';
+    return 'MembersState.error(message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$addMemberSuccessImpl &&
+            other is _$ErrorImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -426,52 +558,51 @@ class _$addMemberSuccessImpl implements addMemberSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$addMemberSuccessImplCopyWith<_$addMemberSuccessImpl> get copyWith =>
-      __$$addMemberSuccessImplCopyWithImpl<_$addMemberSuccessImpl>(
-          this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
   }) {
-    return addMemberSuccess(message);
+    return error(message);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
   }) {
-    return addMemberSuccess?.call(message);
+    return error?.call(message);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
     required TResult orElse(),
   }) {
-    if (addMemberSuccess != null) {
-      return addMemberSuccess(message);
+    if (error != null) {
+      return error(message);
     }
     return orElse();
   }
@@ -480,219 +611,55 @@ class _$addMemberSuccessImpl implements addMemberSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
   }) {
-    return addMemberSuccess(this);
+    return error(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
   }) {
-    return addMemberSuccess?.call(this);
+    return error?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
     required TResult orElse(),
   }) {
-    if (addMemberSuccess != null) {
-      return addMemberSuccess(this);
+    if (error != null) {
+      return error(this);
     }
     return orElse();
   }
 }
 
-abstract class addMemberSuccess implements MembersState {
-  const factory addMemberSuccess(final String message) = _$addMemberSuccessImpl;
+abstract class Error implements MembersState {
+  const factory Error({required final String message}) = _$ErrorImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$addMemberSuccessImplCopyWith<_$addMemberSuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$addMemberFailureImplCopyWith<$Res> {
-  factory _$$addMemberFailureImplCopyWith(_$addMemberFailureImpl value,
-          $Res Function(_$addMemberFailureImpl) then) =
-      __$$addMemberFailureImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String error});
-}
-
-/// @nodoc
-class __$$addMemberFailureImplCopyWithImpl<$Res>
-    extends _$MembersStateCopyWithImpl<$Res, _$addMemberFailureImpl>
-    implements _$$addMemberFailureImplCopyWith<$Res> {
-  __$$addMemberFailureImplCopyWithImpl(_$addMemberFailureImpl _value,
-      $Res Function(_$addMemberFailureImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = null,
-  }) {
-    return _then(_$addMemberFailureImpl(
-      null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$addMemberFailureImpl implements addMemberFailure {
-  const _$addMemberFailureImpl(this.error);
-
-  @override
-  final String error;
-
-  @override
-  String toString() {
-    return 'MembersState.addMemberFailure(error: $error)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$addMemberFailureImpl &&
-            (identical(other.error, error) || other.error == error));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, error);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$addMemberFailureImplCopyWith<_$addMemberFailureImpl> get copyWith =>
-      __$$addMemberFailureImplCopyWithImpl<_$addMemberFailureImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
-    required TResult Function() getMemberLoading,
-    required TResult Function(String message) getMemberFailure,
-    required TResult Function(List<UserModel> member) getMemberSuccess,
-  }) {
-    return addMemberFailure(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
-    TResult? Function()? getMemberLoading,
-    TResult? Function(String message)? getMemberFailure,
-    TResult? Function(List<UserModel> member)? getMemberSuccess,
-  }) {
-    return addMemberFailure?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
-    TResult Function()? getMemberLoading,
-    TResult Function(String message)? getMemberFailure,
-    TResult Function(List<UserModel> member)? getMemberSuccess,
-    required TResult orElse(),
-  }) {
-    if (addMemberFailure != null) {
-      return addMemberFailure(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
-    required TResult Function(getMemberLoading value) getMemberLoading,
-    required TResult Function(getMemberFailure value) getMemberFailure,
-    required TResult Function(getMemberSuccess value) getMemberSuccess,
-  }) {
-    return addMemberFailure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
-    TResult? Function(getMemberLoading value)? getMemberLoading,
-    TResult? Function(getMemberFailure value)? getMemberFailure,
-    TResult? Function(getMemberSuccess value)? getMemberSuccess,
-  }) {
-    return addMemberFailure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
-    TResult Function(getMemberLoading value)? getMemberLoading,
-    TResult Function(getMemberFailure value)? getMemberFailure,
-    TResult Function(getMemberSuccess value)? getMemberSuccess,
-    required TResult orElse(),
-  }) {
-    if (addMemberFailure != null) {
-      return addMemberFailure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class addMemberFailure implements MembersState {
-  const factory addMemberFailure(final String error) = _$addMemberFailureImpl;
-
-  String get error;
-  @JsonKey(ignore: true)
-  _$$addMemberFailureImplCopyWith<_$addMemberFailureImpl> get copyWith =>
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -735,9 +702,9 @@ class _$getMemberLoadingImpl implements getMemberLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
@@ -749,9 +716,9 @@ class _$getMemberLoadingImpl implements getMemberLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
@@ -763,9 +730,9 @@ class _$getMemberLoadingImpl implements getMemberLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
@@ -781,9 +748,9 @@ class _$getMemberLoadingImpl implements getMemberLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
@@ -795,9 +762,9 @@ class _$getMemberLoadingImpl implements getMemberLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
@@ -809,9 +776,9 @@ class _$getMemberLoadingImpl implements getMemberLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
@@ -894,9 +861,9 @@ class _$getMemberFailureImpl implements getMemberFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
@@ -908,9 +875,9 @@ class _$getMemberFailureImpl implements getMemberFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
@@ -922,9 +889,9 @@ class _$getMemberFailureImpl implements getMemberFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
@@ -940,9 +907,9 @@ class _$getMemberFailureImpl implements getMemberFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
@@ -954,9 +921,9 @@ class _$getMemberFailureImpl implements getMemberFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
@@ -968,9 +935,9 @@ class _$getMemberFailureImpl implements getMemberFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
@@ -1064,9 +1031,9 @@ class _$getMemberSuccessImpl implements getMemberSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() addMemberLoading,
-    required TResult Function(String message) addMemberSuccess,
-    required TResult Function(String error) addMemberFailure,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String message) error,
     required TResult Function() getMemberLoading,
     required TResult Function(String message) getMemberFailure,
     required TResult Function(List<UserModel> member) getMemberSuccess,
@@ -1078,9 +1045,9 @@ class _$getMemberSuccessImpl implements getMemberSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? addMemberLoading,
-    TResult? Function(String message)? addMemberSuccess,
-    TResult? Function(String error)? addMemberFailure,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
     TResult? Function()? getMemberLoading,
     TResult? Function(String message)? getMemberFailure,
     TResult? Function(List<UserModel> member)? getMemberSuccess,
@@ -1092,9 +1059,9 @@ class _$getMemberSuccessImpl implements getMemberSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? addMemberLoading,
-    TResult Function(String message)? addMemberSuccess,
-    TResult Function(String error)? addMemberFailure,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String message)? error,
     TResult Function()? getMemberLoading,
     TResult Function(String message)? getMemberFailure,
     TResult Function(List<UserModel> member)? getMemberSuccess,
@@ -1110,9 +1077,9 @@ class _$getMemberSuccessImpl implements getMemberSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(addMemberLoading value) addMemberLoading,
-    required TResult Function(addMemberSuccess value) addMemberSuccess,
-    required TResult Function(addMemberFailure value) addMemberFailure,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
     required TResult Function(getMemberLoading value) getMemberLoading,
     required TResult Function(getMemberFailure value) getMemberFailure,
     required TResult Function(getMemberSuccess value) getMemberSuccess,
@@ -1124,9 +1091,9 @@ class _$getMemberSuccessImpl implements getMemberSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(addMemberLoading value)? addMemberLoading,
-    TResult? Function(addMemberSuccess value)? addMemberSuccess,
-    TResult? Function(addMemberFailure value)? addMemberFailure,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
     TResult? Function(getMemberLoading value)? getMemberLoading,
     TResult? Function(getMemberFailure value)? getMemberFailure,
     TResult? Function(getMemberSuccess value)? getMemberSuccess,
@@ -1138,9 +1105,9 @@ class _$getMemberSuccessImpl implements getMemberSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(addMemberLoading value)? addMemberLoading,
-    TResult Function(addMemberSuccess value)? addMemberSuccess,
-    TResult Function(addMemberFailure value)? addMemberFailure,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
     TResult Function(getMemberLoading value)? getMemberLoading,
     TResult Function(getMemberFailure value)? getMemberFailure,
     TResult Function(getMemberSuccess value)? getMemberSuccess,
