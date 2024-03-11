@@ -1,6 +1,7 @@
 import 'package:bug_tracking/core/networking/api_constance.dart';
 import 'package:bug_tracking/features/add_bug/data/models/add_bug_request_body.dart';
 import 'package:bug_tracking/features/add_bug/data/models/add_bug_response_body.dart';
+import 'package:bug_tracking/features/add_project/data/models/sent_notification_request_body.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_request_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/login_response_model.dart';
 import 'package:bug_tracking/features/authentcation/data/models/register_request_model.dart';
@@ -16,9 +17,13 @@ import 'package:bug_tracking/features/bug_details/data/models/bug_details_respon
 import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/edit_bug_request_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_body.dart';
+import 'package:bug_tracking/features/home/data/models/device_token_request_body.dart';
+import 'package:bug_tracking/features/home/data/models/device_token_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_request_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_response_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_request_body.dart';
 import 'package:bug_tracking/features/project_details/data/models/project_edit_response_body.dart';
 import 'package:dio/dio.dart';
@@ -106,5 +111,28 @@ abstract class ApiService {
     @Path('id') String bugId,
     @Header('authorization') String token,
     @Body() EditBugRequestBody editBugRequestBody,
+  );
+
+  @POST(ApiConstance.deviceTokens)
+  Future<DeviceTokenResponseBody> addDeviceToken(
+    @Body() DeviceTokenRequestBody deviceTokenRequestBody,
+    @Header('authorization') String token,
+  );
+
+  @GET('${ApiConstance.deviceTokens}/{id}')
+  Future<DeviceTokenResponseBody> getDeviceToken(
+    @Path('id') String userId,
+  );
+
+  @POST(ApiConstance.notifications)
+  Future<AddNotificationsResponseBody> addNotification(
+    @Body() AddNotificationsRequestBody addNotificationRequestBody,
+    @Header('authorization') String token,
+  );
+
+  @POST(ApiConstance.fcmEndpoint)
+  Future<int> sendNotification(
+    @Header('Authorization') String token,
+    @Body() SentNotificationRequestBody sentProjectNotificationRequestBody,
   );
 }

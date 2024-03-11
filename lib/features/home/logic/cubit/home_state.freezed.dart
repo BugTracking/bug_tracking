@@ -28,6 +28,9 @@ mixin _$HomeState {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +45,9 @@ mixin _$HomeState {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +62,9 @@ mixin _$HomeState {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +80,12 @@ mixin _$HomeState {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +100,9 @@ mixin _$HomeState {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +117,9 @@ mixin _$HomeState {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -169,6 +190,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return initial();
   }
@@ -186,6 +210,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return initial?.call();
   }
@@ -203,6 +230,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -224,6 +254,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return initial(this);
   }
@@ -241,6 +277,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return initial?.call(this);
   }
@@ -258,6 +297,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -319,6 +361,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getUserLoading();
   }
@@ -336,6 +381,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getUserLoading?.call();
   }
@@ -353,6 +401,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getUserLoading != null) {
@@ -374,6 +425,12 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getUserLoading(this);
   }
@@ -391,6 +448,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getUserLoading?.call(this);
   }
@@ -408,6 +468,9 @@ class _$GetUserLoadingImpl implements GetUserLoading {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getUserLoading != null) {
@@ -496,6 +559,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getUserFailure(message);
   }
@@ -513,6 +579,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getUserFailure?.call(message);
   }
@@ -530,6 +599,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getUserFailure != null) {
@@ -551,6 +623,12 @@ class _$GetUserFailureImpl implements GetUserFailure {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getUserFailure(this);
   }
@@ -568,6 +646,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getUserFailure?.call(this);
   }
@@ -585,6 +666,9 @@ class _$GetUserFailureImpl implements GetUserFailure {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getUserFailure != null) {
@@ -678,6 +762,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getUserSuccess(user);
   }
@@ -695,6 +782,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getUserSuccess?.call(user);
   }
@@ -712,6 +802,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getUserSuccess != null) {
@@ -733,6 +826,12 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getUserSuccess(this);
   }
@@ -750,6 +849,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getUserSuccess?.call(this);
   }
@@ -767,6 +869,9 @@ class _$GetUserSuccessImpl implements GetUserSuccess {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getUserSuccess != null) {
@@ -833,6 +938,9 @@ class _$GetProjectsLoadingImpl implements GetProjectsLoading {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getProjectsLoading();
   }
@@ -850,6 +958,9 @@ class _$GetProjectsLoadingImpl implements GetProjectsLoading {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getProjectsLoading?.call();
   }
@@ -867,6 +978,9 @@ class _$GetProjectsLoadingImpl implements GetProjectsLoading {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsLoading != null) {
@@ -888,6 +1002,12 @@ class _$GetProjectsLoadingImpl implements GetProjectsLoading {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getProjectsLoading(this);
   }
@@ -905,6 +1025,9 @@ class _$GetProjectsLoadingImpl implements GetProjectsLoading {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getProjectsLoading?.call(this);
   }
@@ -922,6 +1045,9 @@ class _$GetProjectsLoadingImpl implements GetProjectsLoading {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsLoading != null) {
@@ -1010,6 +1136,9 @@ class _$GetProjectsFailureImpl implements GetProjectsFailure {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getProjectsFailure(message);
   }
@@ -1027,6 +1156,9 @@ class _$GetProjectsFailureImpl implements GetProjectsFailure {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getProjectsFailure?.call(message);
   }
@@ -1044,6 +1176,9 @@ class _$GetProjectsFailureImpl implements GetProjectsFailure {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsFailure != null) {
@@ -1065,6 +1200,12 @@ class _$GetProjectsFailureImpl implements GetProjectsFailure {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getProjectsFailure(this);
   }
@@ -1082,6 +1223,9 @@ class _$GetProjectsFailureImpl implements GetProjectsFailure {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getProjectsFailure?.call(this);
   }
@@ -1099,6 +1243,9 @@ class _$GetProjectsFailureImpl implements GetProjectsFailure {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsFailure != null) {
@@ -1200,6 +1347,9 @@ class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getProjectsSuccess(projects);
   }
@@ -1217,6 +1367,9 @@ class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getProjectsSuccess?.call(projects);
   }
@@ -1234,6 +1387,9 @@ class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsSuccess != null) {
@@ -1255,6 +1411,12 @@ class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getProjectsSuccess(this);
   }
@@ -1272,6 +1434,9 @@ class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getProjectsSuccess?.call(this);
   }
@@ -1289,6 +1454,9 @@ class _$GetProjectsSuccessImpl implements GetProjectsSuccess {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getProjectsSuccess != null) {
@@ -1356,6 +1524,9 @@ class _$GetBugsLoadingImpl implements GetBugsLoading {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getBugsLoading();
   }
@@ -1373,6 +1544,9 @@ class _$GetBugsLoadingImpl implements GetBugsLoading {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getBugsLoading?.call();
   }
@@ -1390,6 +1564,9 @@ class _$GetBugsLoadingImpl implements GetBugsLoading {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getBugsLoading != null) {
@@ -1411,6 +1588,12 @@ class _$GetBugsLoadingImpl implements GetBugsLoading {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getBugsLoading(this);
   }
@@ -1428,6 +1611,9 @@ class _$GetBugsLoadingImpl implements GetBugsLoading {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getBugsLoading?.call(this);
   }
@@ -1445,6 +1631,9 @@ class _$GetBugsLoadingImpl implements GetBugsLoading {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getBugsLoading != null) {
@@ -1533,6 +1722,9 @@ class _$GetBugsFailureImpl implements GetBugsFailure {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getBugsFailure(message);
   }
@@ -1550,6 +1742,9 @@ class _$GetBugsFailureImpl implements GetBugsFailure {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getBugsFailure?.call(message);
   }
@@ -1567,6 +1762,9 @@ class _$GetBugsFailureImpl implements GetBugsFailure {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getBugsFailure != null) {
@@ -1588,6 +1786,12 @@ class _$GetBugsFailureImpl implements GetBugsFailure {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getBugsFailure(this);
   }
@@ -1605,6 +1809,9 @@ class _$GetBugsFailureImpl implements GetBugsFailure {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getBugsFailure?.call(this);
   }
@@ -1622,6 +1829,9 @@ class _$GetBugsFailureImpl implements GetBugsFailure {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getBugsFailure != null) {
@@ -1722,6 +1932,9 @@ class _$GetBugsSuccessImpl implements GetBugsSuccess {
     required TResult Function() getBugsLoading,
     required TResult Function(String message) getBugsFailure,
     required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
   }) {
     return getBugsSuccess(projects);
   }
@@ -1739,6 +1952,9 @@ class _$GetBugsSuccessImpl implements GetBugsSuccess {
     TResult? Function()? getBugsLoading,
     TResult? Function(String message)? getBugsFailure,
     TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
   }) {
     return getBugsSuccess?.call(projects);
   }
@@ -1756,6 +1972,9 @@ class _$GetBugsSuccessImpl implements GetBugsSuccess {
     TResult Function()? getBugsLoading,
     TResult Function(String message)? getBugsFailure,
     TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getBugsSuccess != null) {
@@ -1777,6 +1996,12 @@ class _$GetBugsSuccessImpl implements GetBugsSuccess {
     required TResult Function(GetBugsLoading value) getBugsLoading,
     required TResult Function(GetBugsFailure value) getBugsFailure,
     required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
   }) {
     return getBugsSuccess(this);
   }
@@ -1794,6 +2019,9 @@ class _$GetBugsSuccessImpl implements GetBugsSuccess {
     TResult? Function(GetBugsLoading value)? getBugsLoading,
     TResult? Function(GetBugsFailure value)? getBugsFailure,
     TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
   }) {
     return getBugsSuccess?.call(this);
   }
@@ -1811,6 +2039,9 @@ class _$GetBugsSuccessImpl implements GetBugsSuccess {
     TResult Function(GetBugsLoading value)? getBugsLoading,
     TResult Function(GetBugsFailure value)? getBugsFailure,
     TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
     required TResult orElse(),
   }) {
     if (getBugsSuccess != null) {
@@ -1828,4 +2059,523 @@ abstract class GetBugsSuccess implements HomeState {
   @JsonKey(ignore: true)
   _$$GetBugsSuccessImplCopyWith<_$GetBugsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SetDeviceTokenLoadingImplCopyWith<$Res> {
+  factory _$$SetDeviceTokenLoadingImplCopyWith(
+          _$SetDeviceTokenLoadingImpl value,
+          $Res Function(_$SetDeviceTokenLoadingImpl) then) =
+      __$$SetDeviceTokenLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SetDeviceTokenLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$SetDeviceTokenLoadingImpl>
+    implements _$$SetDeviceTokenLoadingImplCopyWith<$Res> {
+  __$$SetDeviceTokenLoadingImplCopyWithImpl(_$SetDeviceTokenLoadingImpl _value,
+      $Res Function(_$SetDeviceTokenLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SetDeviceTokenLoadingImpl implements SetDeviceTokenLoading {
+  const _$SetDeviceTokenLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.setDeviceTokenLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetDeviceTokenLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserLoading,
+    required TResult Function(String message) getUserFailure,
+    required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
+    required TResult Function() getBugsLoading,
+    required TResult Function(String message) getBugsFailure,
+    required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserLoading,
+    TResult? Function(String message)? getUserFailure,
+    TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
+    TResult? Function()? getBugsLoading,
+    TResult? Function(String message)? getBugsFailure,
+    TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserLoading,
+    TResult Function(String message)? getUserFailure,
+    TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
+    TResult Function()? getBugsLoading,
+    TResult Function(String message)? getBugsFailure,
+    TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
+    required TResult orElse(),
+  }) {
+    if (setDeviceTokenLoading != null) {
+      return setDeviceTokenLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetUserLoading value) getUserLoading,
+    required TResult Function(GetUserFailure value) getUserFailure,
+    required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(GetBugsLoading value) getBugsLoading,
+    required TResult Function(GetBugsFailure value) getBugsFailure,
+    required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetUserLoading value)? getUserLoading,
+    TResult? Function(GetUserFailure value)? getUserFailure,
+    TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(GetBugsLoading value)? getBugsLoading,
+    TResult? Function(GetBugsFailure value)? getBugsFailure,
+    TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetUserLoading value)? getUserLoading,
+    TResult Function(GetUserFailure value)? getUserFailure,
+    TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(GetBugsLoading value)? getBugsLoading,
+    TResult Function(GetBugsFailure value)? getBugsFailure,
+    TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
+    required TResult orElse(),
+  }) {
+    if (setDeviceTokenLoading != null) {
+      return setDeviceTokenLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetDeviceTokenLoading implements HomeState {
+  const factory SetDeviceTokenLoading() = _$SetDeviceTokenLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SetDeviceTokenFailureImplCopyWith<$Res> {
+  factory _$$SetDeviceTokenFailureImplCopyWith(
+          _$SetDeviceTokenFailureImpl value,
+          $Res Function(_$SetDeviceTokenFailureImpl) then) =
+      __$$SetDeviceTokenFailureImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SetDeviceTokenFailureImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$SetDeviceTokenFailureImpl>
+    implements _$$SetDeviceTokenFailureImplCopyWith<$Res> {
+  __$$SetDeviceTokenFailureImplCopyWithImpl(_$SetDeviceTokenFailureImpl _value,
+      $Res Function(_$SetDeviceTokenFailureImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SetDeviceTokenFailureImpl implements SetDeviceTokenFailure {
+  const _$SetDeviceTokenFailureImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.setDeviceTokenFailure()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetDeviceTokenFailureImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserLoading,
+    required TResult Function(String message) getUserFailure,
+    required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
+    required TResult Function() getBugsLoading,
+    required TResult Function(String message) getBugsFailure,
+    required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenFailure();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserLoading,
+    TResult? Function(String message)? getUserFailure,
+    TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
+    TResult? Function()? getBugsLoading,
+    TResult? Function(String message)? getBugsFailure,
+    TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenFailure?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserLoading,
+    TResult Function(String message)? getUserFailure,
+    TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
+    TResult Function()? getBugsLoading,
+    TResult Function(String message)? getBugsFailure,
+    TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
+    required TResult orElse(),
+  }) {
+    if (setDeviceTokenFailure != null) {
+      return setDeviceTokenFailure();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetUserLoading value) getUserLoading,
+    required TResult Function(GetUserFailure value) getUserFailure,
+    required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(GetBugsLoading value) getBugsLoading,
+    required TResult Function(GetBugsFailure value) getBugsFailure,
+    required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetUserLoading value)? getUserLoading,
+    TResult? Function(GetUserFailure value)? getUserFailure,
+    TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(GetBugsLoading value)? getBugsLoading,
+    TResult? Function(GetBugsFailure value)? getBugsFailure,
+    TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetUserLoading value)? getUserLoading,
+    TResult Function(GetUserFailure value)? getUserFailure,
+    TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(GetBugsLoading value)? getBugsLoading,
+    TResult Function(GetBugsFailure value)? getBugsFailure,
+    TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
+    required TResult orElse(),
+  }) {
+    if (setDeviceTokenFailure != null) {
+      return setDeviceTokenFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetDeviceTokenFailure implements HomeState {
+  const factory SetDeviceTokenFailure() = _$SetDeviceTokenFailureImpl;
+}
+
+/// @nodoc
+abstract class _$$SetDeviceTokenSuccessImplCopyWith<$Res> {
+  factory _$$SetDeviceTokenSuccessImplCopyWith(
+          _$SetDeviceTokenSuccessImpl value,
+          $Res Function(_$SetDeviceTokenSuccessImpl) then) =
+      __$$SetDeviceTokenSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SetDeviceTokenSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$SetDeviceTokenSuccessImpl>
+    implements _$$SetDeviceTokenSuccessImplCopyWith<$Res> {
+  __$$SetDeviceTokenSuccessImplCopyWithImpl(_$SetDeviceTokenSuccessImpl _value,
+      $Res Function(_$SetDeviceTokenSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SetDeviceTokenSuccessImpl implements SetDeviceTokenSuccess {
+  const _$SetDeviceTokenSuccessImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.setDeviceTokenSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetDeviceTokenSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getUserLoading,
+    required TResult Function(String message) getUserFailure,
+    required TResult Function(UserData user) getUserSuccess,
+    required TResult Function() getProjectsLoading,
+    required TResult Function(String message) getProjectsFailure,
+    required TResult Function(List<ProjectModel> projects) getProjectsSuccess,
+    required TResult Function() getBugsLoading,
+    required TResult Function(String message) getBugsFailure,
+    required TResult Function(List<BugModel> projects) getBugsSuccess,
+    required TResult Function() setDeviceTokenLoading,
+    required TResult Function() setDeviceTokenFailure,
+    required TResult Function() setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getUserLoading,
+    TResult? Function(String message)? getUserFailure,
+    TResult? Function(UserData user)? getUserSuccess,
+    TResult? Function()? getProjectsLoading,
+    TResult? Function(String message)? getProjectsFailure,
+    TResult? Function(List<ProjectModel> projects)? getProjectsSuccess,
+    TResult? Function()? getBugsLoading,
+    TResult? Function(String message)? getBugsFailure,
+    TResult? Function(List<BugModel> projects)? getBugsSuccess,
+    TResult? Function()? setDeviceTokenLoading,
+    TResult? Function()? setDeviceTokenFailure,
+    TResult? Function()? setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getUserLoading,
+    TResult Function(String message)? getUserFailure,
+    TResult Function(UserData user)? getUserSuccess,
+    TResult Function()? getProjectsLoading,
+    TResult Function(String message)? getProjectsFailure,
+    TResult Function(List<ProjectModel> projects)? getProjectsSuccess,
+    TResult Function()? getBugsLoading,
+    TResult Function(String message)? getBugsFailure,
+    TResult Function(List<BugModel> projects)? getBugsSuccess,
+    TResult Function()? setDeviceTokenLoading,
+    TResult Function()? setDeviceTokenFailure,
+    TResult Function()? setDeviceTokenSuccess,
+    required TResult orElse(),
+  }) {
+    if (setDeviceTokenSuccess != null) {
+      return setDeviceTokenSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetUserLoading value) getUserLoading,
+    required TResult Function(GetUserFailure value) getUserFailure,
+    required TResult Function(GetUserSuccess value) getUserSuccess,
+    required TResult Function(GetProjectsLoading value) getProjectsLoading,
+    required TResult Function(GetProjectsFailure value) getProjectsFailure,
+    required TResult Function(GetProjectsSuccess value) getProjectsSuccess,
+    required TResult Function(GetBugsLoading value) getBugsLoading,
+    required TResult Function(GetBugsFailure value) getBugsFailure,
+    required TResult Function(GetBugsSuccess value) getBugsSuccess,
+    required TResult Function(SetDeviceTokenLoading value)
+        setDeviceTokenLoading,
+    required TResult Function(SetDeviceTokenFailure value)
+        setDeviceTokenFailure,
+    required TResult Function(SetDeviceTokenSuccess value)
+        setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetUserLoading value)? getUserLoading,
+    TResult? Function(GetUserFailure value)? getUserFailure,
+    TResult? Function(GetUserSuccess value)? getUserSuccess,
+    TResult? Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult? Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult? Function(GetProjectsSuccess value)? getProjectsSuccess,
+    TResult? Function(GetBugsLoading value)? getBugsLoading,
+    TResult? Function(GetBugsFailure value)? getBugsFailure,
+    TResult? Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult? Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult? Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult? Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
+  }) {
+    return setDeviceTokenSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetUserLoading value)? getUserLoading,
+    TResult Function(GetUserFailure value)? getUserFailure,
+    TResult Function(GetUserSuccess value)? getUserSuccess,
+    TResult Function(GetProjectsLoading value)? getProjectsLoading,
+    TResult Function(GetProjectsFailure value)? getProjectsFailure,
+    TResult Function(GetProjectsSuccess value)? getProjectsSuccess,
+    TResult Function(GetBugsLoading value)? getBugsLoading,
+    TResult Function(GetBugsFailure value)? getBugsFailure,
+    TResult Function(GetBugsSuccess value)? getBugsSuccess,
+    TResult Function(SetDeviceTokenLoading value)? setDeviceTokenLoading,
+    TResult Function(SetDeviceTokenFailure value)? setDeviceTokenFailure,
+    TResult Function(SetDeviceTokenSuccess value)? setDeviceTokenSuccess,
+    required TResult orElse(),
+  }) {
+    if (setDeviceTokenSuccess != null) {
+      return setDeviceTokenSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SetDeviceTokenSuccess implements HomeState {
+  const factory SetDeviceTokenSuccess() = _$SetDeviceTokenSuccessImpl;
 }

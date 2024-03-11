@@ -24,7 +24,6 @@ final getIt = GetIt.instance;
 void setupGetIt() async {
   Dio dioFactory = await DioFactory.getInstance();
   getIt.registerLazySingleton<ApiService>(() => ApiService(dioFactory));
-
   // Onboarding
   getIt.registerFactory<OnBoardingCubit>(() => OnBoardingCubit());
 

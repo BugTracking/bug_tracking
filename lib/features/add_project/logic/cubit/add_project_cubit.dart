@@ -1,10 +1,14 @@
 import 'package:bloc/bloc.dart';
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_categories_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/add_project_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/models/categories_response_body.dart';
+import 'package:bug_tracking/features/add_project/data/models/sent_notification_request_body.dart';
 import 'package:bug_tracking/features/add_project/data/repos/add_project_repo.dart';
 import 'package:bug_tracking/features/add_project/logic/cubit/add_project_state.dart';
+import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
+import 'package:bug_tracking/features/notfications/data/models/add_notification_request_body.dart';
 import 'package:flutter/material.dart';
 
 class AddProjectCubit extends Cubit<AddProjectState> {
@@ -114,7 +118,12 @@ class AddProjectCubit extends Cubit<AddProjectState> {
         ),
       );
       response.when(
-        success: (data) => emit(const AddProjectState.success()),
+        success: (data) async {
+          await addNotifications();
+          ProjectModel projectModel = data.data!;
+          await getTokens(projectModel);
+          emit(const AddProjectState.success());
+        },
         failure: (failure) => emit(
           AddProjectState.error(
             message: failure,
@@ -122,5 +131,55 @@ class AddProjectCubit extends Cubit<AddProjectState> {
         ),
       );
     }
+  }
+
+  List<String> tokens = [];
+  Future<void> getTokens(ProjectModel? projectModel) async {
+    final response = await _addProjectRepo.getTokens(memberIds);
+    response.when(
+      success: (data) {
+        tokens = data.map((e) => e.data?.fcmToken ?? '').toList();
+        sentNotification(tokens, projectModel);
+      },
+      failure: (error) {},
+    );
+  }
+
+  Future<void> addNotifications() async {
+    await _addProjectRepo.addNotifications(
+      AddNotificationsRequestBody(
+        userData.user.name,
+        'You are added to ${titleController.text} Project',
+        memberIds,
+      ),
+    );
+  }
+
+  Future<void> sentNotification(
+      List<String> tokens, ProjectModel? projectModel) async {
+    List<SentNotificationRequestBody> requests = [];
+    NotificationModel notification = NotificationModel(
+      userData.user.name,
+      'You are added to ${titleController.text} Project',
+    );
+    for (String token in tokens) {
+      requests.add(
+        SentNotificationRequestBody(
+          token,
+          notification,
+          NotiticationData(
+            senderId: userData.user.id,
+            projectId: projectModel?.id,
+            projectTitle: projectModel?.title,
+            projectStatus: projectModel?.status,
+            bugTitle: null,
+            bugId: null,
+          ),
+        ),
+      );
+    }
+    await _addProjectRepo.sentNotification(
+      requests,
+    );
   }
 }
