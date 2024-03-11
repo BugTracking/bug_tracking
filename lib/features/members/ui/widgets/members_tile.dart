@@ -1,10 +1,10 @@
 import 'package:bug_tracking/core/widgets/custom_member.dart';
+import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:flutter/material.dart';
 
 class MembersTile extends StatelessWidget {
-  const MembersTile({
-    Key? key,
-  }) : super(key: key);
+  final UserModel members;
+  const MembersTile({super.key, required this.members});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,10 @@ class MembersTile extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: const CustomMember(
-        image: null,
-        name: 'Nada Ahmed',
-        body: 'nada12@gmail.com',
+      child: CustomMember(
+        image: members.avatar ?? '',
+        name: members.name,
+        body: members.email,
       ),
     );
   }

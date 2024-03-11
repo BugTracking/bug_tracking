@@ -23,5 +23,5 @@ class BugsList extends StatelessWidget {
         itemCount: bugs.length,
       ),
     );
-  }
+  } 
 }

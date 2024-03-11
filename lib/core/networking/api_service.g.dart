@@ -551,6 +551,38 @@ class _ApiService implements ApiService {
   }
 
   @override
+  Future<AddMemberResponseBody> addmember(
+    AddMemberModel addMemberModel,
+    String token,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(addMemberModel.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<AddMemberResponseBody>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'users',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = AddMemberResponseBody.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
   Future<DeviceTokenResponseBody> addDeviceToken(
     DeviceTokenRequestBody deviceTokenRequestBody,
     String token,
