@@ -32,7 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          if (userData.user.id == '') {
+          if (userData.user.id == '' ||
+              context.read<HomeCubit>().projects == null ||
+              context.read<HomeCubit>().bugs == null) {
             return const CustomShimmerList();
           }
           return context.read<HomeCubit>().screens[currentIndex];
