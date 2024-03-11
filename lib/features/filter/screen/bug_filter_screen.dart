@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BugFilterScreen extends StatefulWidget {
-  
   const BugFilterScreen({Key? key}) : super(key: key);
 
   @override
@@ -61,6 +60,7 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
                       },
                       child: FilterContainer(
                         text: projectNames[index],
+                        onTap: () {},
                         isSelected: projectNameSelected == index,
                       ),
                     ),
@@ -91,6 +91,7 @@ class _BugFilterScreenState extends State<BugFilterScreen> {
                       child: FilterContainer(
                         text: projectNames[index],
                         isSelected: bugStatusSelected == index,
+                        onTap: () {},
                       ),
                     ),
                   ),
