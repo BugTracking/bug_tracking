@@ -1,5 +1,7 @@
 import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/extensions.dart';
+import 'package:bug_tracking/core/helpers/notification_helper.dart';
+import 'package:bug_tracking/core/helpers/permissions.dart';
 import 'package:bug_tracking/core/router/routes.dart';
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
@@ -18,20 +20,33 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    NotificationHelper.init(context);
+    requestNotificationPermission();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          if (userData.user.id == '') {
+          if (userData.user.id == '' ||
+              context.read<HomeCubit>().projects == null ||
+              context.read<HomeCubit>().bugs == null) {
             return const CustomShimmerList();
           }
           return context.read<HomeCubit>().screens[currentIndex];
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.push(Routes.addProject),
+        onPressed: () async {
+          context.push(Routes.addProject).then((_) {
+            context.read<HomeCubit>().emitProjectDataState();
+            context.read<HomeCubit>().emitBugDataState();
+          });
+        },
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),

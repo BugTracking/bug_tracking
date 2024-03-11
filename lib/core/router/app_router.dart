@@ -89,7 +89,8 @@ class AppRouter {
             create: (context) => getIt<HomeCubit>()
               ..emitUserDataState()
               ..emitProjectDataState()
-              ..emitBugDataState(),
+              ..emitBugDataState()
+              ..emitSetDeviceTokenState(),
             child: const HomeScreen(),
           ),
         );
@@ -105,11 +106,8 @@ class AppRouter {
           ),
         );
       case Routes.members:
-        ;
         return MaterialPageRoute(
-            builder: (context) =>  MembersScreen(
-    
-  ),
+          builder: (context) => const MembersScreen(),
         );
       case Routes.addBug:
         var args = settings.arguments as AddBugScreenArgs;

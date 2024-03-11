@@ -30,7 +30,7 @@ class LatestProjects extends StatelessWidget {
           textAlign: TextAlign.center,
         );
       }
-      ProjectModel project = cubit.projects![0];
+      ProjectModel project = cubit.projects![cubit.projects!.length - 1];
       return Column(
         children: [
           Row(
@@ -41,10 +41,15 @@ class LatestProjects extends StatelessWidget {
                 style: AppTexts.text16OnBackgroundNunitoSansBold,
               ),
               CustomTextButton(
-                onPressed: () => context.push(
-                  Routes.allProjects,
-                  arguments: ProjectsScreenArgs(cubit.projects!),
-                ),
+                onPressed: () {
+                  context
+                      .push(Routes.allProjects,
+                          arguments: ProjectsScreenArgs(cubit.projects!))
+                      .then((_) {
+                    context.read<HomeCubit>().emitProjectDataState();
+                    context.read<HomeCubit>().emitBugDataState();
+                  });
+                },
                 text: 'View All',
               ),
             ],

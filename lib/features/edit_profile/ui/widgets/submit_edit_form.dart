@@ -13,7 +13,7 @@ class SubmitEditForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<EditProfileCubit,EditProfileState>(
+    return BlocConsumer<EditProfileCubit, EditProfileState>(
       listener: (context, state) {
         if (state is GetUserEditSuccess) {
           showToast(message: state.message);

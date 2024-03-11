@@ -35,7 +35,6 @@ class BugDetailsCommentsList extends StatelessWidget {
             CommentData comment = comments[index];
             List<String> dates = comment.time.extractDate().split('-');
             List<String> times = comment.time.extractTime().split(':');
-            print(times);
             return Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

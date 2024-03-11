@@ -43,6 +43,9 @@ class BugModel {
       this.lastUpdatedBy,
       this.lastUpdatedAt,
       this.timeCreated);
+
   factory BugModel.fromJson(Map<String, dynamic> json) =>
       _$BugModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$BugModelToJson(this);
 }

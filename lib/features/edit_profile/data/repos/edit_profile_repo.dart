@@ -1,9 +1,7 @@
-
 import 'package:bug_tracking/core/networking/api_result.dart';
 import 'package:bug_tracking/core/networking/api_service.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:dio/dio.dart';
-import '../models/user_edit_request_model.dart';
 import '../models/user_response_model.dart';
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -25,9 +23,14 @@ class EditProfileRepo {
     }
   }
 
-  Future<ApiResult<UserResponseModel>> editUser(String userId,UserEditRequestModel userEditRequestModel ) async {
+  Future<ApiResult<UserResponseModel>> editUser(
+      String userId, FormData formData) async {
     try {
-      final response = await _apiService.editProfile(userId,userEditRequestModel);
+      final response = await _apiService.editProfile(
+        userId,
+        formData,
+        'multipart/form-data',
+      );
       if (response.status) {
         return ApiResult.success(response);
       }
@@ -36,7 +39,6 @@ class EditProfileRepo {
       return ApiResult.failure(e.message ?? '');
     }
   }
-
 
   Future<ApiResult<String>> uploadAttachment(File file) async {
     try {
@@ -50,8 +52,4 @@ class EditProfileRepo {
       return ApiResult.failure(e.message ?? '');
     }
   }
-
-
 }
-
-

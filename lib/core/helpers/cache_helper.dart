@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CacheHelper {
   static late SharedPreferences sharedPreferences;
 
+  CacheHelper._();
   static Future init() async {
     sharedPreferences = await SharedPreferences.getInstance();
     if (!sharedPreferences.containsKey('token')) {
@@ -13,11 +14,12 @@ class CacheHelper {
     }
   }
 
-  static Future<bool> setString({required String key, required String value}) async {
+  static Future<bool> setString(
+      {required String key, required String value}) async {
     return sharedPreferences.setString(key, value);
   }
 
-  Future<void> removeString(String key) async {
+  static Future<void> removeString(String key) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove(key);
   }

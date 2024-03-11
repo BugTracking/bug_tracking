@@ -8,29 +8,22 @@ class SettingsCubit extends Cubit<SettingsState> {
 
   SettingsCubit(this._settingsRepo) : super(const SettingsState.initial());
 
-
   void emitLogOutState() async {
-    await CacheHelper().removeString('token');
-    await CacheHelper().removeString('userId');
+    await CacheHelper.removeString('token');
+    await CacheHelper.removeString('userId');
     emit(const GetLogOutSuccess('You logged out sucessfully'));
-
-        }
-
+  }
 
   void emitDeleteAccountState() async {
     final response = await _settingsRepo.deleteAccount(CacheHelper.userId);
     response.when(
       success: (data) {
-
         emit(GetDeleteAccSuccess(data.message!));
-       // emitLogOutState();
+        // emitLogOutState();
       },
       failure: (error) {
         emit(GetDeleteAccFailure(error));
       },
     );
   }
-
-
-  }
-
+}
