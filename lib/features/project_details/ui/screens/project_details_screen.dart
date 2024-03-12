@@ -38,10 +38,16 @@ class ProjectDetailsScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColor.bluish,
         foregroundColor: Colors.white,
-        onPressed: () => context.push(
+        onPressed: () => context
+            .push(
           Routes.addBug,
           arguments: AddBugScreenArgs(args.projectId),
-        ),
+        )
+            .then((_) {
+          context
+              .read<ProjectDetailsCubit>()
+              .emitProjectDetailsState(args.projectId);
+        }),
         child: const Icon(
           Icons.add,
         ),
