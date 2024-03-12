@@ -75,8 +75,7 @@ class MembersScreen extends StatelessWidget {
               children: [
                 SearchWidget(
                   hintText: 'Search Here...',
-                  controller:
-                      context.read<MembersCubit>().userNameAndEmailController,
+                  controller: context.read<MembersCubit>().searchController,
                 ),
                 verticalSpace(10),
                 Expanded(

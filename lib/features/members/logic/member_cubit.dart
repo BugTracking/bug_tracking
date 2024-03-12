@@ -12,6 +12,8 @@ class MembersCubit extends Cubit<MembersState> {
   UserData? userData;
   final TextEditingController userNameAndEmailController =
       TextEditingController();
+
+  final TextEditingController searchController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   void emitMemberDataState() async {
