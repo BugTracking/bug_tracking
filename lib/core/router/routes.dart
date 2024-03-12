@@ -14,4 +14,5 @@ class Routes {
   static const String allProjects = '/allProjects';
   static const String members = '/members';
   static const String allBugs = '/allBugs';
+  static const String termsandcondtions = '/termsandcondtions';
 }

@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/features/allprojects/ui/screens/projects_screen.dart';
+import 'package:bug_tracking/features/home/data/models/device_token_request_body.dart';
 import 'package:bug_tracking/features/home/data/models/project_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/bugs_response_body.dart';
 import 'package:bug_tracking/features/home/data/repos/home_repo.dart';
@@ -10,6 +11,7 @@ import 'package:bug_tracking/features/home/ui/screens/home_body_screen.dart';
 import 'package:bug_tracking/features/notfications/ui/screens/notfications_screen.dart';
 import 'package:bug_tracking/features/settings/ui/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
@@ -61,6 +63,24 @@ class HomeCubit extends Cubit<HomeState> {
       },
       failure: (error) {
         emit(HomeState.getUserFailure(error));
+      },
+    );
+  }
+
+  void emitSetDeviceTokenState() async {
+    emit(const HomeState.setDeviceTokenLoading());
+    final String? fcmToken = await FirebaseMessaging.instance.getToken();
+    final response = await _homeRepo.setDeviceToken(
+      DeviceTokenRequestBody(
+        fcmToken: fcmToken ?? '',
+      ),
+    );
+    response.when(
+      success: (data) {
+        emit(const HomeState.setDeviceTokenSuccess());
+      },
+      failure: (error) {
+        emit(const HomeState.setDeviceTokenFailure());
       },
     );
   }

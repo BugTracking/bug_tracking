@@ -1,12 +1,11 @@
-import 'package:bug_tracking/features/notfications/ui/widgets/notfications_body.dart';
 import 'package:bug_tracking/features/notfications/ui/widgets/notfications_header.dart';
 import 'package:flutter/material.dart';
 import 'package:bug_tracking/features/notfications/data/models/notfication_response_model.dart';
 
 class NotificationsTile extends StatelessWidget {
   final NotificationData notfication;
-  const NotificationsTile({Key? key,required this.notfication}) : super(key: key);
-
+  const NotificationsTile({Key? key, required this.notfication})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +21,12 @@ class NotificationsTile extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child:  Column(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              NotficationsHeader(notfication: notfication,),
-              NotficationsBody(notfication: notfication,),
+              NotficationsHeader(
+                notfication: notfication,
+              ),
             ],
           ),
         ),

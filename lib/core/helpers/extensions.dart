@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension NavigationEx on BuildContext {
-  void push(String routerName, {Object? arguments}) {
-    Navigator.pushNamed(
+  Future push(String routerName, {Object? arguments}) async {
+    return Navigator.pushNamed(
       this,
       routerName,
       arguments: arguments,
     );
   }
 
-  void pushAndRemoveUntil(String routerName, {Object? arguments}) {
-    Navigator.pushNamedAndRemoveUntil(
+  Future pushAndRemoveUntil(String routerName, {Object? arguments}) async {
+    return Navigator.pushNamedAndRemoveUntil(
       this,
       routerName,
       (route) => false,
@@ -19,8 +19,8 @@ extension NavigationEx on BuildContext {
     );
   }
 
-  void pushReplace(String routerName, {Object? arguments}) {
-    Navigator.pushReplacementNamed(
+  Future pushReplace(String routerName, {Object? arguments}) async {
+    return Navigator.pushReplacementNamed(
       this,
       routerName,
       arguments: arguments,

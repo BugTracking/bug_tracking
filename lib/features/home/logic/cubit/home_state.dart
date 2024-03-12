@@ -16,16 +16,22 @@ class HomeState with _$HomeState {
 
   const factory HomeState.getProjectsLoading() = GetProjectsLoading;
 
-  const factory HomeState.getProjectsFailure(String message) = GetProjectsFailure;
+  const factory HomeState.getProjectsFailure(String message) =
+      GetProjectsFailure;
 
-  const factory HomeState.getProjectsSuccess(List<ProjectModel> projects) = GetProjectsSuccess;
+  const factory HomeState.getProjectsSuccess(List<ProjectModel> projects) =
+      GetProjectsSuccess;
 
   const factory HomeState.getBugsLoading() = GetBugsLoading;
 
   const factory HomeState.getBugsFailure(String message) = GetBugsFailure;
 
-  const factory HomeState.getBugsSuccess(List<BugModel> projects) = GetBugsSuccess;
+  const factory HomeState.getBugsSuccess(List<BugModel> projects) =
+      GetBugsSuccess;
 
+  const factory HomeState.setDeviceTokenLoading() = SetDeviceTokenLoading;
 
+  const factory HomeState.setDeviceTokenFailure() = SetDeviceTokenFailure;
 
+  const factory HomeState.setDeviceTokenSuccess() = SetDeviceTokenSuccess;
 }
