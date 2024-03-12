@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
@@ -24,35 +23,11 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
         clipBehavior: Clip.none,
         fit: StackFit.expand,
         children: [
-          InkWell(
-            onTap: () async {
-              image = await picker.pickImage(source: ImageSource.gallery);
-              setState(() {
-                // Update UI
-              });
-            },
-            child: CircleAvatar(
-              backgroundImage: image != null
-                  ? FileImage(File(image!.path))
-                  : const AssetImage("assets/images/avatar.png")
-                      as ImageProvider,
-              backgroundColor: Colors.white,
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            right: -25,
-            child: RawMaterialButton(
-              onPressed: () {},
-              elevation: 2.0,
-              padding: const EdgeInsets.all(2.0),
-              shape: const CircleBorder(),
-              child: const Icon(
-                Icons.camera_alt_rounded,
-                color: AppColor.bluish,
-                size: 40.0,
-              ),
-            ),
+          CircleAvatar(
+            backgroundImage: image != null
+                ? FileImage(File(image!.path))
+                : const AssetImage("assets/images/avatar.png") as ImageProvider,
+            backgroundColor: Colors.white,
           ),
         ],
       ),
