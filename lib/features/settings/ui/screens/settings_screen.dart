@@ -28,7 +28,6 @@ class _SettingScreenState extends State<SettingScreen> {
       create: (context) => getIt<SettingsCubit>(),
       child: Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.arrow_back_ios),
           title: Text(
             "Settings ",
             style: AppTexts.text21OnBackgroundColorNunitoSansBold,

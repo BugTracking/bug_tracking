@@ -1,3 +1,4 @@
+import 'package:bug_tracking/core/data/app_data.dart';
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/members/data/model/member_request_model.dart';
@@ -9,19 +10,20 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class MembersCubit extends Cubit<MembersState> {
   final MembersRepo _addMemberRepo;
   MembersCubit(this._addMemberRepo) : super(const MembersState.initial());
-  UserData? userData;
+  UserData? user;
   final TextEditingController userNameAndEmailController =
       TextEditingController();
 
   final TextEditingController searchController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
-  void emitMemberDataState() async {
+  void emitMemberDataState(String message) async {
     final response = await _addMemberRepo.getUser(CacheHelper.userId);
     response.when(
       success: (data) {
+        user = data.data!;
         userData = data.data!;
-        emit(MembersState.getMemberSuccess(userData?.members ?? []));
+        emit(const MembersState.success());
       },
       failure: (error) {
         emit(MembersState.getMemberFailure(error));
@@ -53,16 +55,13 @@ class MembersCubit extends Cubit<MembersState> {
   void emitAddMemberState() async {
     if (formKey.currentState!.validate()) {
       emit(const MembersState.loading());
-      final response = await _addMemberRepo.addMember(
-        getAddMemberModel(),
-      );
+      final response = await _addMemberRepo.addMember(getAddMemberModel());
       response.when(
         success: (data) async {
-          emitMemberDataState();
-          emit(const MembersState.success());
+          emitMemberDataState(data.message ?? '');
         },
         failure: (error) {
-          emit(const MembersState.error(message: 'error'));
+          emit(MembersState.error(message: error));
         },
       );
     }
@@ -72,7 +71,7 @@ class MembersCubit extends Cubit<MembersState> {
 
   void searchFilterSearch(String query) {
     emit(const MembersState.initial());
-    filteredList = userData?.members
+    filteredList = user?.members
             .where((element) =>
                 element.name.toLowerCase().contains(query.toLowerCase()) ||
                 element.email.toLowerCase().contains(query.toLowerCase()))

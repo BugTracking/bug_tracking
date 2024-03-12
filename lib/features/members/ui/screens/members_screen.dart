@@ -48,12 +48,12 @@ class MembersScreen extends StatelessWidget {
       body: BlocBuilder<MembersCubit, MembersState>(
         builder: (context, state) {
           MembersCubit cubit = context.read<MembersCubit>();
-          if (cubit.userData == null) {
+          if (cubit.user == null) {
             return const Center(
               child: CustomShimmerList(),
             );
           }
-          UserData userData = cubit.userData!;
+          UserData userData = cubit.user!;
           List<UserModel> members = userData.members;
           if (userData.members.isEmpty) {
             return Center(

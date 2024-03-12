@@ -2,10 +2,10 @@ import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
 import 'package:bug_tracking/core/helpers/toasts.dart';
 import 'package:bug_tracking/core/style/app_texts.dart';
+import 'package:bug_tracking/core/widgets/custom_text_field.dart';
 import 'package:bug_tracking/features/members/logic/member_cubit.dart';
 import 'package:bug_tracking/features/members/logic/member_state.dart';
 import 'package:bug_tracking/features/members/ui/widgets/add_member_submit.dart';
-import 'package:bug_tracking/features/members/ui/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -52,9 +52,11 @@ class _AddMemberState extends State<AddMember> {
                   style: AppTexts.text21OnBackgroundColorNunitoSansBold,
                 ),
                 verticalSpace(16),
-                SearchWidget(
-                  hintText: 'Username or Email',
+                CustomTextField(
                   controller: cubit.userNameAndEmailController,
+                  hintText: 'Username or email',
+                  keyboardType: TextInputType.text,
+                  textInputAction: TextInputAction.done,
                 ),
                 verticalSpace(16),
                 const AddMemberSubmit(),

@@ -15,6 +15,7 @@ class AddProjectMembersContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        print('The members ${userData.members}');
         showModalBottomSheet(
           enableDrag: true,
           context: context,

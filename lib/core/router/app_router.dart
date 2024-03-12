@@ -109,7 +109,8 @@ class AppRouter {
       case Routes.members:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-              create: (context) => getIt<MembersCubit>()..emitMemberDataState(),
+              create: (context) =>
+                  getIt<MembersCubit>()..emitMemberDataState(''),
               child: const MembersScreen()),
         );
       case Routes.addBug:

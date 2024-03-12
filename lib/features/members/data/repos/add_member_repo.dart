@@ -28,8 +28,7 @@ class MembersRepo {
       AddMemberModel addMemberModel) async {
     try {
       final String token = CacheHelper.token;
-      final response =
-          await _apiService.addmember(addMemberModel, token);
+      final response = await _apiService.addmember(addMemberModel, token);
       if (response.status) {
         return ApiResult.success(response);
       }
