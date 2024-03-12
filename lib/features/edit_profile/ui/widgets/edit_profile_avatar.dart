@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ImagePickerWidget extends StatefulWidget {
-  const ImagePickerWidget({Key? key}) : super(key: key);
+class EditProfileAvatar extends StatefulWidget {
+  const EditProfileAvatar({Key? key}) : super(key: key);
 
   @override
-  State<ImagePickerWidget> createState() => _ImagePickerWidgetState();
+  State<EditProfileAvatar> createState() => _EditProfileAvatarState();
 }
 
-class _ImagePickerWidgetState extends State<ImagePickerWidget> {
+class _EditProfileAvatarState extends State<EditProfileAvatar> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<EditProfileCubit, EditProfileState>(

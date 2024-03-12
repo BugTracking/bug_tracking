@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 
-class ImagePickerWidget extends StatefulWidget {
-  const ImagePickerWidget({Key? key}) : super(key: key);
+class SettingsAvatar extends StatefulWidget {
+  const SettingsAvatar({Key? key}) : super(key: key);
 
   @override
-  State<ImagePickerWidget> createState() => _ImagePickerWidgetState();
+  State<SettingsAvatar> createState() => _SettingsAvatarState();
 }
 
-class _ImagePickerWidgetState extends State<ImagePickerWidget> {
+class _SettingsAvatarState extends State<SettingsAvatar> {
   final ImagePicker picker = ImagePicker();
   XFile? image;
 
