@@ -1,8 +1,6 @@
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
 import 'package:bug_tracking/features/members/data/model/member_request_model.dart';
-import 'package:bug_tracking/features/members/data/model/member_response_model.dart';
-
 import 'package:bug_tracking/features/members/data/repos/add_member_repo.dart';
 import 'package:bug_tracking/features/members/logic/member_state.dart';
 import 'package:flutter/material.dart';
@@ -16,15 +14,12 @@ class MembersCubit extends Cubit<MembersState> {
       TextEditingController();
   final formKey = GlobalKey<FormState>();
 
-  List<UserModel>? members;
-
   void emitMemberDataState() async {
     final response = await _addMemberRepo.getUser(CacheHelper.userId);
     response.when(
       success: (data) {
-        members = data.data?.members;
-        print("sucess");
-        emit(MembersState.getMemberSuccess(members!));
+        userData = data.data!;
+        emit(MembersState.getMemberSuccess(userData?.members ?? []));
       },
       failure: (error) {
         emit(MembersState.getMemberFailure(error));
@@ -32,7 +27,7 @@ class MembersCubit extends Cubit<MembersState> {
     );
   }
 
-     AddMemberModel getAddMemberModel() {
+  AddMemberModel getAddMemberModel() {
     late AddMemberModel addMemberModel;
 
     final RegExp emailRegex = RegExp(
@@ -43,28 +38,25 @@ class MembersCubit extends Cubit<MembersState> {
       addMemberModel = AddMemberModel(
         userNameAndEmailController.text,
         null,
-      
       );
     } else {
       addMemberModel = AddMemberModel(
         null,
         userNameAndEmailController.text,
-        
       );
     }
     return addMemberModel;
   }
 
-
   void emitAddMemberState() async {
     if (formKey.currentState!.validate()) {
       emit(const MembersState.loading());
       final response = await _addMemberRepo.addMember(
-     getAddMemberModel( ),
+        getAddMemberModel(),
       );
       response.when(
         success: (data) async {
-         
+          emitMemberDataState();
           emit(const MembersState.success());
         },
         failure: (error) {
@@ -74,6 +66,16 @@ class MembersCubit extends Cubit<MembersState> {
     }
   }
 
+  List<UserModel> filteredList = [];
 
-
+  void searchFilterSearch(String query) {
+    emit(const MembersState.initial());
+    filteredList = userData?.members
+            .where((element) =>
+                element.name.toLowerCase().contains(query.toLowerCase()) ||
+                element.email.toLowerCase().contains(query.toLowerCase()))
+            .toList() ??
+        [];
+    emit(MembersState.getMemberSuccess(filteredList));
+  }
 }

@@ -1,12 +1,16 @@
 import 'package:bug_tracking/core/style/app_color.dart';
 import 'package:bug_tracking/core/widgets/custom_text_field.dart';
+import 'package:bug_tracking/features/members/logic/member_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SearchWidget extends StatefulWidget {
   final String hintText;
   final TextEditingController controller;
 
-  const SearchWidget({Key? key, required this.hintText, required this.controller}) : super(key: key);
+  const SearchWidget(
+      {Key? key, required this.hintText, required this.controller})
+      : super(key: key);
 
   @override
   State<SearchWidget> createState() => _SearchWidgetState();
@@ -25,6 +29,8 @@ class _SearchWidgetState extends State<SearchWidget> {
         Icons.search,
         color: AppColor.lightGrey,
       ),
+      oncChange: (value) =>
+          context.read<MembersCubit>().searchFilterSearch(value),
     );
   }
 }

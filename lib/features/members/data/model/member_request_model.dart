@@ -6,10 +6,7 @@ class AddMemberModel {
   final String? email;
   final String? userName;
 
-
   AddMemberModel(this.email, this.userName);
-
-
 
   Map<String, dynamic> toJson() => _$AddMemberModelToJson(this);
 }
