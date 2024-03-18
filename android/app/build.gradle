@@ -53,6 +53,20 @@ android {
         multiDexEnabled true
     }
 
+    flavorDimensions "default"
+    productFlavors {
+        production {
+            dimension "default"
+            resValue "string", "app_name", "Bug Prod"
+        }
+        development {
+            dimension "default"
+            resValue "string", "app_name", "Bug Dev"
+            applicationIdSuffix ".dev"
+        }
+    }
+
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
