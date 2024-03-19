@@ -21,7 +21,7 @@ class SaveProjectSubmit extends StatelessWidget {
           },
           error: (message) {
             showToast(
-              message: 'Project has already been created',
+              message: message.toString(),
               isError: true,
             );
           },

@@ -90,7 +90,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
     emit(const AddProjectState.selectCategoriesSuccess());
   }
 
-  void emitAddCategoryState() async {
+  Future<void> emitAddCategoryState() async {
     emit(const AddProjectState.addCategoriesLoading());
     final response = await _addProjectRepo.addCategories(
       AddCategoriesRequestBody(
@@ -107,7 +107,6 @@ class AddProjectCubit extends Cubit<AddProjectState> {
 
   void emitAddProjectState() async {
     if (formKey.currentState!.validate()) {
-      emitAddCategoryState();
       emit(const AddProjectState.loading());
       final response = await _addProjectRepo.addProject(
         AddProjectRequestBody(
@@ -120,6 +119,7 @@ class AddProjectCubit extends Cubit<AddProjectState> {
       response.when(
         success: (data) async {
           await addNotifications();
+          await emitAddCategoryState();
           ProjectModel projectModel = data.data!;
           await getTokens(projectModel);
           emit(const AddProjectState.success());

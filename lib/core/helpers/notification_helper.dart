@@ -12,35 +12,9 @@ class NotificationHelper {
       FlutterLocalNotificationsPlugin();
   static void initLocalNotifications() {
     const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings('app_icon');
+        AndroidInitializationSettings('@mipmap/ic_launcher');
     DarwinInitializationSettings initializationSettingsDarwin =
-        DarwinInitializationSettings(
-      notificationCategories: [
-        DarwinNotificationCategory(
-          'demoCategory',
-          actions: <DarwinNotificationAction>[
-            DarwinNotificationAction.plain('id_1', 'Action 1'),
-            DarwinNotificationAction.plain(
-              'id_2',
-              'Action 2',
-              options: <DarwinNotificationActionOption>{
-                DarwinNotificationActionOption.destructive,
-              },
-            ),
-            DarwinNotificationAction.plain(
-              'id_3',
-              'Action 3',
-              options: <DarwinNotificationActionOption>{
-                DarwinNotificationActionOption.foreground,
-              },
-            ),
-          ],
-          options: <DarwinNotificationCategoryOption>{
-            DarwinNotificationCategoryOption.hiddenPreviewShowTitle,
-          },
-        )
-      ],
-    );
+        const DarwinInitializationSettings();
     InitializationSettings initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid,
       iOS: initializationSettingsDarwin,

@@ -57,7 +57,7 @@ android {
     productFlavors {
         production {
             dimension "default"
-            resValue "string", "app_name", "Bug Prod"
+            resValue "string", "app_name", "Bug Tracking"
         }
         development {
             dimension "default"
