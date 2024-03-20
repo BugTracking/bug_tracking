@@ -4,6 +4,7 @@ import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/core/widgets/custom_shimmer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomMember extends StatelessWidget {
   final String? image;
@@ -18,23 +19,19 @@ class CustomMember extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String validImageUrl =
-        image != null && Uri.tryParse(image!)?.hasAbsolutePath == true
-            ? image!
-            : 'assets/images/male.png';
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         CircleAvatar(
-          radius: 30,
+          radius: 32.r,
           backgroundColor: AppColor.bluish,
-          child: CircleAvatar(
-            radius: 28,
-            backgroundColor: Colors.white,
-            child: ClipOval(
-              child: validImageUrl.startsWith('http')
+          child: ClipOval(
+            child: CircleAvatar(
+              radius: 30.r,
+              backgroundColor: Colors.white,
+              child: image != null && image != ''
                   ? CachedNetworkImage(
-                      imageUrl: validImageUrl,
+                      imageUrl: image ?? '',
                       placeholder: (context, url) => const CustomShimmer(),
                       errorWidget: (context, url, error) => Container(
                         color: Colors.white,
@@ -42,14 +39,23 @@ class CustomMember extends StatelessWidget {
                           'assets/images/male.png',
                         ),
                       ),
-                      fit: BoxFit.cover,
                       color: Colors.white,
                       filterQuality: FilterQuality.high,
-                      width: double.infinity,
-                      height: double.infinity,
+                      imageBuilder: (context, imageProvider) {
+                        return Container(
+                          width: double.infinity,
+                          height: double.infinity,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: imageProvider,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        );
+                      },
                     )
                   : Image.asset(
-                      validImageUrl,
+                      'assets/images/male.png',
                       fit: BoxFit.cover,
                       width: double.infinity,
                       height: double.infinity,
