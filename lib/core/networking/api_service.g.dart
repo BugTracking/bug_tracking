@@ -107,20 +107,18 @@ class _ApiService implements ApiService {
   @override
   Future<UserResponseModel> editProfile(
     String userId,
-    FormData formData,
-    String contentType,
+    UserEditRequestModel userEditRequestModel,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{r'Content-Type': contentType};
-    _headers.removeWhere((k, v) => v == null);
-    final _data = formData;
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(userEditRequestModel.toJson());
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<UserResponseModel>(Options(
       method: 'PUT',
       headers: _headers,
       extra: _extra,
-      contentType: contentType,
     )
             .compose(
               _dio.options,

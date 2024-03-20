@@ -11,7 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProjectsScreen extends StatelessWidget {
-  final List<ProjectModel>? projects;
+  final List<ProjectModel> projects;
   const ProjectsScreen({Key? key, required this.projects}) : super(key: key);
 
   @override
@@ -32,7 +32,7 @@ class ProjectsScreen extends StatelessWidget {
                       builder: (_) => BlocProvider.value(
                         value: context.read<ProjectsCubit>(),
                         child: ProjectFilterScreen(
-                          projects: projects ?? [],
+                          projects: projects,
                         ),
                       ),
                     );
@@ -48,7 +48,8 @@ class ProjectsScreen extends StatelessWidget {
             body: BlocBuilder<ProjectsCubit, ProjectStates>(
                 builder: (context, state) {
               ProjectsCubit cubit = context.read<ProjectsCubit>();
-              if (cubit.filterdList != null && cubit.filterdList!.isEmpty) {
+              if ((cubit.filterdList != null && cubit.filterdList!.isEmpty) ||
+                  projects.isEmpty) {
                 return Center(
                   child: Text(
                     'No Projects Found',
@@ -64,7 +65,7 @@ class ProjectsScreen extends StatelessWidget {
                 child: ProjectList(
                   projects: context.read<ProjectsCubit>().filterdList != null
                       ? context.read<ProjectsCubit>().filterdList ?? []
-                      : projects ?? [],
+                      : projects,
                 ),
               );
             }),

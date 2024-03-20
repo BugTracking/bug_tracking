@@ -1,9 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:bug_tracking/core/data/app_data.dart';
-import 'package:bug_tracking/core/helpers/cache_helper.dart';
+import 'package:bug_tracking/features/edit_profile/data/models/user_edit_request_model.dart';
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:bug_tracking/features/edit_profile/data/repos/edit_profile_repo.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:bug_tracking/core/helpers/permissions.dart';
@@ -38,29 +37,53 @@ class EditProfileCubit extends Cubit<EditProfileState> {
       TextEditingController(text: userData.user.userName);
   final TextEditingController emailController =
       TextEditingController(text: userData.user.email);
-  final TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   void emitUserEditState() async {
-    if (formKey.currentState!.validate() || avatarAttach != null) {
-      emit(const EditProfileState.getUserEditLoading());
-      FormData formData = FormData.fromMap({
-        "name": nameController.text,
-        "userName": userNameController.text,
-        "email": emailController.text,
-      });
-      final response = await _editProfileRepo.editUser(
-        CacheHelper.userId,
-        formData,
-      );
-      response.when(
-        success: (data) {
-          emit(EditProfileState.getUserEditSuccess(data.message!));
-        },
-        failure: (error) {
+    emit(const EditProfileState.getUserEditLoading());
+    if (formKey.currentState!.validate()) {
+      if (avatarAttach != null) {
+        final imageResult =
+            await _editProfileRepo.uploadAttachment(avatarAttach!);
+        imageResult.when(success: (imageUrl) async {
+          print('ImageURL : $imageUrl');
+          UserEditRequestModel userEditRequestModel = UserEditRequestModel(
+            name: nameController.text,
+            userName: userNameController.text,
+            email: emailController.text,
+            avatar: imageUrl,
+          );
+          editAndGetUser(userEditRequestModel);
+        }, failure: (error) {
           emit(EditProfileState.getUserEditFailure(error));
-        },
-      );
+        });
+      } else {
+        UserEditRequestModel userEditRequestModel = UserEditRequestModel(
+          name: nameController.text,
+          userName: userNameController.text,
+          email: emailController.text,
+        );
+        editAndGetUser(userEditRequestModel);
+      }
     }
+  }
+
+  void editAndGetUser(UserEditRequestModel userEditRequestModel) async {
+    final response = await _editProfileRepo.editUser(
+      userData.user.id,
+      userEditRequestModel,
+    );
+    response.when(success: (value) async {
+      final userResult = await _editProfileRepo.getUser(userData.user.id);
+      userResult.when(success: (value) {
+        userData = value.data!;
+        emit(const EditProfileState.getUserEditSuccess(
+            'User Updated successfully'));
+      }, failure: (error) {
+        emit(EditProfileState.getUserEditFailure(error));
+      });
+    }, failure: (error) {
+      emit(EditProfileState.getUserEditFailure(error));
+    });
   }
 }

@@ -2,7 +2,6 @@ import 'package:bug_tracking/core/helpers/extensions.dart';
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:bug_tracking/features/edit_profile/ui/widgets/edit_profile_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:bug_tracking/core/style/app_texts.dart';
 import 'package:bug_tracking/features/edit_profile/ui/widgets/edit_form.dart';
 import 'package:bug_tracking/features/edit_profile/ui/widgets/submit_edit_form.dart';
 import 'package:bug_tracking/core/helpers/spacing.dart';
@@ -26,9 +25,8 @@ class EditProfileScreen extends StatelessWidget {
         },
         child: Scaffold(
           appBar: AppBar(
-            title: Text(
-              'Edit',
-              style: AppTexts.text21OnBackgroundColorNunitoSansBold,
+            title: const Text(
+              'Edit Profile',
             ),
           ),
           body: SingleChildScrollView(
