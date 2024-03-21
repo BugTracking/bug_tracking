@@ -15,11 +15,13 @@ class SettingsCubit extends Cubit<SettingsState> {
   }
 
   void emitDeleteAccountState() async {
+    emit(const GetDeleteAccLoading());
     final response = await _settingsRepo.deleteAccount(CacheHelper.userId);
     response.when(
-      success: (data) {
+      success: (data) async {
+        await CacheHelper.removeString('token');
+        await CacheHelper.removeString('userId');
         emit(GetDeleteAccSuccess(data.message!));
-        // emitLogOutState();
       },
       failure: (error) {
         emit(GetDeleteAccFailure(error));

@@ -21,7 +21,8 @@ class LogoutButton extends StatelessWidget {
       if (state is GetLogOutSuccess) {
         showToast(message: state.message);
         if (context.mounted) {
-          context.pushAndRemoveUntil(Routes.getStarted);
+          showToast(message: state.message, isError: true);
+          context.pushAndRemoveUntil(Routes.onBoarding);
         }
       } else if (state is GetLogOutFailure) {
         showToast(message: state.message, isError: true);
