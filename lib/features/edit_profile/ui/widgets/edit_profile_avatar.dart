@@ -1,9 +1,9 @@
 import 'package:bug_tracking/core/style/app_color.dart';
+import 'package:bug_tracking/core/widgets/custom_avatar.dart';
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:bug_tracking/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EditProfileAvatar extends StatefulWidget {
   const EditProfileAvatar({Key? key}) : super(key: key);
@@ -18,41 +18,26 @@ class _EditProfileAvatarState extends State<EditProfileAvatar> {
     return BlocBuilder<EditProfileCubit, EditProfileState>(
         builder: (context, state) {
       EditProfileCubit cubit = context.read<EditProfileCubit>();
-      return SizedBox(
-        height: 115.h,
-        width: 115.w,
+      return GestureDetector(
+        onTap: () {
+          context.read<EditProfileCubit>().emitUploadAttachmentsState();
+        },
         child: Stack(
-          clipBehavior: Clip.none,
-          fit: StackFit.expand,
+          clipBehavior: Clip.antiAlias,
+          alignment: Alignment.center,
           children: [
-            InkWell(
-              onTap: () {
-                context.read<EditProfileCubit>().emitUploadAttachmentsState();
-                setState(() {});
-              },
-              child: CircleAvatar(
-                backgroundImage: cubit.avatarAttach != null
-                    ? FileImage(cubit.avatarAttach!)
-                    : const AssetImage("assets/images/avatar.png")
-                        as ImageProvider,
-                backgroundColor: Colors.white,
-              ),
+            CustomAvatar(
+              image: cubit.avatarAttach,
             ),
-            Positioned(
-              bottom: 0,
-              right: -25,
-              child: RawMaterialButton(
-                onPressed: () {},
-                elevation: 2.0,
-                padding: const EdgeInsets.all(2.0),
-                shape: const CircleBorder(),
-                child: const Icon(
-                  Icons.camera_alt_rounded,
-                  color: AppColor.bluish,
-                  size: 40.0,
-                ),
+            const Positioned(
+              bottom: 2,
+              right: 3,
+              child: Icon(
+                Icons.camera_alt,
+                color: AppColor.bluish,
+                size: 30,
               ),
-            ),
+            )
           ],
         ),
       );

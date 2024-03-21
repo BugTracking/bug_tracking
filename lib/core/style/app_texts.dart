@@ -102,6 +102,13 @@ class AppTexts {
         color: AppColor.blackish,
       );
 
+  static TextStyle get text18OnBackgroundNunitoSansBold =>
+      GoogleFonts.nunitoSans(
+        fontSize: 18.sp,
+        fontWeight: AppFontWeight.bold,
+        color: AppColor.blackish,
+      );
+
   static TextStyle get text12GreyNunitoSansSemiBold => GoogleFonts.nunitoSans(
         fontSize: 12.sp,
         fontWeight: AppFontWeight.semiBold,

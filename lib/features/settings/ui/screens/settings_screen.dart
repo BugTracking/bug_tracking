@@ -53,7 +53,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 SettingsContainer(
                   text: "Terms&conditions",
-                  onTap: () {},
+                  onTap: () => context.push(Routes.termsandcondtions),
                 ),
                 SettingsContainer(
                   text: "Members",

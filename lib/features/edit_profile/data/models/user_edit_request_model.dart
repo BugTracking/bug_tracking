@@ -6,10 +6,14 @@ class UserEditRequestModel {
   final String? name;
   final String? userName;
   final String? email;
+  final String? avatar;
 
-  UserEditRequestModel(
+  UserEditRequestModel({
     this.name,
     this.userName,
     this.email,
-  );
+    this.avatar,
+  });
+
+  Map<String, dynamic> toJson() => _$UserEditRequestModelToJson(this);
 }

@@ -25,7 +25,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bug_tracking/features/edit_profile/ui/screens/edit_profile_screen.dart';
 
-import '../../features/settings/ui/widgets/terms_conditions_dialog.dart';
+import '../../features/settings/ui/screens/terms_conditions_screen.dart';
 
 class AppRouter {
   Route? onGeneratedRoute(RouteSettings settings) {
@@ -136,10 +136,9 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => AllBugsScreen(bugs: args.bugs),
         );
-
       case Routes.termsandcondtions:
         return MaterialPageRoute(
-          builder: (context) => const TermsAndCondtionsDialog(),
+          builder: (context) => const TermsAndCondtionsScreen(),
         );
       default:
         return null;

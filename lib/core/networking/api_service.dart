@@ -17,6 +17,7 @@ import 'package:bug_tracking/features/bug_details/data/models/bug_details_respon
 import 'package:bug_tracking/features/bug_details/data/models/comments_response_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/edit_bug_request_body.dart';
 import 'package:bug_tracking/features/bug_details/data/models/edit_bug_response_body.dart';
+import 'package:bug_tracking/features/edit_profile/data/models/user_edit_request_model.dart';
 import 'package:bug_tracking/features/home/data/models/device_token_request_body.dart';
 import 'package:bug_tracking/features/home/data/models/device_token_response_body.dart';
 import 'package:bug_tracking/features/home/data/models/user_response_body.dart';
@@ -54,8 +55,7 @@ abstract class ApiService {
   @PUT('${ApiConstance.users}/{id}')
   Future<UserResponseModel> editProfile(
     @Path('id') String userId,
-    @Body() FormData formData,
-    @Header('Content-Type') String contentType,
+    @Body() UserEditRequestModel userEditRequestModel,
   );
 
   @DELETE('${ApiConstance.users}/{id}')

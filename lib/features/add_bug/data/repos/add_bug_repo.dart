@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:bug_tracking/core/helpers/cache_helper.dart';
 import 'package:bug_tracking/core/networking/api_constance.dart';
@@ -51,7 +52,7 @@ class AddBugRepo {
     try {
       for (File file in files) {
         String filePath =
-            'bugs/${DateTime.now().millisecondsSinceEpoch}_${file.path}';
+            'bugs/${DateTime.now().millisecondsSinceEpoch}_${Random().nextInt(1000)}';
         Reference reference = FirebaseStorage.instance.ref().child(filePath);
         await reference.putFile(file);
         final String downloadUrl = await reference.getDownloadURL();
